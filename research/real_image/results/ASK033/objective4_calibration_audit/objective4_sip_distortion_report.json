@@ -1,0 +1,202 @@
+{
+  "objective": 4,
+  "title": "SIP polynomial distortion analysis",
+  "grid": "81 x 61 samples per 640 x 480 section",
+  "sections": {
+    "R1C2": {
+      "wcs_file": "research/real_image/results/ASK033/phase36_section_solutions/R1C2_custom.wcs",
+      "sip_a_order": 2,
+      "sip_b_order": 2,
+      "sip_ap_order": 2,
+      "sip_bp_order": 2,
+      "reference_pixel": [
+        363.820666667,
+        411.413
+      ],
+      "correction_magnitude_px": {
+        "minimum": 0.008142623824811322,
+        "median": 25.385193418800917,
+        "rms": 40.71845320228049,
+        "maximum": 132.80370434240828
+      },
+      "corner_corrections": {
+        "top_left": {
+          "delta_x_px": -30.60658549676216,
+          "delta_y_px": -129.22871511895173,
+          "magnitude_px": 132.80370434240828
+        },
+        "top_right": {
+          "delta_x_px": -12.408377771256994,
+          "delta_y_px": -66.13986417586591,
+          "magnitude_px": 67.29375507516441
+        },
+        "bottom_left": {
+          "delta_x_px": -13.259749150224112,
+          "delta_y_px": -37.923259531417486,
+          "magnitude_px": 40.17455116132744
+        },
+        "bottom_right": {
+          "delta_x_px": -9.352218746144136,
+          "delta_y_px": -28.56469283184947,
+          "magnitude_px": 30.05670760501959
+        }
+      }
+    },
+    "R2C1": {
+      "wcs_file": "research/real_image/results/ASK033/phase36_section_solutions/R2C1_custom.wcs",
+      "sip_a_order": 2,
+      "sip_b_order": 2,
+      "sip_ap_order": 2,
+      "sip_bp_order": 2,
+      "reference_pixel": [
+        583.17,
+        67.1853333333
+      ],
+      "correction_magnitude_px": {
+        "minimum": 0.0005885168741251756,
+        "median": 14.038297735962802,
+        "rms": 25.827107773252752,
+        "maximum": 76.25675503921083
+      },
+      "corner_corrections": {
+        "top_left": {
+          "delta_x_px": -74.85350990065554,
+          "delta_y_px": -14.561756235518793,
+          "magnitude_px": 76.25675503921083
+        },
+        "top_right": {
+          "delta_x_px": -0.29529909090427986,
+          "delta_y_px": 0.19743441389972935,
+          "magnitude_px": 0.3552209184167281
+        },
+        "bottom_left": {
+          "delta_x_px": -41.26996881627573,
+          "delta_y_px": -10.178426593542447,
+          "magnitude_px": 42.50659588836188
+        },
+        "bottom_right": {
+          "delta_x_px": -11.249264794644814,
+          "delta_y_px": 26.060287921207916,
+          "magnitude_px": 28.38458322674988
+        }
+      }
+    },
+    "R3C1": {
+      "wcs_file": "research/real_image/results/ASK033/phase36_section_solutions/R3C1_custom.wcs",
+      "sip_a_order": 2,
+      "sip_b_order": 2,
+      "sip_ap_order": 2,
+      "sip_bp_order": 2,
+      "reference_pixel": [
+        471.955666667,
+        97.033
+      ],
+      "correction_magnitude_px": {
+        "minimum": 2.2856870184206497e-05,
+        "median": 17.177903306085167,
+        "rms": 23.980979142546577,
+        "maximum": 63.24234515796994
+      },
+      "corner_corrections": {
+        "top_left": {
+          "delta_x_px": -32.04378907324272,
+          "delta_y_px": 54.52329596520495,
+          "magnitude_px": 63.24234515796994
+        },
+        "top_right": {
+          "delta_x_px": -4.543894139766555,
+          "delta_y_px": 4.042658409526519,
+          "magnitude_px": 6.08194549215301
+        },
+        "bottom_left": {
+          "delta_x_px": -46.76045734390761,
+          "delta_y_px": 31.400118024897072,
+          "magnitude_px": 56.325019156577916
+        },
+        "bottom_right": {
+          "delta_x_px": -33.27106631242376,
+          "delta_y_px": 35.364036886779274,
+          "magnitude_px": 48.55490663666428
+        }
+      }
+    },
+    "R3C2": {
+      "wcs_file": "research/real_image/results/ASK033/phase36_section_solutions/R3C2_custom.wcs",
+      "sip_a_order": 2,
+      "sip_b_order": 2,
+      "sip_ap_order": 2,
+      "sip_bp_order": 2,
+      "reference_pixel": [
+        141.355666667,
+        86.4136666667
+      ],
+      "correction_magnitude_px": {
+        "minimum": 0.004562076895792905,
+        "median": 22.12791025547559,
+        "rms": 37.102828823247975,
+        "maximum": 115.73107296412675
+      },
+      "corner_corrections": {
+        "top_left": {
+          "delta_x_px": 1.0639052541794647,
+          "delta_y_px": 7.454073831772521,
+          "magnitude_px": 7.52961559970936
+        },
+        "top_right": {
+          "delta_x_px": 29.786251949223836,
+          "delta_y_px": 42.27399096757101,
+          "magnitude_px": 51.71374205671947
+        },
+        "bottom_left": {
+          "delta_x_px": 5.675103929857639,
+          "delta_y_px": 27.44483755674878,
+          "magnitude_px": 28.0254511673053
+        },
+        "bottom_right": {
+          "delta_x_px": 9.378177283665035,
+          "delta_y_px": 115.35047048132998,
+          "magnitude_px": 115.73107296412675
+        }
+      }
+    },
+    "R2C2": {
+      "wcs_file": "research/real_image/results/ASK033/custom_plate_solutions/R2C2_custom.wcs",
+      "sip_a_order": 2,
+      "sip_b_order": 2,
+      "sip_ap_order": 2,
+      "sip_bp_order": 2,
+      "reference_pixel": [
+        112.087,
+        268.758
+      ],
+      "correction_magnitude_px": {
+        "minimum": 0.001444602667176533,
+        "median": 3.74811658283891,
+        "rms": 7.08958125905217,
+        "maximum": 23.397130042594515
+      },
+      "corner_corrections": {
+        "top_left": {
+          "delta_x_px": -5.554305603277691,
+          "delta_y_px": -9.721823940186928,
+          "magnitude_px": 11.19661428551478
+        },
+        "top_right": {
+          "delta_x_px": 0.012500945024172871,
+          "delta_y_px": 23.39712670300463,
+          "magnitude_px": 23.397130042594515
+        },
+        "bottom_left": {
+          "delta_x_px": -2.928268010592942,
+          "delta_y_px": -0.7189090276433436,
+          "magnitude_px": 3.0152253202520445
+        },
+        "bottom_right": {
+          "delta_x_px": -0.7483320901015009,
+          "delta_y_px": -4.913031101369198,
+          "magnitude_px": 4.969695717053179
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "phase": 61,
+  "title": "Final real-star association visualisation",
+  "source_image": "research/real_image/data/network/ASK033/ASK033_live_grayscale.png",
+  "input_correspondences": 233,
+  "strict_internal_consistency": 74,
+  "uncertain_internal_consistency": 155,
+  "suspect_associations": 4,
+  "strict_threshold_px": 1.0,
+  "overlay": "research/real_image/results/ASK033/phase61_final_association_visualisation/phase61_real_star_association_overlay.jpg",
+  "classified_csv": "research/real_image/results/ASK033/phase61_final_association_visualisation/phase61_all_classified_correspondences.csv",
+  "interpretation": "The overlay visualises local-WCS residual quality. Green points are internally consistent within 1 pixel; orange points exceed that threshold; red crosses mark four previously suspected associations. These classifications do not independently certify stellar catalogue identities."
+}

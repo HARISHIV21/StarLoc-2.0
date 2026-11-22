@@ -1,0 +1,71 @@
+{
+  "project": "StarLoc 2.0",
+  "title": "Real-Image Star Detection and Astrometric Association Evidence",
+  "generated_utc": "2026-11-21T20:07:04.026489+00:00",
+  "dataset": {
+    "camera": "ASK033 AllSkyKamera",
+    "site_latitude_deg": 47.834,
+    "site_longitude_deg": 16.005,
+    "primary_archive_frame": 522,
+    "image_dimensions_px": [
+      1920,
+      1440
+    ],
+    "visible_hipparcos_catalogue_rows": 4006
+  },
+  "correspondence_results": {
+    "total": 233,
+    "classification_counts": {
+      "UNCERTAIN_INTERNAL_CONSISTENCY": 155,
+      "STRICT_INTERNAL_CONSISTENCY": 74,
+      "SUSPECT_ASSOCIATION": 4
+    },
+    "strict_internal_consistency": 74,
+    "uncertain_internal_consistency": 155,
+    "suspect_associations": 4,
+    "strict_subset_global_candidate_error": {
+      "count": 74,
+      "median_px": 0.603618709698089,
+      "mean_px": 0.7581282837684847,
+      "rms_px": 1.054146508523345,
+      "maximum_px": 6.077996706933368
+    },
+    "all_rows_global_candidate_error": {
+      "count": 233,
+      "median_px": 0.6136537018680649,
+      "mean_px": 1.2136260277302522,
+      "rms_px": 3.5926506809946037,
+      "maximum_px": 30.018661247693558
+    }
+  },
+  "astrometry_net": {
+    "target": "Track 66",
+    "crop_size_px": [
+      512,
+      512
+    ],
+    "solver_completed": true,
+    "wcs_file_exists": true,
+    "independent_validation": "NOT ESTABLISHED",
+    "exposure_timestamp": "UNVERIFIED"
+  },
+  "scientific_status": {
+    "star_detection": "Implemented; real-image candidates require confirmation.",
+    "catalogue_association": "233 classified associations available; not independently validated.",
+    "ra_dec_to_pixel_projection": "Available in existing experimental models; real-image accuracy not established.",
+    "optical_calibration": "NOT VALIDATED ON REAL CAMERA DATA.",
+    "synthetic_calibration": "Previously demonstrated successfully on synthetic data.",
+    "observer_position": "Approximate ASK033 site coordinates used.",
+    "timestamp": "Archive exposure time not independently established."
+  },
+  "limitations": [
+    "Internal consistency is not independent astrometric truth.",
+    "The targeted solver success marker does not validate the WCS.",
+    "The archive timestamp cannot currently support a definitive exposure-time-based catalogue match.",
+    "No real-camera optical calibration accuracy is claimed."
+  ],
+  "outputs": [
+    "research/final_professor_evidence/strict_internal_correspondences.csv",
+    "research/final_professor_evidence/all_classified_correspondences.csv"
+  ]
+}

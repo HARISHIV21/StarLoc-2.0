@@ -1,0 +1,348 @@
+{
+  "phase": "108B",
+  "title": "Corrected targeted WCS and Hipparcos comparison",
+  "candidate": {
+    "track_id": 66,
+    "original_image_xy": [
+      810.0,
+      359.0
+    ],
+    "crop_local_xy": [
+      256.0,
+      256.0
+    ],
+    "calculated_ra_deg": 10.713883343451496,
+    "calculated_dec_deg": 56.463638707552384
+  },
+  "wcs": {
+    "hdu_summary": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "naxis": 0,
+        "naxis1": null,
+        "naxis2": null,
+        "ctype1": "RA---TAN-SIP",
+        "ctype2": "DEC--TAN-SIP"
+      }
+    ],
+    "ctype1": "RA---TAN-SIP",
+    "ctype2": "DEC--TAN-SIP",
+    "pixel_scale_arcsec_per_pixel": [
+      252.03012200054175,
+      261.1862371947475
+    ],
+    "roundtrip_error_pixels": 1.5486443909138276e-06
+  },
+  "catalogue": {
+    "file": "/Users/harish/STAR/StarLoc-2.0/research/real_image/results/ASK033/ASK033_visible_hipparcos_catalogue.csv",
+    "rows_loaded": 4006,
+    "valid_coordinate_rows": 4006,
+    "ra_column": "ra_deg",
+    "dec_column": "dec_deg",
+    "nearest_sources": [
+      {
+        "hip_number": null,
+        "ra_deg": 10.1275175294,
+        "dec_deg": 56.5370908444,
+        "separation_arcsec": 1194.7084112074813
+      },
+      {
+        "hip_number": null,
+        "ra_deg": 11.3211892753,
+        "dec_deg": 55.2213558414,
+        "separation_arcsec": 4637.579425264074
+      },
+      {
+        "hip_number": null,
+        "ra_deg": 12.2914523556,
+        "dec_deg": 57.8110064415,
+        "separation_arcsec": 5746.350747489934
+      },
+      {
+        "hip_number": null,
+        "ra_deg": 8.2942209027,
+        "dec_deg": 54.894691012,
+        "separation_arcsec": 7483.9963495399825
+      },
+      {
+        "hip_number": null,
+        "ra_deg": 10.6297672616,
+        "dec_deg": 58.7533473991,
+        "separation_arcsec": 8244.545572059475
+      },
+      {
+        "hip_number": null,
+        "ra_deg": 14.0546428098,
+        "dec_deg": 57.9964383437,
+        "separation_arcsec": 8532.046068508766
+      },
+      {
+        "hip_number": null,
+        "ra_deg": 9.0349199618,
+        "dec_deg": 54.1684387938,
+        "separation_arcsec": 8949.331888823333
+      },
+      {
+        "hip_number": null,
+        "ra_deg": 7.9436868566,
+        "dec_deg": 54.5221781323,
+        "separation_arcsec": 8985.615249003002
+      },
+      {
+        "hip_number": null,
+        "ra_deg": 9.2430777212,
+        "dec_deg": 53.896841039,
+        "separation_arcsec": 9721.920445483096
+      },
+      {
+        "hip_number": null,
+        "ra_deg": 13.7501851016,
+        "dec_deg": 58.9723938016,
+        "separation_arcsec": 10751.637020156712
+      }
+    ],
+    "sources_within_thresholds": {
+      "within_30_arcsec": 0,
+      "within_60_arcsec": 0,
+      "within_120_arcsec": 0,
+      "within_300_arcsec": 0,
+      "within_600_arcsec": 0
+    }
+  },
+  "astrometry_net_match_table": {
+    "exists": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "data_shape": null
+      },
+      {
+        "index": 1,
+        "name": "",
+        "data_shape": [
+          1
+        ],
+        "columns": [
+          "QUAD",
+          "DIMQUADS",
+          "STARS",
+          "FIELDOBJS",
+          "IDS",
+          "CODEERR",
+          "QUADPDI",
+          "QUADPIX",
+          "QUADXYZ",
+          "CENTERXYZ",
+          "RADIUS",
+          "NMATCH",
+          "NDISTRACT",
+          "NCONFLICT",
+          "NFIELD",
+          "NINDEX",
+          "NAGREE",
+          "CRVAL",
+          "CRPIX",
+          "CD",
+          "WCS_VALID",
+          "FIELDNUM",
+          "FIELDID",
+          "INDEXID",
+          "HEALPIX",
+          "HPNSIDE",
+          "FIELDNAME",
+          "PARITY",
+          "QTRIED",
+          "QMATCHED",
+          "QSCALEOK",
+          "QPEERS",
+          "NVERIFIED",
+          "TIMEUSED",
+          "LOGODDS",
+          "WORSTLOGODDS"
+        ]
+      }
+    ],
+    "rows": 1,
+    "table_columns": [
+      "QUAD",
+      "DIMQUADS",
+      "STARS",
+      "FIELDOBJS",
+      "IDS",
+      "CODEERR",
+      "QUADPDI",
+      "QUADPIX",
+      "QUADXYZ",
+      "CENTERXYZ",
+      "RADIUS",
+      "NMATCH",
+      "NDISTRACT",
+      "NCONFLICT",
+      "NFIELD",
+      "NINDEX",
+      "NAGREE",
+      "CRVAL",
+      "CRPIX",
+      "CD",
+      "WCS_VALID",
+      "FIELDNUM",
+      "FIELDID",
+      "INDEXID",
+      "HEALPIX",
+      "HPNSIDE",
+      "FIELDNAME",
+      "PARITY",
+      "QTRIED",
+      "QMATCHED",
+      "QSCALEOK",
+      "QPEERS",
+      "NVERIFIED",
+      "TIMEUSED",
+      "LOGODDS",
+      "WORSTLOGODDS"
+    ],
+    "sample_rows": [
+      {
+        "QUAD": "1609",
+        "DIMQUADS": "3",
+        "STARS": "[2708 2691 2703    0    0]",
+        "FIELDOBJS": "[ 3 10 18  0  0]",
+        "IDS": "[0 0 0 0 0]",
+        "CODEERR": "1.3982224e-05",
+        "QUADPDI": "[371.30761719 507.50119019 204.18907166 414.48260498 326.41046143\n 500.17877197   0.           0.           0.           0.        ]",
+        "QUADPIX": "[371.30761719 507.50119019 204.18907166 414.48260498 326.41046143\n 500.17877197   0.           0.           0.           0.        ]",
+        "QUADXYZ": "[0.43847019 0.41703076 0.79613393 0.38942394 0.21230923 0.89625542\n 0.41224087 0.38006057 0.82801656 0.         0.         0.\n 0.         0.         0.        ]",
+        "CENTERXYZ": "[0.54376688 0.10526375 0.83260863]",
+        "RADIUS": "20.928759242520545",
+        "NMATCH": "39",
+        "NDISTRACT": "37",
+        "NCONFLICT": "0",
+        "NFIELD": "125",
+        "NINDEX": "76",
+        "NAGREE": "0",
+        "CRVAL": "[39.23096876 57.59470278]",
+        "CRPIX": "[300.63571676 474.05418905]",
+        "CD": "[ 0.0050332   0.0725094  -0.0698272   0.00247814]",
+        "WCS_VALID": "True",
+        "FIELDNUM": "1",
+        "FIELDID": "0",
+        "INDEXID": "4117",
+        "HEALPIX": "-1",
+        "HPNSIDE": "0",
+        "FIELDNAME": "",
+        "PARITY": "True",
+        "QTRIED": "620",
+        "QMATCHED": "2325",
+        "QSCALEOK": "1937",
+        "QPEERS": "1",
+        "NVERIFIED": "1936",
+        "TIMEUSED": "0.030211",
+        "LOGODDS": "127.31471",
+        "WORSTLOGODDS": "-5.5451775"
+      }
+    ]
+  },
+  "astrometry_net_correspondence_table": {
+    "exists": true,
+    "hdus": [
+      {
+        "index": 0,
+        "name": "PRIMARY",
+        "data_shape": null
+      },
+      {
+        "index": 1,
+        "name": "",
+        "data_shape": [
+          41
+        ],
+        "columns": [
+          "field_x",
+          "field_y",
+          "field_ra",
+          "field_dec",
+          "index_x",
+          "index_y",
+          "index_ra",
+          "index_dec",
+          "index_id",
+          "field_id",
+          "match_weight",
+          "FLUX",
+          "BACKGROUND"
+        ]
+      }
+    ],
+    "rows": 41,
+    "table_columns": [
+      "field_x",
+      "field_y",
+      "field_ra",
+      "field_dec",
+      "index_x",
+      "index_y",
+      "index_ra",
+      "index_dec",
+      "index_id",
+      "field_id",
+      "match_weight",
+      "FLUX",
+      "BACKGROUND"
+    ],
+    "sample_rows": [
+      {
+        "field_x": "214.20208740234375",
+        "field_y": "310.0486145019531",
+        "field_ra": "14.328925313077558",
+        "field_dec": "60.73377011256232",
+        "index_x": "213.90986043931258",
+        "index_y": "308.9817553349875",
+        "index_ra": "14.177088097009932",
+        "index_dec": "60.716749654942106",
+        "index_id": "0",
+        "field_id": "0",
+        "match_weight": "0.9945934965760852",
+        "FLUX": "147.87933",
+        "BACKGROUND": "21.120667"
+      },
+      {
+        "field_x": "239.68673706054688",
+        "field_y": "354.29193115234375",
+        "field_ra": "21.303480027149465",
+        "field_dec": "60.25327653893686",
+        "index_x": "240.25321716739865",
+        "index_y": "355.30076940478637",
+        "index_ra": "21.452594178979773",
+        "index_dec": "60.235397772756734",
+        "index_id": "7",
+        "field_id": "1",
+        "match_weight": "0.9954396446596486",
+        "FLUX": "122.38313",
+        "BACKGROUND": "20.616867"
+      },
+      {
+        "field_x": "409.9980163574219",
+        "field_y": "331.2491455078125",
+        "field_ra": "24.326810387674698",
+        "field_dec": "48.59566139589256",
+        "index_x": "410.06296280335386",
+        "index_y": "333.0090537066793",
+        "index_ra": "24.497937795288795",
+        "index_dec": "48.62847361658811",
+        "index_id": "8",
+        "field_id": "2",
+        "match_weight": "0.9879882510134315",
+        "FLUX": "66.70218",
+        "BACKGROUND": "24.297821"
+      }
+    ]
+  },
+  "limitations": [
+    "Catalogue proximity at one candidate position does not independently validate the entire WCS.",
+    "The archive exposure timestamp remains unverified.",
+    "Earlier tile WCS solutions were inconsistent.",
+    "The .match and .corr data must be checked for source-level residuals."
+  ]
+}

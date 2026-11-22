@@ -1,0 +1,194 @@
+{
+  "phase": 100,
+  "title": "Track coverage and robust PSF quality audit",
+  "input_counts": {
+    "phase97_position_rows": 9508,
+    "phase97_unique_tracks": 1349,
+    "phase98_motion_tracks": 1349,
+    "phase99_photometry_tracks": 1076,
+    "phase99_frame_measurements": 9429
+  },
+  "track_coverage_by_motion_class": {
+    "exact_pixel_stationary": {
+      "phase98_tracks": 567,
+      "phase99_tracks_measured": 294,
+      "phase99_tracks_missing": 273,
+      "coverage_fraction": 0.5185185185185185,
+      "missing_track_observation_counts": {
+        "1": 273
+      }
+    },
+    "higher_displacement": {
+      "phase98_tracks": 315,
+      "phase99_tracks_measured": 315,
+      "phase99_tracks_missing": 0,
+      "coverage_fraction": 1.0,
+      "missing_track_observation_counts": {}
+    },
+    "low_displacement": {
+      "phase98_tracks": 290,
+      "phase99_tracks_measured": 290,
+      "phase99_tracks_missing": 0,
+      "coverage_fraction": 1.0,
+      "missing_track_observation_counts": {}
+    },
+    "near_stationary": {
+      "phase98_tracks": 177,
+      "phase99_tracks_measured": 177,
+      "phase99_tracks_missing": 0,
+      "coverage_fraction": 1.0,
+      "missing_track_observation_counts": {}
+    }
+  },
+  "raw_track_median_ellipticity_by_class": {
+    "higher_displacement": {
+      "count": 315,
+      "median": 1.2244676229734601,
+      "p10": 1.1164259032206219,
+      "p90": 1.457258688070318,
+      "minimum": 1.0337369309686153,
+      "maximum": 17678.369471291993
+    },
+    "exact_pixel_stationary": {
+      "count": 563,
+      "median": 1.280375969889198,
+      "p10": 1.0874948208304966,
+      "p90": 1.8519165085143812,
+      "minimum": 1.0,
+      "maximum": 25819.888974716112
+    },
+    "low_displacement": {
+      "count": 290,
+      "median": 1.2563083098879222,
+      "p10": 1.0971877149807572,
+      "p90": 1.701949824017132,
+      "minimum": 1.0164230601704525,
+      "maximum": 3.541932918897957
+    },
+    "near_stationary": {
+      "count": 177,
+      "median": 1.3147738551939752,
+      "p10": 1.138770307503957,
+      "p90": 1.6470742902009594,
+      "minimum": 1.0303919686228464,
+      "maximum": 4.53804194595854
+    }
+  },
+  "ellipticity_quality_buckets": {
+    "higher_displacement": {
+      "1_to_2": 309,
+      "2_to_5": 4,
+      "above_5": 2
+    },
+    "exact_pixel_stationary": {
+      "1_to_2": 529,
+      "2_to_5": 33,
+      "above_5": 1
+    },
+    "low_displacement": {
+      "1_to_2": 276,
+      "2_to_5": 14
+    },
+    "near_stationary": {
+      "1_to_2": 172,
+      "2_to_5": 5
+    }
+  },
+  "quality_filtered_photometry_by_class": {
+    "exact_pixel_stationary": {
+      "quality_accepted_tracks": 293,
+      "rejected": {
+        "ellipticity_outside_1_to_5": 1
+      },
+      "accepted_median_ellipticity": {
+        "count": 293,
+        "median": 1.3754417875563985,
+        "p10": 1.1296467628122013,
+        "p90": 1.8867907417985657,
+        "minimum": 1.0176065477409424,
+        "maximum": 3.0518794008176306
+      },
+      "accepted_flux_cv": {
+        "count": 293,
+        "median": 0.06282840241856212,
+        "p10": 0.0,
+        "p90": 0.5057069351444357,
+        "minimum": 0.0,
+        "maximum": 1.6678741818500962
+      }
+    },
+    "higher_displacement": {
+      "quality_accepted_tracks": 313,
+      "rejected": {
+        "ellipticity_outside_1_to_5": 2
+      },
+      "accepted_median_ellipticity": {
+        "count": 313,
+        "median": 1.2244017321752343,
+        "p10": 1.1164259032206219,
+        "p90": 1.429365609181411,
+        "minimum": 1.0337369309686153,
+        "maximum": 2.9941276016851956
+      },
+      "accepted_flux_cv": {
+        "count": 313,
+        "median": 0.3396203420702339,
+        "p10": 0.16755511378215096,
+        "p90": 0.5813249734974691,
+        "minimum": 0.011401064969602217,
+        "maximum": 0.9720007234350049
+      }
+    },
+    "low_displacement": {
+      "quality_accepted_tracks": 290,
+      "rejected": {},
+      "accepted_median_ellipticity": {
+        "count": 290,
+        "median": 1.2563083098879222,
+        "p10": 1.0971877149807572,
+        "p90": 1.701949824017132,
+        "minimum": 1.0164230601704525,
+        "maximum": 3.541932918897957
+      },
+      "accepted_flux_cv": {
+        "count": 290,
+        "median": 0.2686667572886434,
+        "p10": 0.09952283747270382,
+        "p90": 0.5060969971977376,
+        "minimum": 0.0079155672823219,
+        "maximum": 0.9622641509433962
+      }
+    },
+    "near_stationary": {
+      "quality_accepted_tracks": 177,
+      "rejected": {},
+      "accepted_median_ellipticity": {
+        "count": 177,
+        "median": 1.3147738551939752,
+        "p10": 1.138770307503957,
+        "p90": 1.6470742902009594,
+        "minimum": 1.0303919686228464,
+        "maximum": 4.53804194595854
+      },
+      "accepted_flux_cv": {
+        "count": 177,
+        "median": 0.2433114898035693,
+        "p10": 0.09860416029530092,
+        "p90": 0.5586034912718204,
+        "minimum": 0.0,
+        "maximum": 1.104130127420556
+      }
+    }
+  },
+  "filter_definition": {
+    "accepted_median_ellipticity": "1.0 <= median ellipticity <= 5.0",
+    "flux_cv": "retained as measured; not used as an acceptance threshold"
+  },
+  "limitations": [
+    "The Phase 98 motion classes are algorithmic labels, not source identities.",
+    "Ellipticity is a second-moment approximation, not a fitted optical PSF.",
+    "The filter removes degenerate shapes but does not establish that remaining tracks are stars.",
+    "Phase 99 coverage requires at least two valid photometric observations.",
+    "The archive exposure time remains unverified."
+  ]
+}

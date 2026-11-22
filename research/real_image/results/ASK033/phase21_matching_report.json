@@ -1,0 +1,21 @@
+{
+  "phase": 21,
+  "image": "research/real_image/data/network/ASK033/ASK033_live_original.jpg",
+  "image_width": 1920,
+  "image_height": 1440,
+  "candidate_count": 406,
+  "catalogue_count_after_magnitude_filter": 555,
+  "projection": "Provisional zenith-centred equidistant fisheye",
+  "assumed_optical_centre_px": [
+    960.0,
+    720.0
+  ],
+  "estimated_roll_deg": 290.7708743469557,
+  "estimated_focal_scale_px_per_rad": 433.24798723266287,
+  "estimated_full_fov_deg": 190.43578950207842,
+  "matching_threshold_px": 8.0,
+  "provisional_unique_matches": 40,
+  "median_residual_px": 5.822752727873318,
+  "mean_residual_px": 5.304828846471066,
+  "warning": "Exploratory correspondences only. Optical centre, camera tilt, distortion, masks and false matches have not yet been independently solved."
+}

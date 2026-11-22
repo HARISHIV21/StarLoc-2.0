@@ -1,0 +1,78 @@
+{
+  "phase": 38,
+  "model": "Equidistant fisheye with k1 and k2 radial terms",
+  "input": "research/real_image/results/ASK033/phase37_validation/phase37_all_matches.csv",
+  "image_dimensions": [
+    1920,
+    1440
+  ],
+  "correspondences": 233,
+  "training_correspondences": 186,
+  "test_correspondences": 47,
+  "sections": [
+    "R1C2",
+    "R2C1",
+    "R2C2",
+    "R3C1",
+    "R3C2"
+  ],
+  "optimizer_success": true,
+  "optimizer_message": "`ftol` termination condition is satisfied.",
+  "parameters": {
+    "optical_centre_x_px": 940.8792956389896,
+    "optical_centre_y_px": 755.5388124993078,
+    "focal_scale_px_per_rad": 822.9708649090667,
+    "radial_k1": -0.03333727005625633,
+    "radial_k2": 0.0008981455512420184,
+    "optical_axis_ra_deg": 2.127537171487967,
+    "optical_axis_dec_deg": 50.34240609070423,
+    "rotation_matrix_world_to_camera": [
+      [
+        0.7571113563263575,
+        -0.20301852636807335,
+        -0.6209395075794417
+      ],
+      [
+        0.14158671302936818,
+        0.9788882188261971,
+        -0.14741457776222447
+      ],
+      [
+        0.637758258915714,
+        0.023692467043587462,
+        0.7698721128799157
+      ]
+    ]
+  },
+  "training_metrics": {
+    "count": 186,
+    "front_facing": 186,
+    "predicted_inside_image": 186,
+    "median_error_px": 0.6154735941117571,
+    "mean_error_px": 1.3194129130207353,
+    "rmse_px": 3.9903364536347934,
+    "p90_error_px": 1.588541914805273,
+    "max_error_px": 30.018661247693558
+  },
+  "held_out_test_metrics": {
+    "count": 47,
+    "front_facing": 47,
+    "predicted_inside_image": 47,
+    "median_error_px": 0.6084906499370504,
+    "mean_error_px": 0.7949800561551491,
+    "rmse_px": 0.9863467398848935,
+    "p90_error_px": 1.5366254948885925,
+    "max_error_px": 3.5129423526338694
+  },
+  "all_data_metrics": {
+    "count": 233,
+    "front_facing": 233,
+    "predicted_inside_image": 233,
+    "median_error_px": 0.6136537018680649,
+    "mean_error_px": 1.2136260277302524,
+    "rmse_px": 3.5926506809946033,
+    "p90_error_px": 1.6128712281777857,
+    "max_error_px": 30.018661247693558
+  },
+  "interpretation": "Exploratory global fisheye fit. The held-out test residuals must be assessed before accepting this as a camera calibration. Input correspondences inherit local WCS matching uncertainty."
+}

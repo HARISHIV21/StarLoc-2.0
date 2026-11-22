@@ -1,0 +1,94 @@
+{
+  "phase": 56,
+  "title": "Strict-subset global fisheye calibration",
+  "input": "research/real_image/results/ASK033/phase49_cross_section_consistency/phase49_cross_section_point_comparison.csv",
+  "selection": {
+    "criterion": "local_wcs_candidate_error_px <= 1.0",
+    "total_original": 233,
+    "strict_count": 74,
+    "sections": [
+      "R1C2",
+      "R2C1",
+      "R2C2",
+      "R3C1",
+      "R3C2"
+    ],
+    "training_count": 59,
+    "test_count": 15
+  },
+  "optimizer_success": true,
+  "optimizer_message": "`ftol` termination condition is satisfied.",
+  "parameters": {
+    "optical_centre_x_px": 941.0883664946765,
+    "optical_centre_y_px": 755.9871390021009,
+    "focal_scale_px_per_rad": 823.0071766873924,
+    "radial_k1": -0.03258448886194691,
+    "radial_k2": -0.0012072371451769682,
+    "optical_axis_ra_deg": 2.181836661798281,
+    "optical_axis_dec_deg": 50.30771236465781
+  },
+  "training_metrics": {
+    "count": 59,
+    "median_px": 0.5814243968702981,
+    "mean_px": 0.7339799036334593,
+    "rmse_px": 1.0658811236179007,
+    "p90_px": 1.1800916818731726,
+    "max_px": 5.9636554722646515,
+    "within_1px": 49,
+    "within_2px": 58,
+    "within_3px": 58,
+    "within_5px": 58
+  },
+  "held_out_test_metrics": {
+    "count": 15,
+    "median_px": 0.7969571334929929,
+    "mean_px": 0.7877437607170165,
+    "rmse_px": 0.9381143278333259,
+    "p90_px": 1.1591182777183346,
+    "max_px": 2.206737668491011,
+    "within_1px": 10,
+    "within_2px": 14,
+    "within_3px": 15,
+    "within_5px": 15
+  },
+  "all_data_metrics": {
+    "count": 74,
+    "median_px": 0.5849505893700928,
+    "mean_px": 0.7448779827720181,
+    "rmse_px": 1.0412500867441328,
+    "p90_px": 1.164030461169999,
+    "max_px": 5.9636554722646515,
+    "within_1px": 59,
+    "within_2px": 72,
+    "within_3px": 73,
+    "within_5px": 73
+  },
+  "phase38_comparison": {
+    "phase38": {
+      "optical_centre_x_px": 940.8792956389896,
+      "optical_centre_y_px": 755.5388124993078,
+      "focal_scale_px_per_rad": 822.9708649090667,
+      "radial_k1": -0.03333727005625633,
+      "radial_k2": 0.0008981455512420184,
+      "test_median_px": 0.6084906499370504,
+      "test_rmse_px": 0.9863467398848935
+    },
+    "phase56": {
+      "optical_centre_x_px": 941.0883664946765,
+      "optical_centre_y_px": 755.9871390021009,
+      "focal_scale_px_per_rad": 823.0071766873924,
+      "radial_k1": -0.03258448886194691,
+      "radial_k2": -0.0012072371451769682,
+      "optical_axis_ra_deg": 2.181836661798281,
+      "optical_axis_dec_deg": 50.30771236465781,
+      "test_median_px": 0.7969571334929929,
+      "test_rmse_px": 0.9381143278333259
+    }
+  },
+  "limitations": [
+    "The strict subset is selected using residuals from local WCS solutions.",
+    "Local WCS catalogue associations are not independent ground truth.",
+    "The held-out split is internal to one image and one camera.",
+    "This is an exploratory model, not a validated production calibration."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "image_dimensions": [
+    1920,
+    1440
+  ],
+  "raw_local_maxima": 558,
+  "refined_candidates": 406,
+  "section_counts": {
+    "R1C1": 35,
+    "R1C2": 89,
+    "R1C3": 18,
+    "R2C1": 65,
+    "R2C2": 89,
+    "R2C3": 1,
+    "R3C1": 50,
+    "R3C2": 51,
+    "R3C3": 8
+  },
+  "filters": [
+    "camera overlay exclusion",
+    "Moon and glare mask",
+    "fisheye edge exclusion",
+    "local SNR threshold",
+    "non-maximum suppression",
+    "compactness and elongation filtering",
+    "saturation rejection"
+  ],
+  "warning": "Remaining candidates still require astronomical catalogue validation."
+}

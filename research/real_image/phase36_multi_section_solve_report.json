@@ -1,0 +1,75 @@
+{
+  "phase": 36,
+  "method": "Independent Astrometry.net solving of 640x480 image sections",
+  "sections_tested": 5,
+  "sections_solved": 4,
+  "results": [
+    {
+      "section": "R1C2",
+      "candidate_count": 89,
+      "median_snr": 8.098,
+      "return_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.31,
+      "solved": true,
+      "wcs": "research/real_image/results/ASK033/phase36_section_solutions/R1C2_custom.wcs",
+      "log": "research/real_image/results/ASK033/phase36_section_solutions/R1C2_custom_solver.log",
+      "ra_center_deg": 325.826591145,
+      "dec_center_deg": 45.6715547271,
+      "pixel_scale_deg": 0.06824731111316143
+    },
+    {
+      "section": "R1C3",
+      "candidate_count": 18,
+      "median_snr": 7.622,
+      "return_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 1.61,
+      "solved": false,
+      "wcs": null,
+      "log": "research/real_image/results/ASK033/phase36_section_solutions/R1C3_custom_solver.log"
+    },
+    {
+      "section": "R2C1",
+      "candidate_count": 65,
+      "median_snr": 8.285,
+      "return_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 11.51,
+      "solved": true,
+      "wcs": "research/real_image/results/ASK033/phase36_section_solutions/R2C1_custom.wcs",
+      "log": "research/real_image/results/ASK033/phase36_section_solutions/R2C1_custom_solver.log",
+      "ra_center_deg": 326.8080464,
+      "dec_center_deg": 75.6545911725,
+      "pixel_scale_deg": 0.06997771190240872
+    },
+    {
+      "section": "R3C1",
+      "candidate_count": 50,
+      "median_snr": 7.423,
+      "return_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 2.63,
+      "solved": true,
+      "wcs": "research/real_image/results/ASK033/phase36_section_solutions/R3C1_custom.wcs",
+      "log": "research/real_image/results/ASK033/phase36_section_solutions/R3C1_custom_solver.log",
+      "ra_center_deg": 73.5107508288,
+      "dec_center_deg": 61.2490380079,
+      "pixel_scale_deg": 0.06969366162353997
+    },
+    {
+      "section": "R3C2",
+      "candidate_count": 51,
+      "median_snr": 11.23,
+      "return_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.19,
+      "solved": true,
+      "wcs": "research/real_image/results/ASK033/phase36_section_solutions/R3C2_custom.wcs",
+      "log": "research/real_image/results/ASK033/phase36_section_solutions/R3C2_custom_solver.log",
+      "ra_center_deg": 38.9379219233,
+      "dec_center_deg": 50.9060493247,
+      "pixel_scale_deg": 0.06978555147570452
+    }
+  ]
+}

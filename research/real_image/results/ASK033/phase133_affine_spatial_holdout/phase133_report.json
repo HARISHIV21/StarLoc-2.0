@@ -1,0 +1,140 @@
+{
+  "phase": "133_affine_spatial_holdout",
+  "method": "Spatially held-out prediction using mutual-NN centroid matches",
+  "pairs_analysed": 11,
+  "results": [
+    {
+      "pair": "518->519",
+      "robust_matches": 21,
+      "train_points": 15,
+      "test_points": 6,
+      "translation_test_median_px": 0.7868698009955462,
+      "affine_test_median_px": 0.6208399775922524,
+      "translation_test_rms_px": 0.9564636279979003,
+      "affine_test_rms_px": 0.7110267958204239,
+      "affine_improvement_median_px": 0.16602982340329375,
+      "affine_improvement_rms_px": 0.24543683217747636
+    },
+    {
+      "pair": "519->520",
+      "robust_matches": 59,
+      "train_points": 48,
+      "test_points": 11,
+      "translation_test_median_px": 0.8274788681666471,
+      "affine_test_median_px": 0.4076280917449345,
+      "translation_test_rms_px": 0.8608278371560419,
+      "affine_test_rms_px": 0.6572058437509485,
+      "affine_improvement_median_px": 0.4198507764217126,
+      "affine_improvement_rms_px": 0.20362199340509346
+    },
+    {
+      "pair": "520->521",
+      "robust_matches": 93,
+      "train_points": 66,
+      "test_points": 27,
+      "translation_test_median_px": 1.2069808933361643,
+      "affine_test_median_px": 0.5070633497140795,
+      "translation_test_rms_px": 1.1927333809791874,
+      "affine_test_rms_px": 0.5761340594449613,
+      "affine_improvement_median_px": 0.6999175436220848,
+      "affine_improvement_rms_px": 0.616599321534226
+    },
+    {
+      "pair": "521->522",
+      "robust_matches": 75,
+      "train_points": 51,
+      "test_points": 24,
+      "translation_test_median_px": 0.9115242341104375,
+      "affine_test_median_px": 0.45178246525593163,
+      "translation_test_rms_px": 0.9578417153915451,
+      "affine_test_rms_px": 0.5852417639862553,
+      "affine_improvement_median_px": 0.45974176885450585,
+      "affine_improvement_rms_px": 0.3725999514052898
+    },
+    {
+      "pair": "522->523",
+      "robust_matches": 43,
+      "train_points": 20,
+      "test_points": 23,
+      "translation_test_median_px": 1.1169764886885851,
+      "affine_test_median_px": 0.7573774784693198,
+      "translation_test_rms_px": 1.0840306243506481,
+      "affine_test_rms_px": 0.8073203453952402,
+      "affine_improvement_median_px": 0.3595990102192653,
+      "affine_improvement_rms_px": 0.2767102789554079
+    },
+    {
+      "pair": "523->524",
+      "robust_matches": 30,
+      "train_points": 20,
+      "test_points": 10,
+      "translation_test_median_px": 0.7426129847768901,
+      "affine_test_median_px": 0.7264711033100504,
+      "translation_test_rms_px": 0.8840184734172654,
+      "affine_test_rms_px": 0.8002418651663772,
+      "affine_improvement_median_px": 0.016141881466839703,
+      "affine_improvement_rms_px": 0.08377660825088817
+    },
+    {
+      "pair": "524->525",
+      "robust_matches": 48,
+      "train_points": 39,
+      "test_points": 9,
+      "translation_test_median_px": 1.2605935474694103,
+      "affine_test_median_px": 0.6287071298095719,
+      "translation_test_rms_px": 1.110619153970508,
+      "affine_test_rms_px": 0.6990589405678316,
+      "affine_improvement_median_px": 0.6318864176598384,
+      "affine_improvement_rms_px": 0.41156021340267634
+    },
+    {
+      "pair": "525->526",
+      "robust_matches": 94,
+      "train_points": 73,
+      "test_points": 21,
+      "translation_test_median_px": 1.0168882614333956,
+      "affine_test_median_px": 0.48280683617364617,
+      "translation_test_rms_px": 1.0112383280616686,
+      "affine_test_rms_px": 0.7237209422560651,
+      "affine_improvement_median_px": 0.5340814252597494,
+      "affine_improvement_rms_px": 0.2875173858056035
+    },
+    {
+      "pair": "526->527",
+      "robust_matches": 100,
+      "train_points": 76,
+      "test_points": 24,
+      "translation_test_median_px": 0.7863549203990428,
+      "affine_test_median_px": 0.4880828886569002,
+      "translation_test_rms_px": 0.9755507584564219,
+      "affine_test_rms_px": 0.7887250292256139,
+      "affine_improvement_median_px": 0.29827203174214256,
+      "affine_improvement_rms_px": 0.18682572923080798
+    },
+    {
+      "pair": "527->528",
+      "robust_matches": 99,
+      "train_points": 74,
+      "test_points": 25,
+      "translation_test_median_px": 1.1559884665598885,
+      "affine_test_median_px": 0.6373736916599939,
+      "translation_test_rms_px": 1.0685339452137856,
+      "affine_test_rms_px": 0.6810583547164417,
+      "affine_improvement_median_px": 0.5186147748998946,
+      "affine_improvement_rms_px": 0.3874755904973439
+    },
+    {
+      "pair": "528->529",
+      "robust_matches": 87,
+      "train_points": 67,
+      "test_points": 20,
+      "translation_test_median_px": 0.9007926252921414,
+      "affine_test_median_px": 0.548856675535333,
+      "translation_test_rms_px": 1.0553145612265122,
+      "affine_test_rms_px": 0.6925814793922473,
+      "affine_improvement_median_px": 0.3519359497568084,
+      "affine_improvement_rms_px": 0.3627330818342649
+    }
+  ],
+  "interpretation": "A lower held-out affine error supports a spatially varying affine component. Similar or higher affine error means the apparent in-sample improvement may not generalise. This does not prove physical camera rotation."
+}

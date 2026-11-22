@@ -1,0 +1,40 @@
+{
+  "phase": 22,
+  "model": "Equidistant fisheye with full 3D camera rotation",
+  "optical_centre_fixed_px": [
+    960.0,
+    720.0
+  ],
+  "rotation_vector_rad": [
+    -1.5712199266641083,
+    -2.4523289719516255,
+    0.22466329640872912
+  ],
+  "rotation_matrix_world_to_camera": [
+    [
+      -0.4041786946119795,
+      0.8753597255222352,
+      -0.26530159018632643
+    ],
+    [
+      0.9089937406846638,
+      0.4166908239685323,
+      -0.009956737243089805
+    ],
+    [
+      0.10183301143469414,
+      -0.24518178593456502,
+      -0.9641140646355485
+    ]
+  ],
+  "focal_scale_px_per_rad": 357.44746351793236,
+  "catalogue_stars_tested": 555,
+  "image_candidates": 406,
+  "unique_provisional_matches_within_6px": 3,
+  "median_residual_px": 3.2355550973570426,
+  "mean_residual_px": 3.3973545351826027,
+  "optimizer_objective": 159.24651287027447,
+  "optimizer_success": false,
+  "optimizer_message": "Maximum number of iterations has been exceeded.",
+  "warning": "Exploratory fit only. Optical centre, lens distortion, masks and correspondence reliability still require validation."
+}

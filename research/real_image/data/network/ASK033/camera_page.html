@@ -1,0 +1,2500 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My AllSky Camera (ASK033) – AllskyKamera</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+ <!-- Leaflet wie auf der Startseite -->
+  <link rel="stylesheet"href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+</head>
+<body class="bg-dark text-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom mb-4">
+  <div class="container">
+    <a class="navbar-brand" href="/index.php?lang=en">AllSkyKamera Network</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <!-- Dropdown: Netzwerk -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navNetwork" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Network          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navNetwork">
+            <li><a class="dropdown-item" href="/index.php?lang=en">Home</a></li>
+            <li><a class="dropdown-item" href="/overview.php?lang=en">Camera overview</a></li>
+            <li><a class="dropdown-item" href="/highlights.php?lang=en">Highlights</a></li>
+            <li><a class="dropdown-item" href="/news.php?lang=en">News</a></li>
+            <li><a class="dropdown-item" href="/masks.php?lang=en">Masks</a></li>
+            <li><a class="dropdown-item" href="/events.php?lang=en">Events</a></li>
+            <li><a class="dropdown-item" href="/network_status.php?lang=en">Network status</a></li>
+          </ul>
+        </li>
+
+        <!-- Dropdown: Daten & Himmel -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navSkyData" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            Data &amp; Sky          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navSkyData">
+            <li><a class="dropdown-item" href="/dataViewer.php?lang=en">Data</a></li>
+            <li><a class="dropdown-item" href="/lichtverschmutzung.php?lang=en">Light Pollution</a></li>
+            <li><a class="dropdown-item" href="/aurora.php?lang=en">Aurora Alerts</a></li>
+            <li><a class="dropdown-item" href="/api-doc.php?lang=en">API documentation</a></li>
+          </ul>
+        </li>
+
+        <!-- Dropdown: Mitmachen -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navJoin" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            Join          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navJoin">
+            <li><a class="dropdown-item" href="/machmit.php?lang=en">Join us</a></li>
+            <li><a class="dropdown-item" href="/awards.php?lang=en">Community / Awards</a></li>
+            <li><a class="dropdown-item" href="/mint.php?lang=en">STEM &amp; Education</a></li>
+          </ul>
+        </li>
+
+        <!-- Dropdown: Unterstützen -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navSupport" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            Donation          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navSupport">
+            <li><a class="dropdown-item" href="/donation.php?lang=en">Donation</a></li>
+            <li><a class="dropdown-item" href="/content_license.php?lang=en">Content / License</a></li>
+          </ul>
+        </li>
+
+        <!-- Dropdown: Kamerabau (aufgeteilt) -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navBuild" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            Build a Camera          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navBuild">
+            <li><a class="dropdown-item" href="/kamerabau.php?lang=en">Overview</a></li>
+            <li><a class="dropdown-item" href="/kamerabau_gehaeuse.php?lang=en">Housing & Dome</a></li>
+            <li><a class="dropdown-item" href="/kamerabau_hardware.php?lang=en">Hardware</a></li>
+            <li><a class="dropdown-item" href="/kamerabau_installation.php?lang=en">Installation</a></li>
+            <li><a class="dropdown-item" href="/kamerabau_sensorik.php?lang=en">Sensors</a></li>
+          </ul>
+        </li>
+
+        <!-- Dropdown: Tools -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navTools" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Tools          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navTools">
+            <li>
+              <a class="dropdown-item" href="/tools_camera_simulator.php?lang=en">
+                Camera / Lens Simulator              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="/tools_tj_stats.php?lang=en">
+                TJ settings              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="/tools_indi_stats.php?lang=en">
+                INDI settings              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Dropdown: Über mich -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navAbout" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            About me          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navAbout">
+            <li><a class="dropdown-item" href="/uebermich.php?lang=en">About me</a></li>
+            <li><a class="dropdown-item" href="/faq.php?lang=en">FAQ</a></li>
+            <li><a class="dropdown-item" href="/docs/docs.php?lang=en">Documentation</a></li>
+          </ul>
+        </li>
+
+        <!-- Dropdown: Portale -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navPortals" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Portals          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navPortals">
+            <li>
+              <a class="dropdown-item" href="/index.php?lang=en">
+                Network              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item"
+                href="https://data.allskykamera.space?lang=en"
+                target="_blank" rel="noopener noreferrer">
+                Data Portal              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item"
+                href="https://schule.allskykamera.space?lang=en"
+                target="_blank" rel="noopener noreferrer">
+                AllSkyKamera EDU              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item"
+                href="https://blog.allskykamera.space?lang=en"
+                target="_blank" rel="noopener noreferrer">
+                Blog              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item"
+                href="https://shop.allskykamera.space?lang=en"
+                target="_blank" rel="noopener noreferrer">
+                Shop              </a>
+            </li>
+
+          </ul>
+        </li>
+
+        <!-- User-Account / Login -->
+        
+                  <li class="nav-item"><a class="nav-link" href="/login.php?lang=en">Login</a></li>
+        
+        <!-- Sprachwahl -->
+        <li class="nav-item ms-3 d-flex align-items-center">
+          <div class="btn-group btn-group-sm" role="group" aria-label="Language switch">
+            <a class="btn btn-outline-light "
+               href="/kamera.php?k=ASK033&amp;lang=de">DE</a>
+            <a class="btn btn-outline-light active"
+               href="/kamera.php?k=ASK033&amp;lang=en">EN</a>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Consent Banner & Modal -->
+<div id="cookie-banner" class="position-fixed bottom-0 start-50 translate-middle-x mb-3 w-100" style="max-width: 720px; z-index: 1080; display:none;">
+  <div class="card bg-secondary text-white shadow">
+    <div class="card-body d-flex flex-column flex-md-row align-items-md-center gap-3">
+      <div class="flex-fill">
+        Wir verwenden optionale Cookies für <strong>Statistiken (Google Analytics)</strong> – nur mit deiner Einwilligung.
+        <a href="/datenschutz.php" class="text-light text-decoration-underline">Mehr erfahren</a>
+      </div>
+      <div class="d-flex gap-2">
+        <button class="btn btn-outline-light btn-sm" data-cookie-action="settings">Einstellungen</button>
+        <button class="btn btn-light btn-sm" data-cookie-action="deny">Ablehnen</button>
+        <button class="btn btn-primary btn-sm" data-cookie-action="accept">Akzeptieren</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Einstellungen als Modal (Bootstrap 5) -->
+<div class="modal fade" id="cookieModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-secondary text-white">
+      <div class="modal-header">
+        <h5 class="modal-title">Cookie-Einstellungen</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Schließen"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3 p-3 border border-light rounded">
+          <div class="d-flex justify-content-between">
+            <strong>Unbedingt erforderliche Cookies</strong><span class="badge bg-light text-dark">immer aktiv</span>
+          </div>
+          <small class="text-light-50">Erforderlich für den Betrieb der Website (z. B. Consent-Status).</small>
+        </div>
+
+        <div class="p-3 border border-light rounded">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="toggleAnalytics">
+            <label class="form-check-label" for="toggleAnalytics">Statistik (Google Analytics)</label>
+          </div>
+          <small class="text-light-50">IP-Anonymisierung aktiv, keine personalisierte Werbung.</small>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-light" data-bs-dismiss="modal">Abbrechen</button>
+        <button class="btn btn-light" id="btnSaveCookie">Speichern</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GA sofort deaktivieren, falls widerrufen -->
+<script>
+  (function(){
+    const GA_ID = "G-MF22N64YKG";
+    if (localStorage.getItem('consent_analytics') === 'denied') {
+      window['ga-disable-' + GA_ID] = true;
+    }
+  })();
+</script>
+
+<!-- 1) Konfiguration bereitstellen -->
+<script>
+  window.__CONSENT_CONFIG__ = {
+    gaId: "G-MF22N64YKG",
+    gaConfig: {
+      anonymize_ip: true,
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false
+    }
+  };
+</script>
+
+<!-- 2) zentrale Consent-Logik laden (jetzt aus /inc/) -->
+<script src="/assets/js/consent.js"></script>
+
+<!-- Vorherige / Nächste Kamera (wie Sensor-Seite) -->
+<div class="container pt-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <div>
+              <a class="btn btn-outline-light" href="kamera.php?k=ASK032&lang=en">
+          <i class="bi bi-chevron-left me-1"></i>Previous camera        </a>
+          </div>
+
+    <div>
+              <a class="btn btn-outline-light" href="kamera.php?k=ASK034&lang=en">
+          Next camera<i class="bi bi-chevron-right ms-1"></i>
+        </a>
+          </div>
+  </div>
+</div>
+
+
+<!-- HEADER -->
+<div class="container py-4">
+
+  
+  <!-- Camera Header Bar -->
+  <div class="camera-header card bg-secondary shadow mb-3">
+    <div class="card-body py-3">
+
+      <!-- Camera Header Layout as Grid/Table -->
+<div class="camera-header-grid">
+
+  <!-- Zeile 1 -->
+  <div class="ch-cell ch-left cam-head-left">
+    <!-- Name + Badges + Like -->
+    <div class="d-flex flex-column gap-1">
+      <div class="d-flex flex-wrap align-items-center gap-2">
+        <span class="cam-title">
+          My AllSky Camera        </span>
+
+        <span class="cam-id badge text-bg-dark">
+          ASK033        </span>
+
+                  <span class="badge rounded-pill bg-warning text-dark"
+                title="XP: 1,174.5">
+            Level 4          </span>
+        
+        <button id="likeBtn"
+                class="btn btn-sm btn-like"
+                type="button"
+                aria-label="Like"
+                data-liked="0">
+          <i id="likeIcon" class="bi bi-heart"></i>
+          <span class="ms-1 d-none d-md-inline">Like</span>
+          <span class="like-count ms-2" id="likeCount">11</span>
+        </button>
+      </div>
+
+      <div class="cam-sub text-light-50">
+        <i class="bi bi-geo-alt"></i>
+        <span>Miesenbach</span>
+
+              </div>
+    </div>
+  </div>
+
+  <div class="ch-cell ch-right">
+    <!-- Supporter badge -->
+    <div class="camera-support-mini cam-head-support">
+          </div>
+  </div>
+
+  <!-- Zeile 2 (Buttons links, aber über 2 Spalten?) -> nein, Zeile 2 nur Spalte 1 wie gewünscht -->
+  <div class="ch-cell ch-buttons cam-head-buttons">
+    <div class="ch-btnbox p-2 rounded-2 border border-light-subtle bg-dark bg-opacity-25">
+      <div class="d-flex gap-2 flex-wrap justify-content-start cam-head-actions">
+
+        <a href="sensor.php?k=ASK033&lang=en"
+           class="btn btn-sm btn-outline-info"
+           style="min-width: 200px;"
+           title="Show sensor data">
+          <i class="bi bi-activity"></i>
+          <span class="ms-1">Show sensor data</span>
+        </a>
+
+                  <a href="profile.php?k=ASK033&lang=en"
+             class="btn btn-sm btn-outline-light"
+             style="min-width: 200px;"
+             title="Profile">
+            <i class="bi bi-person-badge"></i>
+            <span class="ms-1">Profile</span>
+          </a>
+        
+                  <a href="aggregate.php?k=ASK033&lang=en"
+            class="btn btn-sm btn-outline-warning"
+            style="min-width: 200px;"
+            title="Aggregation">
+            <i class="bi bi-diagram-3"></i>
+            <span class="ms-1">Aggregation</span>
+          </a>
+        
+        <button class="btn btn-sm btn-outline-light"
+                type="button"
+                style="min-width: 200px;"
+                data-bs-toggle="collapse"
+                data-bs-target="#shareCollapse"
+                aria-expanded="false"
+                aria-controls="shareCollapse"
+                title="Share">
+          <i class="bi bi-share"></i>
+          <span class="ms-1">Share</span>
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Zeile 3: Collapse über 2 Spalten -->
+  <div class="ch-cell ch-share">
+    <div class="collapse" id="shareCollapse">
+      <div class="pt-2">
+        <div class="share-wrap">
+          <div class="share-buttons d-flex flex-wrap gap-2" data-share-url="https://allskykamera.space/kamera.php?k=ASK033&amp;lang=en"><a class="btn btn-sm btn-primary share-btn" target="_blank" rel="noopener nofollow" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fallskykamera.space%2Fkamera.php%3Fk%3DASK033%26lang%3Den" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.07c.67-1.27 2.3-2.6 4.73-2.6 5.05 0 5.98 3.33 5.98 7.66V24h-5V16c0-1.91-.03-4.37-2.66-4.37-2.67 0-3.08 2.08-3.08 4.23V24h-5V8z"/></svg><span class="ms-1">LinkedIn</span></a><a class="btn btn-sm btn-primary share-btn" target="_blank" rel="noopener nofollow" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fallskykamera.space%2Fkamera.php%3Fk%3DASK033%26lang%3Den" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 3h-1.9v7A10 10 0 0 0 22 12"/></svg><span class="ms-1">Facebook</span></a><a class="btn btn-sm btn-primary share-btn" target="_blank" rel="noopener nofollow" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fallskykamera.space%2Fkamera.php%3Fk%3DASK033%26lang%3Den&text=We+make+the+sky+visible+%E2%80%94+for+everyone." aria-label="X"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M18.9 2H22l-7.1 8.1L23 22h-6.8l-5.3-6.9L4.8 22H2l7.6-8.7L1.5 2h6.9l4.8 6.3L18.9 2zM17 20h2.1L7.1 4H5z"/></svg><span class="ms-1">X</span></a><a class="btn btn-sm btn-primary share-btn" target="_blank" rel="noopener nofollow" href="https://api.whatsapp.com/send?text=We+make+the+sky+visible+%E2%80%94+for+everyone.%20https%3A%2F%2Fallskykamera.space%2Fkamera.php%3Fk%3DASK033%26lang%3Den" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12 0 12 12 0 0 0 1.8 17.7L0 24l6.5-1.7A12 12 0 0 0 12 24h.1A12 12 0 0 0 24 12c0-3.2-1.3-6.2-3.5-8.5zM12 21.3c-1.9 0-3.6-.5-5.1-1.5l-.4-.2-3.8 1 1-3.7-.3-.4A9.3 9.3 0 1 1 12 21.3zm5.3-6.9c-.3-.2-1.8-.9-2-.9-.2 0-.3-.1-.5.2s-.6.9-.7 1c-.1.1-.2.2-.4.1-1-.4-1.9-1-2.7-1.8-.7-.7-1.3-1.6-1.7-2.6 0-.2 0-.3.2-.4l.8-1c.1-.1.1-.2.2-.4s0-.3 0-.4c0-.2-.5-1.3-.8-1.8-.2-.4-.4-.3-.5-.3h-.4c-.1 0-.4.1-.7.3-.3.3-1 .9-1 2.2s1.1 2.6 1.3 2.8c.2.2 2.1 3.3 5.1 4.6.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.5-.4z"/></svg><span class="ms-1">WhatsApp</span></a><a class="btn btn-sm btn-primary share-btn" target="_blank" rel="noopener nofollow" href="https://t.me/share/url?url=https%3A%2F%2Fallskykamera.space%2Fkamera.php%3Fk%3DASK033%26lang%3Den&text=We+make+the+sky+visible+%E2%80%94+for+everyone." aria-label="Telegram"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9.9 15.6 9.7 20c.4 0 .6-.2.8-.4l2-1.9 4.1 3c.8.5 1.3.3 1.5-.7l2.7-12.6c.2-.9-.3-1.3-1-1l-16 6.2c-1 .4-1 .9-.2 1.2l4.1 1.3 9.4-5.9c.4-.2.7-.1.4.2"/></svg><span class="ms-1">Telegram</span></a><a class="btn btn-sm btn-primary share-btn" target="_blank" rel="noopener nofollow" href="mailto:?subject=AllSkyKamera+%E2%80%93+Miesenbach&body=We+make+the+sky+visible+%E2%80%94+for+everyone.%0A%0Ahttps%3A%2F%2Fallskykamera.space%2Fkamera.php%3Fk%3DASK033%26lang%3Den" aria-label="Email"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 13 0 6V4l12 7L24 4v2l-12 7zM0 8l12 7 12-7v12H0z"/></svg><span class="ms-1">Email</span></a><button type="button" class="btn btn-sm btn-outline-light share-btn" data-action="copy" aria-label="Copy link"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M16 1H4c-1.1 0-2 .9-2 2v12h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg><span class="ms-1">Copy link</span></button></div>        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+        </div>
+
+
+
+  <!-- Livebild -->
+  <div class="row g-4">
+    <div class="col-md-8">
+      <!-- Livebild -->
+      <div id="liveContainer" class="mb-3 position-relative">
+        <a href="imageProxy.php?cam=ASK033&type=image&variant=auto&t=1795202423" id="liveLink" target="_blank" class="d-block">
+          <img src="imageProxy.php?cam=ASK033&type=image&variant=auto&t=1795202423" alt="Live image" class="img-fluid rounded shadow d-block" id="liveImage">
+        </a>
+
+        <!-- ROI Overlay Kreis -->
+        <div id="roiOverlay" class="roi-overlay" aria-hidden="true"></div>
+      </div>
+      <p class="small text-muted">The image refreshes automatically every 1–4 minutes.</p>
+
+      <div class="card bg-secondary mb-4 shadow" id="histCard">
+        <button
+          class="card-header border-0 text-start text-light d-flex justify-content-between align-items-center w-100"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#histCollapse"
+          aria-expanded="false"
+          aria-controls="histCollapse"
+          style="background: transparent;"
+        >
+          <span>📊 Histogram (live image)</span>
+          <span class="d-flex align-items-center gap-2 small text-muted">
+            <span>show</span>
+            <i class="bi bi-chevron-down" id="histCollapseIcon" aria-hidden="true"></i>
+          </span>
+        </button>
+        <div class="collapse" id="histCollapse">
+          <div class="card-body">
+
+          <!-- ROI Controls -->
+          <div class="d-flex flex-wrap align-items-center gap-3 mb-2">
+            <div class="form-check form-switch m-0">
+              <input class="form-check-input" type="checkbox" id="roiToggle">
+              <label class="form-check-label" for="roiToggle">
+                Enable overlay circle              </label>
+            </div>
+
+            <div class="d-flex align-items-center gap-2">
+              <label for="roiSize" class="small text-muted m-0">
+                Circle size              </label>
+              <input type="range" class="form-range" id="roiSize" min="10" max="100" value="70" style="width:220px;">
+              <span class="small text-muted" id="roiSizeLabel">70%</span>
+            </div>
+          </div>
+
+          <!-- Histogram Controls -->
+          <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+
+            <div class="form-check form-switch m-0">
+              <input class="form-check-input" type="checkbox" id="histNormalize">
+              <label class="form-check-label" for="histNormalize">
+                Normalized (in %)              </label>
+            </div>
+
+            <div class="form-check form-switch m-0">
+              <input class="form-check-input" type="checkbox" id="histLuma">
+              <label class="form-check-label" for="histLuma">
+                Luminance instead of RGB              </label>
+            </div>
+
+            <div class="form-check form-switch m-0">
+              <input class="form-check-input" type="checkbox" id="histLog">
+              <label class="form-check-label" for="histLog">
+                Log scale              </label>
+            </div>
+
+          </div>
+
+          <div class="hist-wrap">
+            <canvas id="liveHist"></canvas>
+          </div>
+
+          <div class="small text-muted mt-2" id="histHint">
+            Distribution of color values (RGB) in the current image.          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Standortdaten -->
+      <div class="card bg-secondary mb-4 shadow">
+        <div class="card-header">🌐 Location data & info</div>
+        <div class="card-body">
+          <ul class="mb-0">
+                          <li><strong>Camera name:</strong> My AllSky Camera</li>
+                                      <li><strong>Camera ID:</strong> ASK033</li>
+                                      <li><strong>Location:</strong> Miesenbach</li>
+                                      <li><strong>User:</strong> Anton Postl</li>
+                                      <li><strong>Contact:</strong>
+                <a href="mailto:anton.postl@zwinz.co.at">
+                  anton.postl@zwinz.co.at                </a>
+              </li>
+                                                  <li><strong>Latitude:</strong> 47.834</li>
+                                      <li><strong>Longitude:</strong> 16.005</li>
+                                      <li><strong>Timezone:</strong> Europe/Vienna</li>
+            
+
+
+                          <li><strong>Software:</strong> INDI-Allsky</li>
+            
+                          <li><strong>Lib Version (ASK):</strong> v2026.03.23_01</li>
+                      </ul>
+        </div>
+      </div>
+
+      <!-- Kamera-Level -->
+            <div class="card bg-secondary mb-4 shadow">
+        <div class="card-header">🏅 Level</div>
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div>
+              <span class="badge bg-warning text-dark me-2">Level 4</span>
+              <span class="text-muted small">XP: 1,174.5</span>
+            </div>
+            <div class="small text-muted">Nächstes Level bei <strong>1650</strong> XP</div>
+          </div>
+          <div class="progress" style="height:1.1rem;">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 37%;">
+              37%
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Quick Preview: letzte 3 Inhalte -->
+      <div class="card bg-secondary mb-4 shadow">
+        <div class="card-header d-flex flex-wrap align-items-center justify-content-between gap-2">
+          <span>📌 Quick preview</span>
+
+          <div class="btn-group btn-group-sm" role="group" aria-label="Quick preview tabs">
+            <button type="button" class="btn btn-outline-light qp-tab" data-target="qp-videos">
+              🎥 Videos            </button>
+            <button type="button" class="btn btn-outline-light qp-tab" data-target="qp-keograms">
+              📈 Keograms            </button>
+            <button type="button" class="btn btn-outline-light qp-tab" data-target="qp-startrails">
+              🌌 Startrails            </button>
+          </div>
+        </div>
+
+        <div class="card-body">
+
+          <!-- Videos -->
+          <div id="qp-videos" class="qp-pane">
+                          <div class="row g-3">
+                                                    <div class="col-12 col-md-4">
+                    <a href="imageProxy.php?cam=ASK033&amp;type=video&amp;file=allsky-20261119.mp4&amp;control=on" target="_blank" class="d-block text-decoration-none">
+                                            <div class="position-relative">
+                          <img src="imageProxy.php?cam=ASK033&amp;type=videothumb&amp;file=thumb-20261119.jpg"
+                              class="img-fluid rounded shadow-sm w-100"
+                              loading="lazy"
+                              alt="allsky-20261119.mp4">
+                          <span class="position-absolute top-50 start-50 translate-middle badge rounded-pill bg-dark bg-opacity-75 px-3 py-2">
+                            <i class="bi bi-play-fill"></i>
+                          </span>
+                        </div>
+                      
+                      <div class="small text-muted mt-1 text-truncate">allsky-20261119.mp4</div>
+                    </a>
+                  </div>
+                                                    <div class="col-12 col-md-4">
+                    <a href="imageProxy.php?cam=ASK033&amp;type=video&amp;file=allsky-20261118.mp4&amp;control=on" target="_blank" class="d-block text-decoration-none">
+                                            <div class="position-relative">
+                          <img src="imageProxy.php?cam=ASK033&amp;type=videothumb&amp;file=thumb-20261118.jpg"
+                              class="img-fluid rounded shadow-sm w-100"
+                              loading="lazy"
+                              alt="allsky-20261118.mp4">
+                          <span class="position-absolute top-50 start-50 translate-middle badge rounded-pill bg-dark bg-opacity-75 px-3 py-2">
+                            <i class="bi bi-play-fill"></i>
+                          </span>
+                        </div>
+                      
+                      <div class="small text-muted mt-1 text-truncate">allsky-20261118.mp4</div>
+                    </a>
+                  </div>
+                                                    <div class="col-12 col-md-4">
+                    <a href="imageProxy.php?cam=ASK033&amp;type=video&amp;file=allsky-20261117.mp4&amp;control=on" target="_blank" class="d-block text-decoration-none">
+                                            <div class="position-relative">
+                          <img src="imageProxy.php?cam=ASK033&amp;type=videothumb&amp;file=thumb-20261117.jpg"
+                              class="img-fluid rounded shadow-sm w-100"
+                              loading="lazy"
+                              alt="allsky-20261117.mp4">
+                          <span class="position-absolute top-50 start-50 translate-middle badge rounded-pill bg-dark bg-opacity-75 px-3 py-2">
+                            <i class="bi bi-play-fill"></i>
+                          </span>
+                        </div>
+                      
+                      <div class="small text-muted mt-1 text-truncate">allsky-20261117.mp4</div>
+                    </a>
+                  </div>
+                              </div>
+                      </div>
+
+          <!-- Keogramme -->
+          <div id="qp-keograms" class="qp-pane">
+                          <div class="row g-3">
+                                                    <div class="col-12 col-md-4">
+                    <a href="imageProxy.php?cam=ASK033&amp;type=keogram&amp;file=keogram-20261119.jpg" target="_blank" class="d-block text-decoration-none">
+                      <img src="imageProxy.php?cam=ASK033&amp;type=keogram&amp;file=keogram-20261119.jpg" class="img-fluid rounded shadow-sm" loading="lazy" alt="Keogram">
+                      <div class="small text-muted mt-1 text-truncate">keogram-20261119.jpg</div>
+                    </a>
+                  </div>
+                                                    <div class="col-12 col-md-4">
+                    <a href="imageProxy.php?cam=ASK033&amp;type=keogram&amp;file=keogram-20261118.jpg" target="_blank" class="d-block text-decoration-none">
+                      <img src="imageProxy.php?cam=ASK033&amp;type=keogram&amp;file=keogram-20261118.jpg" class="img-fluid rounded shadow-sm" loading="lazy" alt="Keogram">
+                      <div class="small text-muted mt-1 text-truncate">keogram-20261118.jpg</div>
+                    </a>
+                  </div>
+                                                    <div class="col-12 col-md-4">
+                    <a href="imageProxy.php?cam=ASK033&amp;type=keogram&amp;file=keogram-20261117.jpg" target="_blank" class="d-block text-decoration-none">
+                      <img src="imageProxy.php?cam=ASK033&amp;type=keogram&amp;file=keogram-20261117.jpg" class="img-fluid rounded shadow-sm" loading="lazy" alt="Keogram">
+                      <div class="small text-muted mt-1 text-truncate">keogram-20261117.jpg</div>
+                    </a>
+                  </div>
+                              </div>
+                      </div>
+
+          <!-- Startrails -->
+          <div id="qp-startrails" class="qp-pane">
+                          <div class="row g-3">
+                                                    <div class="col-12 col-md-4">
+                    <a href="imageProxy.php?cam=ASK033&amp;type=startrails&amp;file=startrails-20261119.jpg" target="_blank" class="d-block text-decoration-none">
+                      <img src="imageProxy.php?cam=ASK033&amp;type=startrails&amp;file=startrails-20261119.jpg" class="img-fluid rounded shadow-sm" loading="lazy" alt="Startrails">
+                      <div class="small text-muted mt-1 text-truncate">startrails-20261119.jpg</div>
+                    </a>
+                  </div>
+                                                    <div class="col-12 col-md-4">
+                    <a href="imageProxy.php?cam=ASK033&amp;type=startrails&amp;file=startrails-20261118.jpg" target="_blank" class="d-block text-decoration-none">
+                      <img src="imageProxy.php?cam=ASK033&amp;type=startrails&amp;file=startrails-20261118.jpg" class="img-fluid rounded shadow-sm" loading="lazy" alt="Startrails">
+                      <div class="small text-muted mt-1 text-truncate">startrails-20261118.jpg</div>
+                    </a>
+                  </div>
+                                                    <div class="col-12 col-md-4">
+                    <a href="imageProxy.php?cam=ASK033&amp;type=startrails&amp;file=startrails-20261117.jpg" target="_blank" class="d-block text-decoration-none">
+                      <img src="imageProxy.php?cam=ASK033&amp;type=startrails&amp;file=startrails-20261117.jpg" class="img-fluid rounded shadow-sm" loading="lazy" alt="Startrails">
+                      <div class="small text-muted mt-1 text-truncate">startrails-20261117.jpg</div>
+                    </a>
+                  </div>
+                              </div>
+                      </div>
+
+        </div>
+      </div>
+
+      <!-- Kamera in Zahlen -->
+      <div class="card bg-secondary mb-4 shadow border-0 stats-card">
+        <div class="card-header stats-card-header">
+          <span class="d-flex align-items-center gap-2">
+            <span class="stats-card-icon">📊</span>
+            <span>Camera by the numbers</span>
+          </span>
+        </div>
+
+        <div class="card-body">
+
+          <!-- Haupt-KPIs -->
+          <div class="row g-3 mb-4">
+            <div class="col-6 col-md-3">
+              <div class="stats-kpi-box h-100">
+                <div class="stats-kpi-value">290</div>
+                <div class="stats-kpi-label">Timelapse videos</div>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <div class="stats-kpi-box h-100">
+                <div class="stats-kpi-value">337</div>
+                <div class="stats-kpi-label">Keograms</div>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <div class="stats-kpi-box h-100">
+                <div class="stats-kpi-value">336</div>
+                <div class="stats-kpi-label">Star trails</div>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <div class="stats-kpi-box h-100">
+                <div class="stats-kpi-value">11,4 GB</div>
+                <div class="stats-kpi-label">Storage used</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Zuverlässigkeit -->
+          
+          <div class="stats-info-box mb-4">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+              <div class="stats-info-title mb-0">🛡 Reliability 2026</div>
+                              <span class="badge bg-success">Complete data basis</span>
+                          </div>
+
+                          <div class="row g-3 align-items-stretch">
+                <div class="col-12 col-lg-3">
+                  <div class="h-100 rounded-3 bg-dark bg-opacity-50 p-3 d-flex flex-column justify-content-center text-center">
+                    <div class="display-5 fw-bold lh-1">
+                      98.61 %
+                    </div>
+                    <div class="small text-muted mt-2">Reliability 2026</div>
+                    <div class="progress mt-3" style="height:.55rem;" role="progressbar"
+                         aria-valuenow="98.61"
+                         aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar bg-success"
+                           style="width: 98.61%;"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-lg-9">
+                  <div class="row g-2 h-100">
+                    <div class="col-6 col-xl">
+                      <div class="rounded-3 bg-dark bg-opacity-25 p-3 h-100">
+                        <div class="small text-muted">Current month</div>
+                        <div class="fs-5 fw-semibold mt-1">
+                                                      98.02 %
+                                                  </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-xl">
+                      <div class="rounded-3 bg-dark bg-opacity-25 p-3 h-100">
+                        <div class="small text-muted">Evaluated months</div>
+                        <div class="fs-5 fw-semibold mt-1">11</div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-xl">
+                      <div class="rounded-3 bg-dark bg-opacity-25 p-3 h-100">
+                        <div class="small text-muted">Downtime</div>
+                        <div class="fs-6 fw-semibold mt-1">4 days 2 h 20 min</div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-xl">
+                      <div class="rounded-3 bg-dark bg-opacity-25 p-3 h-100">
+                        <div class="small text-muted">Longest outage</div>
+                        <div class="fs-6 fw-semibold mt-1">2 days 6 h 20 min</div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-xl">
+                      <div class="rounded-3 bg-dark bg-opacity-25 p-3 h-100">
+                        <div class="small text-muted">Data basis</div>
+                        <div class="fs-6 fw-semibold mt-1">
+                          Complete data basis                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="small text-muted mt-3">
+                Evaluation period: 01/28/2026 – 11/19/2026              </div>
+                      </div>
+
+          <!-- Detail-Infos -->
+          <div class="row g-3">
+            <div class="col-12 col-md-4">
+              <div class="stats-info-box h-100">
+                <div class="stats-info-title">🗓 Activity</div>
+                <div class="stats-info-line">
+                  <span class="stats-info-key">First activity</span>
+                  <span class="stats-info-val">12/17/2025</span>
+                </div>
+                <div class="stats-info-line">
+                  <span class="stats-info-key">Days active</span>
+                  <span class="stats-info-val">
+                    338 days                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="stats-info-box h-100">
+                <div class="stats-info-title">🎞 Archive</div>
+                <div class="stats-info-line">
+                  <span class="stats-info-key">Timelapse videos</span>
+                  <span class="stats-info-val">290</span>
+                </div>
+                <div class="stats-info-line">
+                  <span class="stats-info-key">Keograms</span>
+                  <span class="stats-info-val">337</span>
+                </div>
+                <div class="stats-info-line">
+                  <span class="stats-info-key">Star trails</span>
+                  <span class="stats-info-val">336</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="stats-info-box h-100">
+                <div class="stats-info-title">💾 Storage</div>
+                <div class="stats-info-line">
+                  <span class="stats-info-key">Server</span>
+                  <span class="stats-info-val">2,1 GB</span>
+                </div>
+                <div class="stats-info-line">
+                  <span class="stats-info-key">Storage</span>
+                  <span class="stats-info-val">9,4 GB</span>
+                </div>
+                                  <div class="stats-info-line">
+                    <span class="stats-info-key">Archive images</span>
+                    <span class="stats-info-val">158,3 MB</span>
+                  </div>
+                              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- /Kamera in Zahlen -->
+    </div>
+
+    <div class="col-md-4">
+
+          <!-- Kleine Kamerakarte -->
+      <div class="card bg-secondary mb-4 shadow">
+        <div class="card-header">🗺 Map view</div>
+        <div class="card-body">
+          <div id="camMap"
+               data-lat="47.834"
+               data-lon="16.005"
+               data-id="ASK033"
+               data-name="Miesenbach"
+               style="height: 220px; border-radius: .5rem; overflow: hidden;"></div>
+          <p class="small text-muted mt-2 mb-0">
+            Camera position based on the stored coordinates.          </p>
+        </div>
+      </div>
+      
+
+
+      <!-- Live-Werte -->
+      <div class="card bg-secondary mb-4 shadow">
+        <div class="card-header">📊 Live values (Raspberry Pi)</div>
+        <div class="card-body"><div id="statusbox">Loading data...</div></div>
+        <div class="card-body"><div id="sensorbox">Loading data...</div></div>
+      </div>
+
+      <!-- Detailseiten -->
+      <div class="card bg-secondary mb-4 shadow">
+        <div class="card-header"> Detail pages</div>
+        <a href="sensor.php?k=ASK033" class="btn btn-outline-info mt-2">📊 Show sensor data</a>
+        <a href="video_details.php?k=ASK033" class="btn btn-outline-info mt-2">📈 Show all videos</a>
+        <a href="keogram_details.php?k=ASK033" class="btn btn-outline-info mt-2">📈 Show all keograms</a>
+        <a href="startrail_details.php?k=ASK033" class="btn btn-outline-info mt-2">📈 Show all star trails</a>
+      <!--  <a href="analemma_details.php?k=ASK033" class="btn btn-outline-info mt-2">📈 Show all analemma data</a> -->
+        <a href="event_details.php?k=ASK033" class="btn btn-outline-info mt-2">📈 Show all events</a>
+        <a href="mask_details.php?k=ASK033" class="btn btn-outline-info mt-2">📈 Show all masks</a>
+        <a href="https://grafana.allskykamera.space/d/Gj5DhuENz/allskykamera-netzwerk?orgId=1&refresh=5s&var-kamera=ASK033" target="_blank" class="btn btn-outline-info mt-2">📈 Open Grafana panel</a>
+        <a href="archive.php?k=ASK033&from=ASK033&lang=en"
+          class="btn btn-outline-info mt-2">
+          📚 Archive        </a>
+      </div>
+
+      <!-- Klima-Indikatoren -->
+      <div class="card bg-secondary mb-4 shadow">
+        <div class="card-header">🌡 Climate indicators (2026)</div>
+        <div class="card-body">
+                      <ul class="mb-0">
+              <li><strong>Hot days (> 30 °C):</strong> 95</li>
+              <li><strong>Summer days (≥ 25 °C):</strong> 145</li>
+              <li><strong>Tropical nights (Tmin ≥ 20 °C):</strong> 16</li>
+              <li><strong>Frost days (Tmin < 0 °C):</strong> 47</li>
+              <li><strong>Ice days (Tmax < 0 °C):</strong> 5</li>
+            </ul>
+            <p class="small text-muted mt-2 mb-0">
+              Based on DS18B20 outdoor temperature, daily min/max in local time (Europe/Berlin).            </p>
+                  </div>
+      </div>
+
+      <!-- Forecast -->
+      <div class="card bg-secondary mb-4 shadow">
+        <div class="card-header">🌡 Forecast</div>
+        <div class="card-body text-center">
+                    <a href="https://clearoutside.com/forecast/47.83/16.01" target="_blank" rel="noopener">
+              <img src="https://clearoutside.com/forecast_image_medium/47.83/16.01/forecast.png"
+                   alt="Forecast for Miesenbach (47.83, 16.01)"
+                   class="img-fluid rounded shadow" loading="lazy">
+            </a>
+                </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <h4 class="mt-4 mb-3"><span class="me-2">📂</span>Latest files</h4>
+  <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+          <div class="col">
+        <div class="card bg-secondary equal-height-card">
+          <div class="card-header">
+            🎥 Latest video                          <span class="text-muted ms-2">
+                (Video from: 11/19/2026 - 11/20/2026)
+              </span>
+                      </div>
+          <div class="card-body text-center">
+            <a href="imageProxy.php?cam=ASK033&type=video&file=allsky-20261119.mp4&control=on"
+              target="_blank"
+              class="d-block position-relative">
+                              <img src="imageProxy.php?cam=ASK033&type=videothumb&file=thumb-20261119.jpg"
+                    class="img-fluid w-100 rounded"
+                    alt="allsky-20261119.mp4"
+                    loading="lazy">
+                <span class="position-absolute top-50 start-50 translate-middle badge rounded-pill bg-dark bg-opacity-75 px-3 py-2">
+                  <i class="bi bi-play-fill"></i>
+                </span>
+                          </a>
+          </div>
+        </div>
+      </div>
+    
+          <div class="col">
+        <div class="card bg-secondary equal-height-card">
+          <div class="card-header">
+            📈 Latest keogram                          <span class="text-muted ms-2">
+                (Keogram from: 11/19/2026 - 11/20/2026)
+              </span>
+                      </div>
+          <div class="card-body text-center">
+            <div class="preview-box">
+              <a href="imageProxy.php?cam=ASK033&type=keogram&file=keogram-20261119.jpg" target="_blank">
+                <img src="imageProxy.php?cam=ASK033&type=keogram&file=keogram-20261119.jpg" class="img-fluid" alt="Keogram">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    
+          <div class="col">
+        <div class="card bg-secondary equal-height-card">
+          <div class="card-header">
+            🌌 Latest star trails                          <span class="text-muted ms-2">
+                (Startrails from: 11/19/2026 - 11/20/2026)
+              </span>
+                      </div>
+          <div class="card-body text-center">
+            <a href="imageProxy.php?cam=ASK033&type=startrails&file=startrails-20261119.jpg" target="_blank">
+              <img src="imageProxy.php?cam=ASK033&type=startrails&file=startrails-20261119.jpg" class="img-fluid" alt="Startrails">
+            </a>
+          </div>
+        </div>
+      </div>
+    
+                <div class="col">
+        <div class="card bg-secondary equal-height-card">
+          <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-2">
+            <span>🎞️ Seasonal timelapse</span>
+
+            <div class="d-flex flex-wrap gap-1">
+                              <a href="imageProxy.php?cam=ASK033&amp;type=dayvideo&amp;file=timelapse_all_25fps_1080p.mp4&amp;src=storage&amp;control=on"
+                  target="_blank"
+                  class="btn btn-sm btn-outline-light">
+                  1080p                </a>
+                              <a href="imageProxy.php?cam=ASK033&amp;type=dayvideo&amp;file=timelapse_all_25fps_720p.mp4&amp;src=storage&amp;control=on"
+                  target="_blank"
+                  class="btn btn-sm btn-outline-light">
+                  720p                </a>
+                              <a href="imageProxy.php?cam=ASK033&amp;type=dayvideo&amp;file=timelapse_all_25fps_480p.mp4&amp;src=storage&amp;control=on"
+                  target="_blank"
+                  class="btn btn-sm btn-outline-light">
+                  480p                </a>
+                              <a href="imageProxy.php?cam=ASK033&amp;type=dayvideo&amp;file=timelapse_all_25fps.mp4&amp;src=server&amp;control=on"
+                  target="_blank"
+                  class="btn btn-sm btn-outline-light">
+                  Legacy                </a>
+                          </div>
+          </div>
+
+          <div class="card-body text-center">
+            <a href="imageProxy.php?cam=ASK033&amp;type=dayvideo&amp;file=timelapse_all_25fps_720p.mp4&amp;src=storage&amp;control=on" target="_blank">
+              <video src="imageProxy.php?cam=ASK033&amp;type=dayvideo&amp;file=timelapse_all_25fps_720p.mp4&amp;src=storage"
+                     class="w-100 rounded"
+                     muted
+                     preload="metadata"
+                     playsinline></video>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    
+  </div>
+
+      <div class="card bg-secondary mb-4 shadow">
+      <div class="card-header">
+        📊 Long-term Keogram        <span class="text-muted ms-2">
+          (Nov 2026)
+        </span>
+      </div>
+      <div class="card-body text-center">
+        <a href="imageProxy.php?cam=ASK033&type=longkeo&file=LongKeogram_202611.jpg" target="_blank">
+          <img
+            src="imageProxy.php?cam=ASK033&type=longkeo&file=LongKeogram_202611.jpg"
+            class="img-fluid rounded longkeo-preview"
+            alt="Long-term keogram of the current month"
+            loading="lazy"
+          />
+        </a>
+        <div class="small text-muted mt-2">Click for full resolution</div>
+      </div>
+    </div>
+
+  
+  <!-- ############################################################# -->
+  <!-- LongKeogram-Archiv -->
+  <!-- ############################################################# -->
+      <div class="card bg-secondary mb-4 shadow">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <span>🗓️ Previous months</span>
+
+              </div>
+
+      <div class="card-body">
+
+        <!-- Vorschau (max. N Monate) -->
+        <div class="row row-cols-2 row-cols-sm-4 row-cols-md-6 g-3">
+                                  <div class="col">
+              <a href="imageProxy.php?cam=ASK033&amp;type=longkeo&amp;file=LongKeogram_202610.jpg" target="_blank" class="text-decoration-none d-block">
+                <div class="longkeo-thumb-wrap shadow-sm h-100">
+                  <img
+                    src="imageProxy.php?cam=ASK033&amp;type=longkeo&amp;file=LongKeogram_202610.jpg"
+                    class="longkeo-thumb"
+                    loading="lazy"
+                    alt="Oct 2026"
+                  />
+                  <div class="small text-muted mt-2 text-center">Oct 2026</div>
+                </div>
+              </a>
+            </div>
+                                  <div class="col">
+              <a href="imageProxy.php?cam=ASK033&amp;type=longkeo&amp;file=LongKeogram_202609.jpg" target="_blank" class="text-decoration-none d-block">
+                <div class="longkeo-thumb-wrap shadow-sm h-100">
+                  <img
+                    src="imageProxy.php?cam=ASK033&amp;type=longkeo&amp;file=LongKeogram_202609.jpg"
+                    class="longkeo-thumb"
+                    loading="lazy"
+                    alt="Sep 2026"
+                  />
+                  <div class="small text-muted mt-2 text-center">Sep 2026</div>
+                </div>
+              </a>
+            </div>
+                                  <div class="col">
+              <a href="imageProxy.php?cam=ASK033&amp;type=longkeo&amp;file=LongKeogram_202608.jpg" target="_blank" class="text-decoration-none d-block">
+                <div class="longkeo-thumb-wrap shadow-sm h-100">
+                  <img
+                    src="imageProxy.php?cam=ASK033&amp;type=longkeo&amp;file=LongKeogram_202608.jpg"
+                    class="longkeo-thumb"
+                    loading="lazy"
+                    alt="Aug 2026"
+                  />
+                  <div class="small text-muted mt-2 text-center">Aug 2026</div>
+                </div>
+              </a>
+            </div>
+                                  <div class="col">
+              <a href="imageProxy.php?cam=ASK033&amp;type=longkeo&amp;file=LongKeogram_202607.jpg" target="_blank" class="text-decoration-none d-block">
+                <div class="longkeo-thumb-wrap shadow-sm h-100">
+                  <img
+                    src="imageProxy.php?cam=ASK033&amp;type=longkeo&amp;file=LongKeogram_202607.jpg"
+                    class="longkeo-thumb"
+                    loading="lazy"
+                    alt="Jul 2026"
+                  />
+                  <div class="small text-muted mt-2 text-center">Jul 2026</div>
+                </div>
+              </a>
+            </div>
+                                  <div class="col">
+              <a href="imageProxy.php?cam=ASK033&amp;type=longkeo&amp;file=LongKeogram_202606.jpg" target="_blank" class="text-decoration-none d-block">
+                <div class="longkeo-thumb-wrap shadow-sm h-100">
+                  <img
+                    src="imageProxy.php?cam=ASK033&amp;type=longkeo&amp;file=LongKeogram_202606.jpg"
+                    class="longkeo-thumb"
+                    loading="lazy"
+                    alt="Jun 2026"
+                  />
+                  <div class="small text-muted mt-2 text-center">Jun 2026</div>
+                </div>
+              </a>
+            </div>
+                                  <div class="col">
+              <a href="imageProxy.php?cam=ASK033&amp;type=longkeo&amp;file=LongKeogram_202605.jpg" target="_blank" class="text-decoration-none d-block">
+                <div class="longkeo-thumb-wrap shadow-sm h-100">
+                  <img
+                    src="imageProxy.php?cam=ASK033&amp;type=longkeo&amp;file=LongKeogram_202605.jpg"
+                    class="longkeo-thumb"
+                    loading="lazy"
+                    alt="May 2026"
+                  />
+                  <div class="small text-muted mt-2 text-center">May 2026</div>
+                </div>
+              </a>
+            </div>
+                                  <div class="col">
+              <a href="imageProxy.php?cam=ASK033&amp;type=longkeo&amp;file=LongKeogram_202604.jpg" target="_blank" class="text-decoration-none d-block">
+                <div class="longkeo-thumb-wrap shadow-sm h-100">
+                  <img
+                    src="imageProxy.php?cam=ASK033&amp;type=longkeo&amp;file=LongKeogram_202604.jpg"
+                    class="longkeo-thumb"
+                    loading="lazy"
+                    alt="Apr 2026"
+                  />
+                  <div class="small text-muted mt-2 text-center">Apr 2026</div>
+                </div>
+              </a>
+            </div>
+                                  <div class="col">
+              <a href="imageProxy.php?cam=ASK033&amp;type=longkeo&amp;file=LongKeogram_202603.jpg" target="_blank" class="text-decoration-none d-block">
+                <div class="longkeo-thumb-wrap shadow-sm h-100">
+                  <img
+                    src="imageProxy.php?cam=ASK033&amp;type=longkeo&amp;file=LongKeogram_202603.jpg"
+                    class="longkeo-thumb"
+                    loading="lazy"
+                    alt="Mar 2026"
+                  />
+                  <div class="small text-muted mt-2 text-center">Mar 2026</div>
+                </div>
+              </a>
+            </div>
+                                  <div class="col">
+              <a href="imageProxy.php?cam=ASK033&amp;type=longkeo&amp;file=LongKeogram_202602.jpg" target="_blank" class="text-decoration-none d-block">
+                <div class="longkeo-thumb-wrap shadow-sm h-100">
+                  <img
+                    src="imageProxy.php?cam=ASK033&amp;type=longkeo&amp;file=LongKeogram_202602.jpg"
+                    class="longkeo-thumb"
+                    loading="lazy"
+                    alt="Feb 2026"
+                  />
+                  <div class="small text-muted mt-2 text-center">Feb 2026</div>
+                </div>
+              </a>
+            </div>
+                                  <div class="col">
+              <a href="imageProxy.php?cam=ASK033&amp;type=longkeo&amp;file=LongKeogram_202601.jpg" target="_blank" class="text-decoration-none d-block">
+                <div class="longkeo-thumb-wrap shadow-sm h-100">
+                  <img
+                    src="imageProxy.php?cam=ASK033&amp;type=longkeo&amp;file=LongKeogram_202601.jpg"
+                    class="longkeo-thumb"
+                    loading="lazy"
+                    alt="Jan 2026"
+                  />
+                  <div class="small text-muted mt-2 text-center">Jan 2026</div>
+                </div>
+              </a>
+            </div>
+                                  <div class="col">
+              <a href="imageProxy.php?cam=ASK033&amp;type=longkeo&amp;file=LongKeogram_202512.jpg" target="_blank" class="text-decoration-none d-block">
+                <div class="longkeo-thumb-wrap shadow-sm h-100">
+                  <img
+                    src="imageProxy.php?cam=ASK033&amp;type=longkeo&amp;file=LongKeogram_202512.jpg"
+                    class="longkeo-thumb"
+                    loading="lazy"
+                    alt="Dec 2025"
+                  />
+                  <div class="small text-muted mt-2 text-center">Dec 2025</div>
+                </div>
+              </a>
+            </div>
+                  </div>
+
+        
+        <div class="small text-muted mt-3">
+          Click a month to open it in full size.        </div>
+      </div>
+    </div>
+  
+<!-- ############################################################# -->
+<!-- Highlights -->
+<!-- ############################################################# -->
+<div class="card-header d-flex align-items-center justify-content-between">
+  <span>⭐ Highlights
+    <a href="highlights.php?lang=en"
+      class="btn btn-sm btn-outline-warning"
+      title="All highlights">
+      <i class="bi bi-stars"></i>
+      <span class="d-none d-md-inline ms-1">
+        All highlights      </span>
+    </a>
+  </span>
+
+    <!-- Filter: Kategorie / Jahr -->
+    <form method="get" class="d-flex gap-2 align-items-center mb-0">
+      <!-- Kamera & Sprache beibehalten -->
+      <input type="hidden" name="k" value="ASK033">
+              <input type="hidden" name="lang" value="en">
+      
+      <label for="hcat" class="form-label mb-0 me-1">Kategorie:</label>
+      <select name="hcat" id="hcat" class="form-select form-select-sm bg-dark text-light">
+        <option value="all" selected>Alle</option>
+              </select>
+
+      <label for="hyear" class="form-label mb-0 ms-2 me-1">Jahr:</label>
+      <select name="hyear" id="hyear" class="form-select form-select-sm bg-dark text-light">
+        <option value="all" selected>Alle</option>
+              </select>
+
+      <button class="btn btn-sm btn-primary ms-2">Filtern</button>
+    </form>
+  </div>
+
+  <div class="card-body">
+          <p class="text-muted mb-0">Keine Highlights für die gewählten Filter.</p>
+      </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const mapEl = document.getElementById('camMap');
+  if (!mapEl || typeof L === 'undefined') return;
+
+  const lat   = parseFloat(mapEl.dataset.lat);
+  const lon   = parseFloat(mapEl.dataset.lon);
+  const camId = mapEl.dataset.id;
+  const name  = mapEl.dataset.name || camId;
+
+  if (!isFinite(lat) || !isFinite(lon)) return;
+
+  // Karte wie auf der Startseite
+  const map = L.map(mapEl).setView([lat, lon], 11);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap-Mitwirkende',
+    maxZoom: 18
+  }).addTo(map);
+
+  // Online-Status wie auf der Startseite abfragen
+  fetch('live.php?k=' + encodeURIComponent(camId))
+    .then(res => res.json())
+    .then(data => {
+      const online = data.online === true || data.online === 1;
+      const color  = online ? 'green' : 'red';
+
+      const marker = L.circleMarker([lat, lon], {
+        color:      color,
+        fillColor:  color,
+        radius:     9,
+        weight:     2,
+        fillOpacity: 0.85
+      }).addTo(map);
+
+      const popup = `
+        <strong>${name}</strong><br>
+        ${camId}<br>
+        Status: ${online ? '🟢 online' : '🔴 offline'}
+      `;
+      marker.bindPopup(popup).openPopup();
+    })
+    .catch(err => {
+      console.error('Kartenstatus fehlgeschlagen:', err);
+      const marker = L.circleMarker([lat, lon], {
+        color:      'gray',
+        fillColor:  'gray',
+        radius:     9,
+        weight:     2,
+        fillOpacity: 0.7
+      }).addTo(map);
+      marker.bindPopup(`<strong>${name}</strong><br>${camId}`).openPopup();
+    });
+});
+</script>
+
+
+<script>
+  // I18N ins JS
+  const I18N = {
+    locale: "en-GB",
+    months: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+    labels: {
+      bmeAvg: "BME280 (avg)",
+      dsAvg:  "DS18B20 (avg)",
+      tooltipMin: "Min",
+      tooltipMax: "Max",
+      unitTemp: " \u00b0C",
+      unitPressure: " hPa",
+      online: "Online",
+      offline: "Offline",
+      status: "Status:",
+      temp: "Temperature:",
+      memUsed: "Memory used:",
+      memFree: "Free memory:",
+      lastReboot: "Last reboot:",
+      tempHeader: "Temperatures:",
+      rpiChip: "Raspberry Pi temperature (SoC)",
+      tempGauge: "Temperature gauge",
+      rangeCool: "0\u201359 \u00b0C",
+      rangeWarm: "60\u201379 \u00b0C",
+      rangeHot:  "80\u201390 \u00b0C",
+      cameraTime: "Local time",
+      views30d: "Views (30 days)",
+      views24h: "Views (24 hours)",
+      sensors: {
+        bme: "BME280",
+        ds: "DS18B20",
+        dht22: "DHT22",
+        dht11: "DHT11",
+        htu21: "HTU21",
+        sht3x: "SHT3X",
+        tsl2591: "TSL2591",
+        mlx90614: "MLX90614",
+        kpindex: "Kp-Index",
+        analemma: "Analemma",
+        temp: "Temperature:",
+        hum:  "Humidity:",
+        press:"Pressure:",
+        outtemp: "Outside temperature:"      }
+    },
+    units: {
+      month: "month",
+      months: "months",
+      week: "week",
+      day: "day",
+      days: "days",
+      hour: "h", minute: "m", second: "s"
+    }
+  };
+
+  // Sichtbare Sensoren aus internal_sensors_display.json
+  const INTERNAL_SENSORS = [];
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const labels = I18N.months;
+
+  const bme280Mean  = [9.84,15.24,15.11,21.09,26.61,32.5,32.76,34.68,29.81,24.73,19.29,null];
+  const ds18b20Mean = [-0.67,3.83,7.21,10.59,16.29,21.76,22.04,23.73,17.75,11.81,5.56,null];
+
+  const bme280Min   = [1.23,3.73,8.24,8.93,12.19,18.31,20.74,21.17,17.2,13.25,9.99,null];
+  const bme280Max   = [31.35,28.33,30.79,35.8,43.45,52.06,50.42,52.02,45.88,40.13,29.46,null];
+  const ds18b20Min  = [-11.62,-7.69,-1.31,-0.38,3.19,6.88,11.19,13,7.19,-0.01,-1.25,null];
+  const ds18b20Max  = [25.94,22.38,24.88,29.81,37.06,44.31,43.38,44.25,38.12,31.12,18.5,null];
+
+  const datasets = [];
+  if (Array.isArray(bme280Mean) && bme280Mean.length) {
+    datasets.push({
+      type: 'bar',
+      label: I18N.labels.bmeAvg,
+      data: bme280Mean,
+      backgroundColor: 'rgba(0,200,255,0.60)',
+      borderColor: 'rgba(0,200,255,1)',
+      whiskerMin: bme280Min,
+      whiskerMax: bme280Max,
+      whiskerColor: '#00e5ff',
+      order: 1
+    });
+  }
+  if (Array.isArray(ds18b20Mean) && ds18b20Mean.length) {
+    datasets.push({
+      type: 'bar',
+      label: I18N.labels.dsAvg,
+      data: ds18b20Mean,
+      backgroundColor: 'rgba(76,175,80,0.60)',
+      borderColor: 'rgba(76,175,80,1)',
+      whiskerMin: ds18b20Min,
+      whiskerMax: ds18b20Max,
+      whiskerColor: '#7ddc83',
+      order: 1
+    });
+  }
+
+  const whiskersPlugin = {
+    id: 'whiskers',
+    afterDatasetsDraw(chart, args, pluginOptions) {
+      const { ctx } = chart;
+      const dsets = chart.data.datasets;
+      const capWidth   = pluginOptions.capWidth   ?? 8;
+      const lineWidth  = pluginOptions.lineWidth  ?? 2;
+      const capLW      = pluginOptions.capLineWidth ?? lineWidth;
+
+      dsets.forEach((ds, di) => {
+        const meta = chart.getDatasetMeta(di);
+        if (!meta || meta.type !== 'bar' || !Array.isArray(ds.whiskerMin) || !Array.isArray(ds.whiskerMax)) return;
+
+        const yScale = chart.scales[meta.yAxisID];
+        if (!yScale) return;
+
+        ctx.save();
+        ctx.strokeStyle = ds.whiskerColor || ds.borderColor || '#fff';
+        ctx.lineWidth   = lineWidth;
+
+        for (let i = 0; i < meta.data.length; i++) {
+          const barEl = meta.data[i];
+          if (!barEl) continue;
+
+          const minVal = ds.whiskerMin[i];
+          const maxVal = ds.whiskerMax[i];
+          if (minVal == null || maxVal == null || isNaN(minVal) || isNaN(maxVal)) continue;
+
+          const x    = barEl.x;
+          const yMin = yScale.getPixelForValue(minVal);
+          const yMax = yScale.getPixelForValue(maxVal);
+
+          ctx.beginPath();
+          ctx.moveTo(x, yMax);
+          ctx.lineTo(x, yMin);
+          ctx.stroke();
+
+          ctx.lineWidth = capLW;
+          ctx.beginPath();
+          ctx.moveTo(x - capWidth, yMax);
+          ctx.lineTo(x + capWidth, yMax);
+          ctx.moveTo(x - capWidth, yMin);
+          ctx.lineTo(x + capWidth, yMin);
+          ctx.stroke();
+          ctx.lineWidth = lineWidth;
+        }
+        ctx.restore();
+      });
+    }
+  };
+
+  const chartEl = document.getElementById('monthlyTempChart');
+  if (datasets.length && chartEl) {
+    new Chart(chartEl.getContext('2d'), {
+      type: 'bar',
+      data: { labels, datasets },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { labels: { color: '#fff' } },
+          tooltip: {
+            callbacks: {
+              label: (ctx) => {
+                const v  = ctx.parsed.y;
+                const ds = ctx.dataset;
+                const i  = ctx.dataIndex;
+                let extra = '';
+                if (ds.whiskerMin && ds.whiskerMax) {
+                  const min = ds.whiskerMin[i];
+                  const max = ds.whiskerMax[i];
+                  if (min != null && max != null) {
+                    extra = ` (${I18N.labels.tooltipMin}: ${min.toLocaleString(I18N.locale,{maximumFractionDigits:2})}${I18N.labels.unitTemp} · ${I18N.labels.tooltipMax}: ${max.toLocaleString(I18N.locale,{maximumFractionDigits:2})}${I18N.labels.unitTemp})`;
+                  }
+                }
+                const val = (v == null) ? '–' : v.toLocaleString(I18N.locale,{maximumFractionDigits:2}) + I18N.labels.unitTemp;
+                return `${ds.label}: ${val}${extra}`;
+              }
+            }
+          },
+          whiskers: { capWidth: 8, lineWidth: 2, capLineWidth: 2 }
+        },
+        scales: {
+          x: { ticks: { color: '#ccc' } },
+          y: {
+            ticks: { color: '#ccc', stepSize: 5 },
+            beginAtZero: true,
+            min: -10,
+            max: 55          }
+        }
+      },
+      plugins: [whiskersPlugin]
+    });
+  } else {
+    // optional: nur zum Debuggen
+    // console.warn('monthlyTempChart not found or no datasets');
+  }
+
+});
+</script>
+
+<script>
+// Bild alle 2 Minuten neu laden
+setInterval(() => {
+  const img = document.getElementById('liveImage');
+  const base = "imageProxy.php?cam=ASK033&amp;type=image&amp;variant=auto";
+  img.src = base + '&t=' + Date.now();
+}, 120000);
+
+// Status & Offline-Logik
+// Status & Offline-Logik
+fetch('live.php?k=ASK033')
+  .then(res => res.json())
+  .then(data => {
+    const online       = data.online === true || data.online === 1;
+    const liveLink     = document.getElementById('liveLink');
+    const liveContainer= document.getElementById('liveContainer');
+
+    if (!online) {
+      if (liveLink) liveLink.style.display = 'none';
+      if (!document.getElementById('offlinePlaceholder')) {
+        const ph = document.createElement('div');
+        ph.id        = 'offlinePlaceholder';
+        ph.className = 'bg-dark text-center rounded shadow mb-3 p-5';
+        ph.textContent = 'OFFLINE';
+        liveContainer.insertBefore(ph, liveContainer.firstChild);
+      }
+    } else {
+      if (liveLink) liveLink.style.display = '';
+      const ph = document.getElementById('offlinePlaceholder');
+      if (ph) ph.remove();
+    }
+
+    const box     = document.getElementById('statusbox');
+    let temp      = data.temp    ?? '–';
+    let tempVal   = parseFloat(temp);
+    let tempPerc  = (tempVal && !isNaN(tempVal)) ? Math.min(Math.max(tempVal,0),90)/90*100 : 0;
+    let tempColor = tempVal>=80 ? 'bg-danger' : tempVal>=60 ? 'bg-warning' : 'bg-success';
+
+    function humanize(seconds){
+      if (!seconds && seconds !== 0) return '–';
+      let s = seconds|0, parts=[];
+      const units = [
+        [30*24*3600, I18N.units.month,  I18N.units.months],
+        [7*24*3600,  I18N.units.week,   I18N.units.week ],
+        [24*3600,    I18N.units.day,    I18N.units.days ],
+        [3600,       'h',               'h'],
+        [60,         'm',               'm'],
+        [1,          's',               's']
+      ];
+      for (let [sec,sing,plur] of units) {
+        let n = Math.floor(s/sec);
+        if (n) parts.push(n + ' ' + (n===1?sing:(plur||sing)));
+        s %= sec;
+      }
+      return parts.join(' ');
+    }
+
+    const CAMERA_TEMP_UNIT = "C";
+    const CAMERA_PRESSURE_UNIT = "hPa";
+    const CAMERA_TEMP_UNIT_LABEL = "\u00b0C";
+    const CAMERA_PRESSURE_UNIT_LABEL = "hPa";
+
+    function asNumber(v) {
+      if (v === null || v === undefined || v === '' || v === '–') return null;
+      const n = Number(v);
+      return Number.isFinite(n) ? n : null;
+    }
+
+    function fmtNumber(v, digits = 2) {
+      const n = asNumber(v);
+      if (n === null) return '–';
+      return n.toLocaleString(I18N.locale, { maximumFractionDigits: digits });
+    }
+
+    function convertTempJs(tempC) {
+      const n = asNumber(tempC);
+      if (n === null) return null;
+      if (CAMERA_TEMP_UNIT === 'F') {
+        return (n * 9 / 5) + 32;
+      }
+      return n;
+    }
+
+    function convertPressureJs(pressureHpa) {
+      const n = asNumber(pressureHpa);
+      if (n === null) return null;
+      if (CAMERA_PRESSURE_UNIT === 'inHg') {
+        return n * 0.0295299830714;
+      }
+      return n;
+    }
+
+    function fmtTemp(tempC, digits = 2) {
+      const v = convertTempJs(tempC);
+      if (v === null) return '–';
+      return `${fmtNumber(v, digits)} ${CAMERA_TEMP_UNIT_LABEL}`;
+    }
+
+    function fmtPressure(pressureHpa, digits = 2) {
+      const v = convertPressureJs(pressureHpa);
+      if (v === null) return '–';
+      return `${fmtNumber(v, digits)} ${CAMERA_PRESSURE_UNIT_LABEL}`;
+    }
+
+
+    // --- Kamera-Lokalzeit = JETZT (Server/Browser now), formatiert in Kamera-Zeitzone ---
+    let camTimeLine = '';
+    const CAM_TZ = "Europe\/Vienna";
+
+    if (CAM_TZ) {
+      const tick = () => {
+        const d = new Date(); // JETZT
+        let formatted = '';
+        try {
+          formatted = new Intl.DateTimeFormat(I18N.locale, {
+            timeZone: CAM_TZ,
+            year: 'numeric', month: '2-digit', day: '2-digit',
+            hour: '2-digit', minute: '2-digit', second: '2-digit'
+          }).format(d);
+        } catch (e) {
+          formatted = d.toLocaleString(I18N.locale);
+        }
+        const el = document.getElementById('camClock');
+        if (el) el.innerHTML = `${formatted} <span class="text-muted small">(${CAM_TZ})</span>`;
+      };
+
+      camTimeLine = `<li><strong>${I18N.labels.cameraTime}</strong> <span id="camClock">–</span></li>`;
+
+      // nach dem Rendern starten
+      setTimeout(() => {
+        tick();
+        window.__camClockTimer && clearInterval(window.__camClockTimer);
+        window.__camClockTimer = setInterval(tick, 1000);
+      }, 0);
+    }
+
+
+
+    box.innerHTML = `
+      <ul>
+        <li><strong>${I18N.labels.status}</strong> ${online ? '🟢 '+I18N.labels.online : '🔴 '+I18N.labels.offline}</li>
+        ${camTimeLine}
+        <li><strong>${I18N.labels.temp}</strong> ${fmtTemp(temp, 2)}</li>
+        <li><strong>${I18N.labels.memUsed}</strong> ${data.mem_used ?? '–'} MB</li>
+        <li><strong>${I18N.labels.memFree}</strong> ${data.mem_free ?? '–'} MB</li>
+        <li><strong>${I18N.labels.lastReboot}</strong> ${data.boottime ? humanize(data.boottime) : '–'}</li>
+        <li><strong>${I18N.labels.views30d}</strong> ${data.views_30d ?? '–'}</li>
+        <li><strong>${I18N.labels.views24h}</strong> ${data.views_24h ?? '–'}</li>
+      </ul>
+
+      <h5>${I18N.labels.tempHeader}</h5>
+      <div class="mb-2">
+        <h6>${I18N.labels.rpiChip}</h6>
+        <label class="form-label">${I18N.labels.tempGauge}</label>
+        <div class="progress" style="height:2rem;">
+          <div class="progress-bar ${tempColor}" role="progressbar" style="width:${tempPerc}%;"></div>
+        </div>
+        <div class="mt-2 small">
+          <span class="badge bg-success">${I18N.labels.rangeCool}</span>
+          <span class="badge bg-warning text-dark">${I18N.labels.rangeWarm}</span>
+          <span class="badge bg-danger">${I18N.labels.rangeHot}</span>
+        </div>
+      </div>
+    `;
+
+    // ----------------------------------------------------------
+    // Live-Sensoren aus INTERNAL_SENSORS + live.php-Daten
+    // Unterstützt alt + neu:
+    //   alt: bme280, dht22
+    //   neu: bme280_1, bme280_2, dht22_1, dht22_2
+    // ----------------------------------------------------------
+    let sensorHtml = '<div class="mt-3">';
+
+    const SENSOR_ENABLED = {
+      bme280:   true,
+      ds18b20:  true,
+      dht22:    false,
+      dht11:    false,
+      htu21:    false,
+      sht3x:    false,
+      tsl2591:  true,
+      mlx90614: true,
+      kpindex:  true,
+      analemma: true    };
+
+    function sensorBaseId(sensorId) {
+      return String(sensorId || '').toLowerCase().replace(/_\d+$/, '');
+    }
+
+    function sensorIndex(sensorId) {
+      const m = String(sensorId || '').toLowerCase().match(/_(\d+)$/);
+      return m ? m[1] : null;
+    }
+
+    function upperId(sensorId) {
+      return String(sensorId || '').toUpperCase();
+    }
+
+    function readLiveValue(dataObj, candidates) {
+      for (const key of candidates) {
+        if (Object.prototype.hasOwnProperty.call(dataObj, key) && dataObj[key] !== null && dataObj[key] !== '') {
+          return dataObj[key];
+        }
+      }
+      return '–';
+    }
+
+    function makeCandidates(baseId, idx, suffixes) {
+      const out = [];
+      suffixes.forEach(suffix => {
+        if (idx) {
+          out.push(`${baseId}_${idx}_${suffix}`);
+          out.push(`${baseId}${idx}_${suffix}`);
+          out.push(`${baseId}_${suffix}${idx}`);
+          out.push(`${baseId}${suffix}${idx}`);
+        }
+        out.push(`${baseId}_${suffix}`);
+        out.push(`${baseId}${suffix}`);
+      });
+      return out;
+    }
+
+    if (Array.isArray(INTERNAL_SENSORS) && INTERNAL_SENSORS.length > 0) {
+      INTERNAL_SENSORS.forEach(s => {
+        const id     = String(s.id || '').toLowerCase();
+        const baseId = sensorBaseId(id);
+        const idx    = sensorIndex(id);
+        const name   = s.name || s.label || upperId(id);
+
+        if (!SENSOR_ENABLED[baseId]) {
+          return;
+        }
+
+        // BME280 / BME280_1 / BME280_2
+        if (baseId === 'bme280') {
+          const temp  = readLiveValue(data, makeCandidates('bme280', idx, ['temp']));
+          const hum   = readLiveValue(data, makeCandidates('bme280', idx, ['hum']));
+          const press = readLiveValue(data, makeCandidates('bme280', idx, ['press']));
+
+          sensorHtml += `
+            <h5>${name} (${upperId(id)})</h5>
+            <ul class="mb-2">
+              <li><strong>${I18N.labels.sensors.temp}</strong> ${fmtTemp(temp, 2)}</li>
+              <li><strong>${I18N.labels.sensors.hum}</strong> ${hum} %</li>
+              <li><strong>${I18N.labels.sensors.press}</strong> ${fmtPressure(press, 2)}</li>
+            </ul>
+          `;
+        }
+
+        // DS18B20
+        else if (baseId === 'ds18b20') {
+          const outtemp = readLiveValue(data, makeCandidates('ds18b20', idx, ['temp']));
+
+          sensorHtml += `
+            <h5>${name} (${upperId(id)})</h5>
+            <ul class="mb-2">
+              <li><strong>${I18N.labels.sensors.outtemp}</strong> ${outtemp} °C</li>
+            </ul>
+          `;
+        }
+
+        // DHT22 / DHT22_1 / DHT22_2
+        else if (baseId === 'dht22') {
+          const temp = readLiveValue(data, makeCandidates('dht22', idx, ['temp']));
+          const hum  = readLiveValue(data, makeCandidates('dht22', idx, ['hum']));
+
+          sensorHtml += `
+            <h5>${name} (${upperId(id)})</h5>
+            <ul class="mb-2">
+              <li><strong>${I18N.labels.sensors.temp}</strong> ${fmtTemp(temp, 2)}</li>
+              <li><strong>${I18N.labels.sensors.hum}</strong> ${hum} %</li>
+            </ul>
+          `;
+        }
+
+        // DHT11
+        else if (baseId === 'dht11') {
+          const temp = readLiveValue(data, makeCandidates('dht11', idx, ['temp']));
+          const hum  = readLiveValue(data, makeCandidates('dht11', idx, ['hum']));
+
+          sensorHtml += `
+            <h5>${name} (${upperId(id)})</h5>
+            <ul class="mb-2">
+              <li><strong>${I18N.labels.sensors.temp}</strong> ${fmtTemp(temp, 2)}</li>
+              <li><strong>${I18N.labels.sensors.hum}</strong> ${hum} %</li>
+            </ul>
+          `;
+        }
+
+        // HTU21
+        else if (baseId === 'htu21') {
+          const temp = readLiveValue(data, makeCandidates('htu21', idx, ['temp']));
+          const hum  = readLiveValue(data, makeCandidates('htu21', idx, ['hum']));
+
+          sensorHtml += `
+            <h5>${name} (${upperId(id)})</h5>
+            <ul class="mb-2">
+              <li><strong>${I18N.labels.sensors.temp}</strong> ${fmtTemp(temp, 2)}</li>
+              <li><strong>${I18N.labels.sensors.hum}</strong> ${hum} %</li>
+            </ul>
+          `;
+        }
+
+        // SHT3X
+        else if (baseId === 'sht3x') {
+          const temp = readLiveValue(data, makeCandidates('sht3x', idx, ['temp']));
+          const hum  = readLiveValue(data, makeCandidates('sht3x', idx, ['hum']));
+
+          sensorHtml += `
+            <h5>${name} (${upperId(id)})</h5>
+            <ul class="mb-2">
+              <li><strong>${I18N.labels.sensors.temp}</strong> ${fmtTemp(temp, 2)}</li>
+              <li><strong>${I18N.labels.sensors.hum}</strong> ${hum} %</li>
+            </ul>
+          `;
+        }
+
+        // TSL2591
+        else if (baseId === 'tsl2591') {
+          const lux = readLiveValue(data, makeCandidates('tsl2591', idx, ['lux', 'Lux']));
+
+          sensorHtml += `
+            <h5>${name} (${upperId(id)})</h5>
+            <ul class="mb-2">
+              <li><strong>SQM:</strong> ${lux}</li>
+            </ul>
+          `;
+        }
+
+        // MLX90614
+        else if (baseId === 'mlx90614') {
+          const temp = readLiveValue(data, [
+            ...makeCandidates('mlx90614', idx, ['temp']),
+            ...makeCandidates('mlx90614', idx, ['object']),
+            ...makeCandidates('mlx90614', idx, ['object_temp'])
+          ]);
+
+          sensorHtml += `
+            <h5>${name} (${upperId(id)})</h5>
+            <ul class="mb-2">
+              <li><strong>${I18N.labels.sensors.temp}</strong> ${fmtTemp(temp, 2)}</li>
+            </ul>
+          `;
+        }
+
+        // Kp-Index
+        else if (baseId === 'kpindex') {
+          const kp = readLiveValue(data, ['kpindex', 'kp_index', 'kp']);
+
+          sensorHtml += `
+            <h5>${name} (${upperId(id)})</h5>
+            <ul class="mb-2">
+              <li><strong>Kp</strong> ${kp}</li>
+            </ul>
+          `;
+        }
+
+        // Analemma
+        else if (baseId === 'analemma') {
+          sensorHtml += `
+            <h5>${name} (${upperId(id)})</h5>
+            <p class="small text-muted mb-2">Analemma-Daten werden aktuell nicht als Live-Wert geliefert.</p>
+          `;
+        }
+      });
+    }
+
+    if (sensorHtml === '<div class="mt-3">') {
+      sensorHtml += '<p class="text-muted mb-0">–</p>';
+    }
+    sensorHtml += '</div>';
+
+    document.getElementById('sensorbox').innerHTML = sensorHtml;
+  })
+  .catch(err => console.error('Live-Daten laden fehlgeschlagen:', err));
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const defaultPane = "qp-videos";
+
+  const tabs  = Array.prototype.slice.call(document.querySelectorAll('.qp-tab'));
+  const panes = Array.prototype.slice.call(document.querySelectorAll('.qp-pane'));
+
+  function activate(targetId){
+    panes.forEach(p => p.classList.toggle('active', p.id === targetId));
+    tabs.forEach(b => b.classList.toggle('active', b.dataset.target === targetId));
+    // URL optional merken (ohne reload)
+    try {
+      const u = new URL(window.location.href);
+      const map = { 'qp-videos':'videos', 'qp-keograms':'keograms', 'qp-startrails':'startrails' };
+      u.searchParams.set('qp', map[targetId] || 'videos');
+      window.history.replaceState({}, '', u.toString());
+    } catch(e){}
+  }
+
+  tabs.forEach(btn => {
+    btn.addEventListener('click', () => activate(btn.dataset.target));
+  });
+
+  // initial
+  activate(defaultPane);
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const btn  = document.getElementById('likeBtn');
+  const icon = document.getElementById('likeIcon');
+  const cnt  = document.getElementById('likeCount');
+  if (!btn || !icon || !cnt) return;
+
+  // Pulse to show "you can like" (only until first click in this session)
+  btn.classList.add('pulse');
+
+  function setLikedUI(liked) {
+    btn.dataset.liked = liked ? '1' : '0';
+    btn.classList.toggle('liked', liked);
+    btn.classList.remove('pulse');
+    icon.className = liked ? 'bi bi-heart-fill' : 'bi bi-heart';
+    if (liked) btn.disabled = true; // du willst aktuell "1 Like pro Visitor" -> deaktivieren
+  }
+
+  btn.addEventListener('click', () => {
+    btn.disabled = true;
+
+    fetch('like_camera.php', {
+      method: 'POST',
+      headers: {'Content-Type':'application/x-www-form-urlencoded'},
+      body: 'k=ASK033'
+    })
+    .then(r => r.json())
+    .then(d => {
+      if (d && d.ok) {
+        // wenn API irgendwann count zurückgibt, nutzen wir den
+        if (typeof d.likes !== 'undefined') {
+          cnt.textContent = String(parseInt(d.likes, 10) || 0);
+        } else {
+          cnt.textContent = String((parseInt(cnt.textContent, 10) || 0) + 1);
+        }
+        setLikedUI(true);
+
+        // mini-toast (Bootstrap)
+        const toast = document.createElement('div');
+        toast.className = 'toast align-items-center text-bg-dark border-0 position-fixed bottom-0 end-0 m-3';
+        toast.setAttribute('role','alert');
+        toast.innerHTML = `
+          <div class="d-flex">
+            <div class="toast-body">
+              Saved: marked as favorite ❤️            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+          </div>
+        `;
+        document.body.appendChild(toast);
+        const t = new bootstrap.Toast(toast, { delay: 2200 });
+        t.show();
+        toast.addEventListener('hidden.bs.toast', () => toast.remove());
+      } else {
+        btn.disabled = false; // Fehler -> wieder klickbar
+      }
+    })
+    .catch(() => { btn.disabled = false; });
+  });
+});
+</script>
+
+<script>
+(() => {
+  const HIST_LABELS = Array.from({length: 256}, (_, i) => i);
+  let histChart = null;
+
+  // ROI state
+  let roiEnabled = false;
+  let roiPct = 70; // 10..100
+
+  // Histogram state
+  let histNormalized = false;  // counts -> percent
+  let histMode = 'rgb';        // 'rgb' | 'luma'
+  let histLog = false;         // linear | log10(value+1)
+
+  const TXT = {
+    hintRgb: "Distribution of color values (RGB) in the current image.",
+    hintLuma: "Distribution of brightness (luminance) in the current image.",
+    yCount: "Count",
+    yPercent: "Share (%)",
+    labelY: "Luminance"  };
+
+  function setHint() {
+    const el = document.getElementById('histHint');
+    if (!el) return;
+    el.textContent = (histMode === 'luma') ? TXT.hintLuma : TXT.hintRgb;
+  }
+
+  function updateRoiOverlay() {
+    const img = document.getElementById('liveImage');
+    const ov  = document.getElementById('roiOverlay');
+    const lbl = document.getElementById('roiSizeLabel');
+    const collapse = document.getElementById('histCollapse');
+    if (lbl) lbl.textContent = `${roiPct}%`;
+    if (!img || !ov) return;
+
+    if ((collapse && !collapse.classList.contains('show')) || !roiEnabled) {
+      ov.style.display = 'none';
+      return;
+    }
+
+    const rect = img.getBoundingClientRect();
+    const d = Math.max(20, Math.min(rect.width, rect.height) * (roiPct / 100));
+    ov.style.width  = `${d}px`;
+    ov.style.height = `${d}px`;
+    ov.style.display = 'block';
+  }
+
+  function computeHistogramFromImage(img) {
+    if (!img || !img.naturalWidth || !img.naturalHeight) return null;
+
+    // Downscale für Performance (bei dir aktuell = naturalWidth -> ok, aber lass es so)
+    const maxW = img.naturalWidth;
+    const scale = Math.min(1, maxW / img.naturalWidth);
+    const w = Math.max(1, Math.round(img.naturalWidth * scale));
+    const h = Math.max(1, Math.round(img.naturalHeight * scale));
+
+    const cvs = document.createElement('canvas');
+    cvs.width = w;
+    cvs.height = h;
+
+    const ctx = cvs.getContext('2d', { willReadFrequently: true });
+    ctx.drawImage(img, 0, 0, w, h);
+
+    let imageData;
+    try {
+      imageData = ctx.getImageData(0, 0, w, h);
+    } catch (e) {
+      return null;
+    }
+
+    const data = imageData.data;
+
+    const r = new Array(256).fill(0);
+    const g = new Array(256).fill(0);
+    const b = new Array(256).fill(0);
+    const y = new Array(256).fill(0);
+
+    const totalPixels = w * h;
+    const stride = totalPixels > 400_000 ? 2 : 1;
+
+    // ROI-Kreis in Canvas-Koordinaten
+    const cx = w / 2;
+    const cy = h / 2;
+    const radius = Math.min(w, h) / 2 * (roiPct / 100);
+    const r2 = radius * radius;
+
+    let samples = 0;
+
+    for (let yy = 0; yy < h; yy += stride) {
+      for (let xx = 0; xx < w; xx += stride) {
+
+        if (roiEnabled) {
+          const dx = (xx + 0.5) - cx;
+          const dy = (yy + 0.5) - cy;
+          if ((dx*dx + dy*dy) > r2) continue;
+        }
+
+        const idx = (yy * w + xx) * 4;
+
+        // Alpha prüfen
+        if (data[idx + 3] === 0) continue;
+
+        const R = data[idx];
+        const G = data[idx + 1];
+        const B = data[idx + 2];
+
+        if (histMode === 'luma') {
+          // Luminanz (ITU-R BT.709) – ausreichend für unsere Zwecke
+          const Y = Math.max(0, Math.min(255, Math.round(0.2126*R + 0.7152*G + 0.0722*B)));
+          y[Y]++;
+        } else {
+          r[R]++; g[G]++; b[B]++;
+        }
+
+        samples++;
+      }
+    }
+
+    return { r, g, b, y, samples };
+  }
+
+  function normalizeArray(arr, samples) {
+    if (!samples || samples <= 0) return arr;
+    const out = new Array(arr.length);
+    for (let i = 0; i < arr.length; i++) {
+      out[i] = (arr[i] / samples) * 100;
+    }
+    return out;
+  }
+
+  function toLog10Array(arr) {
+    // log10(value+1) -> 0 bleibt 0, kleine Werte werden sichtbar
+    const out = new Array(arr.length);
+    for (let i = 0; i < arr.length; i++) {
+      out[i] = Math.log10((arr[i] || 0) + 1);
+    }
+    return out;
+  }
+
+
+  function ensureChart(ctx2d) {
+    if (histChart) return histChart;
+
+    histChart = new Chart(ctx2d, {
+      type: 'line',
+      data: {
+        labels: HIST_LABELS,
+        datasets: [
+          {
+            label: "Red",
+            data: new Array(256).fill(0),
+            borderColor: 'rgba(255,80,80,0.95)',
+            borderWidth: 2,
+            pointRadius: 0,
+            tension: 0.15,
+            hidden: false
+          },
+          {
+            label: "Green",
+            data: new Array(256).fill(0),
+            borderColor: 'rgba(120,255,120,0.95)',
+            borderWidth: 2,
+            pointRadius: 0,
+            tension: 0.15,
+            hidden: false
+          },
+          {
+            label: "Blue",
+            data: new Array(256).fill(0),
+            borderColor: 'rgba(120,160,255,0.95)',
+            borderWidth: 2,
+            pointRadius: 0,
+            tension: 0.15,
+            hidden: false
+          },
+          {
+            label: TXT.labelY,
+            data: new Array(256).fill(0),
+            borderColor: 'rgba(240,240,240,0.95)',
+            borderWidth: 2,
+            pointRadius: 0,
+            tension: 0.15,
+            hidden: true
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: false,
+        plugins: {
+          legend: { labels: { color: '#fff' } },
+          tooltip: { enabled: true }
+        },
+        scales: {
+          x: { ticks: { color: '#ccc', maxTicksLimit: 9 }, grid: { color: 'rgba(255,255,255,0.08)' } },
+          y: {
+            ticks: {
+              color: '#ccc',
+              callback: (v) => {
+                if (histLog) {
+                  const p = Number(v);
+                  if (!isFinite(p)) return '';
+                  return '10^' + p;
+                }
+                return histNormalized ? (Number(v).toFixed(2) + '%') : v;
+              }
+            },
+            grid: { color: 'rgba(255,255,255,0.08)' },
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: TXT.yCount,
+              color: '#ccc'
+            }
+          }
+        }
+      }
+    });
+
+    return histChart;
+  }
+
+  function applyModeToChart(ch) {
+    const ds = ch.data.datasets;
+
+    const isLuma = (histMode === 'luma');
+    ds[0].hidden = isLuma;
+    ds[1].hidden = isLuma;
+    ds[2].hidden = isLuma;
+    ds[3].hidden = !isLuma;
+
+    if (histLog) {
+      ch.options.scales.y.title.text = (histNormalized ? TXT.yPercent : TXT.yCount) + ' (log10)';
+    } else {
+      ch.options.scales.y.title.text = histNormalized ? TXT.yPercent : TXT.yCount;
+    }
+    setHint();
+  }
+
+  function updateHistogram() {
+    const img = document.getElementById('liveImage');
+    const canvas = document.getElementById('liveHist');
+    const collapse = document.getElementById('histCollapse');
+    if (!img || !canvas) return;
+    if (collapse && !collapse.classList.contains('show')) return;
+    if (!img.complete || img.naturalWidth === 0) return;
+
+    const h = computeHistogramFromImage(img);
+    if (!h) return;
+
+    const ch = ensureChart(canvas.getContext('2d'));
+
+    applyModeToChart(ch);
+
+    if (histMode === 'luma') {
+      let yData = histNormalized ? normalizeArray(h.y, h.samples) : h.y;
+      if (histLog) yData = toLog10Array(yData);
+      ch.data.datasets[3].data = yData;
+    } else {
+      let rData = histNormalized ? normalizeArray(h.r, h.samples) : h.r;
+      let gData = histNormalized ? normalizeArray(h.g, h.samples) : h.g;
+      let bData = histNormalized ? normalizeArray(h.b, h.samples) : h.b;
+
+      if (histLog) {
+        rData = toLog10Array(rData);
+        gData = toLog10Array(gData);
+        bData = toLog10Array(bData);
+      }
+
+      ch.data.datasets[0].data = rData;
+      ch.data.datasets[1].data = gData;
+      ch.data.datasets[2].data = bData;
+    }
+
+    ch.update();
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const img = document.getElementById('liveImage');
+    const tgl = document.getElementById('roiToggle');
+    const rng = document.getElementById('roiSize');
+
+    const nrm = document.getElementById('histNormalize');
+    const lum = document.getElementById('histLuma');
+    const lg  = document.getElementById('histLog');
+
+    const histCollapse = document.getElementById('histCollapse');
+    const histIcon = document.getElementById('histCollapseIcon');
+
+    if (histCollapse) {
+      histCollapse.addEventListener('shown.bs.collapse', () => {
+        if (histIcon) histIcon.className = 'bi bi-chevron-up';
+        updateRoiOverlay();
+        setTimeout(() => {
+          updateHistogram();
+          if (histChart) histChart.resize();
+        }, 0);
+      });
+
+      histCollapse.addEventListener('hidden.bs.collapse', () => {
+        if (histIcon) histIcon.className = 'bi bi-chevron-down';
+        const ov = document.getElementById('roiOverlay');
+        if (ov) ov.style.display = 'none';
+      });
+    }
+
+    if (tgl) {
+      tgl.addEventListener('change', () => {
+        roiEnabled = !!tgl.checked;
+        updateRoiOverlay();
+        updateHistogram();
+      });
+    }
+
+    if (rng) {
+      rng.addEventListener('input', () => {
+        roiPct = Math.max(10, Math.min(100, parseInt(rng.value, 10) || 70));
+        updateRoiOverlay();
+        if (roiEnabled) updateHistogram();
+      });
+    }
+
+    if (nrm) {
+      nrm.addEventListener('change', () => {
+        histNormalized = !!nrm.checked;
+        updateHistogram();
+      });
+    }
+
+    if (lum) {
+      lum.addEventListener('change', () => {
+        histMode = lum.checked ? 'luma' : 'rgb';
+        updateHistogram();
+      });
+    }
+
+    if (lg) {
+      lg.addEventListener('change', () => {
+        histLog = !!lg.checked;
+        updateHistogram();
+      });
+    }
+
+
+    window.addEventListener('resize', updateRoiOverlay);
+
+    if (img) {
+      img.addEventListener('load', () => {
+        updateRoiOverlay();
+        setTimeout(updateHistogram, 0);
+      });
+      setTimeout(() => { updateRoiOverlay(); updateHistogram(); }, 50);
+    }
+
+    setHint();
+    window.__askUpdateHistogram = updateHistogram;
+  });
+})();
+
+</script>
+
+
+<!-- footer.inc.php -->
+<footer class="mt-5 text-light small border-top pt-4">
+    <div class="container">
+
+        <!-- Logo + Link-Spalten -->
+        <div class="row align-items-center mb-4">
+            <!-- Logo -->
+            <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+                <img
+                src="images/logo_256.jpg"
+                srcset="
+                    images/logo_256.jpg 256w,
+                    images/logo_512.jpg 512w,
+                    images/logo_1024.jpg 1024w
+                "
+                sizes="(max-width: 768px) 200px, 300px"
+                alt="AllSkyKamera Logo"
+                class="footer-logo img-fluid"
+                loading="lazy">
+            </div>
+
+            <!-- 3 Spalten mit Links -->
+            <div class="col-md-8">
+                <div class="row text-start text-sm-center text-md-start footer-links">
+
+                    <!-- 1. Kontakt & Community -->
+                    <div class="col-sm-4 mb-4">
+                        <h6 class="text-uppercase fw-semibold mb-3">
+                            Contact & Community                        </h6>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="mailto:gottie@web.de" class="text-light text-decoration-none">
+                                    <i class="bi bi-envelope me-2"></i>
+                                    Send an email                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/stefan-gotthold-b8a73017/" target="_blank" rel="noopener"
+                                   class="text-light text-decoration-none">
+                                    <i class="bi bi-linkedin me-2"></i>
+                                    LinkedIn Profile                                </a>
+                            </li>
+                            <li>
+                                <a href="https://discord.gg/SpbBdr6hub" target="_blank" rel="noopener"
+                                   class="text-light text-decoration-none">
+                                    <i class="bi bi-discord me-2"></i>
+                                    Discord                                </a>
+                            </li>
+                            <li>
+                                <a href="https://signal.group/#CjQKIBqrzLiHeqS5xWlAKzqc9rvcOp4F8kb2GcT8n77XFEgCEhBM1coF4RnlvUnYbysC5OYw" target="_blank" rel="noopener"
+                                   class="text-light text-decoration-none">
+                                    <i class="bi bi-chat-dots me-2"></i>
+                                    Signal Group                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 2. Fragen & Antworten -->
+                    <div class="col-sm-4 mb-4">
+                        <h6 class="text-uppercase fw-semibold mb-3">
+                            Questions & Answers                        </h6>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="/api-doc.php" class="text-light text-decoration-none">
+                                    <i class="bi bi-braces-asterisk me-2"></i>
+                                    API Documentation (v1)                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/docs.php" class="text-light text-decoration-none">
+                                    <i class="bi bi-braces-asterisk me-2"></i>
+                                    Website Documentation (v2)                                </a>
+                            </li>
+                            <li>
+                                <a href="/faq.php" class="text-light text-decoration-none">
+                                    <i class="bi bi-question-circle me-2"></i>
+                                    FAQ                                </a>
+                            </li>
+                            <li>
+                                <a href="/kamerabau.php" class="text-light text-decoration-none">
+                                    <i class="bi bi-tools me-2"></i>
+                                    Build Guides                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 3. Über das Projekt -->
+                    <div class="col-sm-4 mb-4">
+                        <h6 class="text-uppercase fw-semibold mb-3">
+                            About the Project                        </h6>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="/uebermich.php" class="text-light text-decoration-none">
+                                    <i class="bi bi-person me-2"></i>
+                                    About Me                                </a>
+                            </li>
+                            <li>
+                                <a href="/impressum.php" class="text-light text-decoration-none">
+                                    <i class="bi bi-file-earmark-text me-2"></i>
+                                    Legal Notice                                </a>
+                            </li>
+                            <li>
+                                <a href="/datenschutz.php" class="text-light text-decoration-none">
+                                    <i class="bi bi-shield-lock me-2"></i>
+                                    Privacy Policy                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Affiliate-Transparenzhinweis -->
+                    <div class="footer-affiliate-note">
+                
+            <div class="small text-light-50 mt-4">
+                <i class="bi bi-info-circle me-1"></i>Transparency notice: Some links on this page are affiliate links. If you purchase through them, this may help support the operation and growth of the AllSkyKamera network.
+            </div>
+                    </div>
+        
+        <!-- Untere Zeile -->
+        <div class="border-top mt-2 pt-3 text-center">
+            &copy; 2026 AllSkyKamera Netzwerk
+        </div>
+    </div>
+</footer>
+
+<!-- kleines Footer-CSS direkt hier (oder in deine main.css auslagern) -->
+<style>
+footer .footer-logo {
+    max-width: 220px;
+    opacity: 0.95;
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.8));
+}
+
+footer .footer-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: .25rem;
+    padding: 2px 0;
+}
+
+footer .footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer .footer-affiliate-note {
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    padding: .85rem 1rem;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 14px;
+    background: rgba(255,255,255,.03);
+    color: rgba(255,255,255,.78);
+}
+
+footer .footer-affiliate-note .small {
+    margin: 0;
+}
+</style>
+
+<!-- SCRIPTS -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.terminator@1.0.0/dist/leaflet.terminator.min.js"></script>
+        -->
+
+<!-- SCRIPTS -->
+<script defer src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script defer src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script defer src="/assets/vendor/leaflet/leaflet.js"></script>
+<script defer src="/assets/vendor/leaflet-markercluster/leaflet.markercluster.js"></script>
+<script defer src="/assets/vendor/leaflet-terminator/leaflet.terminator.js"></script>
+
+<!-- SHARE BUTTONS SCRIPT -->
+<script>
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.share-btn');
+  if (!btn) return;
+
+  if (btn.dataset.action === 'copy') {
+    const wrap = btn.closest('.share-buttons');
+    const url = wrap?.dataset.shareUrl || window.location.href;
+    navigator.clipboard.writeText(url).then(() => {
+      btn.classList.remove('btn-outline-light');
+      btn.classList.add('btn-success');
+      const span = btn.querySelector('span.ms-1');
+      if (span) span.textContent = (span.textContent && span.textContent.trim().length)
+        ? 'Copied!'
+        : 'OK';
+      setTimeout(() => {
+        btn.classList.remove('btn-success');
+        btn.classList.add('btn-outline-light');
+        if (span) span.textContent = 'Copy link';
+      }, 1200);
+    });
+    e.preventDefault();
+    return;
+  }
+
+  if (btn.tagName === 'A') {
+    const w = 620, h = 540;
+    const y = window.top.outerHeight / 2 + window.top.screenY - (h / 2);
+    const x = window.top.outerWidth  / 2 + window.top.screenX - (w / 2);
+    window.open(btn.href, '_blank', `toolbar=0,status=0,width=${w},height=${h},left=${x},top=${y}`);
+    e.preventDefault();
+  }
+});
+</script></body>
+</html>

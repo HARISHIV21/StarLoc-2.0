@@ -1,0 +1,668 @@
+{
+  "phase": "135_similarity_vs_affine",
+  "method": "Leave-one-quadrant-out comparison of translation, similarity and affine models",
+  "pairs_analysed": 12,
+  "results": [
+    {
+      "pair": "518->519",
+      "inliers": 21,
+      "folds": [
+        {
+          "held_quadrant": 0,
+          "test_points": 7,
+          "translation_median": 0.9763554008849948,
+          "similarity_median": 0.5040164866938094,
+          "affine_median": 0.5388405476961772,
+          "translation_rms": 1.0824509794004449,
+          "similarity_rms": 0.6219953447843491,
+          "affine_rms": 0.5920261744580767,
+          "similarity_rotation_deg": -0.08990206854437606,
+          "similarity_scale": 0.9998460164675116
+        },
+        {
+          "held_quadrant": 1,
+          "test_points": 4,
+          "translation_median": 0.8347678017012072,
+          "similarity_median": 0.6223346163064011,
+          "affine_median": 0.6699557823901264,
+          "translation_rms": 0.9530210221571767,
+          "similarity_rms": 1.0113479706170476,
+          "affine_rms": 1.0371542850423108,
+          "similarity_rotation_deg": -0.1528406972729561,
+          "similarity_scale": 1.0004560297845042
+        },
+        {
+          "held_quadrant": 2,
+          "test_points": 5,
+          "translation_median": 0.7376048931906538,
+          "similarity_median": 0.5507613864709021,
+          "affine_median": 0.5783354265086699,
+          "translation_rms": 0.7510507948149694,
+          "similarity_rms": 0.7560482559795076,
+          "affine_rms": 0.7297621644167275,
+          "similarity_rotation_deg": -0.152047289117293,
+          "similarity_scale": 1.0005031198147576
+        },
+        {
+          "held_quadrant": 3,
+          "test_points": 5,
+          "translation_median": 0.8012355927261627,
+          "similarity_median": 0.633377068829646,
+          "affine_median": 0.839066545906002,
+          "translation_rms": 1.0266687588040186,
+          "similarity_rms": 0.6267376065339187,
+          "affine_rms": 0.8362252521274351,
+          "similarity_rotation_deg": -0.11471951433273284,
+          "similarity_scale": 1.000443718439988
+        }
+      ],
+      "similarity_median_wins_vs_translation": 4,
+      "affine_median_wins_vs_similarity": 0,
+      "similarity_rms_wins_vs_translation": 2,
+      "affine_rms_wins_vs_similarity": 2
+    },
+    {
+      "pair": "519->520",
+      "inliers": 59,
+      "folds": [
+        {
+          "held_quadrant": 0,
+          "test_points": 12,
+          "translation_median": 0.859511126424251,
+          "similarity_median": 0.34605498711325866,
+          "affine_median": 0.47216297807621277,
+          "translation_rms": 0.9462946755114593,
+          "similarity_rms": 0.6822995730742535,
+          "affine_rms": 0.7985365261446468,
+          "similarity_rotation_deg": -0.13188949330084704,
+          "similarity_scale": 1.0000771846950605
+        },
+        {
+          "held_quadrant": 1,
+          "test_points": 9,
+          "translation_median": 0.7485696100761302,
+          "similarity_median": 0.4493442562590962,
+          "affine_median": 0.5512988294946845,
+          "translation_rms": 0.8169686376187711,
+          "similarity_rms": 0.5960097758510855,
+          "affine_rms": 0.5942017651171172,
+          "similarity_rotation_deg": -0.11649049000037778,
+          "similarity_scale": 0.9999723631360997
+        },
+        {
+          "held_quadrant": 2,
+          "test_points": 13,
+          "translation_median": 0.5657095411302091,
+          "similarity_median": 0.3324807522916145,
+          "affine_median": 0.3950684085149727,
+          "translation_rms": 0.6746341761939504,
+          "similarity_rms": 0.5190771200564022,
+          "affine_rms": 0.4904274722991364,
+          "similarity_rotation_deg": -0.1272349863953623,
+          "similarity_scale": 0.9999104941872807
+        },
+        {
+          "held_quadrant": 3,
+          "test_points": 25,
+          "translation_median": 0.7370222271081629,
+          "similarity_median": 0.40602366166442255,
+          "affine_median": 0.4196482323153794,
+          "translation_rms": 0.770942067784529,
+          "similarity_rms": 0.5253347382486339,
+          "affine_rms": 0.5169937701012673,
+          "similarity_rotation_deg": -0.1206534961313261,
+          "similarity_scale": 0.9996200827632441
+        }
+      ],
+      "similarity_median_wins_vs_translation": 4,
+      "affine_median_wins_vs_similarity": 0,
+      "similarity_rms_wins_vs_translation": 4,
+      "affine_rms_wins_vs_similarity": 3
+    },
+    {
+      "pair": "520->521",
+      "inliers": 93,
+      "folds": [
+        {
+          "held_quadrant": 0,
+          "test_points": 21,
+          "translation_median": 1.092805296438995,
+          "similarity_median": 0.541805651220879,
+          "affine_median": 0.6460690975886465,
+          "translation_rms": 1.0495451740379966,
+          "similarity_rms": 0.6537034586727015,
+          "affine_rms": 0.7157634355340342,
+          "similarity_rotation_deg": -0.18104963596982923,
+          "similarity_scale": 1.0002820324749786
+        },
+        {
+          "held_quadrant": 1,
+          "test_points": 8,
+          "translation_median": 0.9756566439237283,
+          "similarity_median": 0.5154062206736085,
+          "affine_median": 0.40738144963574874,
+          "translation_rms": 0.999209519093955,
+          "similarity_rms": 0.5256564767877963,
+          "affine_rms": 0.49367838913765255,
+          "similarity_rotation_deg": -0.18745616782322902,
+          "similarity_scale": 0.9996539926205843
+        },
+        {
+          "held_quadrant": 2,
+          "test_points": 41,
+          "translation_median": 0.6936053472372172,
+          "similarity_median": 0.5311505929445489,
+          "affine_median": 0.5346834251254196,
+          "translation_rms": 0.8457569318542445,
+          "similarity_rms": 0.6151833044665039,
+          "affine_rms": 0.599641782930812,
+          "similarity_rotation_deg": -0.1860190182047461,
+          "similarity_scale": 0.9995584569959096
+        },
+        {
+          "held_quadrant": 3,
+          "test_points": 23,
+          "translation_median": 0.9329313264716452,
+          "similarity_median": 0.6015080796496118,
+          "affine_median": 0.4261312388013767,
+          "translation_rms": 1.0316729569943117,
+          "similarity_rms": 0.6620754687204439,
+          "affine_rms": 0.6352118070569438,
+          "similarity_rotation_deg": -0.18250974512334278,
+          "similarity_scale": 0.9998778903524438
+        }
+      ],
+      "similarity_median_wins_vs_translation": 4,
+      "affine_median_wins_vs_similarity": 2,
+      "similarity_rms_wins_vs_translation": 4,
+      "affine_rms_wins_vs_similarity": 3
+    },
+    {
+      "pair": "521->522",
+      "inliers": 75,
+      "folds": [
+        {
+          "held_quadrant": 0,
+          "test_points": 14,
+          "translation_median": 1.0955056008172503,
+          "similarity_median": 0.6495814550998956,
+          "affine_median": 0.6292306771117684,
+          "translation_rms": 1.1010092366795483,
+          "similarity_rms": 0.7254515925221325,
+          "affine_rms": 0.7821199229750455,
+          "similarity_rotation_deg": -0.11464168050010398,
+          "similarity_scale": 1.0002521911089366
+        },
+        {
+          "held_quadrant": 1,
+          "test_points": 7,
+          "translation_median": 0.6059950132850775,
+          "similarity_median": 0.5275441999813696,
+          "affine_median": 0.4584525719004459,
+          "translation_rms": 0.8225288023255395,
+          "similarity_rms": 0.6011857786513238,
+          "affine_rms": 0.6756360737862701,
+          "similarity_rotation_deg": -0.12266567336244052,
+          "similarity_scale": 0.9999349788883974
+        },
+        {
+          "held_quadrant": 2,
+          "test_points": 32,
+          "translation_median": 0.4518267101712646,
+          "similarity_median": 0.4185671686696184,
+          "affine_median": 0.536384239995698,
+          "translation_rms": 0.6607610917895348,
+          "similarity_rms": 0.6198605100919766,
+          "affine_rms": 0.658909935750549,
+          "similarity_rotation_deg": -0.13844784369472743,
+          "similarity_scale": 1.0004417523327145
+        },
+        {
+          "held_quadrant": 3,
+          "test_points": 22,
+          "translation_median": 0.6596833938410849,
+          "similarity_median": 0.49488037855290756,
+          "affine_median": 0.44969378754300815,
+          "translation_rms": 0.7204313707176518,
+          "similarity_rms": 0.6623957494110303,
+          "affine_rms": 0.6814689883162836,
+          "similarity_rotation_deg": -0.13486284514871813,
+          "similarity_scale": 0.9996295571006583
+        }
+      ],
+      "similarity_median_wins_vs_translation": 4,
+      "affine_median_wins_vs_similarity": 3,
+      "similarity_rms_wins_vs_translation": 4,
+      "affine_rms_wins_vs_similarity": 0
+    },
+    {
+      "pair": "522->523",
+      "inliers": 43,
+      "folds": [
+        {
+          "held_quadrant": 0,
+          "test_points": 16,
+          "translation_median": 0.9729524883903421,
+          "similarity_median": 0.42378868233428724,
+          "affine_median": 0.5366692314545498,
+          "translation_rms": 0.9458630013630246,
+          "similarity_rms": 0.7356541238647475,
+          "affine_rms": 0.7067133109650819,
+          "similarity_rotation_deg": -0.19136434710514286,
+          "similarity_scale": 0.9994105214808824
+        },
+        {
+          "held_quadrant": 2,
+          "test_points": 24,
+          "translation_median": 0.7699066972332533,
+          "similarity_median": 0.48225359016972,
+          "affine_median": 0.7763430737737487,
+          "translation_rms": 0.865970737751459,
+          "similarity_rms": 0.6309151312527387,
+          "affine_rms": 0.8821614544000878,
+          "similarity_rotation_deg": -0.13345906217196546,
+          "similarity_scale": 0.9993947711492829
+        }
+      ],
+      "similarity_median_wins_vs_translation": 2,
+      "affine_median_wins_vs_similarity": 0,
+      "similarity_rms_wins_vs_translation": 2,
+      "affine_rms_wins_vs_similarity": 1
+    },
+    {
+      "pair": "523->524",
+      "inliers": 30,
+      "folds": [
+        {
+          "held_quadrant": 0,
+          "test_points": 7,
+          "translation_median": 0.9612058011172296,
+          "similarity_median": 0.5406074503105761,
+          "affine_median": 0.43388378622510376,
+          "translation_rms": 1.0022039001361933,
+          "similarity_rms": 0.7475737937051119,
+          "affine_rms": 0.7160573418785344,
+          "similarity_rotation_deg": -0.11981827173924382,
+          "similarity_scale": 0.9998168422433656
+        },
+        {
+          "held_quadrant": 1,
+          "test_points": 3,
+          "translation_median": 0.44572543853323454,
+          "similarity_median": 0.3741629144681822,
+          "affine_median": 0.23843030763668652,
+          "translation_rms": 0.9319047489806268,
+          "similarity_rms": 0.4909015261008817,
+          "affine_rms": 0.5270036764409467,
+          "similarity_rotation_deg": -0.1342685386356975,
+          "similarity_scale": 1.000070381388863
+        },
+        {
+          "held_quadrant": 2,
+          "test_points": 18,
+          "translation_median": 0.655081826305267,
+          "similarity_median": 0.6158562416679847,
+          "affine_median": 0.6349133259447509,
+          "translation_rms": 0.7962273312518712,
+          "similarity_rms": 0.7181533824167696,
+          "affine_rms": 0.7143685094975702,
+          "similarity_rotation_deg": -0.18809673203802707,
+          "similarity_scale": 1.0006636294092952
+        }
+      ],
+      "similarity_median_wins_vs_translation": 3,
+      "affine_median_wins_vs_similarity": 2,
+      "similarity_rms_wins_vs_translation": 3,
+      "affine_rms_wins_vs_similarity": 2
+    },
+    {
+      "pair": "524->525",
+      "inliers": 48,
+      "folds": [
+        {
+          "held_quadrant": 0,
+          "test_points": 7,
+          "translation_median": 1.2945870577342427,
+          "similarity_median": 0.7534669205138773,
+          "affine_median": 0.4121019426769547,
+          "translation_rms": 1.1814716359713786,
+          "similarity_rms": 0.784623497387702,
+          "affine_rms": 0.5746093691992604,
+          "similarity_rotation_deg": -0.08983830384176117,
+          "similarity_scale": 0.9995854656191264
+        },
+        {
+          "held_quadrant": 1,
+          "test_points": 7,
+          "translation_median": 0.3634813061798629,
+          "similarity_median": 0.612078232053341,
+          "affine_median": 0.7530986602042158,
+          "translation_rms": 0.6359739320287581,
+          "similarity_rms": 1.0535111224957865,
+          "affine_rms": 0.9440742885281507,
+          "similarity_rotation_deg": -0.1647140885742075,
+          "similarity_scale": 0.9997604755367502
+        },
+        {
+          "held_quadrant": 2,
+          "test_points": 18,
+          "translation_median": 0.6776298950998153,
+          "similarity_median": 0.49227868948305176,
+          "affine_median": 0.6768783070570001,
+          "translation_rms": 0.7458288915477621,
+          "similarity_rms": 0.6180746812060437,
+          "affine_rms": 0.7251213342867846,
+          "similarity_rotation_deg": -0.12825166490748985,
+          "similarity_scale": 0.9998555610381032
+        },
+        {
+          "held_quadrant": 3,
+          "test_points": 16,
+          "translation_median": 0.8133663593412692,
+          "similarity_median": 0.4730411213838711,
+          "affine_median": 0.544749787110774,
+          "translation_rms": 0.8289751876120998,
+          "similarity_rms": 0.5524559370208698,
+          "affine_rms": 0.618982034865984,
+          "similarity_rotation_deg": -0.0968746225010552,
+          "similarity_scale": 0.9998128366522676
+        }
+      ],
+      "similarity_median_wins_vs_translation": 3,
+      "affine_median_wins_vs_similarity": 1,
+      "similarity_rms_wins_vs_translation": 3,
+      "affine_rms_wins_vs_similarity": 2
+    },
+    {
+      "pair": "525->526",
+      "inliers": 94,
+      "folds": [
+        {
+          "held_quadrant": 0,
+          "test_points": 23,
+          "translation_median": 1.0593870813302624,
+          "similarity_median": 0.51483368462731,
+          "affine_median": 0.6250029371002388,
+          "translation_rms": 1.0841531694034507,
+          "similarity_rms": 0.9047251643418504,
+          "affine_rms": 0.8799015805959203,
+          "similarity_rotation_deg": -0.17795692773636207,
+          "similarity_scale": 1.0003676734907254
+        },
+        {
+          "held_quadrant": 1,
+          "test_points": 15,
+          "translation_median": 0.9732125756378796,
+          "similarity_median": 0.5716724973823067,
+          "affine_median": 0.5172964027460988,
+          "translation_rms": 0.929066250047543,
+          "similarity_rms": 0.6890011021676679,
+          "affine_rms": 0.6615446691901503,
+          "similarity_rotation_deg": -0.1548554430095571,
+          "similarity_scale": 0.9997185870067443
+        },
+        {
+          "held_quadrant": 2,
+          "test_points": 33,
+          "translation_median": 0.664523277622503,
+          "similarity_median": 0.3171054968772077,
+          "affine_median": 0.42165112405469735,
+          "translation_rms": 0.7983811264140734,
+          "similarity_rms": 0.5407358782492735,
+          "affine_rms": 0.5708016862550939,
+          "similarity_rotation_deg": -0.1560406654392402,
+          "similarity_scale": 0.9998259679599326
+        },
+        {
+          "held_quadrant": 3,
+          "test_points": 23,
+          "translation_median": 0.8177263786677352,
+          "similarity_median": 0.4085633374614422,
+          "affine_median": 0.33393849803508635,
+          "translation_rms": 0.8625801010163735,
+          "similarity_rms": 0.5798701931257059,
+          "affine_rms": 0.5176026018699794,
+          "similarity_rotation_deg": -0.15222314111988677,
+          "similarity_scale": 1.0002386863734511
+        }
+      ],
+      "similarity_median_wins_vs_translation": 4,
+      "affine_median_wins_vs_similarity": 2,
+      "similarity_rms_wins_vs_translation": 4,
+      "affine_rms_wins_vs_similarity": 3
+    },
+    {
+      "pair": "526->527",
+      "inliers": 100,
+      "folds": [
+        {
+          "held_quadrant": 0,
+          "test_points": 21,
+          "translation_median": 1.1485060670035225,
+          "similarity_median": 0.5280006818218322,
+          "affine_median": 0.48586026433150575,
+          "translation_rms": 1.0440450604962186,
+          "similarity_rms": 0.8272329908242477,
+          "affine_rms": 0.8493332220907113,
+          "similarity_rotation_deg": -0.12179183909197212,
+          "similarity_scale": 1.0000754748361032
+        },
+        {
+          "held_quadrant": 1,
+          "test_points": 11,
+          "translation_median": 1.0322722771482182,
+          "similarity_median": 0.765068018304895,
+          "affine_median": 0.8196047055286783,
+          "translation_rms": 1.0709513665343826,
+          "similarity_rms": 0.8339073600979567,
+          "affine_rms": 0.8584082181908638,
+          "similarity_rotation_deg": -0.11305405395292685,
+          "similarity_scale": 0.9996982264002634
+        },
+        {
+          "held_quadrant": 2,
+          "test_points": 38,
+          "translation_median": 0.4545788651553624,
+          "similarity_median": 0.42437376827346174,
+          "affine_median": 0.4035563496616953,
+          "translation_rms": 0.6379491436646123,
+          "similarity_rms": 0.5761189682270013,
+          "affine_rms": 0.5726362572869531,
+          "similarity_rotation_deg": -0.12154840871249172,
+          "similarity_scale": 0.999893005714553
+        },
+        {
+          "held_quadrant": 3,
+          "test_points": 30,
+          "translation_median": 0.6635984518330137,
+          "similarity_median": 0.44105708878061306,
+          "affine_median": 0.48004601043859707,
+          "translation_rms": 0.8156171849037381,
+          "similarity_rms": 0.7542288410860553,
+          "affine_rms": 0.7865732037941451,
+          "similarity_rotation_deg": -0.1297826203607059,
+          "similarity_scale": 0.9995663065826992
+        }
+      ],
+      "similarity_median_wins_vs_translation": 4,
+      "affine_median_wins_vs_similarity": 2,
+      "similarity_rms_wins_vs_translation": 4,
+      "affine_rms_wins_vs_similarity": 1
+    },
+    {
+      "pair": "527->528",
+      "inliers": 99,
+      "folds": [
+        {
+          "held_quadrant": 0,
+          "test_points": 22,
+          "translation_median": 1.0301799366719766,
+          "similarity_median": 0.6242253010010335,
+          "affine_median": 0.6629937870767869,
+          "translation_rms": 1.0888867667152087,
+          "similarity_rms": 0.8860017700321479,
+          "affine_rms": 1.0331424416133375,
+          "similarity_rotation_deg": -0.1427818572158536,
+          "similarity_scale": 1.0001983445844702
+        },
+        {
+          "held_quadrant": 1,
+          "test_points": 8,
+          "translation_median": 1.2113335416055815,
+          "similarity_median": 0.7234899303845732,
+          "affine_median": 0.8227197901734896,
+          "translation_rms": 1.2251880303791944,
+          "similarity_rms": 0.726220050131932,
+          "affine_rms": 0.864027875056819,
+          "similarity_rotation_deg": -0.11618356244317296,
+          "similarity_scale": 0.9998122826553277
+        },
+        {
+          "held_quadrant": 2,
+          "test_points": 40,
+          "translation_median": 0.6415204632530598,
+          "similarity_median": 0.5575967995769282,
+          "affine_median": 0.5992401209945315,
+          "translation_rms": 0.7455459821385896,
+          "similarity_rms": 0.6241213898908915,
+          "affine_rms": 0.6561345335948573,
+          "similarity_rotation_deg": -0.12780735730610515,
+          "similarity_scale": 0.9996481898443245
+        },
+        {
+          "held_quadrant": 3,
+          "test_points": 29,
+          "translation_median": 1.1033311712482567,
+          "similarity_median": 0.8134521887946545,
+          "affine_median": 0.684917970249848,
+          "translation_rms": 1.1714691853374082,
+          "similarity_rms": 1.0096907741320325,
+          "affine_rms": 1.120996328611653,
+          "similarity_rotation_deg": -0.12885448904450222,
+          "similarity_scale": 0.9992372933762406
+        }
+      ],
+      "similarity_median_wins_vs_translation": 4,
+      "affine_median_wins_vs_similarity": 1,
+      "similarity_rms_wins_vs_translation": 4,
+      "affine_rms_wins_vs_similarity": 0
+    },
+    {
+      "pair": "528->529",
+      "inliers": 87,
+      "folds": [
+        {
+          "held_quadrant": 0,
+          "test_points": 15,
+          "translation_median": 1.17955053082862,
+          "similarity_median": 0.6177656865785965,
+          "affine_median": 0.7816609003426426,
+          "translation_rms": 1.1851208249615517,
+          "similarity_rms": 0.9449125929899379,
+          "affine_rms": 1.0125242360442879,
+          "similarity_rotation_deg": -0.12080655091219608,
+          "similarity_scale": 1.0001798807799398
+        },
+        {
+          "held_quadrant": 1,
+          "test_points": 12,
+          "translation_median": 0.8177304795070384,
+          "similarity_median": 0.573872650166942,
+          "affine_median": 0.6430664028526125,
+          "translation_rms": 0.8800084336848927,
+          "similarity_rms": 0.6650343654382112,
+          "affine_rms": 0.710493267620507,
+          "similarity_rotation_deg": -0.1326574224678004,
+          "similarity_scale": 0.9996896376454559
+        },
+        {
+          "held_quadrant": 2,
+          "test_points": 29,
+          "translation_median": 0.4582700799582746,
+          "similarity_median": 0.3456946001950109,
+          "affine_median": 0.4019136105937642,
+          "translation_rms": 0.5854373111017028,
+          "similarity_rms": 0.4066206946711587,
+          "affine_rms": 0.44414001443632795,
+          "similarity_rotation_deg": -0.14209917974395161,
+          "similarity_scale": 0.9999877884491478
+        },
+        {
+          "held_quadrant": 3,
+          "test_points": 31,
+          "translation_median": 0.6390975000703123,
+          "similarity_median": 0.36834472184180295,
+          "affine_median": 0.3821882063519229,
+          "translation_rms": 0.7588494057748979,
+          "similarity_rms": 0.5938445855577508,
+          "affine_rms": 0.66059158920774,
+          "similarity_rotation_deg": -0.15069030871035738,
+          "similarity_scale": 0.9997464895174657
+        }
+      ],
+      "similarity_median_wins_vs_translation": 4,
+      "affine_median_wins_vs_similarity": 0,
+      "similarity_rms_wins_vs_translation": 4,
+      "affine_rms_wins_vs_similarity": 0
+    },
+    {
+      "pair": "529->530",
+      "inliers": 51,
+      "folds": [
+        {
+          "held_quadrant": 0,
+          "test_points": 4,
+          "translation_median": 0.8180042948208159,
+          "similarity_median": 0.4439546004500117,
+          "affine_median": 0.417188564407745,
+          "translation_rms": 0.869034165706927,
+          "similarity_rms": 0.48334386150570796,
+          "affine_rms": 0.4414384254793016,
+          "similarity_rotation_deg": -0.14249679191537518,
+          "similarity_scale": 1.0006874750494068
+        },
+        {
+          "held_quadrant": 1,
+          "test_points": 10,
+          "translation_median": 0.8728755592789139,
+          "similarity_median": 0.702164945573009,
+          "affine_median": 0.7770100676914993,
+          "translation_rms": 1.024068487458924,
+          "similarity_rms": 0.742204081600404,
+          "affine_rms": 0.7463317696318612,
+          "similarity_rotation_deg": -0.10766347257239865,
+          "similarity_scale": 1.0011862733442911
+        },
+        {
+          "held_quadrant": 2,
+          "test_points": 15,
+          "translation_median": 0.5483477736671172,
+          "similarity_median": 0.3949660330682726,
+          "affine_median": 0.4259292573528519,
+          "translation_rms": 0.6335978078790785,
+          "similarity_rms": 0.5192428916750116,
+          "affine_rms": 0.5209113876434718,
+          "similarity_rotation_deg": -0.14594227495345152,
+          "similarity_scale": 1.0009442360393057
+        },
+        {
+          "held_quadrant": 3,
+          "test_points": 22,
+          "translation_median": 0.6381836777756191,
+          "similarity_median": 0.39589466186104927,
+          "affine_median": 0.4634510345273162,
+          "translation_rms": 0.6923311106938724,
+          "similarity_rms": 0.5717695221870804,
+          "affine_rms": 0.6298189067553991,
+          "similarity_rotation_deg": -0.1827444713166029,
+          "similarity_scale": 1.0008397468966608
+        }
+      ],
+      "similarity_median_wins_vs_translation": 4,
+      "affine_median_wins_vs_similarity": 1,
+      "similarity_rms_wins_vs_translation": 4,
+      "affine_rms_wins_vs_similarity": 1
+    }
+  ],
+  "interpretation": "Similarity improvement suggests rotation and uniform scale explain some spatial displacement. Further affine improvement suggests additional shear or anisotropic deformation. Neither establishes physical camera motion."
+}

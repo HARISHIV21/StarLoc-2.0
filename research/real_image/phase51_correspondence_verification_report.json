@@ -1,0 +1,385 @@
+{
+  "phase": 51,
+  "image": "research/real_image/data/network/ASK033/ASK033_live_grayscale.png",
+  "source_audit": "research/real_image/results/ASK033/phase50_r2c2_spatial_correction/phase50_correction_point_audit.csv",
+  "diagnostic_points": [
+    {
+      "point_number": 1,
+      "candidate_x": 1059,
+      "candidate_y": 524,
+      "candidate_intensity": 75,
+      "local_background_median": 58.0,
+      "local_noise_mad_estimate": 4.448,
+      "approximate_snr": 3.822,
+      "phase50_source_row": {
+        "global_x": "1059.032",
+        "global_y": "524.367",
+        "baseline_error_px": "30.018661247693558",
+        "constant_corrected_error_px": "30.126561909754805",
+        "affine_corrected_error_px": "29.245381168763636",
+        "affine_predicted_dx_px": "-0.3925790583534417",
+        "affine_predicted_dy_px": "-1.080451623355758",
+        "role": "diagnostic"
+      },
+      "nearby_image_peaks": [
+        {
+          "x": 1059,
+          "y": 524,
+          "intensity": 75,
+          "distance_from_candidate_px": 0.0
+        },
+        {
+          "x": 1080,
+          "y": 558,
+          "intensity": 72,
+          "distance_from_candidate_px": 39.962
+        },
+        {
+          "x": 1085,
+          "y": 552,
+          "intensity": 71,
+          "distance_from_candidate_px": 38.21
+        },
+        {
+          "x": 1086,
+          "y": 559,
+          "intensity": 71,
+          "distance_from_candidate_px": 44.204
+        },
+        {
+          "x": 1093,
+          "y": 552,
+          "intensity": 70,
+          "distance_from_candidate_px": 44.045
+        },
+        {
+          "x": 1080,
+          "y": 547,
+          "intensity": 69,
+          "distance_from_candidate_px": 31.145
+        },
+        {
+          "x": 1091,
+          "y": 534,
+          "intensity": 69,
+          "distance_from_candidate_px": 33.526
+        },
+        {
+          "x": 1080,
+          "y": 552,
+          "intensity": 69,
+          "distance_from_candidate_px": 35.0
+        },
+        {
+          "x": 1087,
+          "y": 547,
+          "intensity": 69,
+          "distance_from_candidate_px": 36.235
+        },
+        {
+          "x": 1075,
+          "y": 559,
+          "intensity": 69,
+          "distance_from_candidate_px": 38.484
+        },
+        {
+          "x": 1093,
+          "y": 557,
+          "intensity": 69,
+          "distance_from_candidate_px": 47.381
+        },
+        {
+          "x": 1088,
+          "y": 528,
+          "intensity": 68,
+          "distance_from_candidate_px": 29.275
+        }
+      ]
+    },
+    {
+      "point_number": 2,
+      "candidate_x": 1074,
+      "candidate_y": 606,
+      "candidate_intensity": 102,
+      "local_background_median": 75.0,
+      "local_noise_mad_estimate": 4.448,
+      "approximate_snr": 6.07,
+      "phase50_source_row": {
+        "global_x": "1074.072",
+        "global_y": "605.775",
+        "baseline_error_px": "28.595389223528773",
+        "constant_corrected_error_px": "28.67883948578513",
+        "affine_corrected_error_px": "28.146433170389138",
+        "affine_predicted_dx_px": "-0.48722723093951104",
+        "affine_predicted_dy_px": "-0.9627370063178211",
+        "role": "diagnostic"
+      },
+      "nearby_image_peaks": [
+        {
+          "x": 1074,
+          "y": 606,
+          "intensity": 102,
+          "distance_from_candidate_px": 0.0
+        },
+        {
+          "x": 1101,
+          "y": 640,
+          "intensity": 84,
+          "distance_from_candidate_px": 43.417
+        },
+        {
+          "x": 1106,
+          "y": 640,
+          "intensity": 84,
+          "distance_from_candidate_px": 46.69
+        },
+        {
+          "x": 1095,
+          "y": 611,
+          "intensity": 83,
+          "distance_from_candidate_px": 21.587
+        },
+        {
+          "x": 1093,
+          "y": 628,
+          "intensity": 83,
+          "distance_from_candidate_px": 29.069
+        },
+        {
+          "x": 1096,
+          "y": 638,
+          "intensity": 83,
+          "distance_from_candidate_px": 38.833
+        },
+        {
+          "x": 1109,
+          "y": 636,
+          "intensity": 83,
+          "distance_from_candidate_px": 46.098
+        },
+        {
+          "x": 1088,
+          "y": 629,
+          "intensity": 82,
+          "distance_from_candidate_px": 26.926
+        },
+        {
+          "x": 1086,
+          "y": 634,
+          "intensity": 82,
+          "distance_from_candidate_px": 30.463
+        },
+        {
+          "x": 1091,
+          "y": 634,
+          "intensity": 82,
+          "distance_from_candidate_px": 32.757
+        },
+        {
+          "x": 1098,
+          "y": 630,
+          "intensity": 82,
+          "distance_from_candidate_px": 33.941
+        },
+        {
+          "x": 1086,
+          "y": 639,
+          "intensity": 82,
+          "distance_from_candidate_px": 35.114
+        }
+      ]
+    },
+    {
+      "point_number": 3,
+      "candidate_x": 1008,
+      "candidate_y": 505,
+      "candidate_intensity": 67,
+      "local_background_median": 46.0,
+      "local_noise_mad_estimate": 2.965,
+      "approximate_snr": 7.082,
+      "phase50_source_row": {
+        "global_x": "1007.639",
+        "global_y": "505.11",
+        "baseline_error_px": "26.123057120848877",
+        "constant_corrected_error_px": "26.219373495050743",
+        "affine_corrected_error_px": "25.46575541509113",
+        "affine_predicted_dx_px": "-0.26955302546729326",
+        "affine_predicted_dy_px": "-0.9588536904674818",
+        "role": "diagnostic"
+      },
+      "nearby_image_peaks": [
+        {
+          "x": 993,
+          "y": 527,
+          "intensity": 73,
+          "distance_from_candidate_px": 26.627
+        },
+        {
+          "x": 1008,
+          "y": 505,
+          "intensity": 67,
+          "distance_from_candidate_px": 0.0
+        },
+        {
+          "x": 1040,
+          "y": 540,
+          "intensity": 58,
+          "distance_from_candidate_px": 47.424
+        },
+        {
+          "x": 1043,
+          "y": 535,
+          "intensity": 57,
+          "distance_from_candidate_px": 46.098
+        },
+        {
+          "x": 1029,
+          "y": 536,
+          "intensity": 56,
+          "distance_from_candidate_px": 37.443
+        },
+        {
+          "x": 1025,
+          "y": 539,
+          "intensity": 56,
+          "distance_from_candidate_px": 38.013
+        },
+        {
+          "x": 1040,
+          "y": 527,
+          "intensity": 56,
+          "distance_from_candidate_px": 38.833
+        },
+        {
+          "x": 1037,
+          "y": 536,
+          "intensity": 55,
+          "distance_from_candidate_px": 42.45
+        },
+        {
+          "x": 1033,
+          "y": 540,
+          "intensity": 55,
+          "distance_from_candidate_px": 43.012
+        },
+        {
+          "x": 992,
+          "y": 535,
+          "intensity": 54,
+          "distance_from_candidate_px": 34.0
+        },
+        {
+          "x": 1042,
+          "y": 522,
+          "intensity": 54,
+          "distance_from_candidate_px": 38.013
+        },
+        {
+          "x": 1027,
+          "y": 507,
+          "intensity": 53,
+          "distance_from_candidate_px": 19.105
+        }
+      ]
+    },
+    {
+      "point_number": 4,
+      "candidate_x": 966,
+      "candidate_y": 518,
+      "candidate_intensity": 69,
+      "local_background_median": 43.0,
+      "local_noise_mad_estimate": 2.965,
+      "approximate_snr": 8.768,
+      "phase50_source_row": {
+        "global_x": "966.337",
+        "global_y": "518.103",
+        "baseline_error_px": "19.094066408546162",
+        "constant_corrected_error_px": "19.196703638065543",
+        "affine_corrected_error_px": "18.49746168464258",
+        "affine_predicted_dx_px": "-0.19271694217353014",
+        "affine_predicted_dy_px": "-0.8035343550428444",
+        "role": "diagnostic"
+      },
+      "nearby_image_peaks": [
+        {
+          "x": 957,
+          "y": 535,
+          "intensity": 87,
+          "distance_from_candidate_px": 19.235
+        },
+        {
+          "x": 967,
+          "y": 518,
+          "intensity": 78,
+          "distance_from_candidate_px": 1.0
+        },
+        {
+          "x": 993,
+          "y": 527,
+          "intensity": 73,
+          "distance_from_candidate_px": 28.46
+        },
+        {
+          "x": 940,
+          "y": 550,
+          "intensity": 71,
+          "distance_from_candidate_px": 41.231
+        },
+        {
+          "x": 943,
+          "y": 491,
+          "intensity": 58,
+          "distance_from_candidate_px": 35.468
+        },
+        {
+          "x": 992,
+          "y": 535,
+          "intensity": 54,
+          "distance_from_candidate_px": 31.064
+        },
+        {
+          "x": 997,
+          "y": 552,
+          "intensity": 54,
+          "distance_from_candidate_px": 46.011
+        },
+        {
+          "x": 1001,
+          "y": 549,
+          "intensity": 54,
+          "distance_from_candidate_px": 46.755
+        },
+        {
+          "x": 986,
+          "y": 552,
+          "intensity": 53,
+          "distance_from_candidate_px": 39.446
+        },
+        {
+          "x": 1000,
+          "y": 539,
+          "intensity": 53,
+          "distance_from_candidate_px": 39.962
+        },
+        {
+          "x": 992,
+          "y": 552,
+          "intensity": 53,
+          "distance_from_candidate_px": 42.802
+        },
+        {
+          "x": 998,
+          "y": 520,
+          "intensity": 52,
+          "distance_from_candidate_px": 32.062
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Image intensity peaks are not automatically confirmed stars.",
+    "Approximate SNR uses local median and MAD, not calibrated photometry.",
+    "This phase does not independently establish Hipparcos identities.",
+    "The four points were selected from Phase 50 diagnostic residuals."
+  ]
+}

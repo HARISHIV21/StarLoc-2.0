@@ -1,0 +1,13 @@
+{
+  "phase": "137_rotation_drift_audit",
+  "source": "research/real_image/results/ASK033/phase135_similarity_vs_affine/phase136_similarity_parameter_stability.json",
+  "pairs": 12,
+  "rotation_median_deg": -0.1338259701803552,
+  "rotation_mad_deg": 0.01013764608553458,
+  "rotation_min_deg": -0.18426438166404444,
+  "rotation_max_deg": -0.11256314370427253,
+  "linear_slope_deg_per_frame_pair": 0.0008024379194952268,
+  "linear_total_change_deg": 0.008826817114447496,
+  "linear_fit_residual_rms_deg": 0.01893760179229088,
+  "interpretation": "Descriptive temporal trend only. A small slope and residual variation relative to the overall rotation spread are consistent with approximately stable image-plane rotation. This does not identify its physical cause."
+}

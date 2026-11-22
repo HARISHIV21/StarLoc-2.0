@@ -1,0 +1,457 @@
+{
+  "phase": 42,
+  "title": "Spatial residual and distortion validation",
+  "input_correspondences": 233,
+  "image_dimensions_px": [
+    1920,
+    1440
+  ],
+  "method": "Spatial analysis of Phase 38 baseline and Phase 41 filtered pixel residual magnitudes. No new fitting or correspondence rejection was performed.",
+  "excluded_points_from_phase41": 4,
+  "baseline": {
+    "optical_centre_px": {
+      "x": 940.8792956389896,
+      "y": 755.5388124993078
+    },
+    "overall": {
+      "count": 233,
+      "median_px": 0.6136537018680649,
+      "mean_px": 1.2136260277302524,
+      "rmse_px": 3.5926506809946033,
+      "p90_px": 1.6128712281777857,
+      "maximum_px": 30.018661247693558,
+      "count_over_2px": 13,
+      "count_over_3px": 9,
+      "count_over_5px": 5,
+      "count_over_10px": 4
+    },
+    "radial_distance_correlation": {
+      "pearson": {
+        "coefficient": -0.1817021825084352,
+        "p_value": 0.005405143072681079
+      },
+      "spearman": {
+        "coefficient": -0.1331933076050288,
+        "p_value": 0.0422314232927785
+      },
+      "interpretation": "Positive correlation means residual magnitude tends to increase farther from the estimated optical centre. Correlation alone does not prove optical distortion."
+    },
+    "radial_bands": [
+      {
+        "radius_min_px": 0,
+        "radius_max_px": 200,
+        "count": 23,
+        "median_px": 0.6097919231194666,
+        "mean_px": 0.8191105374589374,
+        "rmse_px": 1.1078885469146065,
+        "p90_px": 1.5707524661543206,
+        "maximum_px": 3.5129423526338694,
+        "count_over_2px": 1,
+        "count_over_3px": 1,
+        "count_over_5px": 0,
+        "count_over_10px": 0
+      },
+      {
+        "radius_min_px": 200,
+        "radius_max_px": 400,
+        "count": 72,
+        "median_px": 0.7379023745826501,
+        "mean_px": 2.3467564612570118,
+        "rmse_px": 6.32783273462769,
+        "p90_px": 2.881861877749613,
+        "maximum_px": 30.018661247693558,
+        "count_over_2px": 10,
+        "count_over_3px": 7,
+        "count_over_5px": 5,
+        "count_over_10px": 4
+      },
+      {
+        "radius_min_px": 400,
+        "radius_max_px": 600,
+        "count": 100,
+        "median_px": 0.5565408262147031,
+        "mean_px": 0.7055190698787147,
+        "rmse_px": 0.8727523864574186,
+        "p90_px": 1.3490686056225007,
+        "maximum_px": 3.497336377513192,
+        "count_over_2px": 2,
+        "count_over_3px": 1,
+        "count_over_5px": 0,
+        "count_over_10px": 0
+      },
+      {
+        "radius_min_px": 600,
+        "radius_max_px": 800,
+        "count": 38,
+        "median_px": 0.606122149231741,
+        "mean_px": 0.6425513131899181,
+        "rmse_px": 0.7250675166469175,
+        "p90_px": 1.184444786046976,
+        "maximum_px": 1.3995510189691927,
+        "count_over_2px": 0,
+        "count_over_3px": 0,
+        "count_over_5px": 0,
+        "count_over_10px": 0
+      }
+    ],
+    "section_statistics": {
+      "R1C2": {
+        "count": 71,
+        "median_px": 0.5979008780015361,
+        "mean_px": 0.6844952971445321,
+        "rmse_px": 0.8353012167470341,
+        "p90_px": 1.0361511512508248,
+        "maximum_px": 3.497336377513192,
+        "count_over_2px": 2,
+        "count_over_3px": 1,
+        "count_over_5px": 0,
+        "count_over_10px": 0
+      },
+      "R2C1": {
+        "count": 28,
+        "median_px": 0.6903666510352575,
+        "mean_px": 0.891738715795779,
+        "rmse_px": 1.101228224485373,
+        "p90_px": 1.594465187671703,
+        "maximum_px": 3.3357492684052996,
+        "count_over_2px": 2,
+        "count_over_3px": 1,
+        "count_over_5px": 0,
+        "count_over_10px": 0
+      },
+      "R2C2": {
+        "count": 51,
+        "median_px": 0.6997076189605878,
+        "mean_px": 2.971694942468643,
+        "rmse_px": 7.498565608683014,
+        "p90_px": 3.5129423526338694,
+        "maximum_px": 30.018661247693558,
+        "count_over_2px": 9,
+        "count_over_3px": 7,
+        "count_over_5px": 5,
+        "count_over_10px": 4
+      },
+      "R3C1": {
+        "count": 43,
+        "median_px": 0.5961820866707638,
+        "mean_px": 0.6874098221558577,
+        "rmse_px": 0.7924222695041476,
+        "p90_px": 1.1751613389278637,
+        "maximum_px": 1.9713709450419479,
+        "count_over_2px": 0,
+        "count_over_3px": 0,
+        "count_over_5px": 0,
+        "count_over_10px": 0
+      },
+      "R3C2": {
+        "count": 40,
+        "median_px": 0.5667536013208749,
+        "mean_px": 0.7022987475750626,
+        "rmse_px": 0.8546205723299908,
+        "p90_px": 1.5561028303085904,
+        "maximum_px": 1.9072886882558222,
+        "count_over_2px": 0,
+        "count_over_3px": 0,
+        "count_over_5px": 0,
+        "count_over_10px": 0
+      }
+    },
+    "dataset_statistics": {
+      "train": {
+        "count": 186,
+        "median_px": 0.6154735941117571,
+        "mean_px": 1.3194129130207353,
+        "rmse_px": 3.990336453634793,
+        "p90_px": 1.588541914805273,
+        "maximum_px": 30.018661247693558,
+        "count_over_2px": 11,
+        "count_over_3px": 8,
+        "count_over_5px": 5,
+        "count_over_10px": 4
+      },
+      "test": {
+        "count": 47,
+        "median_px": 0.6084906499370504,
+        "mean_px": 0.7949800561551491,
+        "rmse_px": 0.9863467398848935,
+        "p90_px": 1.5366254948885925,
+        "maximum_px": 3.5129423526338694,
+        "count_over_2px": 2,
+        "count_over_3px": 1,
+        "count_over_5px": 0,
+        "count_over_10px": 0
+      }
+    },
+    "normalized_radius_range": [
+      0.06164733558353228,
+      1.0666983358323756
+    ]
+  },
+  "filtered": {
+    "optical_centre_px": {
+      "x": 942.9616343396372,
+      "y": 754.422152486943
+    },
+    "overall": {
+      "count": 233,
+      "median_px": 0.5684321910058214,
+      "mean_px": 1.1775872018603342,
+      "rmse_px": 3.6585902084164617,
+      "p90_px": 1.5115444142842243,
+      "maximum_px": 30.586449775765512,
+      "count_over_2px": 16,
+      "count_over_3px": 9,
+      "count_over_5px": 5,
+      "count_over_10px": 4
+    },
+    "radial_distance_correlation": {
+      "pearson": {
+        "coefficient": -0.185031778185446,
+        "p_value": 0.004601142743535264
+      },
+      "spearman": {
+        "coefficient": -0.12159469951389443,
+        "p_value": 0.06388783007511462
+      },
+      "interpretation": "Positive correlation means residual magnitude tends to increase farther from the estimated optical centre. Correlation alone does not prove optical distortion."
+    },
+    "radial_bands": [
+      {
+        "radius_min_px": 0,
+        "radius_max_px": 200,
+        "count": 23,
+        "median_px": 0.6016497172064416,
+        "mean_px": 2.066311566252475,
+        "rmse_px": 6.179559099765232,
+        "p90_px": 2.174027502617684,
+        "maximum_px": 29.163769027614205,
+        "count_over_2px": 3,
+        "count_over_3px": 2,
+        "count_over_5px": 1,
+        "count_over_10px": 1
+      },
+      {
+        "radius_min_px": 200,
+        "radius_max_px": 400,
+        "count": 72,
+        "median_px": 0.6097905311625953,
+        "mean_px": 1.9193370987452383,
+        "rmse_px": 5.465708265376137,
+        "p90_px": 2.0285143290072734,
+        "maximum_px": 30.586449775765512,
+        "count_over_2px": 9,
+        "count_over_3px": 6,
+        "count_over_5px": 4,
+        "count_over_10px": 3
+      },
+      {
+        "radius_min_px": 400,
+        "radius_max_px": 600,
+        "count": 100,
+        "median_px": 0.5133752007724132,
+        "mean_px": 0.6580722368453366,
+        "rmse_px": 0.8466869519386426,
+        "p90_px": 1.2968365334266208,
+        "maximum_px": 3.6190748557880084,
+        "count_over_2px": 4,
+        "count_over_3px": 1,
+        "count_over_5px": 0,
+        "count_over_10px": 0
+      },
+      {
+        "radius_min_px": 600,
+        "radius_max_px": 800,
+        "count": 38,
+        "median_px": 0.4888440957206516,
+        "mean_px": 0.601398874091056,
+        "rmse_px": 0.6855159698715639,
+        "p90_px": 1.167928071447059,
+        "maximum_px": 1.3459598664010801,
+        "count_over_2px": 0,
+        "count_over_3px": 0,
+        "count_over_5px": 0,
+        "count_over_10px": 0
+      }
+    ],
+    "section_statistics": {
+      "R1C2": {
+        "count": 71,
+        "median_px": 0.49391972212803464,
+        "mean_px": 0.5850707152924545,
+        "rmse_px": 0.766166662738694,
+        "p90_px": 0.8576951462808239,
+        "maximum_px": 3.6190748557880084,
+        "count_over_2px": 2,
+        "count_over_3px": 1,
+        "count_over_5px": 0,
+        "count_over_10px": 0
+      },
+      "R2C1": {
+        "count": 28,
+        "median_px": 0.7564402898609084,
+        "mean_px": 0.9167008020485009,
+        "rmse_px": 1.1185914229492817,
+        "p90_px": 1.6234020418299353,
+        "maximum_px": 3.3248162893404203,
+        "count_over_2px": 2,
+        "count_over_3px": 1,
+        "count_over_5px": 0,
+        "count_over_10px": 0
+      },
+      "R2C2": {
+        "count": 51,
+        "median_px": 0.6730091940005117,
+        "mean_px": 3.002652199509234,
+        "rmse_px": 7.657119862666876,
+        "p90_px": 3.4742034877854815,
+        "maximum_px": 30.586449775765512,
+        "count_over_2px": 10,
+        "count_over_3px": 7,
+        "count_over_5px": 5,
+        "count_over_10px": 4
+      },
+      "R3C1": {
+        "count": 43,
+        "median_px": 0.5193385190819908,
+        "mean_px": 0.62645024166836,
+        "rmse_px": 0.7436394460235876,
+        "p90_px": 1.007560901520545,
+        "maximum_px": 2.1176323159768424,
+        "count_over_2px": 2,
+        "count_over_3px": 0,
+        "count_over_5px": 0,
+        "count_over_10px": 0
+      },
+      "R3C2": {
+        "count": 40,
+        "median_px": 0.49959894092841445,
+        "mean_px": 0.6774388055906281,
+        "rmse_px": 0.837755410095351,
+        "p90_px": 1.4796768084208778,
+        "maximum_px": 1.9212174575854073,
+        "count_over_2px": 0,
+        "count_over_3px": 0,
+        "count_over_5px": 0,
+        "count_over_10px": 0
+      }
+    },
+    "dataset_statistics": {
+      "train": {
+        "count": 186,
+        "median_px": 0.5483533995627249,
+        "mean_px": 1.2810856045637435,
+        "rmse_px": 4.065801929062391,
+        "p90_px": 1.5046816485274035,
+        "maximum_px": 30.586449775765512,
+        "count_over_2px": 14,
+        "count_over_3px": 8,
+        "count_over_5px": 5,
+        "count_over_10px": 4
+      },
+      "test": {
+        "count": 47,
+        "median_px": 0.5770106016404984,
+        "mean_px": 0.7679977783957788,
+        "rmse_px": 0.9681320932907733,
+        "p90_px": 1.4931222694079669,
+        "maximum_px": 3.4313894885123593,
+        "count_over_2px": 2,
+        "count_over_3px": 1,
+        "count_over_5px": 0,
+        "count_over_10px": 0
+      }
+    },
+    "normalized_radius_range": [
+      0.06484352197767759,
+      1.0699647981002696
+    ]
+  },
+  "spatial_grid": {
+    "description": "4x4 image grid; values are median residual magnitudes in pixels",
+    "baseline_median_residual_px": [
+      [
+        null,
+        0.5279839034668005,
+        0.5398685418016202,
+        null
+      ],
+      [
+        0.5694443924001191,
+        0.7931991143457293,
+        0.9392980949277712,
+        null
+      ],
+      [
+        0.7175854665758152,
+        0.5543430120708992,
+        0.5972350974392835,
+        null
+      ],
+      [
+        0.7077921059134398,
+        0.6172934863554493,
+        0.7862297935684759,
+        null
+      ]
+    ],
+    "filtered_median_residual_px": [
+      [
+        null,
+        0.41188936890168426,
+        0.4587650857712656,
+        null
+      ],
+      [
+        0.6030381401666769,
+        0.6405323726719431,
+        0.7938761508568782,
+        null
+      ],
+      [
+        0.4953736045210075,
+        0.5196870760094012,
+        0.452705208876936,
+        null
+      ],
+      [
+        0.49141075498721626,
+        0.569084197089298,
+        0.6172310253357061,
+        null
+      ]
+    ],
+    "point_counts": [
+      [
+        0,
+        20,
+        31,
+        0
+      ],
+      [
+        8,
+        49,
+        11,
+        0
+      ],
+      [
+        9,
+        53,
+        1,
+        0
+      ],
+      [
+        10,
+        37,
+        4,
+        0
+      ]
+    ]
+  },
+  "limitations": [
+    "Residual magnitude does not retain the direction of pixel error.",
+    "A radial correlation does not independently establish optical distortion.",
+    "The correspondence set originates from local WCS solutions.",
+    "The five sections do not provide uniform full-image coverage.",
+    "This analysis does not establish final camera calibration accuracy."
+  ]
+}

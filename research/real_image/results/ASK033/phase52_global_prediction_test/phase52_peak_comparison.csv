@@ -1,0 +1,5 @@
+point,candidate_x,candidate_y,global_x,global_y,separation_px,candidate_patch_max,global_patch_max,nearest_global_peak_x,nearest_global_peak_y,nearest_global_peak_intensity,nearest_global_peak_distance_px
+P1,1059.032,524.367,1044.744,551.557,30.716,75,67,1045,551,67,1.0
+P2,1074.072,605.775,1055.858,628.744,29.314,102,77,1056,629,76,0.0
+P3,1007.639,505.11,993.159,527.689,26.823,67,73,993,527,73,1.0
+P4,966.337,518.103,956.454,535.199,19.747,78,87,956,535,87,0.0

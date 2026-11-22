@@ -1,0 +1,44 @@
+{
+    "project": "StarLoc 2.0",
+    "dataset": "synthetic",
+    "projection_model": "equidistant_fisheye",
+    "matched_stars": 99,
+    "training_stars": 79,
+    "testing_stars": 20,
+    "estimated_optical_center_pixels": {
+        "cx": 511.9038427487693,
+        "cy": 512.0057842184868
+    },
+    "estimated_focal_scale_pixels": 318.29110658839085,
+    "estimated_fov_from_image_radius_deg": 180.01062023758126,
+    "estimated_camera_to_celestial_rotation_matrix": [
+        [
+            0.886488163966243,
+            -0.4446808637261511,
+            -0.128053366154598
+        ],
+        [
+            0.41327988754279665,
+            0.8852893033374222,
+            -0.2132195674626391
+        ],
+        [
+            0.2081789367356186,
+            0.1360947421177826,
+            0.9685761464477232
+        ]
+    ],
+    "training_error_pixels": {
+        "mean": 0.15657068303112695,
+        "median": 0.11310017609946843,
+        "maximum": 1.05379471148457,
+        "rmse": 0.21063822476494948
+    },
+    "testing_error_pixels": {
+        "mean": 0.3157287180267918,
+        "median": 0.1646278082101523,
+        "maximum": 2.970522158093062,
+        "rmse": 0.6925677118543242
+    },
+    "note": "Synthetic validation only. This does not establish calibration performance on real AllSkyKamera images."
+}

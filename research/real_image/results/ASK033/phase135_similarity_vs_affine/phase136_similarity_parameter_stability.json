@@ -1,0 +1,107 @@
+{
+  "phase": "136_similarity_parameter_stability",
+  "source": "research/real_image/results/ASK033/phase135_similarity_vs_affine/phase135_report.json",
+  "pairs": [
+    {
+      "pair": "518->519",
+      "folds": 4,
+      "rotation_median_deg": -0.13338340172501292,
+      "rotation_mad_deg": 0.019060591470111632,
+      "scale_median": 1.000449874112246,
+      "scale_mad": 2.970068738483711e-05
+    },
+    {
+      "pair": "519->520",
+      "folds": 4,
+      "rotation_median_deg": -0.12394424126334419,
+      "rotation_mad_deg": 0.005372248197492255,
+      "scale_median": 0.9999414286616902,
+      "scale_mad": 8.334525388986602e-05
+    },
+    {
+      "pair": "520->521",
+      "folds": 4,
+      "rotation_median_deg": -0.18426438166404444,
+      "rotation_mad_deg": 0.002473211349943119,
+      "scale_median": 0.9997659414865141,
+      "scale_mad": 0.0001597166782671411
+    },
+    {
+      "pair": "521->522",
+      "folds": 4,
+      "rotation_median_deg": -0.12876425925557933,
+      "rotation_mad_deg": 0.007891085166143452,
+      "scale_median": 1.000093584998667,
+      "scale_mad": 0.00025338672215857727
+    },
+    {
+      "pair": "522->523",
+      "folds": 2,
+      "rotation_median_deg": -0.16241170463855414,
+      "rotation_mad_deg": 0.0289526424665887,
+      "scale_median": 0.9994026463150827,
+      "scale_mad": 7.875165799753336e-06
+    },
+    {
+      "pair": "523->524",
+      "folds": 3,
+      "rotation_median_deg": -0.1342685386356975,
+      "rotation_mad_deg": 0.014450266896453665,
+      "scale_median": 1.000070381388863,
+      "scale_mad": 0.0002535391454973057
+    },
+    {
+      "pair": "524->525",
+      "folds": 4,
+      "rotation_median_deg": -0.11256314370427253,
+      "rotation_mad_deg": 0.019206680532864347,
+      "scale_median": 0.9997866560945089,
+      "scale_mad": 4.7542750676532464e-05
+    },
+    {
+      "pair": "525->526",
+      "folds": 4,
+      "rotation_median_deg": -0.15544805422439864,
+      "rotation_mad_deg": 0.0019087621596767107,
+      "scale_median": 1.000032327166692,
+      "scale_mad": 0.00026004968335352485
+    },
+    {
+      "pair": "526->527",
+      "folds": 4,
+      "rotation_median_deg": -0.12167012390223192,
+      "rotation_mad_deg": 0.004117105824107091,
+      "scale_median": 0.9997956160574082,
+      "scale_mad": 0.00016334956592689576
+    },
+    {
+      "pair": "527->528",
+      "folds": 4,
+      "rotation_median_deg": -0.1283309231753037,
+      "rotation_mad_deg": 0.0063354633006646455,
+      "scale_median": 0.9997302362498262,
+      "scale_mad": 0.0002750773700728737
+    },
+    {
+      "pair": "528->529",
+      "folds": 4,
+      "rotation_median_deg": -0.137378301105876,
+      "rotation_mad_deg": 0.009016443121278486,
+      "scale_median": 0.9998671389833067,
+      "scale_mad": 0.00014907540184594392
+    },
+    {
+      "pair": "529->530",
+      "folds": 4,
+      "rotation_median_deg": -0.14421953343441335,
+      "rotation_mad_deg": 0.019139401190526435,
+      "scale_median": 1.0008919914679832,
+      "scale_mad": 0.0001283804949494538
+    }
+  ],
+  "across_pair_rotation_median_deg": -0.1338259701803552,
+  "across_pair_rotation_mad_deg": 0.01013764608553458,
+  "across_pair_scale_median": 0.9999042838224985,
+  "across_pair_scale_mad": 0.000152219951174426,
+  "caution": "Parameter consistency supports a coherent image-plane similarity model, but does not establish physical camera rotation or absolute astrometric accuracy."
+}

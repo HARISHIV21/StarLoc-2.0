@@ -1,0 +1,42 @@
+{
+  "phase": 34,
+  "section": "R2C2",
+  "method": "Hungarian one-to-one assignment with angular gates",
+  "image_sources": 89,
+  "hipparcos_catalogue_rows": 8870,
+  "plate_scale_arcsec_per_pixel": 251.247,
+  "nearest_neighbour_median_arcmin": 13.875342954202692,
+  "nearest_neighbour_mean_arcmin": 26.26488553152495,
+  "threshold_results": {
+    "2": {
+      "unique_matches": 7,
+      "unmatched_image_sources": 82,
+      "median_separation_arcmin": 1.025615091660716,
+      "mean_separation_arcmin": 0.9523409632374411,
+      "maximum_separation_arcmin": 1.7824494279502945
+    },
+    "5": {
+      "unique_matches": 19,
+      "unmatched_image_sources": 70,
+      "median_separation_arcmin": 2.6064056346162645,
+      "mean_separation_arcmin": 2.5719393455115416,
+      "maximum_separation_arcmin": 4.815609313699999
+    },
+    "10": {
+      "unique_matches": 36,
+      "unmatched_image_sources": 53,
+      "median_separation_arcmin": 4.735974630739471,
+      "mean_separation_arcmin": 4.531681953118454,
+      "maximum_separation_arcmin": 9.321286786080924
+    },
+    "20": {
+      "unique_matches": 56,
+      "unmatched_image_sources": 33,
+      "median_separation_arcmin": 6.245605366123151,
+      "mean_separation_arcmin": 7.987037569079616,
+      "maximum_separation_arcmin": 19.999988491303483
+    }
+  },
+  "unique_matches_at_10_arcmin": 36,
+  "matches_csv": "research/real_image/results/ASK033/phase34_unique_hipparcos_matches.csv"
+}

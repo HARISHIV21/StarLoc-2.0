@@ -1,0 +1,155 @@
+{
+  "phase": 83,
+  "purpose": "Read-only Hipparcos catalogue and propagation integrity audit",
+  "catalogues": [
+    {
+      "file": "research/data/catalogue/hipparcos_positions_2026.csv",
+      "row_count": 8870,
+      "columns": [
+        "hip_number",
+        "ra_deg",
+        "dec_deg",
+        "vmag",
+        "pm_ra_mas_yr",
+        "pm_dec_mas_yr",
+        "ra_2026_deg",
+        "dec_2026_deg",
+        "proper_motion_shift_arcsec"
+      ],
+      "blank_counts": {
+        "hip_number": 0,
+        "ra_deg": 0,
+        "dec_deg": 0,
+        "vmag": 0,
+        "pm_ra_mas_yr": 0,
+        "pm_dec_mas_yr": 0,
+        "ra_2026_deg": 0,
+        "dec_2026_deg": 0,
+        "proper_motion_shift_arcsec": 0
+      },
+      "nan_counts": {},
+      "duplicate_hip_ids": 0,
+      "hip_id_column": "hip_number",
+      "unique_hip_ids": 8870
+    },
+    {
+      "file": "research/real_image/results/ASK033/ASK033_visible_hipparcos_catalogue.csv",
+      "row_count": 4006,
+      "columns": [
+        "hip_id",
+        "ra_deg",
+        "dec_deg",
+        "altitude_deg",
+        "azimuth_deg",
+        "magnitude"
+      ],
+      "blank_counts": {
+        "hip_id": 0,
+        "ra_deg": 0,
+        "dec_deg": 0,
+        "altitude_deg": 0,
+        "azimuth_deg": 0,
+        "magnitude": 0
+      },
+      "nan_counts": {},
+      "duplicate_hip_ids": 0,
+      "hip_id_column": "hip_id",
+      "unique_hip_ids": 4006
+    },
+    {
+      "file": "research/real_image/results/ASK033/phase33_hipparcos_crossmatches.csv",
+      "row_count": 89,
+      "columns": [
+        "source_number",
+        "x_pixel",
+        "y_pixel",
+        "wcs_ra_deg",
+        "wcs_dec_deg",
+        "nearest_hip_id",
+        "catalogue_ra_deg",
+        "catalogue_dec_deg",
+        "catalogue_magnitude",
+        "separation_arcmin"
+      ],
+      "blank_counts": {
+        "source_number": 0,
+        "x_pixel": 0,
+        "y_pixel": 0,
+        "wcs_ra_deg": 0,
+        "wcs_dec_deg": 0,
+        "nearest_hip_id": 0,
+        "catalogue_ra_deg": 0,
+        "catalogue_dec_deg": 0,
+        "catalogue_magnitude": 0,
+        "separation_arcmin": 0
+      },
+      "nan_counts": {},
+      "duplicate_hip_ids": null
+    },
+    {
+      "file": "research/real_image/results/ASK033/phase34_unique_hipparcos_matches.csv",
+      "row_count": 36,
+      "columns": [
+        "source_number",
+        "x_pixel",
+        "y_pixel",
+        "wcs_ra_deg",
+        "wcs_dec_deg",
+        "hip_id",
+        "catalogue_ra_deg",
+        "catalogue_dec_deg",
+        "magnitude",
+        "separation_arcmin",
+        "separation_pixels"
+      ],
+      "blank_counts": {
+        "source_number": 0,
+        "x_pixel": 0,
+        "y_pixel": 0,
+        "wcs_ra_deg": 0,
+        "wcs_dec_deg": 0,
+        "hip_id": 0,
+        "catalogue_ra_deg": 0,
+        "catalogue_dec_deg": 0,
+        "magnitude": 0,
+        "separation_arcmin": 0,
+        "separation_pixels": 0
+      },
+      "nan_counts": {},
+      "duplicate_hip_ids": 0,
+      "hip_id_column": "hip_id",
+      "unique_hip_ids": 36
+    }
+  ],
+  "scripts": [
+    {
+      "file": "research/08_clean_hipparcos_catalogue.py",
+      "exists": true,
+      "hip_column_detection": [],
+      "proper_motion_references": [
+        "pm_ra = numeric_column(\"pm_ra\")",
+        "pm_dec = numeric_column(\"pm_dec\")",
+        "clean[\"pm_ra_mas_yr\"] = pm_ra[valid]",
+        "clean[\"pm_dec_mas_yr\"] = pm_dec[valid]",
+        "print(\"Missing PM_RA:\", np.sum(~np.isfinite(pm_ra[valid])))",
+        "print(\"Missing PM_Dec:\", np.sum(~np.isfinite(pm_dec[valid])))"
+      ]
+    },
+    {
+      "file": "research/09_propagate_hipparcos_positions.py",
+      "exists": true,
+      "hip_column_detection": [],
+      "proper_motion_references": [
+        "\"vmag\", \"pm_ra_mas_yr\", \"pm_dec_mas_yr\"",
+        "pm_ra = np.array([float(row[\"pm_ra_mas_yr\"]) for row in rows])",
+        "pm_dec = np.array([float(row[\"pm_dec_mas_yr\"]) for row in rows])",
+        "pm_ra_cosdec=pm_ra * u.mas / u.yr,",
+        "pm_dec=pm_dec * u.mas / u.yr,",
+        "updated = coordinates.apply_space_motion(new_obstime=target_epoch)",
+        "\"pm_ra\": \"mu_alpha*cos(dec), milliarcseconds/year\",",
+        "\"pm_dec\": \"mu_delta, milliarcseconds/year\"",
+        "\"method\": \"Astropy SkyCoord.apply_space_motion\","
+      ]
+    }
+  ]
+}

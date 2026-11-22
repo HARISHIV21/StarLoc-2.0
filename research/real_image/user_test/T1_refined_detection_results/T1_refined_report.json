@@ -1,0 +1,13 @@
+{
+  "image": "research/real_image/user_test/T1.jpeg",
+  "dimensions": [
+    6000,
+    1918
+  ],
+  "method": "multi-scale Gaussian response, local maxima, weighted centroid and shape ranking",
+  "threshold": 32.81235874056816,
+  "robust_noise_estimate": 4.377720237493515,
+  "total_candidates": 11417,
+  "compact_candidates": 11417,
+  "warning": "Candidates are not confirmed astronomical stars. Catalogue verification is required."
+}

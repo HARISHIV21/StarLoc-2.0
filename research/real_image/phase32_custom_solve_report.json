@@ -1,0 +1,17 @@
+{
+  "phase": 32,
+  "section": "R2C2",
+  "method": "Custom FITS XYLS source catalogue",
+  "candidate_count": 89,
+  "median_snr": 10.152,
+  "scale_low_deg": 15,
+  "scale_high_deg": 80,
+  "return_code": 0,
+  "timed_out": false,
+  "elapsed_seconds": 0.32,
+  "solved": true,
+  "wcs_created": true,
+  "rdls_created": true,
+  "catalogue": "research/real_image/results/ASK033/custom_source_catalogues/R2C2_custom.xyls",
+  "log": "research/real_image/results/ASK033/custom_plate_solutions/R2C2_custom_solver.log"
+}

@@ -1,0 +1,246 @@
+{
+  "phase": 40,
+  "section": "R2C2",
+  "coordinate_conversion": "global = local + (640, 480)",
+  "source": "research/real_image/results/ASK033/phase37_validation/phase37_all_matches.csv",
+  "traced_outliers": [
+    {
+      "phase38_global_x": 1059.032,
+      "phase38_global_y": 524.367,
+      "phase38_residual_px": 30.018661,
+      "target_local_x": 419.0319999999999,
+      "target_local_y": 44.36699999999996,
+      "nearest_phase37_record_distance_px": 0.0,
+      "phase37_correspondence": {
+        "section": "R2C2",
+        "candidate_x_local": "419.0319999999999",
+        "candidate_y_local": "44.36699999999996",
+        "hip_ra_deg": "340.1295618475",
+        "hip_dec_deg": "44.2763796568",
+        "pixel_residual": "2.8487551797027524"
+      },
+      "next_nearest_records": [
+        {
+          "section": "R2C2",
+          "candidate_x_local": "367.639",
+          "candidate_y_local": "25.110000000000014",
+          "hip_ra_deg": "337.3825859043",
+          "hip_dec_deg": "47.7068615223",
+          "pixel_residual": "3.019272463694852"
+        },
+        {
+          "section": "R2C2",
+          "candidate_x_local": "434.0719999999999",
+          "candidate_y_local": "125.77499999999998",
+          "hip_ra_deg": "347.6112539788",
+          "hip_dec_deg": "43.5426811789",
+          "pixel_residual": "4.994145129772349"
+        }
+      ]
+    },
+    {
+      "phase38_global_x": 1074.072,
+      "phase38_global_y": 605.775,
+      "phase38_residual_px": 28.595389,
+      "target_local_x": 434.0719999999999,
+      "target_local_y": 125.77499999999998,
+      "nearest_phase37_record_distance_px": 0.0,
+      "phase37_correspondence": {
+        "section": "R2C2",
+        "candidate_x_local": "434.0719999999999",
+        "candidate_y_local": "125.77499999999998",
+        "hip_ra_deg": "347.6112539788",
+        "hip_dec_deg": "43.5426811789",
+        "pixel_residual": "4.994145129772349"
+      },
+      "next_nearest_records": [
+        {
+          "section": "R2C2",
+          "candidate_x_local": "419.0319999999999",
+          "candidate_y_local": "44.36699999999996",
+          "hip_ra_deg": "340.1295618475",
+          "hip_dec_deg": "44.2763796568",
+          "pixel_residual": "2.8487551797027524"
+        },
+        {
+          "section": "R2C2",
+          "candidate_x_local": "367.639",
+          "candidate_y_local": "25.110000000000014",
+          "hip_ra_deg": "337.3825859043",
+          "hip_dec_deg": "47.7068615223",
+          "pixel_residual": "3.019272463694852"
+        }
+      ]
+    },
+    {
+      "phase38_global_x": 1007.639,
+      "phase38_global_y": 505.11,
+      "phase38_residual_px": 26.123057,
+      "target_local_x": 367.639,
+      "target_local_y": 25.110000000000014,
+      "nearest_phase37_record_distance_px": 0.0,
+      "phase37_correspondence": {
+        "section": "R2C2",
+        "candidate_x_local": "367.639",
+        "candidate_y_local": "25.110000000000014",
+        "hip_ra_deg": "337.3825859043",
+        "hip_dec_deg": "47.7068615223",
+        "pixel_residual": "3.019272463694852"
+      },
+      "next_nearest_records": [
+        {
+          "section": "R2C2",
+          "candidate_x_local": "326.337",
+          "candidate_y_local": "38.10299999999995",
+          "hip_ra_deg": "337.8245245814",
+          "hip_dec_deg": "50.2826194986",
+          "pixel_residual": "2.578644390791436"
+        },
+        {
+          "section": "R2C2",
+          "candidate_x_local": "419.0319999999999",
+          "candidate_y_local": "44.36699999999996",
+          "hip_ra_deg": "340.1295618475",
+          "hip_dec_deg": "44.2763796568",
+          "pixel_residual": "2.8487551797027524"
+        }
+      ]
+    },
+    {
+      "phase38_global_x": 966.337,
+      "phase38_global_y": 518.103,
+      "phase38_residual_px": 19.094066,
+      "target_local_x": 326.337,
+      "target_local_y": 38.10299999999995,
+      "nearest_phase37_record_distance_px": 0.0,
+      "phase37_correspondence": {
+        "section": "R2C2",
+        "candidate_x_local": "326.337",
+        "candidate_y_local": "38.10299999999995",
+        "hip_ra_deg": "337.8245245814",
+        "hip_dec_deg": "50.2826194986",
+        "pixel_residual": "2.578644390791436"
+      },
+      "next_nearest_records": [
+        {
+          "section": "R2C2",
+          "candidate_x_local": "367.639",
+          "candidate_y_local": "25.110000000000014",
+          "hip_ra_deg": "337.3825859043",
+          "hip_dec_deg": "47.7068615223",
+          "pixel_residual": "3.019272463694852"
+        },
+        {
+          "section": "R2C2",
+          "candidate_x_local": "419.0319999999999",
+          "candidate_y_local": "44.36699999999996",
+          "hip_ra_deg": "340.1295618475",
+          "hip_dec_deg": "44.2763796568",
+          "pixel_residual": "2.8487551797027524"
+        }
+      ]
+    },
+    {
+      "phase38_global_x": 856.631,
+      "phase38_global_y": 507.827,
+      "phase38_residual_px": 6.077997,
+      "target_local_x": 216.63099999999997,
+      "target_local_y": 27.826999999999998,
+      "nearest_phase37_record_distance_px": 0.0,
+      "phase37_correspondence": {
+        "section": "R2C2",
+        "candidate_x_local": "216.63099999999997",
+        "candidate_y_local": "27.826999999999998",
+        "hip_ra_deg": "333.7656652026",
+        "hip_dec_deg": "57.0439598418",
+        "pixel_residual": "0.9182037879556553"
+      },
+      "next_nearest_records": [
+        {
+          "section": "R2C2",
+          "candidate_x_local": "214.68200000000002",
+          "candidate_y_local": "34.18700000000001",
+          "hip_ra_deg": "334.1113352594",
+          "hip_dec_deg": "57.2202784726",
+          "pixel_residual": "2.5869173683470494"
+        },
+        {
+          "section": "R2C2",
+          "candidate_x_local": "180.00400000000002",
+          "candidate_y_local": "34.321000000000026",
+          "hip_ra_deg": "332.8772942158",
+          "hip_dec_deg": "59.4144050334",
+          "pixel_residual": "3.6091471704911187"
+        }
+      ]
+    },
+    {
+      "phase38_global_x": 785.741,
+      "phase38_global_y": 714.566,
+      "phase38_residual_px": 3.512942,
+      "target_local_x": 145.74099999999999,
+      "target_local_y": 234.56600000000003,
+      "nearest_phase37_record_distance_px": 0.0,
+      "phase37_correspondence": {
+        "section": "R2C2",
+        "candidate_x_local": "145.74099999999999",
+        "candidate_y_local": "234.56600000000003",
+        "hip_ra_deg": "1.2758469886",
+        "hip_dec_deg": "61.3139868522",
+        "pixel_residual": "3.5471604430313977"
+      },
+      "next_nearest_records": [
+        {
+          "section": "R2C2",
+          "candidate_x_local": "141.75599999999997",
+          "candidate_y_local": "203.82600000000002",
+          "hip_ra_deg": "357.2090025552",
+          "hip_dec_deg": "62.2145056073",
+          "pixel_residual": "1.0221059824673673"
+        },
+        {
+          "section": "R2C2",
+          "candidate_x_local": "177.69100000000003",
+          "candidate_y_local": "247.485",
+          "hip_ra_deg": "2.3021428898",
+          "hip_dec_deg": "59.1484318742",
+          "pixel_residual": "0.0992836395352161"
+        }
+      ]
+    },
+    {
+      "phase38_global_x": 854.682,
+      "phase38_global_y": 514.187,
+      "phase38_residual_px": 3.057677,
+      "target_local_x": 214.68200000000002,
+      "target_local_y": 34.18700000000001,
+      "nearest_phase37_record_distance_px": 0.0,
+      "phase37_correspondence": {
+        "section": "R2C2",
+        "candidate_x_local": "214.68200000000002",
+        "candidate_y_local": "34.18700000000001",
+        "hip_ra_deg": "334.1113352594",
+        "hip_dec_deg": "57.2202784726",
+        "pixel_residual": "2.5869173683470494"
+      },
+      "next_nearest_records": [
+        {
+          "section": "R2C2",
+          "candidate_x_local": "216.63099999999997",
+          "candidate_y_local": "27.826999999999998",
+          "hip_ra_deg": "333.7656652026",
+          "hip_dec_deg": "57.0439598418",
+          "pixel_residual": "0.9182037879556553"
+        },
+        {
+          "section": "R2C2",
+          "candidate_x_local": "199.22400000000005",
+          "candidate_y_local": "64.04600000000005",
+          "hip_ra_deg": "337.2930110131",
+          "hip_dec_deg": "58.415225039",
+          "pixel_residual": "3.760969262214716"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "project": "StarLoc 2.0",
+  "generated_utc": "2026-11-20T21:56:45.575381+00:00",
+  "python_scripts_checked": 66,
+  "required_files_verified": 24,
+  "json_reports_verified": 12,
+  "phases_integrated": [
+    60,
+    61,
+    62
+  ],
+  "real_camera_validation": {
+    "camera": "ASK033",
+    "sections_solved": 5,
+    "phase37_correspondences": 233,
+    "phase56_strict_correspondences": 74,
+    "phase57_leave_one_section_out": {
+      "median_px": 1.0468,
+      "rmse_px": 2.3247,
+      "max_px": 8.278
+    },
+    "qualification": "Exploratory single-image calibration. WCS-derived correspondences are not independent ground truth."
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "phase": 37,
+  "dataset": "Public ASK033 AllSkyKamera image",
+  "catalogue": "research/real_image/results/ASK033/ASK033_visible_hipparcos_catalogue.csv",
+  "valid_catalogue_stars": 4006,
+  "sections_attempted": 5,
+  "sections_validated": 5,
+  "total_unique_matches_within_5px": 233,
+  "sections": [
+    {
+      "section": "R1C2",
+      "detected_candidates": 89,
+      "catalogue_stars_within_30deg": 761,
+      "catalogue_stars_projected_inside": 393,
+      "projection_method": "all_world2pix quiet mode",
+      "pixel_validation": {
+        "1": {
+          "unique_matches": 11,
+          "median_residual_px": 0.7942244028614851,
+          "mean_residual_px": 0.5983037179803506
+        },
+        "2": {
+          "unique_matches": 30,
+          "median_residual_px": 1.2618945190131519,
+          "mean_residual_px": 1.1690315908358644
+        },
+        "3": {
+          "unique_matches": 53,
+          "median_residual_px": 1.8121147720410276,
+          "mean_residual_px": 1.7545571506805133
+        },
+        "5": {
+          "unique_matches": 71,
+          "median_residual_px": 2.230042349364938,
+          "mean_residual_px": 2.2072604529412447
+        },
+        "10": {
+          "unique_matches": 77,
+          "median_residual_px": 2.384644125496712,
+          "mean_residual_px": 2.5988543765731005
+        }
+      },
+      "matches_within_5px": 71,
+      "wcs_file": "research/real_image/results/ASK033/phase36_section_solutions/R1C2_custom.wcs"
+    },
+    {
+      "section": "R2C1",
+      "detected_candidates": 65,
+      "catalogue_stars_within_30deg": 677,
+      "catalogue_stars_projected_inside": 184,
+      "projection_method": "all_world2pix quiet mode",
+      "pixel_validation": {
+        "1": {
+          "unique_matches": 4,
+          "median_residual_px": 0.6810752915780329,
+          "mean_residual_px": 0.6103951205285704
+        },
+        "2": {
+          "unique_matches": 13,
+          "median_residual_px": 1.2810300463340774,
+          "mean_residual_px": 1.2184362536097857
+        },
+        "3": {
+          "unique_matches": 21,
+          "median_residual_px": 1.6723736588622065,
+          "mean_residual_px": 1.695590138347804
+        },
+        "5": {
+          "unique_matches": 28,
+          "median_residual_px": 2.0664229650116868,
+          "mean_residual_px": 2.1512068766585526
+        },
+        "10": {
+          "unique_matches": 39,
+          "median_residual_px": 2.8103903257583696,
+          "mean_residual_px": 3.582845257060684
+        }
+      },
+      "matches_within_5px": 28,
+      "wcs_file": "research/real_image/results/ASK033/phase36_section_solutions/R2C1_custom.wcs"
+    },
+    {
+      "section": "R3C1",
+      "detected_candidates": 50,
+      "catalogue_stars_within_30deg": 643,
+      "catalogue_stars_projected_inside": 251,
+      "projection_method": "all_world2pix quiet mode",
+      "pixel_validation": {
+        "1": {
+          "unique_matches": 24,
+          "median_residual_px": 0.7521040173341298,
+          "mean_residual_px": 0.6578639374386027
+        },
+        "2": {
+          "unique_matches": 40,
+          "median_residual_px": 0.9012351335452249,
+          "mean_residual_px": 0.9151456879666664
+        },
+        "3": {
+          "unique_matches": 42,
+          "median_residual_px": 0.9106929141451492,
+          "mean_residual_px": 0.9848210141038329
+        },
+        "5": {
+          "unique_matches": 43,
+          "median_residual_px": 0.9176374224505478,
+          "mean_residual_px": 1.0321398012432412
+        },
+        "10": {
+          "unique_matches": 44,
+          "median_residual_px": 0.9241187471581019,
+          "mean_residual_px": 1.2095492558693712
+        }
+      },
+      "matches_within_5px": 43,
+      "wcs_file": "research/real_image/results/ASK033/phase36_section_solutions/R3C1_custom.wcs"
+    },
+    {
+      "section": "R3C2",
+      "detected_candidates": 51,
+      "catalogue_stars_within_30deg": 661,
+      "catalogue_stars_projected_inside": 266,
+      "projection_method": "all_world2pix quiet mode",
+      "pixel_validation": {
+        "1": {
+          "unique_matches": 21,
+          "median_residual_px": 0.7078931814644686,
+          "mean_residual_px": 0.65731869658961
+        },
+        "2": {
+          "unique_matches": 36,
+          "median_residual_px": 0.89799764677614,
+          "mean_residual_px": 0.9832681535956164
+        },
+        "3": {
+          "unique_matches": 39,
+          "median_residual_px": 0.9277760756136854,
+          "mean_residual_px": 1.1216524152176282
+        },
+        "5": {
+          "unique_matches": 40,
+          "median_residual_px": 0.9287059502324291,
+          "mean_residual_px": 1.1803477459365914
+        },
+        "10": {
+          "unique_matches": 41,
+          "median_residual_px": 0.9296358248511729,
+          "mean_residual_px": 1.3506897929320663
+        }
+      },
+      "matches_within_5px": 40,
+      "wcs_file": "research/real_image/results/ASK033/phase36_section_solutions/R3C2_custom.wcs"
+    },
+    {
+      "section": "R2C2",
+      "detected_candidates": 89,
+      "catalogue_stars_within_30deg": 716,
+      "catalogue_stars_projected_inside": 315,
+      "projection_method": "all_world2pix quiet mode",
+      "pixel_validation": {
+        "1": {
+          "unique_matches": 14,
+          "median_residual_px": 0.5795598033017583,
+          "mean_residual_px": 0.49910637410947667
+        },
+        "2": {
+          "unique_matches": 31,
+          "median_residual_px": 1.0632098283552687,
+          "mean_residual_px": 0.9864342548154437
+        },
+        "3": {
+          "unique_matches": 41,
+          "median_residual_px": 1.2766177727688763,
+          "mean_residual_px": 1.3583974285029308
+        },
+        "5": {
+          "unique_matches": 51,
+          "median_residual_px": 1.4329348713351793,
+          "mean_residual_px": 1.8318656186224263
+        },
+        "10": {
+          "unique_matches": 58,
+          "median_residual_px": 1.7793850032346814,
+          "mean_residual_px": 2.313950804264358
+        }
+      },
+      "matches_within_5px": 51,
+      "wcs_file": "research/real_image/results/ASK033/custom_plate_solutions/R2C2_custom.wcs"
+    }
+  ],
+  "interpretation": "Independent pixel-space WCS validation against the propagated Hipparcos catalogue. This does not establish a final global fisheye optical calibration."
+}

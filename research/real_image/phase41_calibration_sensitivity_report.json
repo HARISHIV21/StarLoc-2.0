@@ -1,0 +1,202 @@
+{
+  "phase": 41,
+  "purpose": "Sensitivity test excluding four largest Phase 38 training residuals",
+  "method": "Same equidistant fisheye model, initialization, bounds, loss and unchanged held-out test set",
+  "correspondences": 233,
+  "baseline_training_count": 186,
+  "filtered_training_count": 182,
+  "held_out_test_count": 47,
+  "excluded_training_points": [
+    {
+      "section": "R2C2",
+      "global_x": 1059.032,
+      "global_y": 524.367,
+      "phase38_residual_px": 30.018661247693558
+    },
+    {
+      "section": "R2C2",
+      "global_x": 1074.072,
+      "global_y": 605.775,
+      "phase38_residual_px": 28.595389223528773
+    },
+    {
+      "section": "R2C2",
+      "global_x": 1007.639,
+      "global_y": 505.11,
+      "phase38_residual_px": 26.123057120848877
+    },
+    {
+      "section": "R2C2",
+      "global_x": 966.337,
+      "global_y": 518.103,
+      "phase38_residual_px": 19.094066408546162
+    }
+  ],
+  "baseline_reproduction": {
+    "optimizer_success": true,
+    "optimizer_message": "`ftol` termination condition is satisfied.",
+    "parameter_differences_from_saved_phase38": {
+      "centre_x": 0.0,
+      "centre_y": 0.0,
+      "focal": 0.0,
+      "k1": 0.0,
+      "k2": 0.0
+    }
+  },
+  "baseline": {
+    "parameters": {
+      "optical_centre_x_px": 940.8792956389896,
+      "optical_centre_y_px": 755.5388124993078,
+      "focal_scale_px_per_rad": 822.9708649090667,
+      "radial_k1": -0.03333727005625633,
+      "radial_k2": 0.0008981455512420184,
+      "optical_axis_ra_deg": 2.127537171487967,
+      "optical_axis_dec_deg": 50.34240609070423,
+      "rotation_matrix_world_to_camera": [
+        [
+          0.7571113563263575,
+          -0.20301852636807335,
+          -0.6209395075794417
+        ],
+        [
+          0.14158671302936818,
+          0.9788882188261971,
+          -0.14741457776222447
+        ],
+        [
+          0.637758258915714,
+          0.023692467043587462,
+          0.7698721128799157
+        ]
+      ]
+    },
+    "training_metrics": {
+      "count": 186,
+      "front_facing": 186,
+      "predicted_inside_image": 186,
+      "median_error_px": 0.6154735941117571,
+      "mean_error_px": 1.3194129130207353,
+      "rmse_px": 3.9903364536347934,
+      "p90_error_px": 1.588541914805273,
+      "max_error_px": 30.018661247693558
+    },
+    "held_out_test_metrics": {
+      "count": 47,
+      "front_facing": 47,
+      "predicted_inside_image": 47,
+      "median_error_px": 0.6084906499370504,
+      "mean_error_px": 0.7949800561551491,
+      "rmse_px": 0.9863467398848935,
+      "p90_error_px": 1.5366254948885925,
+      "max_error_px": 3.5129423526338694
+    },
+    "all_data_metrics": {
+      "count": 233,
+      "front_facing": 233,
+      "predicted_inside_image": 233,
+      "median_error_px": 0.6136537018680649,
+      "mean_error_px": 1.2136260277302524,
+      "rmse_px": 3.5926506809946033,
+      "p90_error_px": 1.6128712281777857,
+      "max_error_px": 30.018661247693558
+    }
+  },
+  "filtered": {
+    "optimizer_success": true,
+    "optimizer_message": "`ftol` termination condition is satisfied.",
+    "parameters": {
+      "optical_centre_x_px": 942.9616343396372,
+      "optical_centre_y_px": 754.422152486943,
+      "focal_scale_px_per_rad": 821.1483871873305,
+      "radial_k1": -0.025104104628419055,
+      "radial_k2": -0.006646403887049945,
+      "optical_axis_ra_deg": 1.9416325080120909,
+      "optical_axis_dec_deg": 50.19684446939933,
+      "rotation_matrix_world_to_camera": [
+        [
+          0.7552450493210836,
+          -0.20296532034234788,
+          -0.6232254762237517
+        ],
+        [
+          0.14241046730918178,
+          0.9789456856668196,
+          -0.14623475412876674
+        ],
+        [
+          0.6397844748638204,
+          0.021689242786425124,
+          0.7682482687716107
+        ]
+      ]
+    },
+    "training_metrics": {
+      "count": 182,
+      "front_facing": 182,
+      "predicted_inside_image": 182,
+      "median_error_px": 0.5297015821041606,
+      "mean_error_px": 0.7264791393383633,
+      "rmse_px": 1.0252153673909186,
+      "p90_error_px": 1.4315504325841057,
+      "max_error_px": 6.4996253172259975
+    },
+    "held_out_test_metrics": {
+      "count": 47,
+      "front_facing": 47,
+      "predicted_inside_image": 47,
+      "median_error_px": 0.5770106016404984,
+      "mean_error_px": 0.7679977783957788,
+      "rmse_px": 0.9681320932907733,
+      "p90_error_px": 1.4931222694079669,
+      "max_error_px": 3.4313894885123593
+    },
+    "all_data_metrics": {
+      "count": 233,
+      "front_facing": 233,
+      "predicted_inside_image": 233,
+      "median_error_px": 0.5684321910058214,
+      "mean_error_px": 1.1775872018603342,
+      "rmse_px": 3.6585902084164617,
+      "p90_error_px": 1.5115444142842243,
+      "max_error_px": 30.586449775765512
+    }
+  },
+  "parameter_changes": {
+    "optical_centre_x_px": {
+      "phase38_baseline": 940.8792956389896,
+      "phase41_filtered": 942.9616343396372,
+      "absolute_change": 2.082338700647597
+    },
+    "optical_centre_y_px": {
+      "phase38_baseline": 755.5388124993078,
+      "phase41_filtered": 754.422152486943,
+      "absolute_change": 1.1166600123648323
+    },
+    "focal_scale_px_per_rad": {
+      "phase38_baseline": 822.9708649090667,
+      "phase41_filtered": 821.1483871873305,
+      "absolute_change": 1.8224777217361634
+    },
+    "radial_k1": {
+      "phase38_baseline": -0.03333727005625633,
+      "phase41_filtered": -0.025104104628419055,
+      "absolute_change": 0.008233165427837273
+    },
+    "radial_k2": {
+      "phase38_baseline": 0.0008981455512420184,
+      "phase41_filtered": -0.006646403887049945,
+      "absolute_change": 0.007544549438291964
+    },
+    "optical_axis_ra_deg": {
+      "phase38_baseline": 2.127537171487967,
+      "phase41_filtered": 1.9416325080120909,
+      "absolute_change": 0.1859046634758763
+    },
+    "optical_axis_dec_deg": {
+      "phase38_baseline": 50.34240609070423,
+      "phase41_filtered": 50.19684446939933,
+      "absolute_change": 0.1455616213048998
+    }
+  },
+  "interpretation_note": "The four excluded points are removed only from training. All 47 held-out test points remain unchanged. This is a sensitivity diagnostic, not automatic rejection of the correspondences or proof of final calibration."
+}

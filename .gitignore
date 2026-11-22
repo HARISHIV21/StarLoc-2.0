@@ -1,0 +1,36 @@
+# Python environments
+.venv/
+.venv-*/
+venv/
+__pycache__/
+*.py[cod]
+
+# macOS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editors
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+*.swp
+
+# Large packaged archives
+*.zip
+
+# Large astrometry index
+research/real_image/astrometry/indexes/
+
+# Raw video acquisition (retain separately)
+research/real_image/data/network/ASK033/archive_video_20261119/*.mp4
+
+# Secrets
+.env
+.env.*
+!.env.example

@@ -1,0 +1,12 @@
+{
+  "catalogue_stars": 4006,
+  "unique_hip_ids": 4006,
+  "magnitude_distribution": {
+    "mag_le_2": 21,
+    "mag_2_to_3": 47,
+    "mag_3_to_4": 142,
+    "mag_4_to_5": 501,
+    "mag_5_to_6_5": 3295
+  },
+  "catalogue_file": "research/real_image/results/ASK033/ASK033_visible_hipparcos_catalogue.csv"
+}

@@ -1,0 +1,24 @@
+{
+  "image": "/Users/harish/Documents/StarLoc-2.0/research/real_image/data/network/ASK033/ASK033_live_original.jpg",
+  "dimensions": [
+    1920,
+    1440
+  ],
+  "background_median": -0.074249267578125,
+  "robust_noise_sigma": 1.5030056579589843,
+  "detection_threshold": 6.689276193237305,
+  "quality_filtered_candidates": 2925,
+  "section_counts": {
+    "R1C1": 213,
+    "R1C2": 153,
+    "R1C3": 155,
+    "R2C1": 94,
+    "R2C2": 201,
+    "R2C3": 409,
+    "R3C1": 534,
+    "R3C2": 74,
+    "R3C3": 1092
+  },
+  "method": "Local background subtraction, local maxima, centroid moments and compactness filtering",
+  "warning": "Candidates are not yet confirmed catalogue stars."
+}

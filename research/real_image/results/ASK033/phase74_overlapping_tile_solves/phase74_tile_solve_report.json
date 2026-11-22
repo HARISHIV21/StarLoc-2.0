@@ -1,0 +1,190 @@
+{
+  "phase": 74,
+  "tile_dimensions": [
+    768,
+    576
+  ],
+  "frames": {
+    "primary": {
+      "image_dimensions": [
+        1920,
+        1440
+      ],
+      "tiles": [
+        {
+          "tile": "tile_01",
+          "x": 0,
+          "y": 0,
+          "exit_code": 0,
+          "solved_marker": false,
+          "wcs_file": false,
+          "provisional_solve": false
+        },
+        {
+          "tile": "tile_02",
+          "x": 576,
+          "y": 0,
+          "exit_code": 0,
+          "solved_marker": false,
+          "wcs_file": false,
+          "provisional_solve": false
+        },
+        {
+          "tile": "tile_03",
+          "x": 1152,
+          "y": 0,
+          "exit_code": 0,
+          "solved_marker": false,
+          "wcs_file": false,
+          "provisional_solve": false
+        },
+        {
+          "tile": "tile_04",
+          "x": 0,
+          "y": 432,
+          "exit_code": 0,
+          "solved_marker": false,
+          "wcs_file": false,
+          "provisional_solve": false
+        },
+        {
+          "tile": "tile_05",
+          "x": 576,
+          "y": 432,
+          "exit_code": 0,
+          "solved_marker": true,
+          "wcs_file": true,
+          "provisional_solve": true
+        },
+        {
+          "tile": "tile_06",
+          "x": 1152,
+          "y": 432,
+          "exit_code": 0,
+          "solved_marker": false,
+          "wcs_file": false,
+          "provisional_solve": false
+        },
+        {
+          "tile": "tile_07",
+          "x": 0,
+          "y": 864,
+          "exit_code": 0,
+          "solved_marker": false,
+          "wcs_file": false,
+          "provisional_solve": false
+        },
+        {
+          "tile": "tile_08",
+          "x": 576,
+          "y": 864,
+          "exit_code": 0,
+          "solved_marker": true,
+          "wcs_file": true,
+          "provisional_solve": true
+        },
+        {
+          "tile": "tile_09",
+          "x": 1152,
+          "y": 864,
+          "exit_code": 0,
+          "solved_marker": false,
+          "wcs_file": false,
+          "provisional_solve": false
+        }
+      ],
+      "provisional_solve_count": 2
+    },
+    "backup": {
+      "image_dimensions": [
+        1920,
+        1440
+      ],
+      "tiles": [
+        {
+          "tile": "tile_01",
+          "x": 0,
+          "y": 0,
+          "exit_code": 0,
+          "solved_marker": false,
+          "wcs_file": false,
+          "provisional_solve": false
+        },
+        {
+          "tile": "tile_02",
+          "x": 576,
+          "y": 0,
+          "exit_code": 0,
+          "solved_marker": true,
+          "wcs_file": true,
+          "provisional_solve": true
+        },
+        {
+          "tile": "tile_03",
+          "x": 1152,
+          "y": 0,
+          "exit_code": 0,
+          "solved_marker": false,
+          "wcs_file": false,
+          "provisional_solve": false
+        },
+        {
+          "tile": "tile_04",
+          "x": 0,
+          "y": 432,
+          "exit_code": 0,
+          "solved_marker": false,
+          "wcs_file": false,
+          "provisional_solve": false
+        },
+        {
+          "tile": "tile_05",
+          "x": 576,
+          "y": 432,
+          "exit_code": 0,
+          "solved_marker": true,
+          "wcs_file": true,
+          "provisional_solve": true
+        },
+        {
+          "tile": "tile_06",
+          "x": 1152,
+          "y": 432,
+          "exit_code": 0,
+          "solved_marker": false,
+          "wcs_file": false,
+          "provisional_solve": false
+        },
+        {
+          "tile": "tile_07",
+          "x": 0,
+          "y": 864,
+          "exit_code": 0,
+          "solved_marker": false,
+          "wcs_file": false,
+          "provisional_solve": false
+        },
+        {
+          "tile": "tile_08",
+          "x": 576,
+          "y": 864,
+          "exit_code": 0,
+          "solved_marker": true,
+          "wcs_file": true,
+          "provisional_solve": true
+        },
+        {
+          "tile": "tile_09",
+          "x": 1152,
+          "y": 864,
+          "exit_code": 0,
+          "solved_marker": false,
+          "wcs_file": false,
+          "provisional_solve": false
+        }
+      ],
+      "provisional_solve_count": 3
+    }
+  },
+  "validation_status": "Provisional only; WCS and catalogue validation pending"
+}

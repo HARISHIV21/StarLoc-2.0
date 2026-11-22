@@ -1,0 +1,128 @@
+{
+  "phase": "122_frame_shift_decomposition",
+  "model": "residual = source_effect + frame_effect + remaining_error",
+  "repeated_sources": 70,
+  "observations_used": 214,
+  "x_before": {
+    "median_abs": 0.7834470273276466,
+    "median": -0.19714263303870894,
+    "mad": 0.7224866344870833,
+    "p90_abs": 1.6590555710378725,
+    "rms": 1.0466032321843632
+  },
+  "x_after": {
+    "median_abs": 0.15867263070575816,
+    "median": -4.163336342344337e-17,
+    "mad": 0.15867263070575818,
+    "p90_abs": 1.0356654747781995,
+    "rms": 0.5670001421533485
+  },
+  "y_before": {
+    "median_abs": 1.2457476598549846,
+    "median": 0.2328369599362219,
+    "mad": 1.2544800630689394,
+    "p90_abs": 2.4331930405537947,
+    "rms": 1.527923875103761
+  },
+  "y_after": {
+    "median_abs": 0.32282044469636895,
+    "median": 0.0,
+    "mad": 0.32282044469636895,
+    "p90_abs": 1.2389932259765468,
+    "rms": 1.0590440128671348
+  },
+  "frame_shifts": [
+    {
+      "frame": 518,
+      "common_sources": 0,
+      "shift_x_px": 2.0507773824307677e-05,
+      "shift_y_px": 0.002457367398615269,
+      "shift_magnitude_px": 0.0024574529701632958
+    },
+    {
+      "frame": 519,
+      "common_sources": 4,
+      "shift_x_px": 1.238517677074533,
+      "shift_y_px": 3.266017435809936,
+      "shift_magnitude_px": 3.492963774138032
+    },
+    {
+      "frame": 520,
+      "common_sources": 29,
+      "shift_x_px": 0.35861633925410735,
+      "shift_y_px": 2.452420048450113,
+      "shift_magnitude_px": 2.478501517615043
+    },
+    {
+      "frame": 521,
+      "common_sources": 43,
+      "shift_x_px": 0.09710082519600513,
+      "shift_y_px": 1.4255448767218872,
+      "shift_magnitude_px": 1.4288480555334657
+    },
+    {
+      "frame": 522,
+      "common_sources": 45,
+      "shift_x_px": 0.12004677810423744,
+      "shift_y_px": 0.36934368486425534,
+      "shift_magnitude_px": 0.3883632146358797
+    },
+    {
+      "frame": 523,
+      "common_sources": 17,
+      "shift_x_px": -0.3141562600377223,
+      "shift_y_px": -0.597756492419866,
+      "shift_magnitude_px": 0.6752828888332579
+    },
+    {
+      "frame": 524,
+      "common_sources": 18,
+      "shift_x_px": -0.2099909280881674,
+      "shift_y_px": -1.7180537064830474,
+      "shift_magnitude_px": 1.730839313234902
+    },
+    {
+      "frame": 525,
+      "common_sources": 15,
+      "shift_x_px": -0.3607634875882539,
+      "shift_y_px": -2.176529121814932,
+      "shift_magnitude_px": 2.20622512724457
+    },
+    {
+      "frame": 526,
+      "common_sources": 14,
+      "shift_x_px": -0.7293827215073678,
+      "shift_y_px": -2.963445821990451,
+      "shift_magnitude_px": 3.0518863501621674
+    },
+    {
+      "frame": 527,
+      "common_sources": 10,
+      "shift_x_px": 0.007013564567108882,
+      "shift_y_px": -3.458783561633865,
+      "shift_magnitude_px": 3.458790672520756
+    },
+    {
+      "frame": 528,
+      "common_sources": 9,
+      "shift_x_px": 0.17121455542657418,
+      "shift_y_px": 0.36274581024433245,
+      "shift_magnitude_px": 0.4011221096371237
+    },
+    {
+      "frame": 529,
+      "common_sources": 7,
+      "shift_x_px": -0.33198300687111426,
+      "shift_y_px": -1.7491560911105417,
+      "shift_magnitude_px": 1.7803819106922807
+    },
+    {
+      "frame": 530,
+      "common_sources": 3,
+      "shift_x_px": 0.17491096665221464,
+      "shift_y_px": -1.1043084271297907,
+      "shift_magnitude_px": 1.1180746614091048
+    }
+  ],
+  "interpretation": "Robust additive decomposition of catalogue residuals. Estimated frame shifts are diagnostic and are not proof of physical camera movement. Persistent source effects can include optical distortion, WCS error, or centroid bias."
+}

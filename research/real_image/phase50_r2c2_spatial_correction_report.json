@@ -1,0 +1,131 @@
+{
+  "phase": 50,
+  "title": "R2C2 spatial residual correction experiment",
+  "correspondences": 51,
+  "training_count": 47,
+  "diagnostic_count": 4,
+  "baseline_training_error": {
+    "count": 47,
+    "median_px": 0.6735919591771996,
+    "mean_px": 1.0154312354315622,
+    "rmse_px": 1.4720011149388605,
+    "p90_px": 2.066842649471235,
+    "max_px": 6.077996706933368
+  },
+  "baseline_diagnostic_error": {
+    "count": 4,
+    "median_px": 27.359223172188827,
+    "mean_px": 25.957793500154345,
+    "rmse_px": 26.29550243531196,
+    "p90_px": 29.591679640444124,
+    "max_px": 30.018661247693558
+  },
+  "constant_correction": {
+    "coefficients_dx": 0.06078051897790896,
+    "coefficients_dy": 0.15164486996443768,
+    "training_error": {
+      "count": 47,
+      "median_px": 0.5822492696610401,
+      "mean_px": 0.9665047897838104,
+      "rmse_px": 1.4629069841611577,
+      "p90_px": 2.0445564870249315,
+      "max_px": 6.211690045764219
+    },
+    "diagnostic_error": {
+      "count": 4,
+      "median_px": 27.449106490417936,
+      "mean_px": 26.05536963216406,
+      "rmse_px": 26.39154478139924,
+      "p90_px": 29.6922451825639,
+      "max_px": 30.126561909754805
+    },
+    "leave_one_out_error": {
+      "count": 47,
+      "median_px": 0.5949068624797583,
+      "mean_px": 0.9875157634747629,
+      "rmse_px": 1.4947093099037918,
+      "p90_px": 2.0890033671776473,
+      "max_px": 6.346726785889529
+    }
+  },
+  "affine_correction": {
+    "coefficients_dx": [
+      -0.3356454925312494,
+      -0.6732238740980073,
+      -0.18575073851256788
+    ],
+    "coefficients_dy": [
+      -0.3752669224828317,
+      -0.9997185294901629,
+      0.4855583370400187
+    ],
+    "training_error": {
+      "count": 47,
+      "median_px": 0.5723911547398078,
+      "mean_px": 0.9730313683957484,
+      "rmse_px": 1.4128601548044104,
+      "p90_px": 1.8499610181058612,
+      "max_px": 5.599608373052565
+    },
+    "diagnostic_error": {
+      "count": 4,
+      "median_px": 26.806094292740134,
+      "mean_px": 25.338757859721618,
+      "rmse_px": 25.68158293192575,
+      "p90_px": 28.915696769251287,
+      "max_px": 29.245381168763636
+    },
+    "leave_one_out_error": {
+      "count": 47,
+      "median_px": 0.6106266764526467,
+      "mean_px": 1.0458725063500407,
+      "rmse_px": 1.528150145004304,
+      "p90_px": 1.9913079777833396,
+      "max_px": 6.198844396349468
+    }
+  },
+  "diagnostic_points": [
+    {
+      "x": 966.337,
+      "y": 518.103,
+      "baseline_error_px": 19.094066408546162,
+      "constant_corrected_error_px": 19.196703638065543,
+      "affine_corrected_error_px": 18.49746168464258,
+      "affine_predicted_dx_px": -0.19271694217353014,
+      "affine_predicted_dy_px": -0.8035343550428444
+    },
+    {
+      "x": 1074.072,
+      "y": 605.775,
+      "baseline_error_px": 28.595389223528773,
+      "constant_corrected_error_px": 28.67883948578513,
+      "affine_corrected_error_px": 28.146433170389138,
+      "affine_predicted_dx_px": -0.48722723093951104,
+      "affine_predicted_dy_px": -0.9627370063178211
+    },
+    {
+      "x": 1007.639,
+      "y": 505.11,
+      "baseline_error_px": 26.123057120848877,
+      "constant_corrected_error_px": 26.219373495050743,
+      "affine_corrected_error_px": 25.46575541509113,
+      "affine_predicted_dx_px": -0.26955302546729326,
+      "affine_predicted_dy_px": -0.9588536904674818
+    },
+    {
+      "x": 1059.032,
+      "y": 524.367,
+      "baseline_error_px": 30.018661247693558,
+      "constant_corrected_error_px": 30.126561909754805,
+      "affine_corrected_error_px": 29.245381168763636,
+      "affine_predicted_dx_px": -0.3925790583534417,
+      "affine_predicted_dy_px": -1.080451623355758
+    }
+  ],
+  "limitations": [
+    "The four diagnostic points were deliberately excluded from fitting.",
+    "The affine correction is an exploratory local residual model, not a new physical camera calibration.",
+    "The four points are not an independent external validation dataset.",
+    "A good correction on training points does not establish generalization beyond R2C2."
+  ]
+}

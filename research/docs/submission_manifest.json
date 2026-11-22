@@ -1,0 +1,15 @@
+{
+  "project": "StarLoc 2.0",
+  "created_utc": "2026-11-20T19:14:11.935551+00:00",
+  "main_archive": {
+    "filename": "StarLoc_2.0_Submission.zip",
+    "size_bytes": 17163809,
+    "sha256": "792a9c1aa62d7c8d84838fb19d5cf04ffe9e4641ce18a696d5206505e4900e6b"
+  },
+  "research_archive": {
+    "filename": "StarLoc_2.0_Research_Results.zip",
+    "size_bytes": 9896235,
+    "sha256": "b39c184f824878b7131f2113fea58d9e302d8fe6db71afdd077ac40bf0850499"
+  },
+  "real_camera_validation": "pending"
+}

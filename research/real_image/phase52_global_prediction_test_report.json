@@ -1,0 +1,649 @@
+{
+  "phase": 52,
+  "method": "Local image-maximum search around candidate and global predicted positions",
+  "image": "research/real_image/data/network/ASK033/ASK033_live_grayscale.png",
+  "points": [
+    {
+      "id": "P1",
+      "candidate_position": {
+        "x": 1059.032,
+        "y": 524.367
+      },
+      "global_prediction": {
+        "x": 1044.744,
+        "y": 551.557
+      },
+      "candidate_to_global_distance_px": 30.716,
+      "candidate_patch": {
+        "patch_max": 75,
+        "patch_mean": 58.587,
+        "patch_median": 58.0
+      },
+      "global_prediction_patch": {
+        "patch_max": 67,
+        "patch_mean": 60.926,
+        "patch_median": 61.0
+      },
+      "candidate_region_peaks": [
+        {
+          "x": 1059,
+          "y": 524,
+          "intensity": 75,
+          "distance_px": 0.0
+        },
+        {
+          "x": 1062,
+          "y": 527,
+          "intensity": 62,
+          "distance_px": 4.243
+        },
+        {
+          "x": 1057,
+          "y": 527,
+          "intensity": 61,
+          "distance_px": 3.606
+        },
+        {
+          "x": 1066,
+          "y": 528,
+          "intensity": 61,
+          "distance_px": 8.062
+        },
+        {
+          "x": 1067,
+          "y": 531,
+          "intensity": 61,
+          "distance_px": 10.63
+        },
+        {
+          "x": 1063,
+          "y": 531,
+          "intensity": 60,
+          "distance_px": 8.062
+        },
+        {
+          "x": 1062,
+          "y": 522,
+          "intensity": 59,
+          "distance_px": 3.606
+        },
+        {
+          "x": 1055,
+          "y": 524,
+          "intensity": 59,
+          "distance_px": 4.0
+        },
+        {
+          "x": 1054,
+          "y": 527,
+          "intensity": 59,
+          "distance_px": 5.831
+        },
+        {
+          "x": 1065,
+          "y": 524,
+          "intensity": 59,
+          "distance_px": 6.0
+        }
+      ],
+      "global_region_peaks": [
+        {
+          "x": 1045,
+          "y": 551,
+          "intensity": 67,
+          "distance_px": 1.0
+        },
+        {
+          "x": 1055,
+          "y": 548,
+          "intensity": 65,
+          "distance_px": 10.77
+        },
+        {
+          "x": 1054,
+          "y": 560,
+          "intensity": 65,
+          "distance_px": 12.042
+        },
+        {
+          "x": 1044,
+          "y": 559,
+          "intensity": 64,
+          "distance_px": 7.071
+        },
+        {
+          "x": 1051,
+          "y": 556,
+          "intensity": 64,
+          "distance_px": 7.211
+        },
+        {
+          "x": 1050,
+          "y": 559,
+          "intensity": 64,
+          "distance_px": 8.602
+        },
+        {
+          "x": 1054,
+          "y": 557,
+          "intensity": 64,
+          "distance_px": 10.296
+        },
+        {
+          "x": 1045,
+          "y": 548,
+          "intensity": 63,
+          "distance_px": 4.0
+        },
+        {
+          "x": 1040,
+          "y": 555,
+          "intensity": 63,
+          "distance_px": 5.831
+        },
+        {
+          "x": 1051,
+          "y": 552,
+          "intensity": 63,
+          "distance_px": 6.0
+        }
+      ],
+      "nearest_peak_to_global_prediction": {
+        "x": 1045,
+        "y": 551,
+        "intensity": 67,
+        "distance_px": 1.0
+      },
+      "brightest_peak_in_global_region": {
+        "x": 1045,
+        "y": 551,
+        "intensity": 67,
+        "distance_px": 1.0
+      },
+      "interpretation": "A local maximum exists near the global prediction."
+    },
+    {
+      "id": "P2",
+      "candidate_position": {
+        "x": 1074.072,
+        "y": 605.775
+      },
+      "global_prediction": {
+        "x": 1055.858,
+        "y": 628.744
+      },
+      "candidate_to_global_distance_px": 29.314,
+      "candidate_patch": {
+        "patch_max": 102,
+        "patch_mean": 75.645,
+        "patch_median": 75.0
+      },
+      "global_prediction_patch": {
+        "patch_max": 77,
+        "patch_mean": 76.0,
+        "patch_median": 76.0
+      },
+      "candidate_region_peaks": [
+        {
+          "x": 1074,
+          "y": 606,
+          "intensity": 102,
+          "distance_px": 0.0
+        },
+        {
+          "x": 1079,
+          "y": 606,
+          "intensity": 80,
+          "distance_px": 5.0
+        },
+        {
+          "x": 1079,
+          "y": 600,
+          "intensity": 78,
+          "distance_px": 7.81
+        },
+        {
+          "x": 1081,
+          "y": 612,
+          "intensity": 78,
+          "distance_px": 9.22
+        },
+        {
+          "x": 1076,
+          "y": 603,
+          "intensity": 77,
+          "distance_px": 3.606
+        },
+        {
+          "x": 1077,
+          "y": 610,
+          "intensity": 77,
+          "distance_px": 5.0
+        },
+        {
+          "x": 1080,
+          "y": 603,
+          "intensity": 77,
+          "distance_px": 6.708
+        },
+        {
+          "x": 1080,
+          "y": 609,
+          "intensity": 77,
+          "distance_px": 6.708
+        },
+        {
+          "x": 1076,
+          "y": 613,
+          "intensity": 77,
+          "distance_px": 7.28
+        },
+        {
+          "x": 1082,
+          "y": 606,
+          "intensity": 77,
+          "distance_px": 8.0
+        }
+      ],
+      "global_region_peaks": [
+        {
+          "x": 1062,
+          "y": 632,
+          "intensity": 78,
+          "distance_px": 6.708
+        },
+        {
+          "x": 1062,
+          "y": 635,
+          "intensity": 78,
+          "distance_px": 8.485
+        },
+        {
+          "x": 1055,
+          "y": 638,
+          "intensity": 78,
+          "distance_px": 9.055
+        },
+        {
+          "x": 1065,
+          "y": 632,
+          "intensity": 78,
+          "distance_px": 9.487
+        },
+        {
+          "x": 1065,
+          "y": 635,
+          "intensity": 78,
+          "distance_px": 10.817
+        },
+        {
+          "x": 1062,
+          "y": 638,
+          "intensity": 78,
+          "distance_px": 10.817
+        },
+        {
+          "x": 1065,
+          "y": 638,
+          "intensity": 78,
+          "distance_px": 12.728
+        },
+        {
+          "x": 1055,
+          "y": 626,
+          "intensity": 77,
+          "distance_px": 3.162
+        },
+        {
+          "x": 1055,
+          "y": 632,
+          "intensity": 77,
+          "distance_px": 3.162
+        },
+        {
+          "x": 1058,
+          "y": 632,
+          "intensity": 77,
+          "distance_px": 3.606
+        }
+      ],
+      "nearest_peak_to_global_prediction": {
+        "x": 1056,
+        "y": 629,
+        "intensity": 76,
+        "distance_px": 0.0
+      },
+      "brightest_peak_in_global_region": {
+        "x": 1062,
+        "y": 632,
+        "intensity": 78,
+        "distance_px": 6.708
+      },
+      "interpretation": "A local maximum exists near the global prediction."
+    },
+    {
+      "id": "P3",
+      "candidate_position": {
+        "x": 1007.639,
+        "y": 505.11
+      },
+      "global_prediction": {
+        "x": 993.159,
+        "y": 527.689
+      },
+      "candidate_to_global_distance_px": 26.823,
+      "candidate_patch": {
+        "patch_max": 67,
+        "patch_mean": 46.562,
+        "patch_median": 46.0
+      },
+      "global_prediction_patch": {
+        "patch_max": 73,
+        "patch_mean": 49.314,
+        "patch_median": 48.0
+      },
+      "candidate_region_peaks": [
+        {
+          "x": 1008,
+          "y": 505,
+          "intensity": 67,
+          "distance_px": 0.0
+        },
+        {
+          "x": 1006,
+          "y": 511,
+          "intensity": 48,
+          "distance_px": 6.325
+        },
+        {
+          "x": 1014,
+          "y": 509,
+          "intensity": 48,
+          "distance_px": 7.211
+        },
+        {
+          "x": 1004,
+          "y": 505,
+          "intensity": 47,
+          "distance_px": 4.0
+        },
+        {
+          "x": 1015,
+          "y": 505,
+          "intensity": 47,
+          "distance_px": 7.0
+        },
+        {
+          "x": 1000,
+          "y": 505,
+          "intensity": 47,
+          "distance_px": 8.0
+        },
+        {
+          "x": 1001,
+          "y": 509,
+          "intensity": 47,
+          "distance_px": 8.062
+        },
+        {
+          "x": 1015,
+          "y": 512,
+          "intensity": 47,
+          "distance_px": 9.899
+        },
+        {
+          "x": 1009,
+          "y": 502,
+          "intensity": 46,
+          "distance_px": 3.162
+        },
+        {
+          "x": 1012,
+          "y": 503,
+          "intensity": 46,
+          "distance_px": 4.472
+        }
+      ],
+      "global_region_peaks": [
+        {
+          "x": 993,
+          "y": 527,
+          "intensity": 73,
+          "distance_px": 1.0
+        },
+        {
+          "x": 992,
+          "y": 535,
+          "intensity": 54,
+          "distance_px": 7.071
+        },
+        {
+          "x": 995,
+          "y": 535,
+          "intensity": 52,
+          "distance_px": 7.28
+        },
+        {
+          "x": 989,
+          "y": 535,
+          "intensity": 52,
+          "distance_px": 8.062
+        },
+        {
+          "x": 998,
+          "y": 520,
+          "intensity": 52,
+          "distance_px": 9.434
+        },
+        {
+          "x": 1001,
+          "y": 537,
+          "intensity": 52,
+          "distance_px": 12.042
+        },
+        {
+          "x": 992,
+          "y": 524,
+          "intensity": 51,
+          "distance_px": 4.123
+        },
+        {
+          "x": 997,
+          "y": 527,
+          "intensity": 51,
+          "distance_px": 4.123
+        },
+        {
+          "x": 992,
+          "y": 532,
+          "intensity": 51,
+          "distance_px": 4.123
+        },
+        {
+          "x": 989,
+          "y": 532,
+          "intensity": 51,
+          "distance_px": 5.657
+        }
+      ],
+      "nearest_peak_to_global_prediction": {
+        "x": 993,
+        "y": 527,
+        "intensity": 73,
+        "distance_px": 1.0
+      },
+      "brightest_peak_in_global_region": {
+        "x": 993,
+        "y": 527,
+        "intensity": 73,
+        "distance_px": 1.0
+      },
+      "interpretation": "A local maximum exists near the global prediction."
+    },
+    {
+      "id": "P4",
+      "candidate_position": {
+        "x": 966.337,
+        "y": 518.103
+      },
+      "global_prediction": {
+        "x": 956.454,
+        "y": 535.199
+      },
+      "candidate_to_global_distance_px": 19.747,
+      "candidate_patch": {
+        "patch_max": 78,
+        "patch_mean": 43.355,
+        "patch_median": 42.0
+      },
+      "global_prediction_patch": {
+        "patch_max": 87,
+        "patch_mean": 45.198,
+        "patch_median": 43.0
+      },
+      "candidate_region_peaks": [
+        {
+          "x": 967,
+          "y": 518,
+          "intensity": 78,
+          "distance_px": 1.0
+        },
+        {
+          "x": 960,
+          "y": 516,
+          "intensity": 46,
+          "distance_px": 6.325
+        },
+        {
+          "x": 972,
+          "y": 512,
+          "intensity": 46,
+          "distance_px": 8.485
+        },
+        {
+          "x": 962,
+          "y": 519,
+          "intensity": 45,
+          "distance_px": 4.123
+        },
+        {
+          "x": 968,
+          "y": 526,
+          "intensity": 45,
+          "distance_px": 8.246
+        },
+        {
+          "x": 971,
+          "y": 526,
+          "intensity": 45,
+          "distance_px": 9.434
+        },
+        {
+          "x": 974,
+          "y": 526,
+          "intensity": 45,
+          "distance_px": 11.314
+        },
+        {
+          "x": 964,
+          "y": 514,
+          "intensity": 44,
+          "distance_px": 4.472
+        },
+        {
+          "x": 968,
+          "y": 522,
+          "intensity": 44,
+          "distance_px": 4.472
+        },
+        {
+          "x": 971,
+          "y": 522,
+          "intensity": 44,
+          "distance_px": 6.403
+        }
+      ],
+      "global_region_peaks": [
+        {
+          "x": 956,
+          "y": 535,
+          "intensity": 87,
+          "distance_px": 0.0
+        },
+        {
+          "x": 952,
+          "y": 536,
+          "intensity": 48,
+          "distance_px": 4.123
+        },
+        {
+          "x": 966,
+          "y": 544,
+          "intensity": 47,
+          "distance_px": 13.454
+        },
+        {
+          "x": 953,
+          "y": 539,
+          "intensity": 46,
+          "distance_px": 5.0
+        },
+        {
+          "x": 959,
+          "y": 542,
+          "intensity": 46,
+          "distance_px": 7.616
+        },
+        {
+          "x": 964,
+          "y": 541,
+          "intensity": 46,
+          "distance_px": 10.0
+        },
+        {
+          "x": 962,
+          "y": 544,
+          "intensity": 46,
+          "distance_px": 10.817
+        },
+        {
+          "x": 956,
+          "y": 540,
+          "intensity": 45,
+          "distance_px": 5.0
+        },
+        {
+          "x": 964,
+          "y": 537,
+          "intensity": 45,
+          "distance_px": 8.246
+        },
+        {
+          "x": 953,
+          "y": 544,
+          "intensity": 45,
+          "distance_px": 9.487
+        }
+      ],
+      "nearest_peak_to_global_prediction": {
+        "x": 956,
+        "y": 535,
+        "intensity": 87,
+        "distance_px": 0.0
+      },
+      "brightest_peak_in_global_region": {
+        "x": 956,
+        "y": 535,
+        "intensity": 87,
+        "distance_px": 0.0
+      },
+      "interpretation": "A local maximum exists near the global prediction."
+    }
+  ],
+  "limitations": [
+    "A local intensity maximum is not proof of a stellar identity.",
+    "The global predictions are inherited from the existing Phase 38 model.",
+    "This test does not independently validate the local WCS or catalogue identity.",
+    "No calibration parameters or original data were modified."
+  ]
+}

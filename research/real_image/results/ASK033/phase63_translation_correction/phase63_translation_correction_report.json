@@ -1,0 +1,422 @@
+{
+  "phase": 63,
+  "method": "Regularised section-specific translation correction",
+  "selection": "local_wcs_candidate_error_px <= 1.0",
+  "training_count": 57,
+  "test_count": 17,
+  "global_model_success": true,
+  "baseline_metrics": {
+    "count": 17,
+    "median_px": 0.6996743280747882,
+    "rmse_px": 0.9927132031027288,
+    "p90_px": 1.612937380506988,
+    "max_px": 2.2606932166443925,
+    "within_1px": 12,
+    "within_2px": 16,
+    "within_3px": 17
+  },
+  "regularisation_sweep": {
+    "0.0": {
+      "metrics": {
+        "count": 17,
+        "median_px": 0.5905571508835121,
+        "rmse_px": 0.9794456356394231,
+        "p90_px": 1.4436469630873352,
+        "max_px": 2.186667855668774,
+        "within_1px": 11,
+        "within_2px": 16,
+        "within_3px": 17
+      },
+      "corrections": {
+        "R1C2": {
+          "training_count": 8,
+          "test_count": 3,
+          "mean_training_residual_px": [
+            0.00996986107753628,
+            0.08433863355238991
+          ],
+          "applied_translation_px": [
+            0.00996986107753628,
+            0.08433863355238991
+          ],
+          "shrinkage_factor": 1.0
+        },
+        "R2C1": {
+          "training_count": 3,
+          "test_count": 1,
+          "mean_training_residual_px": [
+            0.027598893205625547,
+            -0.08590123791793758
+          ],
+          "applied_translation_px": [
+            0.027598893205625547,
+            -0.08590123791793758
+          ],
+          "shrinkage_factor": 1.0
+        },
+        "R2C2": {
+          "training_count": 11,
+          "test_count": 3,
+          "mean_training_residual_px": [
+            0.3117128508506436,
+            -0.29685141988256253
+          ],
+          "applied_translation_px": [
+            0.3117128508506436,
+            -0.29685141988256253
+          ],
+          "shrinkage_factor": 1.0
+        },
+        "R3C1": {
+          "training_count": 19,
+          "test_count": 5,
+          "mean_training_residual_px": [
+            -0.13679683253133434,
+            0.13495349069945095
+          ],
+          "applied_translation_px": [
+            -0.13679683253133434,
+            0.13495349069945095
+          ],
+          "shrinkage_factor": 1.0
+        },
+        "R3C2": {
+          "training_count": 16,
+          "test_count": 5,
+          "mean_training_residual_px": [
+            -0.05364830767116047,
+            -0.19914627866954504
+          ],
+          "applied_translation_px": [
+            -0.05364830767116047,
+            -0.19914627866954504
+          ],
+          "shrinkage_factor": 1.0
+        }
+      }
+    },
+    "2.0": {
+      "metrics": {
+        "count": 17,
+        "median_px": 0.572456605926929,
+        "rmse_px": 0.9769872627057515,
+        "p90_px": 1.4620128828889394,
+        "max_px": 2.201409963693677,
+        "within_1px": 12,
+        "within_2px": 16,
+        "within_3px": 17
+      },
+      "corrections": {
+        "R1C2": {
+          "training_count": 8,
+          "test_count": 3,
+          "mean_training_residual_px": [
+            0.00996986107753628,
+            0.08433863355238991
+          ],
+          "applied_translation_px": [
+            0.007975888862029023,
+            0.06747090684191193
+          ],
+          "shrinkage_factor": 0.8
+        },
+        "R2C1": {
+          "training_count": 3,
+          "test_count": 1,
+          "mean_training_residual_px": [
+            0.027598893205625547,
+            -0.08590123791793758
+          ],
+          "applied_translation_px": [
+            0.01655933592337533,
+            -0.05154074275076254
+          ],
+          "shrinkage_factor": 0.6
+        },
+        "R2C2": {
+          "training_count": 11,
+          "test_count": 3,
+          "mean_training_residual_px": [
+            0.3117128508506436,
+            -0.29685141988256253
+          ],
+          "applied_translation_px": [
+            0.26375702764285225,
+            -0.2511819706698606
+          ],
+          "shrinkage_factor": 0.8461538461538461
+        },
+        "R3C1": {
+          "training_count": 19,
+          "test_count": 5,
+          "mean_training_residual_px": [
+            -0.13679683253133434,
+            0.13495349069945095
+          ],
+          "applied_translation_px": [
+            -0.12376856276644536,
+            0.12210077729950324
+          ],
+          "shrinkage_factor": 0.9047619047619048
+        },
+        "R3C2": {
+          "training_count": 16,
+          "test_count": 5,
+          "mean_training_residual_px": [
+            -0.05364830767116047,
+            -0.19914627866954504
+          ],
+          "applied_translation_px": [
+            -0.04768738459658708,
+            -0.1770189143729289
+          ],
+          "shrinkage_factor": 0.8888888888888888
+        }
+      }
+    },
+    "5.0": {
+      "metrics": {
+        "count": 17,
+        "median_px": 0.5509794134637147,
+        "rmse_px": 0.9760175393827597,
+        "p90_px": 1.4831497167208756,
+        "max_px": 2.215046580115505,
+        "within_1px": 12,
+        "within_2px": 16,
+        "within_3px": 17
+      },
+      "corrections": {
+        "R1C2": {
+          "training_count": 8,
+          "test_count": 3,
+          "mean_training_residual_px": [
+            0.00996986107753628,
+            0.08433863355238991
+          ],
+          "applied_translation_px": [
+            0.006135299124637711,
+            0.05190069757070148
+          ],
+          "shrinkage_factor": 0.6153846153846154
+        },
+        "R2C1": {
+          "training_count": 3,
+          "test_count": 1,
+          "mean_training_residual_px": [
+            0.027598893205625547,
+            -0.08590123791793758
+          ],
+          "applied_translation_px": [
+            0.01034958495210958,
+            -0.03221296421922659
+          ],
+          "shrinkage_factor": 0.375
+        },
+        "R2C2": {
+          "training_count": 11,
+          "test_count": 3,
+          "mean_training_residual_px": [
+            0.3117128508506436,
+            -0.29685141988256253
+          ],
+          "applied_translation_px": [
+            0.21430258495981747,
+            -0.20408535116926174
+          ],
+          "shrinkage_factor": 0.6875
+        },
+        "R3C1": {
+          "training_count": 19,
+          "test_count": 5,
+          "mean_training_residual_px": [
+            -0.13679683253133434,
+            0.13495349069945095
+          ],
+          "applied_translation_px": [
+            -0.10829749242063968,
+            0.10683818013706534
+          ],
+          "shrinkage_factor": 0.7916666666666666
+        },
+        "R3C2": {
+          "training_count": 16,
+          "test_count": 5,
+          "mean_training_residual_px": [
+            -0.05364830767116047,
+            -0.19914627866954504
+          ],
+          "applied_translation_px": [
+            -0.04087490108278893,
+            -0.15173049803393907
+          ],
+          "shrinkage_factor": 0.7619047619047619
+        }
+      }
+    },
+    "10.0": {
+      "metrics": {
+        "count": 17,
+        "median_px": 0.5779903587811575,
+        "rmse_px": 0.9766232795579791,
+        "p90_px": 1.5077255097700353,
+        "max_px": 2.227697036558217,
+        "within_1px": 12,
+        "within_2px": 16,
+        "within_3px": 17
+      },
+      "corrections": {
+        "R1C2": {
+          "training_count": 8,
+          "test_count": 3,
+          "mean_training_residual_px": [
+            0.00996986107753628,
+            0.08433863355238991
+          ],
+          "applied_translation_px": [
+            0.0044310493677939015,
+            0.037483837134395515
+          ],
+          "shrinkage_factor": 0.4444444444444444
+        },
+        "R2C1": {
+          "training_count": 3,
+          "test_count": 1,
+          "mean_training_residual_px": [
+            0.027598893205625547,
+            -0.08590123791793758
+          ],
+          "applied_translation_px": [
+            0.006368975355144357,
+            -0.019823362596447135
+          ],
+          "shrinkage_factor": 0.23076923076923078
+        },
+        "R2C2": {
+          "training_count": 11,
+          "test_count": 3,
+          "mean_training_residual_px": [
+            0.3117128508506436,
+            -0.29685141988256253
+          ],
+          "applied_translation_px": [
+            0.16327815996938475,
+            -0.15549360089086608
+          ],
+          "shrinkage_factor": 0.5238095238095238
+        },
+        "R3C1": {
+          "training_count": 19,
+          "test_count": 5,
+          "mean_training_residual_px": [
+            -0.13679683253133434,
+            0.13495349069945095
+          ],
+          "applied_translation_px": [
+            -0.08962551096880526,
+            0.08841780425136442
+          ],
+          "shrinkage_factor": 0.6551724137931034
+        },
+        "R3C2": {
+          "training_count": 16,
+          "test_count": 5,
+          "mean_training_residual_px": [
+            -0.05364830767116047,
+            -0.19914627866954504
+          ],
+          "applied_translation_px": [
+            -0.033014343182252597,
+            -0.12255155610433542
+          ],
+          "shrinkage_factor": 0.6153846153846154
+        }
+      }
+    },
+    "20.0": {
+      "metrics": {
+        "count": 17,
+        "median_px": 0.611577975498272,
+        "rmse_px": 0.9791554668787014,
+        "p90_px": 1.5366388580669508,
+        "max_px": 2.239464167025588,
+        "within_1px": 12,
+        "within_2px": 16,
+        "within_3px": 17
+      },
+      "corrections": {
+        "R1C2": {
+          "training_count": 8,
+          "test_count": 3,
+          "mean_training_residual_px": [
+            0.00996986107753628,
+            0.08433863355238991
+          ],
+          "applied_translation_px": [
+            0.002848531736438937,
+            0.02409675244353997
+          ],
+          "shrinkage_factor": 0.2857142857142857
+        },
+        "R2C1": {
+          "training_count": 3,
+          "test_count": 1,
+          "mean_training_residual_px": [
+            0.027598893205625547,
+            -0.08590123791793758
+          ],
+          "applied_translation_px": [
+            0.0035998556355163755,
+            -0.011204509293644032
+          ],
+          "shrinkage_factor": 0.13043478260869565
+        },
+        "R2C2": {
+          "training_count": 11,
+          "test_count": 3,
+          "mean_training_residual_px": [
+            0.3117128508506436,
+            -0.29685141988256253
+          ],
+          "applied_translation_px": [
+            0.11060778578571225,
+            -0.10533437479703832
+          ],
+          "shrinkage_factor": 0.3548387096774194
+        },
+        "R3C1": {
+          "training_count": 19,
+          "test_count": 5,
+          "mean_training_residual_px": [
+            -0.13679683253133434,
+            0.13495349069945095
+          ],
+          "applied_translation_px": [
+            -0.06664461072039365,
+            0.06574657239204021
+          ],
+          "shrinkage_factor": 0.48717948717948717
+        },
+        "R3C2": {
+          "training_count": 16,
+          "test_count": 5,
+          "mean_training_residual_px": [
+            -0.05364830767116047,
+            -0.19914627866954504
+          ],
+          "applied_translation_px": [
+            -0.02384369229829354,
+            -0.08850945718646445
+          ],
+          "shrinkage_factor": 0.4444444444444444
+        }
+      }
+    }
+  },
+  "best_lambda_on_test_split": 5.0,
+  "limitations": [
+    "Best lambda is selected using this test split and is exploratory.",
+    "Correspondences are provisionally selected using local WCS residuals.",
+    "Small section sample sizes limit correction reliability.",
+    "Validation uses one image and one camera."
+  ]
+}

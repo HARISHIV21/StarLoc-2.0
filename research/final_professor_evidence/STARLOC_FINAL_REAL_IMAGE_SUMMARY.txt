@@ -1,0 +1,16 @@
+STARLOC 2.0 — FINAL REAL-IMAGE EVIDENCE
+=======================================
+
+Classified correspondences: 233
+Strict internal consistency: 74
+Uncertain: 155
+Suspect: 4
+
+Strict-subset pixel residual statistics: {'count': 74, 'median_px': 0.603618709698089, 'mean_px': 0.7581282837684847, 'rms_px': 1.054146508523345, 'maximum_px': 6.077996706933368}
+
+REAL-CAMERA OPTICAL CALIBRATION: NOT VALIDATED
+EXPOSURE TIMESTAMP: UNVERIFIED
+A solver success marker is not independent validation.
+
+Synthetic calibration results are separate from real-image evidence.
+See STARLOC_FINAL_REAL_IMAGE_REPORT.json for full details.

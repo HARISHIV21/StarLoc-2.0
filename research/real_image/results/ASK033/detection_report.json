@@ -1,0 +1,85 @@
+{
+  "camera_id": "ASK033",
+  "image": "research/real_image/data/network/ASK033/ASK033_live_original.jpg",
+  "width_px": 1920,
+  "height_px": 1440,
+  "method": "Gaussian background subtraction + robust residual threshold + connected components",
+  "threshold_residual": 5.0,
+  "robust_sigma": 1.0,
+  "candidate_count": 1064,
+  "section_counts": [
+    {
+      "section": "R1C1",
+      "x_min": 0,
+      "x_max": 640,
+      "y_min": 0,
+      "y_max": 480,
+      "candidate_count": 68
+    },
+    {
+      "section": "R1C2",
+      "x_min": 640,
+      "x_max": 1280,
+      "y_min": 0,
+      "y_max": 480,
+      "candidate_count": 122
+    },
+    {
+      "section": "R1C3",
+      "x_min": 1280,
+      "x_max": 1920,
+      "y_min": 0,
+      "y_max": 480,
+      "candidate_count": 243
+    },
+    {
+      "section": "R2C1",
+      "x_min": 0,
+      "x_max": 640,
+      "y_min": 480,
+      "y_max": 960,
+      "candidate_count": 62
+    },
+    {
+      "section": "R2C2",
+      "x_min": 640,
+      "x_max": 1280,
+      "y_min": 480,
+      "y_max": 960,
+      "candidate_count": 88
+    },
+    {
+      "section": "R2C3",
+      "x_min": 1280,
+      "x_max": 1920,
+      "y_min": 480,
+      "y_max": 960,
+      "candidate_count": 149
+    },
+    {
+      "section": "R3C1",
+      "x_min": 0,
+      "x_max": 640,
+      "y_min": 960,
+      "y_max": 1440,
+      "candidate_count": 126
+    },
+    {
+      "section": "R3C2",
+      "x_min": 640,
+      "x_max": 1280,
+      "y_min": 960,
+      "y_max": 1440,
+      "candidate_count": 50
+    },
+    {
+      "section": "R3C3",
+      "x_min": 1280,
+      "x_max": 1920,
+      "y_min": 960,
+      "y_max": 1440,
+      "candidate_count": 156
+    }
+  ],
+  "important_note": "These are image-feature candidates, not yet confirmed stars. Clouds, hot pixels, compression artifacts and lights may be included. No catalogue identification or astrometric calibration has been performed."
+}

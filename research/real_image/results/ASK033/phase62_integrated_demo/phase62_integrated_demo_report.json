@@ -1,0 +1,835 @@
+{
+  "project": "StarLoc 2.0",
+  "phase": 62,
+  "title": "Integrated Star Tracker Demonstration",
+  "generated_utc": "2026-11-20T21:56:02Z",
+  "mode": "integration_only_no_previous_experiments_rerun",
+  "synthetic_pipeline": {
+    "status": "previously completed; source reports and documentation indexed",
+    "known_results": {
+      "synthetic_detected_stars": 99,
+      "synthetic_input_stars": 100,
+      "mean_centroid_error_px": 0.1745,
+      "synthetic_catalogue_matches": 1136,
+      "synthetic_catalogue_stars": 1284,
+      "recovered_fov_deg": 179.9982,
+      "recovered_roll_deg": 36.99925,
+      "blind_calibration_rmse_px": 0.285
+    },
+    "candidate_reports_found": [
+      "research/results/final_demo_report.json"
+    ],
+    "documentation_found": [
+      "research/docs/README_STARLOC_FINAL.md",
+      "research/docs/final_report.md",
+      "research/docs/test_plan_and_results.md"
+    ]
+  },
+  "real_camera": {
+    "camera": "AllSkyKamera Network ASK033 \u2014 Miesenbach, Austria",
+    "image_dimensions_px": [
+      1920,
+      1440
+    ],
+    "section_grid": "3 x 3",
+    "solved_sections": [
+      "R1C2",
+      "R2C1",
+      "R2C2",
+      "R3C1",
+      "R3C2"
+    ],
+    "global_model_status": "exploratory; not independently validated",
+    "calibration_models": {
+      "phase38_exploratory": {
+        "optical_centre_x_px": 940.879296,
+        "optical_centre_y_px": 755.538812,
+        "focal_scale_px_per_rad": 822.970865,
+        "radial_k1": -0.03333727,
+        "radial_k2": 0.00089815,
+        "optical_axis_ra_deg": 2.12754,
+        "optical_axis_dec_deg": 50.34241,
+        "held_out_rmse_px": 0.986347
+      },
+      "phase56_strict_subset": {
+        "optical_centre_x_px": 941.08836649,
+        "optical_centre_y_px": 755.987139,
+        "focal_scale_px_per_rad": 823.00717669,
+        "radial_k1": -0.03258449,
+        "radial_k2": -0.00120724,
+        "optical_axis_ra_deg": 2.18183666,
+        "optical_axis_dec_deg": 50.30771236,
+        "held_out_rmse_px": 0.938114,
+        "training_points": 59,
+        "held_out_points": 15
+      }
+    },
+    "association_classification": {
+      "total_correspondences": 233,
+      "strict_internal_consistency": 74,
+      "uncertain": 155,
+      "suspect_associations": 4,
+      "interpretation": "Strict internal consistency is a quality-control category, not independent confirmation of Hipparcos identities."
+    },
+    "leave_one_section_out": {
+      "aggregate": {
+        "count": 74,
+        "median_px": 1.0468,
+        "mean_px": 1.5935,
+        "rmse_px": 2.3247,
+        "p90_px": 3.2666,
+        "max_px": 8.278
+      },
+      "sections": {
+        "R1C2": {
+          "count": 11,
+          "median_px": 1.437,
+          "rmse_px": 1.741
+        },
+        "R2C1": {
+          "count": 4,
+          "median_px": 0.506,
+          "rmse_px": 0.718
+        },
+        "R2C2": {
+          "count": 14,
+          "median_px": 0.827,
+          "rmse_px": 1.876
+        },
+        "R3C1": {
+          "count": 24,
+          "median_px": 1.342,
+          "rmse_px": 3.46
+        },
+        "R3C2": {
+          "count": 21,
+          "median_px": 0.934,
+          "rmse_px": 1.152
+        }
+      }
+    },
+    "source_reports": {
+      "phase38_global_calibration_report.json": {
+        "phase": 38,
+        "model": "Equidistant fisheye with k1 and k2 radial terms",
+        "input": "research/real_image/results/ASK033/phase37_validation/phase37_all_matches.csv",
+        "image_dimensions": [
+          1920,
+          1440
+        ],
+        "correspondences": 233,
+        "training_correspondences": 186,
+        "test_correspondences": 47,
+        "sections": [
+          "R1C2",
+          "R2C1",
+          "R2C2",
+          "R3C1",
+          "R3C2"
+        ],
+        "optimizer_success": true,
+        "optimizer_message": "`ftol` termination condition is satisfied.",
+        "parameters": {
+          "optical_centre_x_px": 940.8792956389896,
+          "optical_centre_y_px": 755.5388124993078,
+          "focal_scale_px_per_rad": 822.9708649090667,
+          "radial_k1": -0.03333727005625633,
+          "radial_k2": 0.0008981455512420184,
+          "optical_axis_ra_deg": 2.127537171487967,
+          "optical_axis_dec_deg": 50.34240609070423,
+          "rotation_matrix_world_to_camera": [
+            [
+              0.7571113563263575,
+              -0.20301852636807335,
+              -0.6209395075794417
+            ],
+            [
+              0.14158671302936818,
+              0.9788882188261971,
+              -0.14741457776222447
+            ],
+            [
+              0.637758258915714,
+              0.023692467043587462,
+              0.7698721128799157
+            ]
+          ]
+        },
+        "training_metrics": {
+          "count": 186,
+          "front_facing": 186,
+          "predicted_inside_image": 186,
+          "median_error_px": 0.6154735941117571,
+          "mean_error_px": 1.3194129130207353,
+          "rmse_px": 3.9903364536347934,
+          "p90_error_px": 1.588541914805273,
+          "max_error_px": 30.018661247693558
+        },
+        "held_out_test_metrics": {
+          "count": 47,
+          "front_facing": 47,
+          "predicted_inside_image": 47,
+          "median_error_px": 0.6084906499370504,
+          "mean_error_px": 0.7949800561551491,
+          "rmse_px": 0.9863467398848935,
+          "p90_error_px": 1.5366254948885925,
+          "max_error_px": 3.5129423526338694
+        },
+        "all_data_metrics": {
+          "count": 233,
+          "front_facing": 233,
+          "predicted_inside_image": 233,
+          "median_error_px": 0.6136537018680649,
+          "mean_error_px": 1.2136260277302524,
+          "rmse_px": 3.5926506809946033,
+          "p90_error_px": 1.6128712281777857,
+          "max_error_px": 30.018661247693558
+        },
+        "interpretation": "Exploratory global fisheye fit. The held-out test residuals must be assessed before accepting this as a camera calibration. Input correspondences inherit local WCS matching uncertainty."
+      },
+      "phase56_strict_global_calibration_report.json": {
+        "phase": 56,
+        "title": "Strict-subset global fisheye calibration",
+        "input": "research/real_image/results/ASK033/phase49_cross_section_consistency/phase49_cross_section_point_comparison.csv",
+        "selection": {
+          "criterion": "local_wcs_candidate_error_px <= 1.0",
+          "total_original": 233,
+          "strict_count": 74,
+          "sections": [
+            "R1C2",
+            "R2C1",
+            "R2C2",
+            "R3C1",
+            "R3C2"
+          ],
+          "training_count": 59,
+          "test_count": 15
+        },
+        "optimizer_success": true,
+        "optimizer_message": "`ftol` termination condition is satisfied.",
+        "parameters": {
+          "optical_centre_x_px": 941.0883664946765,
+          "optical_centre_y_px": 755.9871390021009,
+          "focal_scale_px_per_rad": 823.0071766873924,
+          "radial_k1": -0.03258448886194691,
+          "radial_k2": -0.0012072371451769682,
+          "optical_axis_ra_deg": 2.181836661798281,
+          "optical_axis_dec_deg": 50.30771236465781
+        },
+        "training_metrics": {
+          "count": 59,
+          "median_px": 0.5814243968702981,
+          "mean_px": 0.7339799036334593,
+          "rmse_px": 1.0658811236179007,
+          "p90_px": 1.1800916818731726,
+          "max_px": 5.9636554722646515,
+          "within_1px": 49,
+          "within_2px": 58,
+          "within_3px": 58,
+          "within_5px": 58
+        },
+        "held_out_test_metrics": {
+          "count": 15,
+          "median_px": 0.7969571334929929,
+          "mean_px": 0.7877437607170165,
+          "rmse_px": 0.9381143278333259,
+          "p90_px": 1.1591182777183346,
+          "max_px": 2.206737668491011,
+          "within_1px": 10,
+          "within_2px": 14,
+          "within_3px": 15,
+          "within_5px": 15
+        },
+        "all_data_metrics": {
+          "count": 74,
+          "median_px": 0.5849505893700928,
+          "mean_px": 0.7448779827720181,
+          "rmse_px": 1.0412500867441328,
+          "p90_px": 1.164030461169999,
+          "max_px": 5.9636554722646515,
+          "within_1px": 59,
+          "within_2px": 72,
+          "within_3px": 73,
+          "within_5px": 73
+        },
+        "phase38_comparison": {
+          "phase38": {
+            "optical_centre_x_px": 940.8792956389896,
+            "optical_centre_y_px": 755.5388124993078,
+            "focal_scale_px_per_rad": 822.9708649090667,
+            "radial_k1": -0.03333727005625633,
+            "radial_k2": 0.0008981455512420184,
+            "test_median_px": 0.6084906499370504,
+            "test_rmse_px": 0.9863467398848935
+          },
+          "phase56": {
+            "optical_centre_x_px": 941.0883664946765,
+            "optical_centre_y_px": 755.9871390021009,
+            "focal_scale_px_per_rad": 823.0071766873924,
+            "radial_k1": -0.03258448886194691,
+            "radial_k2": -0.0012072371451769682,
+            "optical_axis_ra_deg": 2.181836661798281,
+            "optical_axis_dec_deg": 50.30771236465781,
+            "test_median_px": 0.7969571334929929,
+            "test_rmse_px": 0.9381143278333259
+          }
+        },
+        "limitations": [
+          "The strict subset is selected using residuals from local WCS solutions.",
+          "Local WCS catalogue associations are not independent ground truth.",
+          "The held-out split is internal to one image and one camera.",
+          "This is an exploratory model, not a validated production calibration."
+        ]
+      },
+      "phase57_leave_one_section_out_report.json": {
+        "phase": 57,
+        "title": "Leave-one-section-out strict-subset validation",
+        "selection": {
+          "criterion": "local_wcs_candidate_error_px <= 1.0",
+          "total_correspondences": 74,
+          "sections": [
+            "R1C2",
+            "R2C1",
+            "R2C2",
+            "R3C1",
+            "R3C2"
+          ]
+        },
+        "folds": [
+          {
+            "held_out_section": "R1C2",
+            "training_count": 63,
+            "test_metrics": {
+              "count": 11,
+              "median_px": 1.4367972756796634,
+              "mean_px": 1.582871879895649,
+              "rmse_px": 1.7407001754921132,
+              "p90_px": 2.4618436863471453,
+              "max_px": 3.219207399025853,
+              "within_1px": 2,
+              "within_2px": 9,
+              "within_3px": 10,
+              "within_5px": 11
+            },
+            "optimizer_success": true,
+            "optimizer_message": "`ftol` termination condition is satisfied."
+          },
+          {
+            "held_out_section": "R2C1",
+            "training_count": 70,
+            "test_metrics": {
+              "count": 4,
+              "median_px": 0.5063599757742905,
+              "mean_px": 0.6523739712891294,
+              "rmse_px": 0.7184767205973447,
+              "p90_px": 0.9780835074845536,
+              "max_px": 1.1698830679262744,
+              "within_1px": 3,
+              "within_2px": 4,
+              "within_3px": 4,
+              "within_5px": 4
+            },
+            "optimizer_success": true,
+            "optimizer_message": "`ftol` termination condition is satisfied."
+          },
+          {
+            "held_out_section": "R2C2",
+            "training_count": 60,
+            "test_metrics": {
+              "count": 14,
+              "median_px": 0.8271028784050886,
+              "mean_px": 1.1645275928212235,
+              "rmse_px": 1.8759891267936024,
+              "p90_px": 1.2180953703839348,
+              "max_px": 6.371592070566025,
+              "within_1px": 11,
+              "within_2px": 13,
+              "within_3px": 13,
+              "within_5px": 13
+            },
+            "optimizer_success": true,
+            "optimizer_message": "`ftol` termination condition is satisfied."
+          },
+          {
+            "held_out_section": "R3C1",
+            "training_count": 50,
+            "test_metrics": {
+              "count": 24,
+              "median_px": 1.3415077644432936,
+              "mean_px": 2.4977539137482303,
+              "rmse_px": 3.460383128458788,
+              "p90_px": 6.423831612140916,
+              "max_px": 8.278042582015043,
+              "within_1px": 8,
+              "within_2px": 15,
+              "within_3px": 17,
+              "within_5px": 20
+            },
+            "optimizer_success": true,
+            "optimizer_message": "`ftol` termination condition is satisfied."
+          },
+          {
+            "held_out_section": "R3C2",
+            "training_count": 53,
+            "test_metrics": {
+              "count": 21,
+              "median_px": 0.9344373246362733,
+              "mean_px": 1.0308655615937639,
+              "rmse_px": 1.1515685211697857,
+              "p90_px": 1.8320187862808002,
+              "max_px": 2.0131351885357245,
+              "within_1px": 11,
+              "within_2px": 20,
+              "within_3px": 21,
+              "within_5px": 21
+            },
+            "optimizer_success": true,
+            "optimizer_message": "`ftol` termination condition is satisfied."
+          }
+        ],
+        "aggregate_held_out_metrics": {
+          "count": 74,
+          "median_px": 1.0467633414311068,
+          "mean_px": 1.5934965349585453,
+          "rmse_px": 2.324651327798568,
+          "p90_px": 3.266637348225405,
+          "max_px": 8.278042582015043,
+          "within_1px": 35,
+          "within_2px": 61,
+          "within_3px": 65,
+          "within_5px": 69
+        },
+        "limitations": [
+          "All folds use correspondences from the same camera image.",
+          "Local WCS associations are not independent ground truth.",
+          "Section-wise differences may reflect local plate-solve quality.",
+          "This validation does not establish accuracy on another camera or night."
+        ]
+      },
+      "phase59_final_real_camera_validation_summary.json": {
+        "phase": 59,
+        "title": "StarLoc 2.0 \u2014 Final Real-Camera Validation Summary",
+        "generated": "2026-11-20",
+        "camera": "ASK033 public AllSkyKamera image",
+        "image_dimensions": [
+          1920,
+          1440
+        ],
+        "real_image_validation": {
+          "solved_sections": 5,
+          "sections": [
+            "R1C2",
+            "R2C1",
+            "R2C2",
+            "R3C1",
+            "R3C2"
+          ],
+          "phase37_provisional_correspondences": 233,
+          "phase56_strict_correspondences": 74,
+          "strict_filter": "Local WCS-to-candidate residual <= 1.0 pixel"
+        },
+        "phase38_global_model": {
+          "model": "Equidistant fisheye with k1 and k2 radial terms",
+          "test_count": 47,
+          "test_median_error_px": 0.6084906499370504,
+          "test_rmse_px": 0.9863467398848935,
+          "parameters": {
+            "optical_centre_x_px": 940.8792956389896,
+            "optical_centre_y_px": 755.5388124993078,
+            "focal_scale_px_per_rad": 822.9708649090667,
+            "radial_k1": -0.03333727005625633,
+            "radial_k2": 0.0008981455512420184,
+            "optical_axis_ra_deg": 2.127537171487967,
+            "optical_axis_dec_deg": 50.34240609070423,
+            "rotation_matrix_world_to_camera": [
+              [
+                0.7571113563263575,
+                -0.20301852636807335,
+                -0.6209395075794417
+              ],
+              [
+                0.14158671302936818,
+                0.9788882188261971,
+                -0.14741457776222447
+              ],
+              [
+                0.637758258915714,
+                0.023692467043587462,
+                0.7698721128799157
+              ]
+            ]
+          }
+        },
+        "phase56_strict_model": {
+          "test_count": 15,
+          "test_median_error_px": 0.7969571334929929,
+          "test_rmse_px": 0.9381143278333259,
+          "parameters": {
+            "optical_centre_x_px": 941.0883664946765,
+            "optical_centre_y_px": 755.9871390021009,
+            "focal_scale_px_per_rad": 823.0071766873924,
+            "radial_k1": -0.03258448886194691,
+            "radial_k2": -0.0012072371451769682,
+            "optical_axis_ra_deg": 2.181836661798281,
+            "optical_axis_dec_deg": 50.30771236465781
+          }
+        },
+        "phase57_leave_one_section_out": {
+          "count": 11,
+          "median_error_px": 1.4367972756796634,
+          "mean_error_px": 1.582871879895649,
+          "rmse_px": 1.7407001754921132,
+          "p90_error_px": 2.4618436863471453,
+          "maximum_error_px": 3.219207399025853,
+          "within_1px": 2,
+          "within_2px": 9,
+          "within_3px": 10,
+          "within_5px": 11
+        },
+        "phase58_section_diagnostics": {
+          "R1C2": {
+            "count": 11,
+            "mean_dx_px": -1.2066416258631472,
+            "mean_dy_px": -0.38894547156514325,
+            "median_dx_px": -1.2462206770867397,
+            "median_dy_px": -0.41884854805226723,
+            "median_error_px": 1.4367972756796634,
+            "rmse_px": 1.7407001754921132,
+            "p90_px": 2.4618436863471453,
+            "max_px": 3.219207399025853,
+            "within_1px": 2,
+            "within_2px": 9,
+            "within_3px": 10,
+            "within_5px": 11
+          },
+          "R2C1": {
+            "count": 4,
+            "mean_dx_px": 0.2111098644252536,
+            "mean_dy_px": 0.013791389549481892,
+            "median_dx_px": 0.2406278985474728,
+            "median_dy_px": -0.2881120025278392,
+            "median_error_px": 0.5063599757742905,
+            "rmse_px": 0.7184767205973447,
+            "p90_px": 0.9780835074845536,
+            "max_px": 1.1698830679262744,
+            "within_1px": 3,
+            "within_2px": 4,
+            "within_3px": 4,
+            "within_5px": 4
+          },
+          "R2C2": {
+            "count": 14,
+            "mean_dx_px": -0.5309580614490658,
+            "mean_dy_px": 0.09732140631664217,
+            "median_dx_px": -0.43646779549993653,
+            "median_dy_px": -0.5484518321744076,
+            "median_error_px": 0.8271028784050886,
+            "rmse_px": 1.8759891267936024,
+            "p90_px": 1.2180953703839348,
+            "max_px": 6.371592070566025,
+            "within_1px": 11,
+            "within_2px": 13,
+            "within_3px": 13,
+            "within_5px": 13
+          },
+          "R3C1": {
+            "count": 24,
+            "mean_dx_px": -1.4412752176395192,
+            "mean_dy_px": 0.2855352716188359,
+            "median_dx_px": 0.27475231203862904,
+            "median_dy_px": -0.2750519104552609,
+            "median_error_px": 1.3415077644432936,
+            "rmse_px": 3.460383128458788,
+            "p90_px": 6.423831612140916,
+            "max_px": 8.278042582015043,
+            "within_1px": 8,
+            "within_2px": 15,
+            "within_3px": 17,
+            "within_5px": 20
+          },
+          "R3C2": {
+            "count": 21,
+            "mean_dx_px": -0.041839223712242656,
+            "mean_dy_px": 0.6891309302747166,
+            "median_dx_px": -0.13228726374256894,
+            "median_dy_px": 0.7883980879964838,
+            "median_error_px": 0.9344373246362733,
+            "rmse_px": 1.1515685211697857,
+            "p90_px": 1.8320187862808002,
+            "max_px": 2.0131351885357245,
+            "within_1px": 11,
+            "within_2px": 20,
+            "within_3px": 21,
+            "within_5px": 21
+          }
+        },
+        "scientific_conclusion": [
+          "The synthetic fisheye pipeline demonstrated controlled calibration performance.",
+          "Five real-image sections produced local astrometric solutions.",
+          "The real-image global fisheye model is exploratory.",
+          "Random held-out validation and leave-one-section-out validation give different results.",
+          "Cross-section generalisation is not uniform.",
+          "R3C1 has the largest section-level prediction error.",
+          "R2C2 contains outliers that materially affect RMSE.",
+          "The strict subset improves correspondence quality but does not establish independent accuracy.",
+          "The local WCS-derived catalogue correspondences are not independent ground truth.",
+          "A separate camera image or independently verified astrometric reference is required for stronger validation."
+        ],
+        "limitations": [
+          "Only one public camera image was used for this real-image investigation.",
+          "Camera site and timestamp assumptions require independent verification.",
+          "The five local WCS solutions are not independent camera calibration ground truth.",
+          "The four excluded R2C2 associations remain unresolved.",
+          "The small R2C1 leave-one-section-out test set contains only four points.",
+          "No production-grade global calibration claim is made."
+        ]
+      },
+      "phase60_real_star_association_audit_report.json": {
+        "phase": 60,
+        "title": "Real-star association validation audit",
+        "input_correspondences": 233,
+        "strict_internal_consistency_count": 74,
+        "uncertain_correspondence_count": 159,
+        "strict_threshold_px": 1.0,
+        "per_section": {
+          "R1C2": {
+            "count": 71,
+            "median_residual_px": 2.230031681669848,
+            "rmse_px": 2.451173231816955,
+            "within_1px": 11,
+            "within_2px": 30,
+            "within_3px": 53,
+            "within_5px": 71
+          },
+          "R2C1": {
+            "count": 28,
+            "median_residual_px": 2.0664218434198007,
+            "rmse_px": 2.3823337886510045,
+            "within_1px": 4,
+            "within_2px": 13,
+            "within_3px": 21,
+            "within_5px": 28
+          },
+          "R2C2": {
+            "count": 51,
+            "median_residual_px": 1.4329345886675728,
+            "rmse_px": 2.204031984025389,
+            "within_1px": 14,
+            "within_2px": 31,
+            "within_3px": 41,
+            "within_5px": 51
+          },
+          "R3C1": {
+            "count": 43,
+            "median_residual_px": 0.9176374869257637,
+            "rmse_px": 1.1818524346794554,
+            "within_1px": 24,
+            "within_2px": 40,
+            "within_3px": 42,
+            "within_5px": 43
+          },
+          "R3C2": {
+            "count": 40,
+            "median_residual_px": 0.9287032238015742,
+            "rmse_px": 1.389323203254552,
+            "within_1px": 21,
+            "within_2px": 36,
+            "within_3px": 39,
+            "within_5px": 40
+          }
+        },
+        "previously_suspected_associations": [
+          {
+            "point": "P1",
+            "candidate_global_x": "1059.032",
+            "candidate_global_y": "524.367",
+            "global_prediction_x": "1044.744",
+            "global_prediction_y": "551.557",
+            "candidate_to_global_prediction_px": "30.715517967307715",
+            "original_assigned_ra_deg": "340.1295618475",
+            "original_assigned_dec_deg": "44.2763796568",
+            "original_assigned_hip_id": "111944",
+            "original_assigned_catalogue_separation_arcsec": "0.0",
+            "candidate_wcs_ra_deg": "340.0434679032106",
+            "candidate_wcs_dec_deg": "44.44474732158648",
+            "candidate_nearest_hip_id": "111944",
+            "candidate_nearest_hip_separation_arcsec": "645.354169473328",
+            "prediction_wcs_ra_deg": "342.24494980786045",
+            "prediction_wcs_dec_deg": "45.30581674292365",
+            "prediction_nearest_hip_id": "112417",
+            "prediction_nearest_hip_separation_arcsec": "3266.060284781412",
+            "same_nearest_catalogue_id": "False"
+          },
+          {
+            "point": "P2",
+            "candidate_global_x": "1074.072",
+            "candidate_global_y": "605.775",
+            "global_prediction_x": "1055.858",
+            "global_prediction_y": "628.744",
+            "candidate_to_global_prediction_px": "29.314241538883458",
+            "original_assigned_ra_deg": "347.6112539788",
+            "original_assigned_dec_deg": "43.5426811789",
+            "original_assigned_hip_id": "114430",
+            "original_assigned_catalogue_separation_arcsec": "0.0",
+            "candidate_wcs_ra_deg": "347.2996806288916",
+            "candidate_wcs_dec_deg": "43.36160245391548",
+            "candidate_nearest_hip_id": "114430",
+            "candidate_nearest_hip_separation_arcsec": "1043.0964802741676",
+            "prediction_wcs_ra_deg": "349.2436479444307",
+            "prediction_wcs_dec_deg": "44.361831035379055",
+            "prediction_nearest_hip_id": "115261",
+            "prediction_nearest_hip_separation_arcsec": "2581.026835545981",
+            "same_nearest_catalogue_id": "False"
+          },
+          {
+            "point": "P3",
+            "candidate_global_x": "1007.639",
+            "candidate_global_y": "505.11",
+            "global_prediction_x": "993.159",
+            "global_prediction_y": "527.689",
+            "candidate_to_global_prediction_px": "26.82315494120701",
+            "original_assigned_ra_deg": "337.3825859043",
+            "original_assigned_dec_deg": "47.7068615223",
+            "original_assigned_hip_id": "111022",
+            "original_assigned_catalogue_separation_arcsec": "0.0",
+            "candidate_wcs_ra_deg": "337.3425715900986",
+            "candidate_wcs_dec_deg": "47.53005440677956",
+            "candidate_nearest_hip_id": "111022",
+            "candidate_nearest_hip_separation_arcsec": "643.8892382840827",
+            "prediction_wcs_ra_deg": "339.20455563617725",
+            "prediction_wcs_dec_deg": "48.48796599581344",
+            "prediction_nearest_hip_id": "111072",
+            "prediction_nearest_hip_separation_arcsec": "5051.5102976804155",
+            "same_nearest_catalogue_id": "False"
+          },
+          {
+            "point": "P4",
+            "candidate_global_x": "966.337",
+            "candidate_global_y": "518.103",
+            "global_prediction_x": "956.454",
+            "global_prediction_y": "535.199",
+            "candidate_to_global_prediction_px": "19.74707332745794",
+            "original_assigned_ra_deg": "337.8245245814",
+            "original_assigned_dec_deg": "50.2826194986",
+            "original_assigned_hip_id": "111169",
+            "original_assigned_catalogue_separation_arcsec": "0.0",
+            "candidate_wcs_ra_deg": "337.7215857288157",
+            "candidate_wcs_dec_deg": "50.143449373522195",
+            "candidate_nearest_hip_id": "111169",
+            "candidate_nearest_hip_separation_arcsec": "554.3287921910845",
+            "prediction_wcs_ra_deg": "339.2619044421889",
+            "prediction_wcs_dec_deg": "50.828006201879965",
+            "prediction_nearest_hip_id": "111674",
+            "prediction_nearest_hip_separation_arcsec": "2585.3091422289394",
+            "same_nearest_catalogue_id": "False"
+          }
+        ],
+        "conclusion": "This audit classifies internal pixel-WCS consistency. It does not independently certify catalogue identities. Independent real-star confirmation remains necessary.",
+        "limitations": [
+          "The local WCS solutions are not independent ground truth.",
+          "The image uses one public AllSky camera observation.",
+          "Catalogue identity requires stronger independent verification.",
+          "The four Phase 53 suspect associations must not be presented as confirmed star identifications."
+        ]
+      },
+      "phase61_final_association_visualisation_report.json": {
+        "phase": 61,
+        "title": "Final real-star association visualisation",
+        "source_image": "research/real_image/data/network/ASK033/ASK033_live_grayscale.png",
+        "input_correspondences": 233,
+        "strict_internal_consistency": 74,
+        "uncertain_internal_consistency": 155,
+        "suspect_associations": 4,
+        "strict_threshold_px": 1.0,
+        "overlay": "research/real_image/results/ASK033/phase61_final_association_visualisation/phase61_real_star_association_overlay.jpg",
+        "classified_csv": "research/real_image/results/ASK033/phase61_final_association_visualisation/phase61_all_classified_correspondences.csv",
+        "interpretation": "The overlay visualises local-WCS residual quality. Green points are internally consistent within 1 pixel; orange points exceed that threshold; red crosses mark four previously suspected associations. These classifications do not independently certify stellar catalogue identities."
+      }
+    }
+  },
+  "artifacts": {
+    "phase61_overlay": {
+      "path": "research/real_image/results/ASK033/phase61_final_association_visualisation/phase61_real_star_association_overlay.jpg",
+      "exists": true
+    },
+    "phase61_classified_correspondences": {
+      "path": "research/real_image/results/ASK033/phase61_final_association_visualisation/phase61_all_classified_correspondences.csv",
+      "exists": true
+    },
+    "phase60_strict_correspondences": {
+      "path": "research/real_image/results/ASK033/phase60_association_audit/phase60_strict_internal_consistency.csv",
+      "exists": true
+    },
+    "phase60_uncertain_correspondences": {
+      "path": "research/real_image/results/ASK033/phase60_association_audit/phase60_uncertain_correspondences.csv",
+      "exists": true
+    },
+    "hipparcos_visible_catalogue": {
+      "path": "research/real_image/results/ASK033/ASK033_visible_hipparcos_catalogue.csv",
+      "exists": true
+    },
+    "phase49_cross_section_correspondences": {
+      "path": "research/real_image/results/ASK033/phase49_cross_section_consistency/phase49_cross_section_point_comparison.csv",
+      "exists": true
+    },
+    "phase56_point_residuals": {
+      "path": "research/real_image/results/ASK033/phase56_strict_global_calibration/phase56_strict_point_residuals.csv",
+      "exists": true
+    },
+    "phase57_held_out_predictions": {
+      "path": "research/real_image/results/ASK033/phase57_leave_one_section_out/phase57_held_out_predictions.csv",
+      "exists": true
+    },
+    "phase58_residual_vectors": {
+      "path": "research/real_image/results/ASK033/phase58_section_error_diagnostics/phase58_residual_vectors.csv",
+      "exists": true
+    }
+  },
+  "visuals": [
+    {
+      "title": "Real-camera association overlay \u2014 Phase 61",
+      "path": "research/real_image/results/ASK033/phase61_final_association_visualisation/phase61_real_star_association_overlay.jpg",
+      "exists": true
+    },
+    {
+      "title": "Global calibration residual map \u2014 Phase 38",
+      "path": "research/real_image/results/ASK033/phase38_global_calibration/phase38_residual_map.png",
+      "exists": true
+    },
+    {
+      "title": "Section residual vectors \u2014 Phase 58",
+      "path": "research/real_image/results/ASK033/phase58_section_error_diagnostics/phase58_spatial_residual_vectors.png",
+      "exists": true
+    },
+    {
+      "title": "Section error distribution \u2014 Phase 58",
+      "path": "research/real_image/results/ASK033/phase58_section_error_diagnostics/phase58_section_error_distribution.png",
+      "exists": true
+    },
+    {
+      "title": "Four-point investigation \u2014 Phase 52",
+      "path": "research/real_image/results/ASK033/phase52_global_prediction_test/phase52_four_point_montage.jpg",
+      "exists": true
+    },
+    {
+      "title": "WCS validation overlay \u2014 Phase 35",
+      "path": "research/real_image/results/ASK033/phase35_wcs_match_overlay.jpg",
+      "exists": true
+    }
+  ],
+  "limitations": [
+    "The real-camera section WCS solutions are not independent ground truth.",
+    "The 74 strict points indicate internal consistency with local WCS solutions, not confirmed catalogue identities.",
+    "The 155 uncertain correspondences remain unresolved.",
+    "Four catalogue associations remain separately flagged as suspect.",
+    "Leave-one-section-out performance varies by section; R3C1 is notably weaker.",
+    "The global fisheye estimates are exploratory and require independent astrometric validation.",
+    "Image timestamp and camera pointing metadata require confirmation.",
+    "The synthetic demonstration assumes a controlled zenith-pointed fisheye geometry and does not prove general real-camera performance."
+  ],
+  "integrity": {
+    "missing_required_artifacts": [],
+    "missing_visuals": [],
+    "phase61_classification_total": 233
+  }
+}

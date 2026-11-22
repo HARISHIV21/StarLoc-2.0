@@ -1,0 +1,18 @@
+{
+    "method": "Blind Hipparcos catalogue matching and robust fisheye refinement",
+    "camera_model": "Zenith-pointed equidistant fisheye with unknown roll",
+    "optical_center_x_px": 511.50051812583945,
+    "optical_center_y_px": 511.50463854997975,
+    "focal_scale_px": 318.3130677463827,
+    "estimated_fov_deg": 179.99820088672254,
+    "estimated_roll_deg": 36.999250176658926,
+    "detected_regions": 1136,
+    "catalogue_candidates": 1284,
+    "identified_stars": 1136,
+    "mean_residual_px": 0.1789672495682389,
+    "median_residual_px": 0.11546969165133067,
+    "rmse_px": 0.2850339152574848,
+    "maximum_residual_px": 2.0205767257023655,
+    "ground_truth_used_for_matching": false,
+    "validation_note": "Synthetic observation; not real camera calibration."
+}

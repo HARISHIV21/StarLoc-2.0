@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.3" xsi:schemaLocation="http://www.ivoa.net/xml/VOTable/v1.3 http://www.ivoa.net/xml/VOTable/v1.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.4">
+ <RESOURCE type="results">
+  <INFO name="QUERY_STATUS" value="OK">No errors detected in query preprocessing</INFO>
+  <TABLE>
+   <DESCRIPTION>Query result for:&#xA;&#xA;SELECT TOP 10&#xA;    HIP_Number, RA_Deg, Dec_Deg, Vmag, PM_RA, PM_Dec&#xA;FROM hipparcos&#xA;WHERE Vmag &lt; 6&#xA;</DESCRIPTION>
+   <FIELD datatype="int" ucd="meta.id" name="hip_number" width="6">
+    <DESCRIPTION>Identifier (HIP Number)</DESCRIPTION>
+    <VALUES null="-2147483648"/>
+   </FIELD>
+   <FIELD unit="deg" datatype="char" arraysize="*" ucd="pos.pm;pos.eq.ra" name="ra_deg">
+    <DESCRIPTION>Right Ascension (ICRS, Epoch J1991.25)</DESCRIPTION>
+   </FIELD>
+   <FIELD unit="deg" datatype="char" arraysize="*" ucd="pos.eq.dec" name="dec_deg">
+    <DESCRIPTION>Declination (ICRS, Epoch J1991.25)</DESCRIPTION>
+   </FIELD>
+   <FIELD unit="mag" datatype="double" ucd="phot.mag;em.opt.V" precision="F2" name="vmag" width="5">
+    <DESCRIPTION>Magnitude in Johnson V</DESCRIPTION>
+   </FIELD>
+   <FIELD unit="mas/yr" datatype="double" ucd="pos.pm;pos.eq.ra" precision="F2" name="pm_ra" width="8">
+    <DESCRIPTION>Proper Motion in RA (mas/yr)</DESCRIPTION>
+   </FIELD>
+   <FIELD unit="mas/yr" datatype="double" ucd="pos.pm;pos.eq.dec" precision="F2" name="pm_dec" width="8">
+    <DESCRIPTION>Proper Motion in Dec (mas/yr)</DESCRIPTION>
+   </FIELD>
+   <DATA>
+    <BINARY>
+     <STREAM encoding="base64">
+AAB+XQAAAAwxMDEuMjg4NTQxMDUAAAAMLTE2LjcxMzE0MzA2v/cKPXCj1wrAgRAU
+euFHrsCTHFHrhR64AAB25gAAAAwwOTUuOTg3ODc3NjMAAAAMLTUyLjY5NTcx
+Nzk5v+PXCj1wo9dAM/1wo9cKPUA3q4UeuFHsAAEQKQAAAAwyMTMuOTE4MTE0
+MDMAAAAMKzE5LjE4NzI2OTk3v6mZmZmZmZrAkRXMzMzMzcCfPZmZmZmaAAEY
+AwAAAAwyMTkuOTIwNDEwMzQAAAAMLTYwLjgzNTE0NzA3v4R64UeuFHvArLxh
+R64Ue0B+HXCj1wo9AAFkfgAAAAwyNzkuMjM0MTA4MzIAAAAMKzM4Ljc4Mjk5
+MzExP564UeuFHrhAaSCj1wo9cUBx91wo9cKPAABgIAAAAAwwNzkuMTcyMDY1
+MTcAAAAMKzQ1Ljk5OTAyOTI3P7R64UeuFHtAUuFHrhR64cB6shR64UeuAABf
+dAAAAAwwNzguNjM0NDYzNTMAAAAMLTA4LjIwMTYzOTE5P8cKPXCj1wo//euF
+HrhR7L/h64UeuFHsAACRnwAAAAwxMTQuODI3MjQxOTQAAAAMKzA1LjIyNzUw
+NzY3P9mZmZmZmZrAhmSPXCj1w8CQKlHrhR64AAAdpAAAAAwwMjQuNDI4MTMy
+MDQAAAAMLTU3LjIzNjY2MDA3P9zMzMzMzM1AVgFHrhR64cBECj1wo9cKAABt
+VQAAAAwwODguNzkyODcxNjEAAAAMKzA3LjQwNzAzNjM0P9zMzMzMzM1AO1R6
+4UeuFEAluFHrhR64
+     </STREAM>
+    </BINARY>
+   </DATA>
+  </TABLE>
+ </RESOURCE>
+</VOTABLE>

@@ -1,0 +1,105 @@
+{
+  "phase": 84,
+  "propagated_catalogue": "research/data/catalogue/hipparcos_positions_2026.csv",
+  "propagated_rows": 8870,
+  "propagated_unique_ids": 8870,
+  "upstream_candidates": [
+    {
+      "file": "research/data/catalogue/hipparcos_bright_stars.csv",
+      "rows": 8870,
+      "pm_ra_column": "pm_ra_mas_yr",
+      "pm_dec_column": "pm_dec_mas_yr",
+      "missing_pm_ra": 0,
+      "missing_pm_dec": 0,
+      "missing_either_pm": 0,
+      "matched_propagated_ids": 8870,
+      "unmatched_upstream_ids": 0,
+      "coordinate_comparison_rows": 8870,
+      "examples": [
+        {
+          "hip_id": "32349",
+          "source_pm_ra": -546.01,
+          "source_pm_dec": -1223.08,
+          "source_ra": 101.28854105,
+          "source_dec": -16.71314306,
+          "propagated_ra": 101.2828976726,
+          "propagated_dec": -16.7252495482
+        },
+        {
+          "hip_id": "30438",
+          "source_pm_ra": 19.99,
+          "source_pm_dec": 23.67,
+          "source_ra": 95.98787763,
+          "source_dec": -52.69571799,
+          "propagated_ra": 95.9882041198,
+          "propagated_dec": -52.6954836938
+        },
+        {
+          "hip_id": "69673",
+          "source_pm_ra": -1093.45,
+          "source_pm_dec": -1999.4,
+          "source_ra": 213.91811403,
+          "source_dec": 19.18726997,
+          "propagated_ra": 213.9066553631,
+          "propagated_dec": 19.1674787056
+        },
+        {
+          "hip_id": "71683",
+          "source_pm_ra": -3678.19,
+          "source_pm_dec": 481.84,
+          "source_ra": 219.92041034,
+          "source_dec": -60.83514707,
+          "propagated_ra": 219.8457109025,
+          "propagated_dec": -60.8303568894
+        },
+        {
+          "hip_id": "91262",
+          "source_pm_ra": 201.02,
+          "source_pm_dec": 287.46,
+          "source_ra": 279.23410832,
+          "source_dec": 38.78299311,
+          "propagated_ra": 279.2366609815,
+          "propagated_dec": 38.7858384833
+        }
+      ]
+    }
+  ],
+  "propagation_script_relevant_lines": [
+    {
+      "line": 30,
+      "text": "\"vmag\", \"pm_ra_mas_yr\", \"pm_dec_mas_yr\""
+    },
+    {
+      "line": 39,
+      "text": "pm_ra = np.array([float(row[\"pm_ra_mas_yr\"]) for row in rows])"
+    },
+    {
+      "line": 40,
+      "text": "pm_dec = np.array([float(row[\"pm_dec_mas_yr\"]) for row in rows])"
+    },
+    {
+      "line": 48,
+      "text": "pm_ra_cosdec=pm_ra * u.mas / u.yr,"
+    },
+    {
+      "line": 49,
+      "text": "pm_dec=pm_dec * u.mas / u.yr,"
+    },
+    {
+      "line": 54,
+      "text": "updated = coordinates.apply_space_motion(new_obstime=target_epoch)"
+    },
+    {
+      "line": 83,
+      "text": "\"pm_ra\": \"mu_alpha*cos(dec), milliarcseconds/year\","
+    },
+    {
+      "line": 84,
+      "text": "\"pm_dec\": \"mu_delta, milliarcseconds/year\""
+    },
+    {
+      "line": 86,
+      "text": "\"method\": \"Astropy SkyCoord.apply_space_motion\","
+    }
+  ]
+}

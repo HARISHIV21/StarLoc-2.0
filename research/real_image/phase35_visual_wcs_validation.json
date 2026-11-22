@@ -1,0 +1,43 @@
+{
+  "phase": 35,
+  "section": "R2C2",
+  "image_dimensions": [
+    640,
+    480
+  ],
+  "detected_candidates": 89,
+  "catalogue_rows": 8870,
+  "catalogue_stars_near_field": 716,
+  "catalogue_stars_projected_inside": 315,
+  "pixel_space_one_to_one_matches": {
+    "1.0": {
+      "unique_matches": 15,
+      "median_pixel_residual": 0.5459866554020743,
+      "mean_pixel_residual": 0.5022318506968111,
+      "maximum_pixel_residual": 0.9182058086315084
+    },
+    "2.0": {
+      "unique_matches": 32,
+      "median_pixel_residual": 1.042656059517291,
+      "mean_pixel_residual": 0.9726700670394202,
+      "maximum_pixel_residual": 1.9245315874709203
+    },
+    "3.0": {
+      "unique_matches": 42,
+      "median_pixel_residual": 1.2661060293411492,
+      "mean_pixel_residual": 1.3390541703854473,
+      "maximum_pixel_residual": 2.8487544074394884
+    },
+    "5.0": {
+      "unique_matches": 53,
+      "median_pixel_residual": 1.432934588667516,
+      "mean_pixel_residual": 1.8453897183475336,
+      "maximum_pixel_residual": 4.994145310481153
+    }
+  },
+  "visual_match_threshold_pixels": 3.0,
+  "visual_match_count": 42,
+  "overlay": "research/real_image/results/ASK033/phase35_wcs_match_overlay.jpg",
+  "match_csv": "research/real_image/results/ASK033/phase35_pixel_matches.csv",
+  "interpretation": "Pixel-space correspondence diagnostic; not a final optical distortion calibration."
+}

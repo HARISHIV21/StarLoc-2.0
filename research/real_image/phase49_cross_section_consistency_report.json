@@ -1,0 +1,247 @@
+{
+  "phase": 49,
+  "title": "Cross-section local WCS and global fisheye consistency",
+  "correspondence_count": 233,
+  "method": "For each Phase 37 catalogue correspondence, project RA/Dec through the corresponding local TAN-SIP WCS and compare the result with the Phase 38 global fisheye prediction and detected image candidate.",
+  "overall": {
+    "local_wcs_vs_candidate": {
+      "count": 233,
+      "median_px": 1.4291690759155848,
+      "mean_px": 1.7251942952615196,
+      "rmse_px": 2.0409076731881535,
+      "p90_px": 3.339588173554742,
+      "max_px": 4.99414531048108,
+      "over_1px": 159,
+      "over_2px": 83,
+      "over_3px": 37,
+      "over_5px": 0
+    },
+    "global_fisheye_vs_candidate": {
+      "count": 233,
+      "median_px": 0.6136537018680649,
+      "mean_px": 1.2136260277302524,
+      "rmse_px": 3.5926506809946033,
+      "p90_px": 1.6128712281777857,
+      "max_px": 30.018661247693558,
+      "over_1px": 51,
+      "over_2px": 13,
+      "over_3px": 9,
+      "over_5px": 5
+    },
+    "global_fisheye_vs_local_wcs": {
+      "count": 233,
+      "median_px": 1.407208723403417,
+      "mean_px": 2.0840960053808004,
+      "rmse_px": 3.773830294713937,
+      "p90_px": 3.395201776343089,
+      "max_px": 30.99656144022806,
+      "over_1px": 160,
+      "over_2px": 81,
+      "over_3px": 32,
+      "over_5px": 7
+    }
+  },
+  "per_section": {
+    "R1C2": {
+      "count": 71,
+      "local_wcs_vs_candidate": {
+        "count": 71,
+        "median_px": 2.230031681669848,
+        "mean_px": 2.207259860369121,
+        "rmse_px": 2.4511732318169552,
+        "p90_px": 3.603227158296466,
+        "max_px": 4.831405587114157,
+        "over_1px": 60,
+        "over_2px": 41,
+        "over_3px": 18,
+        "over_5px": 0
+      },
+      "global_fisheye_vs_candidate": {
+        "count": 71,
+        "median_px": 0.5979008780015361,
+        "mean_px": 0.6844952971445321,
+        "rmse_px": 0.8353012167470341,
+        "p90_px": 1.0361511512508248,
+        "max_px": 3.497336377513192,
+        "over_1px": 9,
+        "over_2px": 2,
+        "over_3px": 1,
+        "over_5px": 0
+      },
+      "global_fisheye_vs_local_wcs": {
+        "count": 71,
+        "median_px": 2.1655731482145275,
+        "mean_px": 2.161777216067836,
+        "rmse_px": 2.3536676699555437,
+        "p90_px": 3.3415363405030254,
+        "max_px": 5.285420823789125,
+        "over_1px": 60,
+        "over_2px": 41,
+        "over_3px": 11,
+        "over_5px": 1
+      }
+    },
+    "R2C1": {
+      "count": 28,
+      "local_wcs_vs_candidate": {
+        "count": 28,
+        "median_px": 2.0664218434198007,
+        "mean_px": 2.1512066449608516,
+        "rmse_px": 2.3823337886510045,
+        "p90_px": 3.6165003893806027,
+        "max_px": 3.8920939304230715,
+        "over_1px": 24,
+        "over_2px": 15,
+        "over_3px": 7,
+        "over_5px": 0
+      },
+      "global_fisheye_vs_candidate": {
+        "count": 28,
+        "median_px": 0.6903666510352575,
+        "mean_px": 0.891738715795779,
+        "rmse_px": 1.101228224485373,
+        "p90_px": 1.594465187671703,
+        "max_px": 3.3357492684052996,
+        "over_1px": 8,
+        "over_2px": 2,
+        "over_3px": 1,
+        "over_5px": 0
+      },
+      "global_fisheye_vs_local_wcs": {
+        "count": 28,
+        "median_px": 1.9683593275844837,
+        "mean_px": 2.2909638885356016,
+        "rmse_px": 2.6162681691824314,
+        "p90_px": 4.009739719651126,
+        "max_px": 4.88067820697376,
+        "over_1px": 25,
+        "over_2px": 14,
+        "over_3px": 8,
+        "over_5px": 0
+      }
+    },
+    "R2C2": {
+      "count": 51,
+      "local_wcs_vs_candidate": {
+        "count": 51,
+        "median_px": 1.4329345886675728,
+        "mean_px": 1.8318654347707273,
+        "rmse_px": 2.204031984025389,
+        "p90_px": 3.547160428699194,
+        "max_px": 4.99414531048108,
+        "over_1px": 37,
+        "over_2px": 20,
+        "over_3px": 10,
+        "over_5px": 0
+      },
+      "global_fisheye_vs_candidate": {
+        "count": 51,
+        "median_px": 0.6997076189605878,
+        "mean_px": 2.971694942468643,
+        "rmse_px": 7.498565608683014,
+        "p90_px": 3.5129423526338694,
+        "max_px": 30.018661247693558,
+        "over_1px": 19,
+        "over_2px": 9,
+        "over_3px": 7,
+        "over_5px": 5
+      },
+      "global_fisheye_vs_local_wcs": {
+        "count": 51,
+        "median_px": 1.407208723403417,
+        "mean_px": 3.4769093015753563,
+        "rmse_px": 7.1491489749859785,
+        "p90_px": 5.570795182349673,
+        "max_px": 30.99656144022806,
+        "over_1px": 31,
+        "over_2px": 20,
+        "over_3px": 12,
+        "over_5px": 6
+      }
+    },
+    "R3C1": {
+      "count": 43,
+      "local_wcs_vs_candidate": {
+        "count": 43,
+        "median_px": 0.9176374869257637,
+        "mean_px": 1.0321394647479936,
+        "rmse_px": 1.1818524346794552,
+        "p90_px": 1.579168076926242,
+        "max_px": 3.019528684726213,
+        "over_1px": 19,
+        "over_2px": 3,
+        "over_3px": 1,
+        "over_5px": 0
+      },
+      "global_fisheye_vs_candidate": {
+        "count": 43,
+        "median_px": 0.5961820866707638,
+        "mean_px": 0.6874098221558577,
+        "rmse_px": 0.7924222695041476,
+        "p90_px": 1.1751613389278637,
+        "max_px": 1.9713709450419479,
+        "over_1px": 6,
+        "over_2px": 0,
+        "over_3px": 0,
+        "over_5px": 0
+      },
+      "global_fisheye_vs_local_wcs": {
+        "count": 43,
+        "median_px": 0.8580519221058653,
+        "mean_px": 0.885230799827877,
+        "rmse_px": 1.0087313157111015,
+        "p90_px": 1.429096041150684,
+        "max_px": 2.2449814857363055,
+        "over_1px": 16,
+        "over_2px": 1,
+        "over_3px": 0,
+        "over_5px": 0
+      }
+    },
+    "R3C2": {
+      "count": 40,
+      "local_wcs_vs_candidate": {
+        "count": 40,
+        "median_px": 0.9287032238015742,
+        "mean_px": 1.1803475123337956,
+        "rmse_px": 1.389323203254552,
+        "p90_px": 2.018411744522961,
+        "max_px": 3.469466294084244,
+        "over_1px": 19,
+        "over_2px": 4,
+        "over_3px": 1,
+        "over_5px": 0
+      },
+      "global_fisheye_vs_candidate": {
+        "count": 40,
+        "median_px": 0.5667536013208749,
+        "mean_px": 0.7022987475750626,
+        "rmse_px": 0.8546205723299908,
+        "p90_px": 1.5561028303085904,
+        "max_px": 1.9072886882558222,
+        "over_1px": 9,
+        "over_2px": 0,
+        "over_3px": 0,
+        "over_5px": 0
+      },
+      "global_fisheye_vs_local_wcs": {
+        "count": 40,
+        "median_px": 1.1687201509322145,
+        "mean_px": 1.3143474815242868,
+        "rmse_px": 1.4403019543075972,
+        "p90_px": 2.213396159025021,
+        "max_px": 3.0147469800931694,
+        "over_1px": 28,
+        "over_2px": 5,
+        "over_3px": 1,
+        "over_5px": 0
+      }
+    }
+  },
+  "limitations": [
+    "Local WCS and global model use the same underlying image detections and catalogue associations.",
+    "This is a consistency analysis, not independent astrometric ground-truth validation.",
+    "Local TAN-SIP solutions describe individual crops and do not alone establish a complete full-frame fisheye model.",
+    "Differences may reflect local WCS uncertainty, catalogue matching uncertainty, or global model limitations."
+  ]
+}

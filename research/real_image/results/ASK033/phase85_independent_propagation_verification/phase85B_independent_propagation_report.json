@@ -1,0 +1,93 @@
+{
+  "phase": "85B",
+  "verification_time_utc": "2026-11-20T23:08:18.787276+00:00",
+  "source_file": "research/data/catalogue/hipparcos_bright_stars.csv",
+  "propagated_file": "research/data/catalogue/hipparcos_positions_2026.csv",
+  "source_rows": 8870,
+  "propagated_rows": 8870,
+  "matched_hip_ids": 8870,
+  "unmatched_source_ids": 0,
+  "unmatched_propagated_ids": 0,
+  "reference_epoch": "J1991.25",
+  "target_epoch": "2026-11-20T00:00:00 UTC",
+  "method": "Independent Astropy SkyCoord.apply_space_motion reproduction",
+  "coordinate_difference_arcsec": {
+    "count": 8870,
+    "mean": 1.2415814956317916e-07,
+    "median": 1.2755780606718869e-07,
+    "p90": 1.8655833670680238e-07,
+    "maximum": 2.50328060435331e-07,
+    "rms": 1.3389930919604086e-07
+  },
+  "proper_motion_shift_difference_arcsec": {
+    "count": 8870,
+    "mean": 2.472916315035069e-07,
+    "median": 2.4546365295918804e-07,
+    "p90": 4.469310127097615e-07,
+    "maximum": 4.998643462761354e-07,
+    "rms": 2.855620207426652e-07
+  },
+  "coordinate_threshold_counts": {
+    "within_0.001_arcsec": 8870,
+    "within_0.01_arcsec": 8870,
+    "within_0.1_arcsec": 8870,
+    "above_1_arcsec": 0
+  },
+  "proper_motion_shift_threshold_counts": {
+    "within_0.001_arcsec": 8870,
+    "within_0.01_arcsec": 8870,
+    "within_0.1_arcsec": 8870
+  },
+  "sample_comparisons": [
+    {
+      "hip_id": "25",
+      "stored_ra_deg": 0.0801724023,
+      "independent_ra_deg": 0.0801724023477219,
+      "stored_dec_deg": -44.291372772,
+      "independent_dec_deg": -44.29137277199044,
+      "coordinate_difference_arcsec": 1.2770219818578854e-07,
+      "stored_shift_arcsec": 4.394529,
+      "independent_shift_arcsec": 4.394528889231467
+    },
+    {
+      "hip_id": "29771",
+      "stored_ra_deg": 94.0319735785,
+      "independent_ra_deg": 94.03197357845224,
+      "stored_dec_deg": -16.6179997414,
+      "independent_dec_deg": -16.61799974139645,
+      "coordinate_difference_arcsec": 1.6525695679181207e-07,
+      "stored_shift_arcsec": 0.329046,
+      "independent_shift_arcsec": 0.32904611895253316
+    },
+    {
+      "hip_id": "57443",
+      "stored_ra_deg": 176.6144248891,
+      "independent_ra_deg": 176.61442488911612,
+      "stored_dec_deg": -40.4973396835,
+      "independent_dec_deg": -40.49733968351507,
+      "coordinate_difference_arcsec": 6.992363243967928e-08,
+      "stored_shift_arcsec": 56.442051,
+      "independent_shift_arcsec": 56.442050702643726
+    },
+    {
+      "hip_id": "88771",
+      "stored_ra_deg": 271.8369677617,
+      "independent_ra_deg": 271.83696776174656,
+      "stored_dec_deg": 9.5644424529,
+      "independent_dec_deg": 9.564442452865656,
+      "coordinate_difference_arcsec": 2.0639633272066599e-07,
+      "stored_shift_arcsec": 3.589749,
+      "independent_shift_arcsec": 3.5897485237204383
+    },
+    {
+      "hip_id": "118322",
+      "stored_ra_deg": 359.9799561601,
+      "independent_ra_deg": 359.9799561600879,
+      "stored_dec_deg": -65.5772987674,
+      "independent_dec_deg": -65.57729876736495,
+      "coordinate_difference_arcsec": 1.274028139858011e-07,
+      "stored_shift_arcsec": 1.906855,
+      "independent_shift_arcsec": 1.9068547223742067
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "phase": 109,
+  "correspondence_rows": 41,
+  "pixel_residual_px": {
+    "count": 41,
+    "median": 1.6694314496057658,
+    "mean": 2.085089934991948,
+    "p90": 4.725523703151548,
+    "maximum": 6.827733451026628,
+    "rms": 2.6132883972185863
+  },
+  "sky_residual_arcsec": {
+    "count": 41,
+    "median": 418.1166376219883,
+    "mean": 491.3291146496685,
+    "p90": 1087.9946383319048,
+    "maximum": 1555.870858817293,
+    "rms": 608.036693707195
+  },
+  "wcs_vs_field_ra_dec": {
+    "0": {
+      "median_arcsec": 349.016376752075,
+      "mean_arcsec": 343.29641198548615,
+      "p90_arcsec": 361.23006335356524,
+      "maximum_arcsec": 370.48976585958457,
+      "rms_arcsec": 343.9911111662928
+    },
+    "1": {
+      "median_arcsec": 1.26063173556103e-07,
+      "mean_arcsec": 1.2964057483059514e-07,
+      "p90_arcsec": 1.6371610520264842e-07,
+      "maximum_arcsec": 1.722865197205742e-07,
+      "rms_arcsec": 1.3213644235579222e-07
+    }
+  },
+  "candidate": {
+    "local_xy": [
+      256.0,
+      256.0
+    ],
+    "calculated_ra_deg": 10.713883343451496,
+    "calculated_dec_deg": 56.463638707552384,
+    "nearest_correspondence": {
+      "row": 5,
+      "pixel_distance": 1.2401223229680343,
+      "field_ra": 10.693486086269225,
+      "field_dec": 56.465513998570614,
+      "index_ra": 10.126622791668753,
+      "index_dec": 56.537406962427504,
+      "sky_residual_arcsec": 1155.6493603116255
+    }
+  },
+  "hipparcos_catalogue": {
+    "columns": [
+      "hip_id",
+      "ra_deg",
+      "dec_deg",
+      "altitude_deg",
+      "azimuth_deg",
+      "magnitude"
+    ],
+    "valid_rows": 4006,
+    "ra_column": "ra_deg",
+    "dec_column": "dec_deg",
+    "id_column": null,
+    "nearest_entry": {
+      "identifier": null,
+      "ra_deg": 10.1275175294,
+      "dec_deg": 56.5370908444,
+      "separation_arcsec": 1194.7084112074813
+    }
+  },
+  "interpretation": "Residuals quantify correspondence consistency. They do not by themselves prove that every matched index source is a correct Hipparcos identification."
+}

@@ -1,0 +1,17 @@
+{
+    "project": "StarLoc 2.0",
+    "dataset_type": "synthetic",
+    "projection": "equidistant_fisheye",
+    "nominal_fov_deg": 180.0,
+    "image_width": 1024,
+    "image_height": 1024,
+    "image_radius_pixels": 500.0,
+    "number_of_stars": 100,
+    "camera_orientation_euler_deg": {
+        "x": 8.0,
+        "y": -12.0,
+        "z": 25.0
+    },
+    "random_seed": 2026,
+    "note": "Synthetic test data, not real AllSkyKamera data."
+}

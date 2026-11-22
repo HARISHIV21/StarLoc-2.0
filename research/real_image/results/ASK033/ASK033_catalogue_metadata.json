@@ -1,0 +1,23 @@
+{
+  "camera": "ASK033",
+  "location": {
+    "latitude_deg": 47.834,
+    "longitude_deg": 16.005,
+    "height_m_assumed": 0
+  },
+  "displayed_local_time": "2026-11-20T20:21:52+01:00",
+  "converted_utc_time": "2026-11-20T19:21:52+00:00",
+  "time_interpretation": "Provisional: displayed time treated as observation reference time",
+  "exposure_seconds": 50,
+  "exposure_midpoint_verified": false,
+  "catalogue_source": "/Users/harish/Documents/StarLoc-2.0/research/data/catalogue/hipparcos_positions_2026.csv",
+  "catalogue_input_rows": 8870,
+  "valid_coordinate_rows": 8870,
+  "visible_stars_altitude_above_5deg": 4006,
+  "ra_column": "ra_2026_deg",
+  "dec_column": "dec_2026_deg",
+  "magnitude_column": "vmag",
+  "hip_id_column": null,
+  "refraction": "Disabled",
+  "warning": "Catalogue coordinates are used as supplied in the 2026 propagated file. Proper-motion epoch and source astrometry must be checked before final calibration."
+}

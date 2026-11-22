@@ -1,0 +1,203 @@
+{
+  "phase": 47,
+  "method": "Direct comparison of detected, local WCS and global fisheye positions",
+  "points": [
+    {
+      "star": 1,
+      "hip_ra_deg": 340.1295618475,
+      "hip_dec_deg": 44.2763796568,
+      "phase37_wcs_residual_px": 2.8487551797027524,
+      "phase45_global_residual_px": 30.71584941310356,
+      "positions": {
+        "detected_candidate": {
+          "position": [
+            1059.032,
+            524.367
+          ],
+          "distance_from_candidate_px": 0.0,
+          "local_peak": {
+            "x": 1059.0,
+            "y": 524.0,
+            "intensity": 75.0,
+            "distance_from_prediction_px": 0.0
+          }
+        },
+        "local_wcs_prediction": {
+          "position": [
+            1061.84251699357,
+            524.8321837301115
+          ],
+          "distance_from_candidate_px": 2.84875440743954,
+          "local_peak": {
+            "x": 1059.0,
+            "y": 524.0,
+            "intensity": 75.0,
+            "distance_from_prediction_px": 3.1622776601683795
+          }
+        },
+        "global_fisheye_prediction": {
+          "position": [
+            1044.7441374413536,
+            551.5574466435122
+          ],
+          "distance_from_candidate_px": 30.71584941310356,
+          "local_peak": {
+            "x": 1044.0,
+            "y": 551.0,
+            "intensity": 67.0,
+            "distance_from_prediction_px": 1.4142135623730951
+          }
+        }
+      }
+    },
+    {
+      "star": 2,
+      "hip_ra_deg": 347.6112539788,
+      "hip_dec_deg": 43.5426811789,
+      "phase37_wcs_residual_px": 4.994145129772349,
+      "phase45_global_residual_px": 29.31450485674704,
+      "positions": {
+        "detected_candidate": {
+          "position": [
+            1074.072,
+            605.775
+          ],
+          "distance_from_candidate_px": 0.0,
+          "local_peak": {
+            "x": 1074.0,
+            "y": 606.0,
+            "intensity": 102.0,
+            "distance_from_prediction_px": 0.0
+          }
+        },
+        "local_wcs_prediction": {
+          "position": [
+            1070.8131813090345,
+            609.5593874169559
+          ],
+          "distance_from_candidate_px": 4.99414531048108,
+          "local_peak": {
+            "x": 1074.0,
+            "y": 606.0,
+            "intensity": 102.0,
+            "distance_from_prediction_px": 5.0
+          }
+        },
+        "global_fisheye_prediction": {
+          "position": [
+            1055.8578565121668,
+            628.7442222767962
+          ],
+          "distance_from_candidate_px": 29.31450485674704,
+          "local_peak": {
+            "x": 1055.0,
+            "y": 624.0,
+            "intensity": 77.0,
+            "distance_from_prediction_px": 5.0990195135927845
+          }
+        }
+      }
+    },
+    {
+      "star": 3,
+      "hip_ra_deg": 337.3825859043,
+      "hip_dec_deg": 47.7068615223,
+      "phase37_wcs_residual_px": 3.019272463694852,
+      "phase45_global_residual_px": 26.823324070811218,
+      "positions": {
+        "detected_candidate": {
+          "position": [
+            1007.639,
+            505.11
+          ],
+          "distance_from_candidate_px": 0.0,
+          "local_peak": {
+            "x": 1008.0,
+            "y": 505.0,
+            "intensity": 67.0,
+            "distance_from_prediction_px": 0.0
+          }
+        },
+        "local_wcs_prediction": {
+          "position": [
+            1004.8132858039207,
+            506.17364799042184
+          ],
+          "distance_from_candidate_px": 3.019272721277814,
+          "local_peak": {
+            "x": 1008.0,
+            "y": 505.0,
+            "intensity": 67.0,
+            "distance_from_prediction_px": 3.1622776601683795
+          }
+        },
+        "global_fisheye_prediction": {
+          "position": [
+            993.1586330848376,
+            527.6889656142621
+          ],
+          "distance_from_candidate_px": 26.823324070811218,
+          "local_peak": {
+            "x": 993.0,
+            "y": 527.0,
+            "intensity": 73.0,
+            "distance_from_prediction_px": 1.0
+          }
+        }
+      }
+    },
+    {
+      "star": 4,
+      "hip_ra_deg": 337.8245245814,
+      "hip_dec_deg": 50.2826194986,
+      "phase37_wcs_residual_px": 2.578644390791436,
+      "phase45_global_residual_px": 19.747209180734295,
+      "positions": {
+        "detected_candidate": {
+          "position": [
+            966.337,
+            518.103
+          ],
+          "distance_from_candidate_px": 0.0,
+          "local_peak": {
+            "x": 967.0,
+            "y": 518.0,
+            "intensity": 78.0,
+            "distance_from_prediction_px": 1.0
+          }
+        },
+        "local_wcs_prediction": {
+          "position": [
+            964.2195527603635,
+            519.5746774948389
+          ],
+          "distance_from_candidate_px": 2.57864643979345,
+          "local_peak": {
+            "x": 967.0,
+            "y": 518.0,
+            "intensity": 78.0,
+            "distance_from_prediction_px": 3.605551275463989
+          }
+        },
+        "global_fisheye_prediction": {
+          "position": [
+            956.4541081943213,
+            535.1992194646923
+          ],
+          "distance_from_candidate_px": 19.747209180734295,
+          "local_peak": {
+            "x": 956.0,
+            "y": 535.0,
+            "intensity": 87.0,
+            "distance_from_prediction_px": 0.0
+          }
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Local WCS and global model are not independent ground truth.",
+    "Nearby maximum intensity is not necessarily a stellar centroid.",
+    "Image inspection is required before classifying a correspondence."
+  ]
+}

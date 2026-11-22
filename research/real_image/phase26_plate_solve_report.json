@@ -1,0 +1,96 @@
+{
+  "phase": 26,
+  "method": "Astrometry.net independent section plate solving",
+  "image_source": "Public AllSkyKamera ASK033 image",
+  "sections_tested": 9,
+  "index_directory": "/Users/harish/Documents/StarLoc-2.0/research/real_image/astrometry/indexes",
+  "results": [
+    {
+      "section": "ASK033_section_R1C1",
+      "solved": false,
+      "wcs_created": false,
+      "rdls_created": false,
+      "return_code": 255,
+      "elapsed_seconds": 1.61,
+      "stdout_tail": "Reading input file 1 of 1: \"/Users/harish/Documents/StarLoc-2.0/research/real_image/results/ASK033/ASK033_section_R1C1.jpg\"...\nRunning command: /opt/homebrew/bin/image2pnm --infile /Users/harish/Documents/StarLoc-2.0/research/real_image/results/ASK033/ASK033_section_R1C1.jpg --uncompressed-outfile /tmp/tmp.uncompressed.4gRWgV --outfile /tmp/tmp.ppm.os5RCo --ppm --mydir /opt/homebrew/bin/solve-field\n",
+      "stderr_tail": "llar/astrometry-net/0.97_1/libexec/lib/python3.15/site-packages/astrometry/util/filetype.py\", line 60, in filetype_short\n    ft = filetype(fn)\n  File \"/opt/homebrew/Cellar/astrometry-net/0.97_1/libexec/lib/python3.15/site-packages/astrometry/util/filetype.py\", line 27, in filetype\n    (rtn,out,err) = run_command(cmd)\n                    ~~~~~~~~~~~^^^^^\n  File \"/opt/homebrew/Cellar/astrometry-net/0.97_1/libexec/lib/python3.15/site-packages/astrometry/util/run_command.py\", line 68, in run_command\n    out = out.decode()\nUnicodeDecodeError: 'utf-8' codec can't decode byte 0xad in position 236: invalid start byte\naugment-xylist.c:591:backtick Failed to run command: /opt/homebrew/bin/image2pnm --infile /Users/harish/Documents/StarLoc-2.0/research/real_image/results/ASK033/ASK033_section_R1C1.jpg --uncompressed-outfile /tmp/tmp.uncompressed.4gRWgV --outfile /tmp/tmp.ppm.os5RCo --ppm --mydir /opt/homebrew/bin/solve-field\n ioutils.c:568:run_command_get_outputs Command failed: return value 255\n"
+    },
+    {
+      "section": "ASK033_section_R1C2",
+      "solved": false,
+      "wcs_created": false,
+      "rdls_created": false,
+      "return_code": 0,
+      "elapsed_seconds": 25.56,
+      "stdout_tail": "ld 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField: /Users/harish/Documents/StarLoc-2.0/research/real_image/results/ASK033/ASK033_section_R1C2.jpg\nDid not solve (or no WCS file was written).\n\n",
+      "stderr_tail": "jpegtopnm: WRITING PPM FILE\nRead file stdin: 640 x 480 pixels x 1 color(s); maxval 255\nUsing 8-bit output\n"
+    },
+    {
+      "section": "ASK033_section_R1C3",
+      "solved": false,
+      "wcs_created": false,
+      "rdls_created": false,
+      "return_code": 0,
+      "elapsed_seconds": 102.13,
+      "stdout_tail": "ld 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField: /Users/harish/Documents/StarLoc-2.0/research/real_image/results/ASK033/ASK033_section_R1C3.jpg\nDid not solve (or no WCS file was written).\n\n",
+      "stderr_tail": "jpegtopnm: WRITING PPM FILE\nRead file stdin: 640 x 480 pixels x 1 color(s); maxval 255\nUsing 8-bit output\n"
+    },
+    {
+      "section": "ASK033_section_R2C1",
+      "solved": false,
+      "wcs_created": false,
+      "rdls_created": false,
+      "return_code": 0,
+      "elapsed_seconds": 0.58,
+      "stdout_tail": "ld 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField: /Users/harish/Documents/StarLoc-2.0/research/real_image/results/ASK033/ASK033_section_R2C1.jpg\nDid not solve (or no WCS file was written).\n\n",
+      "stderr_tail": "jpegtopnm: WRITING PPM FILE\nRead file stdin: 640 x 480 pixels x 1 color(s); maxval 255\nUsing 8-bit output\n"
+    },
+    {
+      "section": "ASK033_section_R2C2",
+      "solved": false,
+      "wcs_created": false,
+      "rdls_created": false,
+      "return_code": 0,
+      "elapsed_seconds": 0.41,
+      "stdout_tail": "ld 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField: /Users/harish/Documents/StarLoc-2.0/research/real_image/results/ASK033/ASK033_section_R2C2.jpg\nDid not solve (or no WCS file was written).\n\n",
+      "stderr_tail": "jpegtopnm: WRITING PPM FILE\nRead file stdin: 640 x 480 pixels x 1 color(s); maxval 255\nUsing 8-bit output\n"
+    },
+    {
+      "section": "ASK033_section_R2C3",
+      "solved": false,
+      "wcs_created": false,
+      "rdls_created": false,
+      "return_code": 0,
+      "elapsed_seconds": 1.44,
+      "stdout_tail": "ld 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField: /Users/harish/Documents/StarLoc-2.0/research/real_image/results/ASK033/ASK033_section_R2C3.jpg\nDid not solve (or no WCS file was written).\n\n",
+      "stderr_tail": "jpegtopnm: WRITING PPM FILE\nRead file stdin: 640 x 480 pixels x 1 color(s); maxval 255\nUsing 8-bit output\n"
+    },
+    {
+      "section": "ASK033_section_R3C1",
+      "solved": false,
+      "error": "Timeout after 240 seconds"
+    },
+    {
+      "section": "ASK033_section_R3C2",
+      "solved": false,
+      "wcs_created": false,
+      "rdls_created": false,
+      "return_code": 0,
+      "elapsed_seconds": 0.37,
+      "stdout_tail": "ld 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField: /Users/harish/Documents/StarLoc-2.0/research/real_image/results/ASK033/ASK033_section_R3C2.jpg\nDid not solve (or no WCS file was written).\n\n",
+      "stderr_tail": "jpegtopnm: WRITING PPM FILE\nRead file stdin: 640 x 480 pixels x 1 color(s); maxval 255\nUsing 8-bit output\n"
+    },
+    {
+      "section": "ASK033_section_R3C3",
+      "solved": false,
+      "wcs_created": false,
+      "rdls_created": false,
+      "return_code": 0,
+      "elapsed_seconds": 2.97,
+      "stdout_tail": "ld 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField 1 did not solve.\nField: /Users/harish/Documents/StarLoc-2.0/research/real_image/results/ASK033/ASK033_section_R3C3.jpg\nDid not solve (or no WCS file was written).\n\n",
+      "stderr_tail": "jpegtopnm: WRITING PPM FILE\nRead file stdin: 640 x 480 pixels x 1 color(s); maxval 255\nUsing 8-bit output\n"
+    }
+  ],
+  "successful_sections": 0,
+  "failed_sections": 9
+}

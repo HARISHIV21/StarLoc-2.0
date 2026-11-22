@@ -1,0 +1,185 @@
+{
+  "phase": "37B",
+  "dataset": "ASK033 AllSkyKamera",
+  "method": "WCS catalogue projection with gated one-to-one pixel matching",
+  "maximum_match_distance_px": 5.0,
+  "catalogue_entries": 4006,
+  "sections_validated": 5,
+  "total_accepted_matches": 237,
+  "unique_hip_ids_global": 237,
+  "median_residual_px": 1.4291681998587515,
+  "maximum_residual_px": 4.994145129772349,
+  "sections": [
+    {
+      "section": "R1C2",
+      "detected_candidates": 89,
+      "projected_catalogue_stars": 393,
+      "accepted_matches": 72,
+      "unmatched_detections": 17,
+      "unique_hip_ids": 72,
+      "median_residual_px": 2.2724044945341833,
+      "maximum_residual_px": 4.831406017040978,
+      "threshold_statistics": {
+        "1": {
+          "match_count": 11,
+          "median_residual_px": 0.7942244028614851,
+          "mean_residual_px": 0.5983037179803506
+        },
+        "2": {
+          "match_count": 30,
+          "median_residual_px": 1.2618945190131519,
+          "mean_residual_px": 1.1690315908358644
+        },
+        "3": {
+          "match_count": 53,
+          "median_residual_px": 1.8121147720410276,
+          "mean_residual_px": 1.7545571506805133
+        },
+        "5": {
+          "match_count": 72,
+          "median_residual_px": 2.2724044945341833,
+          "mean_residual_px": 2.2225647870253677
+        }
+      },
+      "wcs_file": "research/real_image/results/ASK033/phase36_section_solutions/R1C2_custom.wcs"
+    },
+    {
+      "section": "R2C1",
+      "detected_candidates": 65,
+      "projected_catalogue_stars": 184,
+      "accepted_matches": 28,
+      "unmatched_detections": 37,
+      "unique_hip_ids": 28,
+      "median_residual_px": 2.0664229650116868,
+      "maximum_residual_px": 3.8920875825822745,
+      "threshold_statistics": {
+        "1": {
+          "match_count": 4,
+          "median_residual_px": 0.6810752915780329,
+          "mean_residual_px": 0.6103951205285704
+        },
+        "2": {
+          "match_count": 13,
+          "median_residual_px": 1.2810300463340774,
+          "mean_residual_px": 1.2184362536097857
+        },
+        "3": {
+          "match_count": 21,
+          "median_residual_px": 1.6723736588622065,
+          "mean_residual_px": 1.695590138347804
+        },
+        "5": {
+          "match_count": 28,
+          "median_residual_px": 2.0664229650116868,
+          "mean_residual_px": 2.1512068766585526
+        }
+      },
+      "wcs_file": "research/real_image/results/ASK033/phase36_section_solutions/R2C1_custom.wcs"
+    },
+    {
+      "section": "R3C1",
+      "detected_candidates": 50,
+      "projected_catalogue_stars": 251,
+      "accepted_matches": 44,
+      "unmatched_detections": 6,
+      "unique_hip_ids": 44,
+      "median_residual_px": 0.9241187471581019,
+      "maximum_residual_px": 3.0195288610983857,
+      "threshold_statistics": {
+        "1": {
+          "match_count": 25,
+          "median_residual_px": 0.7897086554077266,
+          "mean_residual_px": 0.6698113627845059
+        },
+        "2": {
+          "match_count": 41,
+          "median_residual_px": 0.9037484058397505,
+          "mean_residual_px": 0.9161555387744595
+        },
+        "3": {
+          "match_count": 43,
+          "median_residual_px": 0.9176374224505478,
+          "mean_residual_px": 0.9841635386848178
+        },
+        "5": {
+          "match_count": 44,
+          "median_residual_px": 0.9241187471581019,
+          "mean_residual_px": 1.0304218414669444
+        }
+      },
+      "wcs_file": "research/real_image/results/ASK033/phase36_section_solutions/R3C1_custom.wcs"
+    },
+    {
+      "section": "R3C2",
+      "detected_candidates": 51,
+      "projected_catalogue_stars": 266,
+      "accepted_matches": 40,
+      "unmatched_detections": 11,
+      "unique_hip_ids": 40,
+      "median_residual_px": 0.9287059502324291,
+      "maximum_residual_px": 3.4694656439761533,
+      "threshold_statistics": {
+        "1": {
+          "match_count": 21,
+          "median_residual_px": 0.7078931814644686,
+          "mean_residual_px": 0.65731869658961
+        },
+        "2": {
+          "match_count": 36,
+          "median_residual_px": 0.89799764677614,
+          "mean_residual_px": 0.9832681535956164
+        },
+        "3": {
+          "match_count": 39,
+          "median_residual_px": 0.9277760756136854,
+          "mean_residual_px": 1.1216524152176282
+        },
+        "5": {
+          "match_count": 40,
+          "median_residual_px": 0.9287059502324291,
+          "mean_residual_px": 1.1803477459365914
+        }
+      },
+      "wcs_file": "research/real_image/results/ASK033/phase36_section_solutions/R3C2_custom.wcs"
+    },
+    {
+      "section": "R2C2",
+      "detected_candidates": 89,
+      "projected_catalogue_stars": 315,
+      "accepted_matches": 53,
+      "unmatched_detections": 36,
+      "unique_hip_ids": 53,
+      "median_residual_px": 1.4329348713351793,
+      "maximum_residual_px": 4.994145129772349,
+      "threshold_statistics": {
+        "1": {
+          "match_count": 15,
+          "median_residual_px": 0.545979643140568,
+          "mean_residual_px": 0.5022312587115494
+        },
+        "2": {
+          "match_count": 32,
+          "median_residual_px": 1.042657905411318,
+          "mean_residual_px": 0.9726700482006039
+        },
+        "3": {
+          "match_count": 42,
+          "median_residual_px": 1.2661069640925728,
+          "mean_residual_px": 1.3390541478990652
+        },
+        "5": {
+          "match_count": 53,
+          "median_residual_px": 1.4329348713351793,
+          "mean_residual_px": 1.8453897984200534
+        }
+      },
+      "wcs_file": "research/real_image/results/ASK033/custom_plate_solutions/R2C2_custom.wcs"
+    }
+  ],
+  "limitations": [
+    "Observation timestamp and exposure midpoint are unverified.",
+    "Catalogue epoch and astrometric provenance require confirmation.",
+    "Matches are provisional geometric associations, not independent identity confirmation.",
+    "No final global fisheye optical calibration is established."
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "phase": 111,
+  "candidate": {
+    "crop_pixel_xy_zero_based": [
+      256.0,
+      256.0
+    ],
+    "wcs_ra_deg": 10.713883343451496,
+    "wcs_dec_deg": 56.463638707552384,
+    "nearest_visible_catalogue": {
+      "hip_id": "3179",
+      "ra_deg": 10.1275175294,
+      "dec_deg": 56.5370908444,
+      "separation_arcsec": 1194.7084112074813,
+      "projected_crop_pixel_xy_fits_origin_1": [
+        253.70940051785493,
+        253.07288651990643
+      ],
+      "projected_pixel_distance_from_candidate": 5.123501267436752
+    },
+    "nearest_detected_correspondence": {
+      "row": 5,
+      "field_position": [
+        256.89495849609375,
+        256.85845947265625
+      ],
+      "catalogue_projected_position": [
+        253.69055309196054,
+        253.06147612303485
+      ],
+      "field_distance_from_candidate_px": 1.2401223229680343,
+      "catalogue_position_distance_from_candidate_px": 3.737441316803158,
+      "field_to_catalogue_residual_px": 4.96842998857187,
+      "match_weight": 0.4908649673126763,
+      "catalogue_ra_dec": [
+        10.126622791668753,
+        56.537406962427504
+      ]
+    },
+    "nearest_projected_catalogue_correspondence": {
+      "row": 5,
+      "field_position": [
+        256.89495849609375,
+        256.85845947265625
+      ],
+      "catalogue_projected_position": [
+        253.69055309196054,
+        253.06147612303485
+      ],
+      "field_distance_from_candidate_px": 1.2401223229680343,
+      "catalogue_position_distance_from_candidate_px": 3.737441316803158,
+      "field_to_catalogue_residual_px": 4.96842998857187,
+      "match_weight": 0.4908649673126763,
+      "catalogue_ra_dec": [
+        10.126622791668753,
+        56.537406962427504
+      ]
+    }
+  },
+  "all_41_correspondences": {
+    "median_pixel_residual": 1.6694314496057658,
+    "p90_pixel_residual": 4.725523703151548,
+    "maximum_pixel_residual": 6.827733451026628,
+    "median_dx": -0.06494644593198018,
+    "median_dy": -0.2843707886092375,
+    "median_detected_position_distance_from_candidate": 189.93112026192645,
+    "median_catalogue_position_distance_from_candidate": 190.09870413023057
+  },
+  "interpretation": "A nearby detected feature is not automatically a catalogue star. Candidate confirmation requires agreement between its image position and an independently identified catalogue source."
+}

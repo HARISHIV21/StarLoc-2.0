@@ -1,0 +1,241 @@
+{
+    "title": "StarLoc 2.0 robustness and multi-section validation",
+    "synthetic_test_only": true,
+    "camera_model": "Zenith-pointed equidistant fisheye",
+    "ground_truth_used_for_matching": false,
+    "cases": [
+        {
+            "case": "roll_0_clean",
+            "roll_true_deg": 0,
+            "roll_estimated_deg": 0.0016657265339809389,
+            "roll_error_deg": 0.0016657265339809389,
+            "detected_regions": 1144,
+            "catalogue_matches": 1135,
+            "match_rate_percent": 91.90283400809717,
+            "centre_x_error_px": 0.00020734074428219174,
+            "centre_y_error_px": -0.002916444112258887,
+            "focal_error_px": 0.008313183228040089,
+            "mean_reprojection_error_px": 0.44053749294884287,
+            "rmse_px": 0.5207761984808595,
+            "maximum_error_px": 2.711865798313348,
+            "sections": [
+                {
+                    "section": "top_left",
+                    "matches": 382,
+                    "centre_x_error_px": 0.032536249160159514,
+                    "centre_y_error_px": -0.06403548376744084,
+                    "focal_error_px": 0.00508399397000403,
+                    "roll_error_deg": 0.010828314988415418,
+                    "rmse_px": 0.5081311657855235,
+                    "status": "fitted"
+                },
+                {
+                    "section": "top_right",
+                    "matches": 343,
+                    "centre_x_error_px": -0.027348326587173233,
+                    "centre_y_error_px": -0.05872364959617471,
+                    "focal_error_px": -0.033170010339574674,
+                    "roll_error_deg": 0.011284014505083885,
+                    "rmse_px": 0.5435620818831992,
+                    "status": "fitted"
+                },
+                {
+                    "section": "bottom_left",
+                    "matches": 274,
+                    "centre_x_error_px": 0.05654246219751258,
+                    "centre_y_error_px": -0.030009089134182432,
+                    "focal_error_px": 0.09589491434235242,
+                    "roll_error_deg": 0.0018207224064588064,
+                    "rmse_px": 0.46959130385471054,
+                    "status": "fitted"
+                },
+                {
+                    "section": "bottom_right",
+                    "matches": 351,
+                    "centre_x_error_px": 0.03071653215403103,
+                    "centre_y_error_px": -0.006615476430908984,
+                    "focal_error_px": -0.01840841504213131,
+                    "roll_error_deg": 0.0005358357268572341,
+                    "rmse_px": 0.5350653920438431,
+                    "status": "fitted"
+                }
+            ]
+        },
+        {
+            "case": "roll_37_noisy",
+            "roll_true_deg": 37,
+            "roll_estimated_deg": 36.996318147304166,
+            "roll_error_deg": 0.0036818526958330715,
+            "detected_regions": 1121,
+            "catalogue_matches": 1089,
+            "match_rate_percent": 91.58957106812447,
+            "centre_x_error_px": 0.0049239658335977765,
+            "centre_y_error_px": 0.0324223395041372,
+            "focal_error_px": 0.004609975227197083,
+            "mean_reprojection_error_px": 0.4656602053693452,
+            "rmse_px": 0.575085815986194,
+            "maximum_error_px": 5.582217357614205,
+            "sections": [
+                {
+                    "section": "top_left",
+                    "matches": 303,
+                    "centre_x_error_px": -0.033119516001363536,
+                    "centre_y_error_px": 0.052370420793806716,
+                    "focal_error_px": -0.006516444195995064,
+                    "roll_error_deg": 0.005334214894568657,
+                    "rmse_px": 0.5125678708395707,
+                    "status": "fitted"
+                },
+                {
+                    "section": "top_right",
+                    "matches": 385,
+                    "centre_x_error_px": 0.006791518005798025,
+                    "centre_y_error_px": 0.05012124686646757,
+                    "focal_error_px": 0.014909276533217053,
+                    "roll_error_deg": 0.0036147471582945742,
+                    "rmse_px": 0.6085838045763116,
+                    "status": "fitted"
+                },
+                {
+                    "section": "bottom_left",
+                    "matches": 328,
+                    "centre_x_error_px": -0.03697537704459819,
+                    "centre_y_error_px": -0.005654074167523504,
+                    "focal_error_px": -0.0034309186132190916,
+                    "roll_error_deg": 0.004351325068111204,
+                    "rmse_px": 0.5118730717628379,
+                    "status": "fitted"
+                },
+                {
+                    "section": "bottom_right",
+                    "matches": 252,
+                    "centre_x_error_px": 0.0004468993927844167,
+                    "centre_y_error_px": 0.038800543065747206,
+                    "focal_error_px": 0.013827930364527674,
+                    "roll_error_deg": 0.0029324764598739487,
+                    "rmse_px": 0.6380113366861964,
+                    "status": "fitted"
+                }
+            ]
+        },
+        {
+            "case": "roll_123_degraded",
+            "roll_true_deg": 123,
+            "roll_estimated_deg": 122.9911833660662,
+            "roll_error_deg": 0.008816633933808061,
+            "detected_regions": 1114,
+            "catalogue_matches": 988,
+            "match_rate_percent": 94.18493803622498,
+            "centre_x_error_px": 0.0009941121600718361,
+            "centre_y_error_px": 0.008368465688135984,
+            "focal_error_px": 0.016368734016396047,
+            "mean_reprojection_error_px": 0.503362634177601,
+            "rmse_px": 0.787717943033749,
+            "maximum_error_px": 7.868433827728712,
+            "sections": [
+                {
+                    "section": "top_left",
+                    "matches": 348,
+                    "centre_x_error_px": 0.08052227907461429,
+                    "centre_y_error_px": 0.06075370831320015,
+                    "focal_error_px": 0.10680233866963817,
+                    "roll_error_deg": 0.005039018142495798,
+                    "rmse_px": 0.8287925331754494,
+                    "status": "fitted"
+                },
+                {
+                    "section": "top_right",
+                    "matches": 226,
+                    "centre_x_error_px": 0.06946858028447878,
+                    "centre_y_error_px": 0.02134801025346178,
+                    "focal_error_px": -0.019709651639004733,
+                    "roll_error_deg": 0.005280606100405461,
+                    "rmse_px": 0.7710397808654128,
+                    "status": "fitted"
+                },
+                {
+                    "section": "bottom_left",
+                    "matches": 279,
+                    "centre_x_error_px": -0.03787377527078206,
+                    "centre_y_error_px": 0.061783687932006615,
+                    "focal_error_px": -0.03371010149601261,
+                    "roll_error_deg": 0.00920555240658502,
+                    "rmse_px": 0.6939489179523758,
+                    "status": "fitted"
+                },
+                {
+                    "section": "bottom_right",
+                    "matches": 301,
+                    "centre_x_error_px": -0.07677765504058698,
+                    "centre_y_error_px": 0.03942703062648434,
+                    "focal_error_px": 0.0283182676986371,
+                    "roll_error_deg": 0.005011282841478563,
+                    "rmse_px": 0.6876400226758216,
+                    "status": "fitted"
+                }
+            ]
+        },
+        {
+            "case": "roll_271_stress",
+            "roll_true_deg": 271,
+            "roll_estimated_deg": 271.00524289772784,
+            "roll_error_deg": 0.005242897727821541,
+            "detected_regions": 2401,
+            "catalogue_matches": 972,
+            "match_rate_percent": 101.3555787278415,
+            "centre_x_error_px": -0.01717639635063506,
+            "centre_y_error_px": 0.012481241054103975,
+            "focal_error_px": 0.014050366702008432,
+            "mean_reprojection_error_px": 0.8682538575902088,
+            "rmse_px": 1.7174112893416538,
+            "maximum_error_px": 8.209927838610017,
+            "sections": [
+                {
+                    "section": "top_left",
+                    "matches": 225,
+                    "centre_x_error_px": -0.04704443119226198,
+                    "centre_y_error_px": -0.07226647422203314,
+                    "focal_error_px": -0.02700006073013128,
+                    "roll_error_deg": 0.012752088991008596,
+                    "rmse_px": 1.441499882876036,
+                    "status": "fitted"
+                },
+                {
+                    "section": "top_right",
+                    "matches": 323,
+                    "centre_x_error_px": -0.0005344372432318778,
+                    "centre_y_error_px": -0.05205751261058822,
+                    "focal_error_px": -0.034783929271043235,
+                    "roll_error_deg": 0.0015750079171181254,
+                    "rmse_px": 1.6875740872643288,
+                    "status": "fitted"
+                },
+                {
+                    "section": "bottom_left",
+                    "matches": 306,
+                    "centre_x_error_px": -0.07350650973518214,
+                    "centre_y_error_px": 0.030009938331886588,
+                    "focal_error_px": -0.052669490806920294,
+                    "roll_error_deg": 0.014364062437409971,
+                    "rmse_px": 1.9026899946843205,
+                    "status": "fitted"
+                },
+                {
+                    "section": "bottom_right",
+                    "matches": 297,
+                    "centre_x_error_px": 0.02530284912188563,
+                    "centre_y_error_px": 0.08154402957239881,
+                    "focal_error_px": -0.033641269733209356,
+                    "roll_error_deg": 0.00346956306353451,
+                    "rmse_px": 1.6412292580979777,
+                    "status": "fitted"
+                }
+            ]
+        }
+    ],
+    "overall": {
+        "mean_roll_error_deg": 0.004851777722860903,
+        "mean_reprojection_rmse_px": 0.9002478117106141,
+        "total_catalogue_matches": 4184
+    }
+}

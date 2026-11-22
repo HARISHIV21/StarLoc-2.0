@@ -1,0 +1,1091 @@
+{
+  "phase": 95,
+  "title": "Point-source centroid motion validation",
+  "video": "research/real_image/data/network/ASK033/archive_video_20261119/allsky-20261119.mp4",
+  "frames": [
+    518,
+    519,
+    520,
+    521,
+    522,
+    523,
+    524,
+    525,
+    526,
+    527,
+    528,
+    529,
+    530
+  ],
+  "dimensions": [
+    1920,
+    1440
+  ],
+  "parameters": {
+    "dog_sigma_small": 1.0,
+    "dog_sigma_large": 3.0,
+    "threshold_sigma": 5.0,
+    "mutual_match_radius_px": 8.0,
+    "translation_inlier_threshold_px": 1.5
+  },
+  "detection_settings_per_frame": {
+    "518": {
+      "background": -0.0007190704345703125,
+      "noise_sigma": 0.2524069038391113,
+      "threshold": 1.2613154487609861
+    },
+    "519": {
+      "background": -0.0017948457971215248,
+      "noise_sigma": 0.25122482458949086,
+      "threshold": 1.2543292771503327
+    },
+    "520": {
+      "background": -0.008860588073730469,
+      "noise_sigma": 0.2966611089706421,
+      "threshold": 1.47444495677948
+    },
+    "521": {
+      "background": -0.0074291229248046875,
+      "noise_sigma": 0.31131636428833004,
+      "threshold": 1.5491526985168456
+    },
+    "522": {
+      "background": -0.00490570068359375,
+      "noise_sigma": 0.2729907154083252,
+      "threshold": 1.3600478763580321
+    },
+    "523": {
+      "background": -0.005336761474609375,
+      "noise_sigma": 0.2975702579498291,
+      "threshold": 1.4825145282745362
+    },
+    "524": {
+      "background": -0.0063343048095703125,
+      "noise_sigma": 0.2890358516693115,
+      "threshold": 1.4388449535369872
+    },
+    "525": {
+      "background": -0.01047515869140625,
+      "noise_sigma": 0.3049226291656494,
+      "threshold": 1.5141379871368406
+    },
+    "526": {
+      "background": -0.0059261322021484375,
+      "noise_sigma": 0.2672445545196533,
+      "threshold": 1.330296640396118
+    },
+    "527": {
+      "background": -0.006343841552734375,
+      "noise_sigma": 0.29716022186279295,
+      "threshold": 1.4794572677612303
+    },
+    "528": {
+      "background": -0.00873565673828125,
+      "noise_sigma": 0.2900821506500244,
+      "threshold": 1.4416750965118408
+    },
+    "529": {
+      "background": -0.010974884033203125,
+      "noise_sigma": 0.300420715713501,
+      "threshold": 1.4911286945343019
+    },
+    "530": {
+      "background": -0.002979278564453125,
+      "noise_sigma": 0.24612062644958493,
+      "threshold": 1.2276238536834716
+    }
+  },
+  "summary": {
+    "frames_analysed": 13,
+    "frame_pairs_analysed": 12,
+    "detections_per_frame": {
+      "median": 1429.0,
+      "minimum": 1185,
+      "maximum": 1640
+    },
+    "mutual_matches_per_pair": {
+      "count": 12,
+      "median": 991.0,
+      "mean": 954.25,
+      "p90": 1108.0,
+      "maximum": 1134.0
+    },
+    "median_displacement_px": {
+      "count": 12,
+      "median": 0.006946563720703125,
+      "mean": 0.09792748593705862,
+      "p90": 0.3672005593776704,
+      "maximum": 0.39182281494140625
+    },
+    "translation_inlier_fraction": {
+      "count": 12,
+      "median": 0.6725198182127338,
+      "mean": 0.6710053502052234,
+      "p90": 0.7177462203545381,
+      "maximum": 0.7360097323600974
+    },
+    "spatial_grid_coverage_cells": {
+      "count": 12,
+      "median": 12.0,
+      "mean": 12.0,
+      "p90": 12.0,
+      "maximum": 12.0
+    }
+  },
+  "pair_results": [
+    {
+      "pair": [
+        518,
+        519
+      ],
+      "sources_frame_a": 1233,
+      "sources_frame_b": 1187,
+      "mutual_matches": 756,
+      "match_fraction_frame_a": 0.6131386861313869,
+      "match_fraction_frame_b": 0.636899747262005,
+      "displacement": {
+        "count": 756,
+        "median_dx_px": 0.0,
+        "median_dy_px": 0.004406929016113281,
+        "median_displacement_px": 0.9481284085439077,
+        "mean_displacement_px": 1.2745442315295648,
+        "rms_displacement_px": 1.9398838944878134,
+        "p90_displacement_px": 3.09518196996925,
+        "maximum_displacement_px": 7.93507120001049
+      },
+      "robust_translation_x_px": 0.0,
+      "robust_translation_y_px": 0.004406929016113281,
+      "robust_translation_magnitude_px": 0.004406929016113281,
+      "translation_inliers": 526,
+      "translation_inlier_fraction": 0.6957671957671958,
+      "translation_residual_median_px": 0.943741500377655,
+      "translation_residual_p90_px": 3.092517852783203,
+      "occupied_grid_cells_4x3": 12,
+      "occupied_grid_cell_coordinates": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "pair": [
+        519,
+        520
+      ],
+      "sources_frame_a": 1187,
+      "sources_frame_b": 1532,
+      "mutual_matches": 804,
+      "match_fraction_frame_a": 0.6773378264532435,
+      "match_fraction_frame_b": 0.5248041775456919,
+      "displacement": {
+        "count": 804,
+        "median_dx_px": 0.0,
+        "median_dy_px": -0.00853729248046875,
+        "median_displacement_px": 0.7514879333232845,
+        "mean_displacement_px": 1.0575451187062117,
+        "rms_displacement_px": 1.6889054327594932,
+        "p90_displacement_px": 2.4994458323868756,
+        "maximum_displacement_px": 7.945379717344652
+      },
+      "robust_translation_x_px": 0.0,
+      "robust_translation_y_px": -0.00853729248046875,
+      "robust_translation_magnitude_px": 0.00853729248046875,
+      "translation_inliers": 572,
+      "translation_inlier_fraction": 0.7114427860696517,
+      "translation_residual_median_px": 0.7440440654754639,
+      "translation_residual_p90_px": 2.494993305206299,
+      "occupied_grid_cells_4x3": 12,
+      "occupied_grid_cell_coordinates": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "pair": [
+        520,
+        521
+      ],
+      "sources_frame_a": 1532,
+      "sources_frame_b": 1429,
+      "mutual_matches": 1003,
+      "match_fraction_frame_a": 0.6546997389033943,
+      "match_fraction_frame_b": 0.701889433170049,
+      "displacement": {
+        "count": 1003,
+        "median_dx_px": 0.0,
+        "median_dy_px": -0.146331787109375,
+        "median_displacement_px": 0.9563258339888968,
+        "mean_displacement_px": 1.1634240127885709,
+        "rms_displacement_px": 1.692032261122357,
+        "p90_displacement_px": 2.7120735038750334,
+        "maximum_displacement_px": 7.706201269767064
+      },
+      "robust_translation_x_px": 0.0,
+      "robust_translation_y_px": -0.146331787109375,
+      "robust_translation_magnitude_px": 0.146331787109375,
+      "translation_inliers": 679,
+      "translation_inlier_fraction": 0.6769690927218345,
+      "translation_residual_median_px": 0.9109264016151428,
+      "translation_residual_p90_px": 2.6365819931030274,
+      "occupied_grid_cells_4x3": 12,
+      "occupied_grid_cell_coordinates": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "pair": [
+        521,
+        522
+      ],
+      "sources_frame_a": 1429,
+      "sources_frame_b": 1429,
+      "mutual_matches": 995,
+      "match_fraction_frame_a": 0.6962911126662001,
+      "match_fraction_frame_b": 0.6962911126662001,
+      "displacement": {
+        "count": 995,
+        "median_dx_px": 0.036197662353515625,
+        "median_dy_px": -0.00963592529296875,
+        "median_displacement_px": 0.9879948578951507,
+        "mean_displacement_px": 1.3514545634783095,
+        "rms_displacement_px": 1.9975155073630584,
+        "p90_displacement_px": 3.502570630797736,
+        "maximum_displacement_px": 7.519418717074859
+      },
+      "robust_translation_x_px": 0.036197662353515625,
+      "robust_translation_y_px": -0.00963592529296875,
+      "robust_translation_magnitude_px": 0.03745826706290245,
+      "translation_inliers": 646,
+      "translation_inlier_fraction": 0.6492462311557788,
+      "translation_residual_median_px": 0.9729920029640198,
+      "translation_residual_p90_px": 3.482616472244263,
+      "occupied_grid_cells_4x3": 12,
+      "occupied_grid_cell_coordinates": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "pair": [
+        522,
+        523
+      ],
+      "sources_frame_a": 1429,
+      "sources_frame_b": 1185,
+      "mutual_matches": 824,
+      "match_fraction_frame_a": 0.5766270118964311,
+      "match_fraction_frame_b": 0.6953586497890295,
+      "displacement": {
+        "count": 824,
+        "median_dx_px": 0.0,
+        "median_dy_px": 0.0,
+        "median_displacement_px": 0.9071774430287411,
+        "mean_displacement_px": 1.1441874832808299,
+        "rms_displacement_px": 1.7438790330752982,
+        "p90_displacement_px": 2.786799101676217,
+        "maximum_displacement_px": 7.319482426580293
+      },
+      "robust_translation_x_px": 0.0,
+      "robust_translation_y_px": 0.0,
+      "robust_translation_magnitude_px": 0.0,
+      "translation_inliers": 592,
+      "translation_inlier_fraction": 0.7184466019417476,
+      "translation_residual_median_px": 0.9071774482727051,
+      "translation_residual_p90_px": 2.786799120903016,
+      "occupied_grid_cells_4x3": 12,
+      "occupied_grid_cell_coordinates": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "pair": [
+        523,
+        524
+      ],
+      "sources_frame_a": 1185,
+      "sources_frame_b": 1300,
+      "mutual_matches": 822,
+      "match_fraction_frame_a": 0.6936708860759494,
+      "match_fraction_frame_b": 0.6323076923076923,
+      "displacement": {
+        "count": 822,
+        "median_dx_px": 0.0,
+        "median_dy_px": -0.00046539306640625,
+        "median_displacement_px": 0.7241806368829597,
+        "mean_displacement_px": 1.116014652614222,
+        "rms_displacement_px": 1.8051663940191491,
+        "p90_displacement_px": 3.2317334372653006,
+        "maximum_displacement_px": 7.936141340159949
+      },
+      "robust_translation_x_px": 0.0,
+      "robust_translation_y_px": -0.00046539306640625,
+      "robust_translation_magnitude_px": 0.00046539306640625,
+      "translation_inliers": 605,
+      "translation_inlier_fraction": 0.7360097323600974,
+      "translation_residual_median_px": 0.723720908164978,
+      "translation_residual_p90_px": 3.2313669204711912,
+      "occupied_grid_cells_4x3": 12,
+      "occupied_grid_cell_coordinates": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "pair": [
+        524,
+        525
+      ],
+      "sources_frame_a": 1300,
+      "sources_frame_b": 1541,
+      "mutual_matches": 935,
+      "match_fraction_frame_a": 0.7192307692307692,
+      "match_fraction_frame_b": 0.6067488643737833,
+      "displacement": {
+        "count": 935,
+        "median_dx_px": 0.0,
+        "median_dy_px": -0.0053558349609375,
+        "median_displacement_px": 0.9503611785459878,
+        "mean_displacement_px": 1.226795451308922,
+        "rms_displacement_px": 1.8470448981156309,
+        "p90_displacement_px": 2.8901556698782396,
+        "maximum_displacement_px": 7.919434747637627
+      },
+      "robust_translation_x_px": 0.0,
+      "robust_translation_y_px": -0.0053558349609375,
+      "robust_translation_magnitude_px": 0.0053558349609375,
+      "translation_inliers": 609,
+      "translation_inlier_fraction": 0.651336898395722,
+      "translation_residual_median_px": 0.9488406181335449,
+      "translation_residual_p90_px": 2.8850009918212893,
+      "occupied_grid_cells_4x3": 12,
+      "occupied_grid_cell_coordinates": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "pair": [
+        525,
+        526
+      ],
+      "sources_frame_a": 1541,
+      "sources_frame_b": 1451,
+      "mutual_matches": 1072,
+      "match_fraction_frame_a": 0.6956521739130435,
+      "match_fraction_frame_b": 0.7388008270158511,
+      "displacement": {
+        "count": 1072,
+        "median_dx_px": 0.0,
+        "median_dy_px": -0.39182281494140625,
+        "median_displacement_px": 1.1361942577207618,
+        "mean_displacement_px": 1.3414238830422531,
+        "rms_displacement_px": 1.8726021502751091,
+        "p90_displacement_px": 2.924138335054647,
+        "maximum_displacement_px": 7.8635054337602615
+      },
+      "robust_translation_x_px": 0.0,
+      "robust_translation_y_px": -0.39182281494140625,
+      "robust_translation_magnitude_px": 0.39182281494140625,
+      "translation_inliers": 703,
+      "translation_inlier_fraction": 0.6557835820895522,
+      "translation_residual_median_px": 1.008859395980835,
+      "translation_residual_p90_px": 2.636240291595459,
+      "occupied_grid_cells_4x3": 12,
+      "occupied_grid_cell_coordinates": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "pair": [
+        526,
+        527
+      ],
+      "sources_frame_a": 1451,
+      "sources_frame_b": 1309,
+      "mutual_matches": 987,
+      "match_fraction_frame_a": 0.6802205375603032,
+      "match_fraction_frame_b": 0.7540106951871658,
+      "displacement": {
+        "count": 987,
+        "median_dx_px": 0.000946044921875,
+        "median_dy_px": -4.57763671875e-05,
+        "median_displacement_px": 0.9769245649017062,
+        "mean_displacement_px": 1.2512797322912452,
+        "rms_displacement_px": 1.877665913623987,
+        "p90_displacement_px": 3.0088630009403716,
+        "maximum_displacement_px": 7.886537034638224
+      },
+      "robust_translation_x_px": 0.000946044921875,
+      "robust_translation_y_px": -4.57763671875e-05,
+      "robust_translation_magnitude_px": 0.0009471517405472696,
+      "translation_inliers": 664,
+      "translation_inlier_fraction": 0.6727456940222898,
+      "translation_residual_median_px": 0.9759793281555176,
+      "translation_residual_p90_px": 3.008529806137085,
+      "occupied_grid_cells_4x3": 12,
+      "occupied_grid_cell_coordinates": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "pair": [
+        527,
+        528
+      ],
+      "sources_frame_a": 1309,
+      "sources_frame_b": 1488,
+      "mutual_matches": 1007,
+      "match_fraction_frame_a": 0.7692895339954163,
+      "match_fraction_frame_b": 0.676747311827957,
+      "displacement": {
+        "count": 1007,
+        "median_dx_px": 0.0,
+        "median_dy_px": -0.00447845458984375,
+        "median_displacement_px": 0.7735203879430903,
+        "mean_displacement_px": 1.052015049129303,
+        "rms_displacement_px": 1.579414284022167,
+        "p90_displacement_px": 2.4709802209063807,
+        "maximum_displacement_px": 7.923401847677149
+      },
+      "robust_translation_x_px": 0.0,
+      "robust_translation_y_px": -0.00447845458984375,
+      "robust_translation_magnitude_px": 0.00447845458984375,
+      "translation_inliers": 677,
+      "translation_inlier_fraction": 0.6722939424031777,
+      "translation_residual_median_px": 0.7722307443618774,
+      "translation_residual_p90_px": 2.4667617321014403,
+      "occupied_grid_cells_4x3": 12,
+      "occupied_grid_cell_coordinates": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "pair": [
+        528,
+        529
+      ],
+      "sources_frame_a": 1488,
+      "sources_frame_b": 1640,
+      "mutual_matches": 1112,
+      "match_fraction_frame_a": 0.7473118279569892,
+      "match_fraction_frame_b": 0.6780487804878049,
+      "displacement": {
+        "count": 1112,
+        "median_dx_px": 0.0,
+        "median_dy_px": -0.3870849609375,
+        "median_displacement_px": 1.279855639018839,
+        "mean_displacement_px": 1.4307402993582852,
+        "rms_displacement_px": 1.9500825597806595,
+        "p90_displacement_px": 3.172013974238568,
+        "maximum_displacement_px": 7.925461978648494
+      },
+      "robust_translation_x_px": 0.0,
+      "robust_translation_y_px": -0.3870849609375,
+      "robust_translation_magnitude_px": 0.3870849609375,
+      "translation_inliers": 679,
+      "translation_inlier_fraction": 0.6106115107913669,
+      "translation_residual_median_px": 1.1277072429656982,
+      "translation_residual_p90_px": 2.8812108278274535,
+      "occupied_grid_cells_4x3": 12,
+      "occupied_grid_cell_coordinates": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "pair": [
+        529,
+        530
+      ],
+      "sources_frame_a": 1640,
+      "sources_frame_b": 1489,
+      "mutual_matches": 1134,
+      "match_fraction_frame_a": 0.6914634146341463,
+      "match_fraction_frame_b": 0.7615849563465413,
+      "displacement": {
+        "count": 1134,
+        "median_dx_px": 0.004638671875,
+        "median_dy_px": -0.18818378448486328,
+        "median_displacement_px": 1.0284484190930363,
+        "mean_displacement_px": 1.3233085420862318,
+        "rms_displacement_px": 1.8431218482870662,
+        "p90_displacement_px": 3.0771958476976127,
+        "maximum_displacement_px": 7.456798029520254
+      },
+      "robust_translation_x_px": 0.004638671875,
+      "robust_translation_y_px": -0.18818378448486328,
+      "robust_translation_magnitude_px": 0.18824094533920288,
+      "translation_inliers": 682,
+      "translation_inlier_fraction": 0.6014109347442681,
+      "translation_residual_median_px": 1.016700029373169,
+      "translation_residual_p90_px": 2.9366151332855224,
+      "occupied_grid_cells_4x3": 12,
+      "occupied_grid_cell_coordinates": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    }
+  ],
+  "limitations": [
+    "Detected compact sources are candidates, not confirmed stars.",
+    "Mutual-nearest matching can still produce false associations.",
+    "The archive video has no verified absolute exposure timestamp.",
+    "A coherent translation is not by itself an astrometric solution."
+  ]
+}

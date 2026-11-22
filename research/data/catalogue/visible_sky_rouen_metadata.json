@@ -1,0 +1,25 @@
+{
+    "dataset_type": "Real Hipparcos catalogue transformed to local horizontal coordinates",
+    "catalogue": "Hipparcos",
+    "input_stars": 8870,
+    "valid_stars": 8870,
+    "visible_stars": 4059,
+    "minimum_altitude_deg": 5.0,
+    "maximum_visual_magnitude": 6.5,
+    "observation_local": "2026-11-20T22:00:00+01:00",
+    "observation_utc": "2026-11-20T21:00:00+00:00",
+    "site": {
+        "name": "Rouen temporary test location",
+        "latitude_deg": 49.4431,
+        "longitude_deg": 1.0993,
+        "height_m": 20.0
+    },
+    "site_status": "TEMPORARY TEST LOCATION \u2014 NOT CONFIRMED CAMERA LOCATION",
+    "atmospheric_refraction": "Disabled",
+    "output_coordinates": "Altitude and azimuth, degrees",
+    "limitations": [
+        "This is a catalogue visibility calculation, not an actual camera observation.",
+        "Camera orientation and lens projection are not yet applied.",
+        "A real AllSkyKamera image, its timestamp and actual location are required for final real-camera validation."
+    ]
+}

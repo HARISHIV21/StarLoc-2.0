@@ -1,0 +1,79 @@
+ld 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field 1 did not solve.
+Field: /Users/harish/Documents/StarLoc-2.0/research/real_image/results/ASK033/ASK033_section_R2C1.jpg
+Did not solve (or no WCS file was written).
+
+
+jpegtopnm: WRITING PPM FILE
+Read file stdin: 640 x 480 pixels x 1 color(s); maxval 255
+Using 8-bit output

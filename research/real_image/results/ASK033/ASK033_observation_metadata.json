@@ -1,0 +1,30 @@
+{
+  "dataset": "ASK033",
+  "image": "research/real_image/data/network/ASK033/ASK033_live_original.jpg",
+  "observation_date": "2026-11-19",
+  "displayed_local_timestamp": "2026-11-19T20:55:13",
+  "timezone": "Europe/Vienna",
+  "utc_timestamp": "2026-11-19T19:55:13Z",
+  "timestamp_source": "Camera timestamp overlay",
+  "timestamp_verification": "Visually readable overlay; associated with Phase 63 rank-1 live/archive match",
+  "archive_video": "research/real_image/data/network/ASK033/archive_video_20261119/allsky-20261119.mp4",
+  "matched_video_frame": 260,
+  "matched_video_offset_seconds": 10.4,
+  "phase63_match_rank": 1,
+  "exposure_seconds": 50.0,
+  "exposure_timestamp_semantics": "Unknown: start, midpoint or end not independently established",
+  "observer_position": {
+    "latitude_deg": 47.834,
+    "longitude_deg": 16.005,
+    "status": "Previously recorded camera-site coordinates; independent survey confirmation not established"
+  },
+  "catalogue_reference_epoch": "J1991.25",
+  "limitations": [
+    "Camera overlay time is not independently verified against a synchronized clock.",
+    "Exposure start, midpoint or end is unknown.",
+    "Observer coordinates require independent confirmation.",
+    "Existing catalogue altitude and azimuth values have not been regenerated."
+  ],
+  "nominal_overlay_reference_utc": "2026-11-19T19:55:13Z",
+  "catalogue_epoch_status": "Nominal only; effective exposure epoch is uncertain because overlay timestamp semantics are unverified."
+}

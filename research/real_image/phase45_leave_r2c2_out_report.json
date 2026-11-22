@@ -1,0 +1,164 @@
+{
+  "phase": 45,
+  "title": "Leave-R2C2-out global fisheye calibration",
+  "model": "Equidistant fisheye with k1 and k2 radial terms",
+  "total_correspondences": 233,
+  "training_count": 145,
+  "withheld_r2c2_count": 51,
+  "other_held_out_test_count": 37,
+  "training_sections": [
+    "R1C2",
+    "R2C1",
+    "R3C1",
+    "R3C2"
+  ],
+  "withheld_section": "R2C2",
+  "optimizer_success": true,
+  "optimizer_message": "`ftol` termination condition is satisfied.",
+  "camera_parameters": {
+    "optical_centre_x_px": 943.9932380723219,
+    "optical_centre_y_px": 754.2008755310474,
+    "focal_scale_px_per_rad": 820.8215545827718,
+    "radial_k1": -0.02386206714322053,
+    "radial_k2": -0.007784590103689561,
+    "optical_axis_ra_deg": 1.8905575210147922,
+    "optical_axis_dec_deg": 50.117314521612364,
+    "rotation_matrix_world_to_camera": [
+      [
+        0.7543038234947679,
+        -0.20294505400967938,
+        -0.6243709209389741
+      ],
+      [
+        0.1425237174519861,
+        0.9789615979412036,
+        -0.14601773768988413
+      ],
+      [
+        0.6408687321322837,
+        0.02115407311639296,
+        0.7673589599175511
+      ]
+    ]
+  },
+  "training_metrics": {
+    "count": 145,
+    "front_facing": 145,
+    "predicted_inside_image": 145,
+    "median_error_px": 0.5001726663782444,
+    "mean_error_px": 0.6397400997078572,
+    "rmse_px": 0.8253199343406278,
+    "p90_error_px": 1.2092517741183464,
+    "max_error_px": 3.641380472687324,
+    "over_2px": 4,
+    "over_3px": 2,
+    "over_5px": 0,
+    "over_10px": 0
+  },
+  "withheld_r2c2_metrics": {
+    "count": 51,
+    "front_facing": 51,
+    "predicted_inside_image": 51,
+    "median_error_px": 0.7073140683681685,
+    "mean_error_px": 3.038302308446333,
+    "rmse_px": 7.697927545305282,
+    "p90_error_px": 3.571962305560505,
+    "max_error_px": 30.71584941310356,
+    "over_2px": 10,
+    "over_3px": 7,
+    "over_5px": 5,
+    "over_10px": 4
+  },
+  "other_original_test_metrics": {
+    "count": 37,
+    "front_facing": 37,
+    "predicted_inside_image": 37,
+    "median_error_px": 0.5780060360209502,
+    "mean_error_px": 0.7553546331018485,
+    "rmse_px": 0.8931679206829712,
+    "p90_error_px": 1.5358563254175983,
+    "max_error_px": 2.094382351799109,
+    "over_2px": 1,
+    "over_3px": 0,
+    "over_5px": 0,
+    "over_10px": 0
+  },
+  "per_section_metrics": {
+    "R1C2": {
+      "count": 71,
+      "front_facing": 71,
+      "predicted_inside_image": 71,
+      "median_error_px": 0.47437215824946355,
+      "mean_error_px": 0.5906561267886274,
+      "rmse_px": 0.7750267091150042,
+      "p90_error_px": 0.870248313494126,
+      "max_error_px": 3.641380472687324,
+      "over_2px": 2,
+      "over_3px": 1,
+      "over_5px": 0,
+      "over_10px": 0
+    },
+    "R2C1": {
+      "count": 28,
+      "front_facing": 28,
+      "predicted_inside_image": 28,
+      "median_error_px": 0.7749570290478407,
+      "mean_error_px": 0.9106941164032024,
+      "rmse_px": 1.1094946284714309,
+      "p90_error_px": 1.652578236643041,
+      "max_error_px": 3.236076561358017,
+      "over_2px": 1,
+      "over_3px": 1,
+      "over_5px": 0,
+      "over_10px": 0
+    },
+    "R2C2": {
+      "count": 51,
+      "front_facing": 51,
+      "predicted_inside_image": 51,
+      "median_error_px": 0.7073140683681685,
+      "mean_error_px": 3.038302308446333,
+      "rmse_px": 7.697927545305282,
+      "p90_error_px": 3.571962305560505,
+      "max_error_px": 30.71584941310356,
+      "over_2px": 10,
+      "over_3px": 7,
+      "over_5px": 5,
+      "over_10px": 4
+    },
+    "R3C1": {
+      "count": 43,
+      "front_facing": 43,
+      "predicted_inside_image": 43,
+      "median_error_px": 0.5313654409209945,
+      "mean_error_px": 0.6249091869929482,
+      "rmse_px": 0.7493108912297806,
+      "p90_error_px": 1.0420764491727612,
+      "max_error_px": 2.176066070824253,
+      "over_2px": 2,
+      "over_3px": 0,
+      "over_5px": 0,
+      "over_10px": 0
+    },
+    "R3C2": {
+      "count": 40,
+      "front_facing": 40,
+      "predicted_inside_image": 40,
+      "median_error_px": 0.5024671528576559,
+      "mean_error_px": 0.6600830145107175,
+      "rmse_px": 0.8219810545453078,
+      "p90_error_px": 1.4151980267565647,
+      "max_error_px": 1.9503506397175927,
+      "over_2px": 0,
+      "over_3px": 0,
+      "over_5px": 0,
+      "over_10px": 0
+    }
+  },
+  "interpretation_limits": [
+    "R2C2 is completely withheld from parameter fitting.",
+    "The 51 R2C2 points are evaluated using a model trained on four other sections.",
+    "The correspondences still inherit uncertainty from local plate-solving and catalogue matching.",
+    "This is a cross-section consistency test, not an independent camera ground-truth measurement."
+  ]
+}

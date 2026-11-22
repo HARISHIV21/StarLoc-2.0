@@ -1,0 +1,230 @@
+{
+  "phase": 44,
+  "title": "Direct local WCS versus global model comparison",
+  "section": "R2C2",
+  "total_correspondences": 51,
+  "valid_direct_wcs_projections": 51,
+  "wcs_file": "research/real_image/results/ASK033/custom_plate_solutions/R2C2_custom.wcs",
+  "pixel_origin": 0,
+  "direct_local_wcs_error": {
+    "count": 51,
+    "median_px": 1.4329348784709095,
+    "mean_px": 1.831865592728671,
+    "rmse_px": 2.204032140852571,
+    "p90_px": 3.547160443030853,
+    "max_px": 4.994145310481153,
+    "over_2px": 20,
+    "over_3px": 10,
+    "over_5px": 0,
+    "over_10px": 0
+  },
+  "phase38_global_model_error": {
+    "count": 51,
+    "median_px": 0.6997076189605878,
+    "mean_px": 2.971694942468643,
+    "rmse_px": 7.498565608683014,
+    "p90_px": 3.5129423526338694,
+    "max_px": 30.018661247693558,
+    "over_2px": 9,
+    "over_3px": 7,
+    "over_5px": 5,
+    "over_10px": 4
+  },
+  "phase41_global_model_error": {
+    "count": 51,
+    "median_px": 0.6730091940005117,
+    "mean_px": 3.002652199509234,
+    "rmse_px": 7.657119862666876,
+    "p90_px": 3.4742034877854815,
+    "max_px": 30.586449775765512,
+    "over_2px": 10,
+    "over_3px": 7,
+    "over_5px": 5,
+    "over_10px": 4
+  },
+  "vertical_band_analysis": {
+    "upper": {
+      "count": 21,
+      "direct_local_wcs": {
+        "count": 21,
+        "median_px": 2.57864444732556,
+        "mean_px": 2.526349150301137,
+        "rmse_px": 2.816637527186153,
+        "p90_px": 4.136377963452407,
+        "max_px": 4.994145310481153,
+        "over_2px": 13,
+        "over_3px": 8,
+        "over_5px": 0,
+        "over_10px": 0
+      },
+      "phase38_global": {
+        "count": 21,
+        "median_px": 1.243082326240301,
+        "mean_px": 6.092959531898047,
+        "rmse_px": 11.613508438413767,
+        "p90_px": 26.123057120848877,
+        "max_px": 30.018661247693558,
+        "over_2px": 7,
+        "over_3px": 6,
+        "over_5px": 5,
+        "over_10px": 4
+      },
+      "phase41_global": {
+        "count": 21,
+        "median_px": 1.0848790447688967,
+        "mean_px": 6.155385478824565,
+        "rmse_px": 11.862841749143278,
+        "p90_px": 26.68784635019743,
+        "max_px": 30.586449775765512,
+        "over_2px": 8,
+        "over_3px": 6,
+        "over_5px": 5,
+        "over_10px": 4
+      }
+    },
+    "middle": {
+      "count": 17,
+      "direct_local_wcs": {
+        "count": 17,
+        "median_px": 1.127334509010744,
+        "mean_px": 1.4397049663684187,
+        "rmse_px": 1.804367916181281,
+        "p90_px": 2.979931343055635,
+        "max_px": 3.547160443030853,
+        "over_2px": 5,
+        "over_3px": 2,
+        "over_5px": 0,
+        "over_10px": 0
+      },
+      "phase38_global": {
+        "count": 17,
+        "median_px": 0.46249017015324234,
+        "mean_px": 0.8674875522878582,
+        "rmse_px": 1.3019180941956434,
+        "p90_px": 2.160378736780848,
+        "max_px": 3.5129423526338694,
+        "over_2px": 2,
+        "over_3px": 1,
+        "over_5px": 0,
+        "over_10px": 0
+      },
+      "phase41_global": {
+        "count": 17,
+        "median_px": 0.3934971839160268,
+        "mean_px": 0.8568852424328266,
+        "rmse_px": 1.2774259334047486,
+        "p90_px": 2.0692530863357863,
+        "max_px": 3.4313894885123593,
+        "over_2px": 2,
+        "over_3px": 1,
+        "over_5px": 0,
+        "over_10px": 0
+      }
+    },
+    "lower": {
+      "count": 13,
+      "direct_local_wcs": {
+        "count": 13,
+        "median_px": 1.276617721569139,
+        "mean_px": 1.222832972659634,
+        "rmse_px": 1.4086440456310978,
+        "p90_px": 2.045215245231801,
+        "max_px": 2.615544701761267,
+        "over_2px": 2,
+        "over_3px": 0,
+        "over_5px": 0,
+        "over_10px": 0
+      },
+      "phase38_global": {
+        "count": 13,
+        "median_px": 0.6735919591771996,
+        "mean_px": 0.6813079620883253,
+        "rmse_px": 0.706715590424918,
+        "p90_px": 0.9755708924049971,
+        "max_px": 1.0598490200947577,
+        "over_2px": 0,
+        "over_3px": 0,
+        "over_5px": 0,
+        "over_10px": 0
+      },
+      "phase41_global": {
+        "count": 13,
+        "median_px": 0.6261124413398838,
+        "mean_px": 0.7157783075613078,
+        "rmse_px": 0.7440803938874789,
+        "p90_px": 1.0638201337457045,
+        "max_px": 1.1252049817037695,
+        "over_2px": 0,
+        "over_3px": 0,
+        "over_5px": 0,
+        "over_10px": 0
+      }
+    }
+  },
+  "excluded_point_analysis": {
+    "count": 4,
+    "direct_local_wcs": {
+      "count": 4,
+      "median_px": 2.9340135643586818,
+      "mean_px": 3.3602042216310193,
+      "rmse_px": 3.4936479504696254,
+      "p90_px": 4.4016835337201705,
+      "max_px": 4.994145310481153,
+      "over_2px": 4,
+      "over_3px": 2,
+      "over_5px": 0,
+      "over_10px": 0
+    },
+    "phase38_global": {
+      "count": 4,
+      "median_px": 27.359223172188827,
+      "mean_px": 25.95779350015434,
+      "rmse_px": 26.29550243531196,
+      "p90_px": 29.591679640444124,
+      "max_px": 30.018661247693558,
+      "over_2px": 4,
+      "over_3px": 4,
+      "over_5px": 4,
+      "over_10px": 4
+    },
+    "phase41_global": {
+      "count": 4,
+      "median_px": 27.925807688905817,
+      "mean_px": 26.515679772318542,
+      "rmse_px": 26.848764025039728,
+      "p90_px": 30.15964555132012,
+      "max_px": 30.586449775765512,
+      "over_2px": 4,
+      "over_3px": 4,
+      "over_5px": 4,
+      "over_10px": 4
+    },
+    "retained_count": 47,
+    "retained_direct_local_wcs": {
+      "count": 47,
+      "median_px": 1.3902873324005929,
+      "mean_px": 1.7017942200561305,
+      "rmse_px": 2.0572825371296113,
+      "p90_px": 3.5010315596031596,
+      "max_px": 4.528082091961425,
+      "over_2px": 16,
+      "over_3px": 8,
+      "over_5px": 0,
+      "over_10px": 0
+    }
+  },
+  "correlations": {
+    "direct_local_wcs_vs_phase38_global": 0.4002422200701319,
+    "direct_local_wcs_vs_phase41_global": 0.3937920353773976,
+    "local_x_vs_direct_wcs_error": 0.08185644928347265,
+    "local_y_vs_direct_wcs_error": -0.4055664887173786,
+    "local_x_vs_phase38_global_error": 0.7130034379225443,
+    "local_y_vs_phase38_global_error": -0.3958501123178198
+  },
+  "interpretation_limits": [
+    "The local WCS and global fisheye model are fitted from related catalogue information.",
+    "The local WCS is not independent ground truth.",
+    "Residual magnitudes do not by themselves identify the source of disagreement.",
+    "WCS projection failures and points outside the local tile must be inspected."
+  ]
+}

@@ -1,0 +1,302 @@
+{
+  "phase": 62,
+  "method": "Stratified held-out global fisheye and section affine residual comparison",
+  "selection": "local_wcs_candidate_error_px <= 1.0",
+  "training_count": 57,
+  "test_count": 17,
+  "global_model_parameters": [
+    0.09249727198143319,
+    -0.6885861770370314,
+    0.1881638386421595,
+    942.1428724476328,
+    754.8738863571658,
+    6.71280504621938,
+    -0.031420083756018145,
+    -0.002200039586263126
+  ],
+  "optimizer_success": true,
+  "affine_ridge_alpha": 1.0,
+  "baseline_test_metrics": {
+    "count": 17,
+    "median_px": 0.6996743280747882,
+    "mean_px": 0.8217658251256591,
+    "rmse_px": 0.9927132031027288,
+    "p90_px": 1.612937380506988,
+    "max_px": 2.2606932166443925,
+    "within_1px": 12,
+    "within_2px": 16,
+    "within_3px": 17
+  },
+  "corrected_test_metrics": {
+    "count": 17,
+    "median_px": 0.8195688911172363,
+    "mean_px": 1.1411488643850394,
+    "rmse_px": 1.60167588736826,
+    "p90_px": 2.7092844911205236,
+    "max_px": 4.062201399087876,
+    "within_1px": 13,
+    "within_2px": 14,
+    "within_3px": 15
+  },
+  "rmse_improvement_percent": -61.34326433477625,
+  "per_section_results": {
+    "R1C2": {
+      "baseline": {
+        "count": 3,
+        "median_px": 1.123352592969839,
+        "mean_px": 1.4423087418635274,
+        "rmse_px": 1.5558147219110814,
+        "p90_px": 2.0332250919094816,
+        "max_px": 2.2606932166443925,
+        "within_1px": 1,
+        "within_2px": 2,
+        "within_3px": 3
+      },
+      "affine_corrected": {
+        "count": 3,
+        "median_px": 0.9527211795722373,
+        "mean_px": 1.2440120800184267,
+        "rmse_px": 1.379970196312252,
+        "p90_px": 1.8515911439373711,
+        "max_px": 2.0763086350286546,
+        "within_1px": 2,
+        "within_2px": 2,
+        "within_3px": 3
+      }
+    },
+    "R2C1": {
+      "baseline": {
+        "count": 1,
+        "median_px": 0.3164937250584509,
+        "mean_px": 0.3164937250584509,
+        "rmse_px": 0.3164937250584509,
+        "p90_px": 0.3164937250584509,
+        "max_px": 0.3164937250584509,
+        "within_1px": 1,
+        "within_2px": 1,
+        "within_3px": 1
+      },
+      "affine_corrected": {
+        "count": 1,
+        "median_px": 4.062201399087876,
+        "mean_px": 4.062201399087876,
+        "rmse_px": 4.062201399087876,
+        "p90_px": 4.062201399087876,
+        "max_px": 4.062201399087876,
+        "within_1px": 0,
+        "within_2px": 0,
+        "within_3px": 0
+      }
+    },
+    "R2C2": {
+      "baseline": {
+        "count": 3,
+        "median_px": 0.7781180789184331,
+        "mean_px": 0.862990338500189,
+        "rmse_px": 0.8750686804011204,
+        "p90_px": 1.0091761367333,
+        "max_px": 1.0669406511870168,
+        "within_1px": 2,
+        "within_2px": 3,
+        "within_3px": 3
+      },
+      "affine_corrected": {
+        "count": 3,
+        "median_px": 0.8227428682118648,
+        "mean_px": 1.568334744771904,
+        "rmse_px": 2.168970790542416,
+        "p90_px": 3.0915471938490335,
+        "max_px": 3.6587482752583256,
+        "within_1px": 2,
+        "within_2px": 2,
+        "within_3px": 2
+      }
+    },
+    "R3C1": {
+      "baseline": {
+        "count": 5,
+        "median_px": 0.3954868060698248,
+        "mean_px": 0.3533725158663795,
+        "rmse_px": 0.36580010632040394,
+        "p90_px": 0.43895819208166736,
+        "max_px": 0.46399080631537093,
+        "within_1px": 5,
+        "within_2px": 5,
+        "within_3px": 5
+      },
+      "affine_corrected": {
+        "count": 5,
+        "median_px": 0.3916190882610799,
+        "mean_px": 0.4520147728933971,
+        "rmse_px": 0.4938200902184226,
+        "p90_px": 0.6767914954905944,
+        "max_px": 0.8195688911172363,
+        "within_1px": 5,
+        "within_2px": 5,
+        "within_3px": 5
+      }
+    },
+    "R3C2": {
+      "baseline": {
+        "count": 5,
+        "median_px": 0.6996743280747882,
+        "mean_px": 0.9941530963309415,
+        "rmse_px": 1.1335802363769445,
+        "p90_px": 1.6729443909086206,
+        "max_px": 1.792958411711886,
+        "within_1px": 3,
+        "within_2px": 5,
+        "within_3px": 5
+      },
+      "affine_corrected": {
+        "count": 5,
+        "median_px": 0.9029729182113211,
+        "mean_px": 0.9280429913239626,
+        "rmse_px": 1.1012890906506247,
+        "p90_px": 1.5698295950171417,
+        "max_px": 1.9898568653352395,
+        "within_1px": 4,
+        "within_2px": 5,
+        "within_3px": 5
+      }
+    }
+  },
+  "affine_corrections": {
+    "R1C2": {
+      "centre": [
+        944.4198749999999,
+        310.95625
+      ],
+      "scale": [
+        128.63110151848727,
+        126.37787150323233
+      ],
+      "coefficients": [
+        [
+          0.00996986107753633,
+          0.0843386335523899
+        ],
+        [
+          -0.09522453394589843,
+          0.16301653549429201
+        ],
+        [
+          0.05037959869309959,
+          0.3835604483549091
+        ]
+      ],
+      "training_count": 8,
+      "test_count": 3
+    },
+    "R2C1": {
+      "centre": [
+        595.3996666666667,
+        712.053
+      ],
+      "scale": [
+        4.575705871471865,
+        78.25238772501875
+      ],
+      "coefficients": [
+        [
+          0.027598893205625547,
+          -0.08590123791793758
+        ],
+        [
+          -0.023323159143238778,
+          0.5602179301260456
+        ],
+        [
+          0.08488983149131765,
+          0.10834343644390056
+        ]
+      ],
+      "training_count": 3,
+      "test_count": 1
+    },
+    "R2C2": {
+      "centre": [
+        800.8673636363636,
+        744.0687272727273
+      ],
+      "scale": [
+        64.81868733246712,
+        90.36562842051568
+      ],
+      "coefficients": [
+        [
+          0.31171285085064354,
+          -0.29685141988256203
+        ],
+        [
+          -0.14357293611837213,
+          -0.10931537843336787
+        ],
+        [
+          -0.3362468836587162,
+          1.4401557372408074
+        ]
+      ],
+      "training_count": 11,
+      "test_count": 3
+    },
+    "R3C1": {
+      "centre": [
+        456.36936842105274,
+        1083.6436315789476
+      ],
+      "scale": [
+        119.52949075402645,
+        57.69976066374747
+      ],
+      "coefficients": [
+        [
+          -0.13679683253133448,
+          0.13495349069945065
+        ],
+        [
+          -0.13705635886429482,
+          0.07820652453420464
+        ],
+        [
+          -0.010526684528912492,
+          -0.07646742765058452
+        ]
+      ],
+      "training_count": 19,
+      "test_count": 5
+    },
+    "R3C2": {
+      "centre": [
+        805.393875,
+        1150.33925
+      ],
+      "scale": [
+        83.64916201154902,
+        91.32918929585162
+      ],
+      "coefficients": [
+        [
+          -0.05364830767116051,
+          -0.19914627866954493
+        ],
+        [
+          -0.3164667302951417,
+          -0.00577262206631022
+        ],
+        [
+          0.3928335851971453,
+          -0.44418420563079564
+        ]
+      ],
+      "training_count": 16,
+      "test_count": 5
+    }
+  },
+  "limitations": [
+    "Correspondences are provisional and based on local WCS associations.",
+    "The strict subset was selected using local WCS residuals.",
+    "Section affine corrections are exploratory and may overfit small sections.",
+    "Validation is from one image and one camera."
+  ]
+}

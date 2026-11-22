@@ -1,0 +1,48 @@
+{
+  "objective": 3,
+  "description": "Convert identified stellar RA/Dec coordinates to image pixels",
+  "coordinate_convention": {
+    "WCS_input_output_origin": 1,
+    "local_image_coordinates": "zero-based",
+    "global_image_coordinates": "zero-based with section offsets"
+  },
+  "total_stars_processed": 237,
+  "sections": [
+    {
+      "section": "R1C2",
+      "stars_processed": 72,
+      "median_ra_roundtrip_error_arcsec": 1.3301360013429075e-09,
+      "median_dec_roundtrip_error_arcsec": 2.7498003873915877e-10,
+      "wcs": "research/real_image/results/ASK033/phase36_section_solutions/R1C2_custom.wcs"
+    },
+    {
+      "section": "R2C1",
+      "stars_processed": 28,
+      "median_ra_roundtrip_error_arcsec": 2.175335112042376e-06,
+      "median_dec_roundtrip_error_arcsec": 2.5188171548506944e-07,
+      "wcs": "research/real_image/results/ASK033/phase36_section_solutions/R2C1_custom.wcs"
+    },
+    {
+      "section": "R3C1",
+      "stars_processed": 44,
+      "median_ra_roundtrip_error_arcsec": 1.056230303220218e-06,
+      "median_dec_roundtrip_error_arcsec": 1.8699921611187165e-07,
+      "wcs": "research/real_image/results/ASK033/phase36_section_solutions/R3C1_custom.wcs"
+    },
+    {
+      "section": "R3C2",
+      "stars_processed": 40,
+      "median_ra_roundtrip_error_arcsec": 2.550791577959899e-07,
+      "median_dec_roundtrip_error_arcsec": 4.782094720212626e-08,
+      "wcs": "research/real_image/results/ASK033/phase36_section_solutions/R3C2_custom.wcs"
+    },
+    {
+      "section": "R2C2",
+      "stars_processed": 53,
+      "median_ra_roundtrip_error_arcsec": 3.6545998227666132e-06,
+      "median_dec_roundtrip_error_arcsec": 2.811523813761596e-06,
+      "wcs": "research/real_image/results/ASK033/custom_plate_solutions/R2C2_custom.wcs"
+    }
+  ],
+  "method": "Astropy WCS all_world2pix with inverse all_pix2world round-trip"
+}

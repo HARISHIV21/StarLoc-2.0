@@ -1,0 +1,90 @@
+{
+  "phase": 58,
+  "title": "Section-dependent residual diagnostics",
+  "input": "research/real_image/results/ASK033/phase57_leave_one_section_out/phase57_held_out_predictions.csv",
+  "total_points": 74,
+  "per_section": {
+    "R1C2": {
+      "count": 11,
+      "mean_dx_px": -1.2066416258631472,
+      "mean_dy_px": -0.38894547156514325,
+      "median_dx_px": -1.2462206770867397,
+      "median_dy_px": -0.41884854805226723,
+      "median_error_px": 1.4367972756796634,
+      "rmse_px": 1.7407001754921132,
+      "p90_px": 2.4618436863471453,
+      "max_px": 3.219207399025853,
+      "within_1px": 2,
+      "within_2px": 9,
+      "within_3px": 10,
+      "within_5px": 11
+    },
+    "R2C1": {
+      "count": 4,
+      "mean_dx_px": 0.2111098644252536,
+      "mean_dy_px": 0.013791389549481892,
+      "median_dx_px": 0.2406278985474728,
+      "median_dy_px": -0.2881120025278392,
+      "median_error_px": 0.5063599757742905,
+      "rmse_px": 0.7184767205973447,
+      "p90_px": 0.9780835074845536,
+      "max_px": 1.1698830679262744,
+      "within_1px": 3,
+      "within_2px": 4,
+      "within_3px": 4,
+      "within_5px": 4
+    },
+    "R2C2": {
+      "count": 14,
+      "mean_dx_px": -0.5309580614490658,
+      "mean_dy_px": 0.09732140631664217,
+      "median_dx_px": -0.43646779549993653,
+      "median_dy_px": -0.5484518321744076,
+      "median_error_px": 0.8271028784050886,
+      "rmse_px": 1.8759891267936024,
+      "p90_px": 1.2180953703839348,
+      "max_px": 6.371592070566025,
+      "within_1px": 11,
+      "within_2px": 13,
+      "within_3px": 13,
+      "within_5px": 13
+    },
+    "R3C1": {
+      "count": 24,
+      "mean_dx_px": -1.4412752176395192,
+      "mean_dy_px": 0.2855352716188359,
+      "median_dx_px": 0.27475231203862904,
+      "median_dy_px": -0.2750519104552609,
+      "median_error_px": 1.3415077644432936,
+      "rmse_px": 3.460383128458788,
+      "p90_px": 6.423831612140916,
+      "max_px": 8.278042582015043,
+      "within_1px": 8,
+      "within_2px": 15,
+      "within_3px": 17,
+      "within_5px": 20
+    },
+    "R3C2": {
+      "count": 21,
+      "mean_dx_px": -0.041839223712242656,
+      "mean_dy_px": 0.6891309302747166,
+      "median_dx_px": -0.13228726374256894,
+      "median_dy_px": 0.7883980879964838,
+      "median_error_px": 0.9344373246362733,
+      "rmse_px": 1.1515685211697857,
+      "p90_px": 1.8320187862808002,
+      "max_px": 2.0131351885357245,
+      "within_1px": 11,
+      "within_2px": 20,
+      "within_3px": 21,
+      "within_5px": 21
+    }
+  },
+  "interpretation": [
+    "Residual vectors show the direction of prediction error.",
+    "A consistent mean vector may indicate a systematic section offset.",
+    "Large individual errors may indicate outliers or incorrect associations.",
+    "This diagnostic does not establish independent astrometric ground truth.",
+    "No calibration parameters were modified."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+    "catalogue": "Hipparcos Main Catalogue",
+    "source": "NASA HEASARC",
+    "coordinate_frame": "ICRS",
+    "catalogue_epoch": "J1991.25",
+    "reference_epoch": "2026-11-20T00:00:00",
+    "proper_motion_convention": {
+        "pm_ra": "mu_alpha*cos(dec), milliarcseconds/year",
+        "pm_dec": "mu_delta, milliarcseconds/year"
+    },
+    "method": "Astropy SkyCoord.apply_space_motion",
+    "parallax_included": false,
+    "radial_velocity_included": false,
+    "note": "Catalogue position propagation only; not camera calibration."
+}

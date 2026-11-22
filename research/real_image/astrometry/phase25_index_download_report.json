@@ -1,0 +1,62 @@
+{
+  "phase": 25,
+  "source": "https://data.astrometry.net/4100/",
+  "index_files": [
+    {
+      "filename": "index-4110.fits",
+      "bytes": 24871680,
+      "sha256": "ca5f9470d259c95d1c9ad73facf999de8aa0c97b2c94b700fcbfbf7d350c0169"
+    },
+    {
+      "filename": "index-4111.fits",
+      "bytes": 10206720,
+      "sha256": "b0d76303ff1aa4cee1894a4d5bb5209f2a16f683882200cd5bd428e82c213120"
+    },
+    {
+      "filename": "index-4112.fits",
+      "bytes": 5296320,
+      "sha256": "59745b09bb8197acf8d3736ef58716017926837a1ae45021af85591bfd30dd33"
+    },
+    {
+      "filename": "index-4113.fits",
+      "bytes": 2733120,
+      "sha256": "241d4547e7c2de49286f1d5cddd6d3b66535fa3a485b136e21a9af8b091af841"
+    },
+    {
+      "filename": "index-4114.fits",
+      "bytes": 1382400,
+      "sha256": "f4ebfbd1a5c05693967f38171bfb86476afc14e5e534054739ec206c7725a1b4"
+    },
+    {
+      "filename": "index-4115.fits",
+      "bytes": 740160,
+      "sha256": "548f6c438b5062519e27e83bc7cdc1743705068e327fabe4cc039a4319542953"
+    },
+    {
+      "filename": "index-4116.fits",
+      "bytes": 408960,
+      "sha256": "de811b8513cb2499ace8ce26a79ed8082e5ec19972f2a5d967e5c3b93c475b5a"
+    },
+    {
+      "filename": "index-4117.fits",
+      "bytes": 247680,
+      "sha256": "7de4d4f8827d5622ff1ed5252ab8b18d6b576b48f63a8927b5887bc8fa418f45"
+    },
+    {
+      "filename": "index-4118.fits",
+      "bytes": 187200,
+      "sha256": "5e79c1812ac6fdf11a360b04e82079b87e318ed36a618c21de23441195e67d0f"
+    },
+    {
+      "filename": "index-4119.fits",
+      "bytes": 144000,
+      "sha256": "79b36eea45b72448c8471f6e8af0e1c8635a3821d04f1a23d6cf5ecd5f59d31c"
+    }
+  ],
+  "total_bytes": 46218240,
+  "failures": [],
+  "index_directory": "/Users/harish/Documents/StarLoc-2.0/research/real_image/astrometry/indexes",
+  "configuration": "/Users/harish/Documents/StarLoc-2.0/research/real_image/astrometry/astrometry.cfg",
+  "successful_index_count": 10,
+  "failed_index_count": 0
+}

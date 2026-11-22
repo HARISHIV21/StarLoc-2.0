@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StarLoc 2.0 — Phase 62 Demo</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:1100px;margin:36px auto;padding:0 20px;
+line-height:1.55;color:#20242a;background:#f7f8fa}
+h1,h2{line-height:1.2} .sub{color:#586273}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.metric,.visual{background:white;border:1px solid #dfe3e8;border-radius:12px;padding:16px}
+.metric strong{font-size:28px;display:block} .gallery{display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+img{width:100%;height:auto;border-radius:8px} .warning{border-left:4px solid #d69a20;
+padding:12px;background:#fff8e8} code{overflow-wrap:anywhere}
+</style></head><body>
+<h1>StarLoc 2.0</h1><p class="sub">Phase 62 — Integrated Star Tracker Demonstration</p>
+<p>A combined view of the controlled synthetic pipeline and the ASK033 real-camera
+research experiment.</p>
+<div class="metrics">
+<div class="metric"><strong>99/100</strong>Synthetic star detections</div>
+<div class="metric"><strong>0.285 px</strong>Synthetic blind-calibration RMSE</div>
+<div class="metric"><strong>5</strong>Real-camera sections solved</div>
+<div class="metric"><strong>233</strong>WCS-derived correspondences</div>
+<div class="metric"><strong>74</strong>Strict internal consistency</div>
+<div class="metric"><strong>155</strong>Uncertain</div>
+<div class="metric"><strong>4</strong>Suspect associations</div>
+</div>
+<h2>Real-camera evidence</h2><div class="gallery"><section class="visual"><h3>Real-camera association overlay — Phase 61</h3><img src="../phase61_final_association_visualisation/phase61_real_star_association_overlay.jpg" alt="Real-camera association overlay — Phase 61"><p>research/real_image/results/ASK033/phase61_final_association_visualisation/phase61_real_star_association_overlay.jpg</p></section><section class="visual"><h3>Global calibration residual map — Phase 38</h3><img src="../phase38_global_calibration/phase38_residual_map.png" alt="Global calibration residual map — Phase 38"><p>research/real_image/results/ASK033/phase38_global_calibration/phase38_residual_map.png</p></section><section class="visual"><h3>Section residual vectors — Phase 58</h3><img src="../phase58_section_error_diagnostics/phase58_spatial_residual_vectors.png" alt="Section residual vectors — Phase 58"><p>research/real_image/results/ASK033/phase58_section_error_diagnostics/phase58_spatial_residual_vectors.png</p></section><section class="visual"><h3>Section error distribution — Phase 58</h3><img src="../phase58_section_error_diagnostics/phase58_section_error_distribution.png" alt="Section error distribution — Phase 58"><p>research/real_image/results/ASK033/phase58_section_error_diagnostics/phase58_section_error_distribution.png</p></section><section class="visual"><h3>Four-point investigation — Phase 52</h3><img src="../phase52_global_prediction_test/phase52_four_point_montage.jpg" alt="Four-point investigation — Phase 52"><p>research/real_image/results/ASK033/phase52_global_prediction_test/phase52_four_point_montage.jpg</p></section><section class="visual"><h3>WCS validation overlay — Phase 35</h3><img src="../phase35_wcs_match_overlay.jpg" alt="WCS validation overlay — Phase 35"><p>research/real_image/results/ASK033/phase35_wcs_match_overlay.jpg</p></section></div>
+<h2>Calibration and validation</h2>
+<p>Phase 38 and Phase 56 produced exploratory global fisheye estimates.
+The Phase 56 held-out RMSE was 0.9381 px on 15 points. Leave-one-section-out
+validation across 74 points produced a 2.3247 px RMSE, with R3C1 the weakest
+section at 3.460 px.</p>
+<div class="warning"><strong>Interpretation:</strong> Low local-WCS residuals indicate
+internal consistency, not independent confirmation of stellar identities.
+The real-camera global calibration remains exploratory and requires independent
+astrometric validation.</div>
+<h2>Reproducibility</h2>
+<p>This demonstration reads existing reports and assets only. No earlier phase
+was rerun and no calibration parameters were modified.</p>
+<p>See <code>phase62_integrated_demo.md</code> and
+<code>phase62_integrated_demo_report.json</code> in this folder.</p>
+</body></html>

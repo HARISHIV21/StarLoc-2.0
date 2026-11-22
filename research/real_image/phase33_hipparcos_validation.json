@@ -1,0 +1,21 @@
+{
+  "phase": 33,
+  "section": "R2C2",
+  "wcs_file": "research/real_image/results/ASK033/custom_plate_solutions/R2C2_custom.wcs",
+  "hipparcos_catalogue": "research/data/catalogue/hipparcos_positions_2026.csv",
+  "image_sources": 89,
+  "catalogue_rows": 8870,
+  "field_centre_ra_deg": 202.7681519976557,
+  "field_centre_dec_deg": 56.20254115896469,
+  "nearest_neighbour_median_arcmin": 13.875342954202678,
+  "nearest_neighbour_mean_arcmin": 26.26488553152495,
+  "nearest_neighbour_max_arcmin": 133.27004235238564,
+  "matches_within_threshold": {
+    "2": 7,
+    "5": 19,
+    "10": 36,
+    "20": 56,
+    "30": 63
+  },
+  "interpretation": "Nearest-neighbour catalogue comparison only. Threshold counts must be assessed before accepting the WCS."
+}

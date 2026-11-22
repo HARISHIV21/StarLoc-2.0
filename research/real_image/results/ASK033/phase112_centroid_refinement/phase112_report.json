@@ -1,0 +1,90 @@
+{
+  "phase": 112,
+  "purpose": "Compare image centroid refinements against catalogue-projected positions",
+  "correspondence_count": 41,
+  "crop_dimensions": [
+    512,
+    512
+  ],
+  "crop_origin_in_full_frame": [
+    554,
+    103
+  ],
+  "residuals_px": {
+    "original_astrometry_detection": {
+      "count": 41,
+      "median_px": 1.6694314496057658,
+      "mean_px": 2.085089934991948,
+      "p90_px": 4.725523703151548,
+      "rms_px": 2.6132883972185863,
+      "maximum_px": 6.827733451026628,
+      "within_1px": 11,
+      "within_2px": 25
+    },
+    "weighted_centroid_r2": {
+      "count": 40,
+      "median_px": 2.129281139475818,
+      "mean_px": 2.3870334184361846,
+      "p90_px": 4.0643373898167034,
+      "rms_px": 2.769953067096713,
+      "maximum_px": 6.393069291374275,
+      "within_1px": 4,
+      "within_2px": 18
+    },
+    "weighted_centroid_r3": {
+      "count": 40,
+      "median_px": 2.233642639329806,
+      "mean_px": 2.398271581574923,
+      "p90_px": 3.8879719488875772,
+      "rms_px": 2.7724474800093644,
+      "maximum_px": 6.55121246398562,
+      "within_1px": 4,
+      "within_2px": 18
+    },
+    "weighted_centroid_r4": {
+      "count": 41,
+      "median_px": 2.239545970220699,
+      "mean_px": 2.3512021786333808,
+      "p90_px": 3.808500237355575,
+      "rms_px": 2.7373906472522425,
+      "maximum_px": 6.6136402743336395,
+      "within_1px": 5,
+      "within_2px": 19
+    },
+    "weighted_centroid_r5": {
+      "count": 41,
+      "median_px": 2.2046937037733185,
+      "mean_px": 2.3472991843593416,
+      "p90_px": 3.9640306344779606,
+      "rms_px": 2.7248215849332644,
+      "maximum_px": 6.385544691904172,
+      "within_1px": 5,
+      "within_2px": 18
+    },
+    "gaussian_fit": {
+      "count": 41,
+      "median_px": 2.2866360111193345,
+      "mean_px": 2.459929222967922,
+      "p90_px": 3.5688358667103364,
+      "rms_px": 2.8332909318389903,
+      "maximum_px": 6.28114903508179,
+      "within_1px": 4,
+      "within_2px": 18
+    }
+  },
+  "median_improvement_vs_original_percent": {
+    "original_astrometry_detection": 0.0,
+    "weighted_centroid_r2": -27.545287347895915,
+    "weighted_centroid_r3": -33.796607213628214,
+    "weighted_centroid_r4": -34.15022046874491,
+    "weighted_centroid_r5": -32.06254765920183,
+    "gaussian_fit": -36.97094371016676
+  },
+  "interpretation": "No tested centroid method demonstrates a greater-than-5% median improvement. The dominant error may be in the image projection, camera model, or correspondence geometry.",
+  "limitations": [
+    "Catalogue-projected positions depend on the current WCS.",
+    "The 41 correspondences are not an independent validation set.",
+    "A lower residual does not by itself prove stellar identity.",
+    "The archive exposure timestamp remains unverified."
+  ]
+}

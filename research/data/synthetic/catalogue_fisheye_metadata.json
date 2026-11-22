@@ -1,0 +1,19 @@
+{
+    "image_size_px": 1024,
+    "projection": "Equidistant fisheye: r = f * theta",
+    "nominal_fov_deg": 180.0,
+    "optical_center_px": [
+        511.5,
+        511.5
+    ],
+    "focal_scale_px": 318.3098861837907,
+    "camera_roll_deg": 37.0,
+    "camera_roll_status": "Hidden test parameter; not supplied to identification",
+    "magnitude_limit": 5.5,
+    "stars_rendered": 1284,
+    "catalogue": "Hipparcos propagated positions, Rouen test observation",
+    "noise_sigma": 3.0,
+    "psf_sigma_px": 1.15,
+    "ground_truth_file": "catalogue_fisheye_ground_truth.csv",
+    "warning": "Synthetic image, not a real AllSkyKamera exposure."
+}

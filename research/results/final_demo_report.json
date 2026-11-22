@@ -1,0 +1,34 @@
+{
+    "project": "StarLoc 2.0",
+    "demonstration": "Catalogue-based synthetic all-sky fisheye calibration",
+    "calibration": {
+        "method": "Blind Hipparcos catalogue matching and robust fisheye refinement",
+        "camera_model": "Zenith-pointed equidistant fisheye with unknown roll",
+        "optical_center_x_px": 511.50051812583945,
+        "optical_center_y_px": 511.50463854997975,
+        "focal_scale_px": 318.3130677463827,
+        "estimated_fov_deg": 179.99820088672254,
+        "estimated_roll_deg": 36.999250176658926,
+        "detected_regions": 1136,
+        "catalogue_candidates": 1284,
+        "identified_stars": 1136,
+        "mean_residual_px": 0.1789672495682389,
+        "median_residual_px": 0.11546969165133067,
+        "rmse_px": 0.2850339152574848,
+        "maximum_residual_px": 2.0205767257023655,
+        "ground_truth_used_for_matching": false,
+        "validation_note": "Synthetic observation; not real camera calibration."
+    },
+    "robustness": {
+        "mean_roll_error_deg": 0.004851777722860903,
+        "mean_reprojection_rmse_px": 0.9002478117106141,
+        "total_catalogue_matches": 4184
+    },
+    "validation_scope": "Synthetic observation generated using real Hipparcos catalogue data. Zenith-pointed equidistant fisheye model with unknown roll. Not yet validated against a real AllSkyKamera exposure.",
+    "completed_demo_steps": [
+        "Catalogue fisheye observation",
+        "Blind catalogue calibration",
+        "Robustness validation"
+    ],
+    "execution_time_seconds": 3.28
+}

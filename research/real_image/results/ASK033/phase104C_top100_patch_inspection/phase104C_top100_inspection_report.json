@@ -1,0 +1,50 @@
+{
+  "phase": "104C",
+  "title": "Top 100 candidate patch inspection",
+  "ranked_input_count": 1349,
+  "position_input_count": 1349,
+  "joined_top100_count": 100,
+  "reference_video_frame": 522,
+  "image_dimensions": [
+    1920,
+    1440
+  ],
+  "patch_dimensions": [
+    41,
+    41
+  ],
+  "contact_sheet_dimensions": [
+    1500,
+    1500
+  ],
+  "mask_valid_fraction": 0.8885033275462964,
+  "mask_polarity": "nonzero_pixels_are_valid",
+  "validity_counts": {
+    "valid_interior": 73,
+    "valid_near_image_edge": 27
+  },
+  "motion_class_counts": {
+    "exact_pixel_stationary": 87,
+    "near_stationary": 6,
+    "higher_displacement": 4,
+    "low_displacement": 3
+  },
+  "spatial_grid_counts": {
+    "row0_col0": 20,
+    "row0_col3": 29,
+    "row0_col1": 27,
+    "row1_col0": 6,
+    "row0_col2": 17,
+    "row2_col0": 1
+  },
+  "limitations": [
+    "Patch appearance does not establish stellar identity.",
+    "The descriptive quality score is not a star probability.",
+    "The absolute archive exposure timestamp remains unverified.",
+    "Previous WCS solutions remain mutually inconsistent."
+  ],
+  "outputs": {
+    "contact_sheet": "research/real_image/results/ASK033/phase104C_top100_patch_inspection/phase104C_top100_candidate_contact_sheet.jpg",
+    "candidate_csv": "research/real_image/results/ASK033/phase104C_top100_patch_inspection/phase104C_top100_candidate_audit.csv"
+  }
+}

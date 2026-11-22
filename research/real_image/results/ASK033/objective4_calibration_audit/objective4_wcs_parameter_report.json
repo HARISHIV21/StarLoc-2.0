@@ -1,0 +1,220 @@
+{
+  "objective": 4,
+  "title": "Local WCS optical calibration parameter audit",
+  "sections": {
+    "R1C2": {
+      "wcs_file": "research/real_image/results/ASK033/phase36_section_solutions/R1C2_custom.wcs",
+      "ctype": [
+        "RA---TAN-SIP",
+        "DEC--TAN-SIP"
+      ],
+      "crpix": [
+        363.820666667,
+        411.413
+      ],
+      "crval_deg": [
+        325.826591145,
+        45.6715547271
+      ],
+      "pixel_scale_matrix_deg_per_pixel": [
+        [
+          0.0141009905786,
+          0.0657026401234
+        ],
+        [
+          -0.0668345107956,
+          0.0188987902704
+        ]
+      ],
+      "x_axis_scale_deg_per_pixel": 0.06830585457034367,
+      "y_axis_scale_deg_per_pixel": 0.06836666726460766,
+      "determinant": 0.004657695474176648,
+      "orientation_deg": -78.08625176416439,
+      "distortion_models": {
+        "sip_present": true,
+        "cpdis1_present": false,
+        "cpdis2_present": false,
+        "det2im1_present": false,
+        "det2im2_present": false
+      },
+      "header_cd_matrix": {
+        "CD1_1": 0.0141009905786,
+        "CD1_2": 0.0657026401234,
+        "CD2_1": -0.0668345107956,
+        "CD2_2": 0.0188987902704
+      }
+    },
+    "R2C1": {
+      "wcs_file": "research/real_image/results/ASK033/phase36_section_solutions/R2C1_custom.wcs",
+      "ctype": [
+        "RA---TAN-SIP",
+        "DEC--TAN-SIP"
+      ],
+      "crpix": [
+        583.17,
+        67.1853333333
+      ],
+      "crval_deg": [
+        326.8080464,
+        75.6545911725
+      ],
+      "pixel_scale_matrix_deg_per_pixel": [
+        [
+          0.0265680893223,
+          0.0636398763162
+        ],
+        [
+          -0.067076007265,
+          0.023643828856
+        ]
+      ],
+      "x_axis_scale_deg_per_pixel": 0.07214606102104289,
+      "y_axis_scale_deg_per_pixel": 0.06789009132791804,
+      "determinant": 0.004896880163096516,
+      "orientation_deg": -68.39201106577612,
+      "distortion_models": {
+        "sip_present": true,
+        "cpdis1_present": false,
+        "cpdis2_present": false,
+        "det2im1_present": false,
+        "det2im2_present": false
+      },
+      "header_cd_matrix": {
+        "CD1_1": 0.0265680893223,
+        "CD1_2": 0.0636398763162,
+        "CD2_1": -0.067076007265,
+        "CD2_2": 0.023643828856
+      }
+    },
+    "R3C1": {
+      "wcs_file": "research/real_image/results/ASK033/phase36_section_solutions/R3C1_custom.wcs",
+      "ctype": [
+        "RA---TAN-SIP",
+        "DEC--TAN-SIP"
+      ],
+      "crpix": [
+        471.955666667,
+        97.033
+      ],
+      "crval_deg": [
+        73.5107508288,
+        61.2490380079
+      ],
+      "pixel_scale_matrix_deg_per_pixel": [
+        [
+          -0.0702121391947,
+          0.0212257330459
+        ],
+        [
+          -0.0150247554224,
+          -0.0646369000414
+        ]
+      ],
+      "x_axis_scale_deg_per_pixel": 0.07180172536784103,
+      "y_axis_scale_deg_per_pixel": 0.06803279055204003,
+      "determinant": 0.00485720647049649,
+      "orientation_deg": -167.9213966095361,
+      "distortion_models": {
+        "sip_present": true,
+        "cpdis1_present": false,
+        "cpdis2_present": false,
+        "det2im1_present": false,
+        "det2im2_present": false
+      },
+      "header_cd_matrix": {
+        "CD1_1": -0.0702121391947,
+        "CD1_2": 0.0212257330459,
+        "CD2_1": -0.0150247554224,
+        "CD2_2": -0.0646369000414
+      }
+    },
+    "R3C2": {
+      "wcs_file": "research/real_image/results/ASK033/phase36_section_solutions/R3C2_custom.wcs",
+      "ctype": [
+        "RA---TAN-SIP",
+        "DEC--TAN-SIP"
+      ],
+      "crpix": [
+        141.355666667,
+        86.4136666667
+      ],
+      "crval_deg": [
+        38.9379219233,
+        50.9060493247
+      ],
+      "pixel_scale_matrix_deg_per_pixel": [
+        [
+          -0.0478808949042,
+          0.0534837432198
+        ],
+        [
+          -0.0503539886853,
+          -0.0454649688187
+        ]
+      ],
+      "x_axis_scale_deg_per_pixel": 0.06948456140284953,
+      "y_axis_scale_deg_per_pixel": 0.07019668210454726,
+      "determinant": 0.004870023194768204,
+      "orientation_deg": -133.55786553264483,
+      "distortion_models": {
+        "sip_present": true,
+        "cpdis1_present": false,
+        "cpdis2_present": false,
+        "det2im1_present": false,
+        "det2im2_present": false
+      },
+      "header_cd_matrix": {
+        "CD1_1": -0.0478808949042,
+        "CD1_2": 0.0534837432198,
+        "CD2_1": -0.0503539886853,
+        "CD2_2": -0.0454649688187
+      }
+    },
+    "R2C2": {
+      "wcs_file": "research/real_image/results/ASK033/custom_plate_solutions/R2C2_custom.wcs",
+      "ctype": [
+        "RA---TAN-SIP",
+        "DEC--TAN-SIP"
+      ],
+      "crpix": [
+        112.087,
+        268.758
+      ],
+      "crval_deg": [
+        7.61676413606,
+        63.2728566117
+      ],
+      "pixel_scale_matrix_deg_per_pixel": [
+        [
+          -0.0211484048107,
+          0.066562458248
+        ],
+        [
+          -0.0668377616824,
+          -0.0218795831687
+        ]
+      ],
+      "x_axis_scale_deg_per_pixel": 0.07010379028804745,
+      "y_axis_scale_deg_per_pixel": 0.07006623300601228,
+      "determinant": 0.0049116040033155665,
+      "orientation_deg": -107.55810147919227,
+      "distortion_models": {
+        "sip_present": true,
+        "cpdis1_present": false,
+        "cpdis2_present": false,
+        "det2im1_present": false,
+        "det2im2_present": false
+      },
+      "header_cd_matrix": {
+        "CD1_1": -0.0211484048107,
+        "CD1_2": 0.066562458248,
+        "CD2_1": -0.0668377616824,
+        "CD2_2": -0.0218795831687
+      }
+    }
+  },
+  "interpretation": [
+    "This audit characterizes existing local WCS models.",
+    "It does not establish a global fisheye distortion model."
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "objective": 4,
+  "title": "SIP versus TAN-only positional comparison",
+  "method": "Same Phase 37B star associations evaluated with full SIP and with SIP keywords removed",
+  "sections": {
+    "R1C2": {
+      "wcs_file": "research/real_image/results/ASK033/phase36_section_solutions/R1C2_custom.wcs",
+      "sip_residuals": {
+        "count": 72,
+        "median_px": 2.272404487642034,
+        "mean_px": 2.222564471341597,
+        "rms_px": 2.4651358259597305,
+        "maximum_px": 4.831406017040336
+      },
+      "tan_only_residuals": {
+        "count": 72,
+        "median_px": 16.131614078393717,
+        "mean_px": 20.572630011169803,
+        "rms_px": 26.601674379024637,
+        "maximum_px": 76.2172990760704
+      },
+      "sip_rms_improvement_percent": 90.733155399032
+    },
+    "R2C1": {
+      "wcs_file": "research/real_image/results/ASK033/phase36_section_solutions/R2C1_custom.wcs",
+      "sip_residuals": {
+        "count": 28,
+        "median_px": 2.066423001963337,
+        "mean_px": 2.151207128377568,
+        "rms_px": 2.3823342649262846,
+        "maximum_px": 3.892093930423067
+      },
+      "tan_only_residuals": {
+        "count": 28,
+        "median_px": 5.622124223999359,
+        "mean_px": 8.146633574150759,
+        "rms_px": 10.997006797471187,
+        "maximum_px": 28.450130776877284
+      },
+      "sip_rms_improvement_percent": 78.33652093882387
+    },
+    "R3C1": {
+      "wcs_file": "research/real_image/results/ASK033/phase36_section_solutions/R3C1_custom.wcs",
+      "sip_residuals": {
+        "count": 44,
+        "median_px": 0.9241188333713881,
+        "mean_px": 1.030421845807364,
+        "rms_px": 1.1772112445565144,
+        "maximum_px": 3.01952886109847
+      },
+      "tan_only_residuals": {
+        "count": 44,
+        "median_px": 3.751612324589912,
+        "mean_px": 5.049013088807403,
+        "rms_px": 6.436059677272263,
+        "maximum_px": 18.07332236158921
+      },
+      "sip_rms_improvement_percent": 81.70913099650684
+    },
+    "R3C2": {
+      "wcs_file": "research/real_image/results/ASK033/phase36_section_solutions/R3C2_custom.wcs",
+      "sip_residuals": {
+        "count": 40,
+        "median_px": 0.9287059305471279,
+        "mean_px": 1.1803478695906726,
+        "rms_px": 1.389323510655916,
+        "maximum_px": 3.4694657203627166
+      },
+      "tan_only_residuals": {
+        "count": 40,
+        "median_px": 6.543155368213201,
+        "mean_px": 9.384624359601377,
+        "rms_px": 13.03160354850832,
+        "maximum_px": 36.37463059827293
+      },
+      "sip_rms_improvement_percent": 89.33881386519815
+    },
+    "R2C2": {
+      "wcs_file": "research/real_image/results/ASK033/custom_plate_solutions/R2C2_custom.wcs",
+      "sip_residuals": {
+        "count": 53,
+        "median_px": 1.4329348784709095,
+        "mean_px": 1.8453899069544308,
+        "rms_px": 2.226543932173813,
+        "maximum_px": 4.994145310481153
+      },
+      "tan_only_residuals": {
+        "count": 53,
+        "median_px": 1.6495835612055123,
+        "mean_px": 2.666837232304207,
+        "rms_px": 3.6416308126139545,
+        "maximum_px": 12.420562793240144
+      },
+      "sip_rms_improvement_percent": 38.85860355581721
+    }
+  }
+}

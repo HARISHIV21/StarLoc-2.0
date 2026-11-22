@@ -1,0 +1,88 @@
+{
+  "phase": 31,
+  "input": "research/real_image/results/ASK033/refined_candidates.csv",
+  "total_candidates": 406,
+  "sections": {
+    "R1C1": {
+      "count": 35,
+      "x_min": 275.544,
+      "x_max": 630.625,
+      "y_min": 146.668,
+      "y_max": 465.574,
+      "median_snr": 7.767,
+      "coordinate_mode": "ambiguous"
+    },
+    "R1C2": {
+      "count": 89,
+      "x_min": 652.625,
+      "x_max": 1265.752,
+      "y_min": 86.579,
+      "y_max": 478.485,
+      "median_snr": 8.098,
+      "coordinate_mode": "global"
+    },
+    "R1C3": {
+      "count": 18,
+      "x_min": 1289.136,
+      "x_max": 1688.162,
+      "y_min": 149.729,
+      "y_max": 436.048,
+      "median_snr": 7.6215,
+      "coordinate_mode": "global"
+    },
+    "R2C1": {
+      "count": 65,
+      "x_min": 118.844,
+      "x_max": 636.939,
+      "y_min": 492.621,
+      "y_max": 953.852,
+      "median_snr": 8.285,
+      "coordinate_mode": "global"
+    },
+    "R2C2": {
+      "count": 89,
+      "x_min": 642.98,
+      "x_max": 1269.591,
+      "y_min": 484.92,
+      "y_max": 958.675,
+      "median_snr": 10.152,
+      "coordinate_mode": "global"
+    },
+    "R2C3": {
+      "count": 1,
+      "x_min": 1765.708,
+      "x_max": 1765.708,
+      "y_min": 484.433,
+      "y_max": 484.433,
+      "median_snr": 12.347,
+      "coordinate_mode": "global"
+    },
+    "R3C1": {
+      "count": 50,
+      "x_min": 232.162,
+      "x_max": 638.93,
+      "y_min": 961.052,
+      "y_max": 1236.865,
+      "median_snr": 7.423,
+      "coordinate_mode": "global"
+    },
+    "R3C2": {
+      "count": 51,
+      "x_min": 641.57,
+      "x_max": 1265.983,
+      "y_min": 965.341,
+      "y_max": 1342.701,
+      "median_snr": 11.23,
+      "coordinate_mode": "global"
+    },
+    "R3C3": {
+      "count": 8,
+      "x_min": 1286.815,
+      "x_max": 1630.66,
+      "y_min": 984.757,
+      "y_max": 1230.486,
+      "median_snr": 6.073,
+      "coordinate_mode": "global"
+    }
+  }
+}

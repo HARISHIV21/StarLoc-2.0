@@ -1,0 +1,178 @@
+{
+  "phase": 59,
+  "title": "StarLoc 2.0 \u2014 Final Real-Camera Validation Summary",
+  "generated": "2026-11-20",
+  "camera": "ASK033 public AllSkyKamera image",
+  "image_dimensions": [
+    1920,
+    1440
+  ],
+  "real_image_validation": {
+    "solved_sections": 5,
+    "sections": [
+      "R1C2",
+      "R2C1",
+      "R2C2",
+      "R3C1",
+      "R3C2"
+    ],
+    "phase37_provisional_correspondences": 233,
+    "phase56_strict_correspondences": 74,
+    "strict_filter": "Local WCS-to-candidate residual <= 1.0 pixel"
+  },
+  "phase38_global_model": {
+    "model": "Equidistant fisheye with k1 and k2 radial terms",
+    "test_count": 47,
+    "test_median_error_px": 0.6084906499370504,
+    "test_rmse_px": 0.9863467398848935,
+    "parameters": {
+      "optical_centre_x_px": 940.8792956389896,
+      "optical_centre_y_px": 755.5388124993078,
+      "focal_scale_px_per_rad": 822.9708649090667,
+      "radial_k1": -0.03333727005625633,
+      "radial_k2": 0.0008981455512420184,
+      "optical_axis_ra_deg": 2.127537171487967,
+      "optical_axis_dec_deg": 50.34240609070423,
+      "rotation_matrix_world_to_camera": [
+        [
+          0.7571113563263575,
+          -0.20301852636807335,
+          -0.6209395075794417
+        ],
+        [
+          0.14158671302936818,
+          0.9788882188261971,
+          -0.14741457776222447
+        ],
+        [
+          0.637758258915714,
+          0.023692467043587462,
+          0.7698721128799157
+        ]
+      ]
+    }
+  },
+  "phase56_strict_model": {
+    "test_count": 15,
+    "test_median_error_px": 0.7969571334929929,
+    "test_rmse_px": 0.9381143278333259,
+    "parameters": {
+      "optical_centre_x_px": 941.0883664946765,
+      "optical_centre_y_px": 755.9871390021009,
+      "focal_scale_px_per_rad": 823.0071766873924,
+      "radial_k1": -0.03258448886194691,
+      "radial_k2": -0.0012072371451769682,
+      "optical_axis_ra_deg": 2.181836661798281,
+      "optical_axis_dec_deg": 50.30771236465781
+    }
+  },
+  "phase57_leave_one_section_out": {
+    "count": 11,
+    "median_error_px": 1.4367972756796634,
+    "mean_error_px": 1.582871879895649,
+    "rmse_px": 1.7407001754921132,
+    "p90_error_px": 2.4618436863471453,
+    "maximum_error_px": 3.219207399025853,
+    "within_1px": 2,
+    "within_2px": 9,
+    "within_3px": 10,
+    "within_5px": 11
+  },
+  "phase58_section_diagnostics": {
+    "R1C2": {
+      "count": 11,
+      "mean_dx_px": -1.2066416258631472,
+      "mean_dy_px": -0.38894547156514325,
+      "median_dx_px": -1.2462206770867397,
+      "median_dy_px": -0.41884854805226723,
+      "median_error_px": 1.4367972756796634,
+      "rmse_px": 1.7407001754921132,
+      "p90_px": 2.4618436863471453,
+      "max_px": 3.219207399025853,
+      "within_1px": 2,
+      "within_2px": 9,
+      "within_3px": 10,
+      "within_5px": 11
+    },
+    "R2C1": {
+      "count": 4,
+      "mean_dx_px": 0.2111098644252536,
+      "mean_dy_px": 0.013791389549481892,
+      "median_dx_px": 0.2406278985474728,
+      "median_dy_px": -0.2881120025278392,
+      "median_error_px": 0.5063599757742905,
+      "rmse_px": 0.7184767205973447,
+      "p90_px": 0.9780835074845536,
+      "max_px": 1.1698830679262744,
+      "within_1px": 3,
+      "within_2px": 4,
+      "within_3px": 4,
+      "within_5px": 4
+    },
+    "R2C2": {
+      "count": 14,
+      "mean_dx_px": -0.5309580614490658,
+      "mean_dy_px": 0.09732140631664217,
+      "median_dx_px": -0.43646779549993653,
+      "median_dy_px": -0.5484518321744076,
+      "median_error_px": 0.8271028784050886,
+      "rmse_px": 1.8759891267936024,
+      "p90_px": 1.2180953703839348,
+      "max_px": 6.371592070566025,
+      "within_1px": 11,
+      "within_2px": 13,
+      "within_3px": 13,
+      "within_5px": 13
+    },
+    "R3C1": {
+      "count": 24,
+      "mean_dx_px": -1.4412752176395192,
+      "mean_dy_px": 0.2855352716188359,
+      "median_dx_px": 0.27475231203862904,
+      "median_dy_px": -0.2750519104552609,
+      "median_error_px": 1.3415077644432936,
+      "rmse_px": 3.460383128458788,
+      "p90_px": 6.423831612140916,
+      "max_px": 8.278042582015043,
+      "within_1px": 8,
+      "within_2px": 15,
+      "within_3px": 17,
+      "within_5px": 20
+    },
+    "R3C2": {
+      "count": 21,
+      "mean_dx_px": -0.041839223712242656,
+      "mean_dy_px": 0.6891309302747166,
+      "median_dx_px": -0.13228726374256894,
+      "median_dy_px": 0.7883980879964838,
+      "median_error_px": 0.9344373246362733,
+      "rmse_px": 1.1515685211697857,
+      "p90_px": 1.8320187862808002,
+      "max_px": 2.0131351885357245,
+      "within_1px": 11,
+      "within_2px": 20,
+      "within_3px": 21,
+      "within_5px": 21
+    }
+  },
+  "scientific_conclusion": [
+    "The synthetic fisheye pipeline demonstrated controlled calibration performance.",
+    "Five real-image sections produced local astrometric solutions.",
+    "The real-image global fisheye model is exploratory.",
+    "Random held-out validation and leave-one-section-out validation give different results.",
+    "Cross-section generalisation is not uniform.",
+    "R3C1 has the largest section-level prediction error.",
+    "R2C2 contains outliers that materially affect RMSE.",
+    "The strict subset improves correspondence quality but does not establish independent accuracy.",
+    "The local WCS-derived catalogue correspondences are not independent ground truth.",
+    "A separate camera image or independently verified astrometric reference is required for stronger validation."
+  ],
+  "limitations": [
+    "Only one public camera image was used for this real-image investigation.",
+    "Camera site and timestamp assumptions require independent verification.",
+    "The five local WCS solutions are not independent camera calibration ground truth.",
+    "The four excluded R2C2 associations remain unresolved.",
+    "The small R2C1 leave-one-section-out test set contains only four points.",
+    "No production-grade global calibration claim is made."
+  ]
+}

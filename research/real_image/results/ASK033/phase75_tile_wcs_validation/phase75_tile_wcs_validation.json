@@ -1,0 +1,324 @@
+{
+  "phase": 75,
+  "purpose": "Read-only validation of Phase 74 candidate tile solutions",
+  "frames": {
+    "primary": {
+      "candidate_tiles": 9,
+      "reported_provisional_solves": 2
+    },
+    "backup": {
+      "candidate_tiles": 9,
+      "reported_provisional_solves": 3
+    }
+  },
+  "records": [
+    {
+      "frame": "primary",
+      "tile": {
+        "tile": "tile_01",
+        "x": 0,
+        "y": 0,
+        "exit_code": 0,
+        "solved_marker": false,
+        "wcs_file": false,
+        "provisional_solve": false
+      },
+      "tile_directory": "research/real_image/results/ASK033/phase74_overlapping_tile_solves",
+      "solved_marker": false,
+      "wcs_files": [],
+      "axy_files": [],
+      "wcs_header": null
+    },
+    {
+      "frame": "primary",
+      "tile": {
+        "tile": "tile_02",
+        "x": 576,
+        "y": 0,
+        "exit_code": 0,
+        "solved_marker": false,
+        "wcs_file": false,
+        "provisional_solve": false
+      },
+      "tile_directory": "research/real_image/results/ASK033/phase74_overlapping_tile_solves",
+      "solved_marker": false,
+      "wcs_files": [],
+      "axy_files": [],
+      "wcs_header": null
+    },
+    {
+      "frame": "primary",
+      "tile": {
+        "tile": "tile_03",
+        "x": 1152,
+        "y": 0,
+        "exit_code": 0,
+        "solved_marker": false,
+        "wcs_file": false,
+        "provisional_solve": false
+      },
+      "tile_directory": "research/real_image/results/ASK033/phase74_overlapping_tile_solves",
+      "solved_marker": false,
+      "wcs_files": [],
+      "axy_files": [],
+      "wcs_header": null
+    },
+    {
+      "frame": "primary",
+      "tile": {
+        "tile": "tile_04",
+        "x": 0,
+        "y": 432,
+        "exit_code": 0,
+        "solved_marker": false,
+        "wcs_file": false,
+        "provisional_solve": false
+      },
+      "tile_directory": "research/real_image/results/ASK033/phase74_overlapping_tile_solves",
+      "solved_marker": false,
+      "wcs_files": [],
+      "axy_files": [],
+      "wcs_header": null
+    },
+    {
+      "frame": "primary",
+      "tile": {
+        "tile": "tile_05",
+        "x": 576,
+        "y": 432,
+        "exit_code": 0,
+        "solved_marker": true,
+        "wcs_file": true,
+        "provisional_solve": true
+      },
+      "tile_directory": "research/real_image/results/ASK033/phase74_overlapping_tile_solves",
+      "solved_marker": false,
+      "wcs_files": [],
+      "axy_files": [],
+      "wcs_header": null
+    },
+    {
+      "frame": "primary",
+      "tile": {
+        "tile": "tile_06",
+        "x": 1152,
+        "y": 432,
+        "exit_code": 0,
+        "solved_marker": false,
+        "wcs_file": false,
+        "provisional_solve": false
+      },
+      "tile_directory": "research/real_image/results/ASK033/phase74_overlapping_tile_solves",
+      "solved_marker": false,
+      "wcs_files": [],
+      "axy_files": [],
+      "wcs_header": null
+    },
+    {
+      "frame": "primary",
+      "tile": {
+        "tile": "tile_07",
+        "x": 0,
+        "y": 864,
+        "exit_code": 0,
+        "solved_marker": false,
+        "wcs_file": false,
+        "provisional_solve": false
+      },
+      "tile_directory": "research/real_image/results/ASK033/phase74_overlapping_tile_solves",
+      "solved_marker": false,
+      "wcs_files": [],
+      "axy_files": [],
+      "wcs_header": null
+    },
+    {
+      "frame": "primary",
+      "tile": {
+        "tile": "tile_08",
+        "x": 576,
+        "y": 864,
+        "exit_code": 0,
+        "solved_marker": true,
+        "wcs_file": true,
+        "provisional_solve": true
+      },
+      "tile_directory": "research/real_image/results/ASK033/phase74_overlapping_tile_solves",
+      "solved_marker": false,
+      "wcs_files": [],
+      "axy_files": [],
+      "wcs_header": null
+    },
+    {
+      "frame": "primary",
+      "tile": {
+        "tile": "tile_09",
+        "x": 1152,
+        "y": 864,
+        "exit_code": 0,
+        "solved_marker": false,
+        "wcs_file": false,
+        "provisional_solve": false
+      },
+      "tile_directory": "research/real_image/results/ASK033/phase74_overlapping_tile_solves",
+      "solved_marker": false,
+      "wcs_files": [],
+      "axy_files": [],
+      "wcs_header": null
+    },
+    {
+      "frame": "backup",
+      "tile": {
+        "tile": "tile_01",
+        "x": 0,
+        "y": 0,
+        "exit_code": 0,
+        "solved_marker": false,
+        "wcs_file": false,
+        "provisional_solve": false
+      },
+      "tile_directory": "research/real_image/results/ASK033/phase74_overlapping_tile_solves",
+      "solved_marker": false,
+      "wcs_files": [],
+      "axy_files": [],
+      "wcs_header": null
+    },
+    {
+      "frame": "backup",
+      "tile": {
+        "tile": "tile_02",
+        "x": 576,
+        "y": 0,
+        "exit_code": 0,
+        "solved_marker": true,
+        "wcs_file": true,
+        "provisional_solve": true
+      },
+      "tile_directory": "research/real_image/results/ASK033/phase74_overlapping_tile_solves",
+      "solved_marker": false,
+      "wcs_files": [],
+      "axy_files": [],
+      "wcs_header": null
+    },
+    {
+      "frame": "backup",
+      "tile": {
+        "tile": "tile_03",
+        "x": 1152,
+        "y": 0,
+        "exit_code": 0,
+        "solved_marker": false,
+        "wcs_file": false,
+        "provisional_solve": false
+      },
+      "tile_directory": "research/real_image/results/ASK033/phase74_overlapping_tile_solves",
+      "solved_marker": false,
+      "wcs_files": [],
+      "axy_files": [],
+      "wcs_header": null
+    },
+    {
+      "frame": "backup",
+      "tile": {
+        "tile": "tile_04",
+        "x": 0,
+        "y": 432,
+        "exit_code": 0,
+        "solved_marker": false,
+        "wcs_file": false,
+        "provisional_solve": false
+      },
+      "tile_directory": "research/real_image/results/ASK033/phase74_overlapping_tile_solves",
+      "solved_marker": false,
+      "wcs_files": [],
+      "axy_files": [],
+      "wcs_header": null
+    },
+    {
+      "frame": "backup",
+      "tile": {
+        "tile": "tile_05",
+        "x": 576,
+        "y": 432,
+        "exit_code": 0,
+        "solved_marker": true,
+        "wcs_file": true,
+        "provisional_solve": true
+      },
+      "tile_directory": "research/real_image/results/ASK033/phase74_overlapping_tile_solves",
+      "solved_marker": false,
+      "wcs_files": [],
+      "axy_files": [],
+      "wcs_header": null
+    },
+    {
+      "frame": "backup",
+      "tile": {
+        "tile": "tile_06",
+        "x": 1152,
+        "y": 432,
+        "exit_code": 0,
+        "solved_marker": false,
+        "wcs_file": false,
+        "provisional_solve": false
+      },
+      "tile_directory": "research/real_image/results/ASK033/phase74_overlapping_tile_solves",
+      "solved_marker": false,
+      "wcs_files": [],
+      "axy_files": [],
+      "wcs_header": null
+    },
+    {
+      "frame": "backup",
+      "tile": {
+        "tile": "tile_07",
+        "x": 0,
+        "y": 864,
+        "exit_code": 0,
+        "solved_marker": false,
+        "wcs_file": false,
+        "provisional_solve": false
+      },
+      "tile_directory": "research/real_image/results/ASK033/phase74_overlapping_tile_solves",
+      "solved_marker": false,
+      "wcs_files": [],
+      "axy_files": [],
+      "wcs_header": null
+    },
+    {
+      "frame": "backup",
+      "tile": {
+        "tile": "tile_08",
+        "x": 576,
+        "y": 864,
+        "exit_code": 0,
+        "solved_marker": true,
+        "wcs_file": true,
+        "provisional_solve": true
+      },
+      "tile_directory": "research/real_image/results/ASK033/phase74_overlapping_tile_solves",
+      "solved_marker": false,
+      "wcs_files": [],
+      "axy_files": [],
+      "wcs_header": null
+    },
+    {
+      "frame": "backup",
+      "tile": {
+        "tile": "tile_09",
+        "x": 1152,
+        "y": 864,
+        "exit_code": 0,
+        "solved_marker": false,
+        "wcs_file": false,
+        "provisional_solve": false
+      },
+      "tile_directory": "research/real_image/results/ASK033/phase74_overlapping_tile_solves",
+      "solved_marker": false,
+      "wcs_files": [],
+      "axy_files": [],
+      "wcs_header": null
+    }
+  ],
+  "validated_wcs_count": 0,
+  "solved_marker_count": 0
+}

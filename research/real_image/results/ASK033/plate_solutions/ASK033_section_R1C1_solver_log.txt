@@ -1,0 +1,13 @@
+Reading input file 1 of 1: "/Users/harish/Documents/StarLoc-2.0/research/real_image/results/ASK033/ASK033_section_R1C1.jpg"...
+Running command: /opt/homebrew/bin/image2pnm --infile /Users/harish/Documents/StarLoc-2.0/research/real_image/results/ASK033/ASK033_section_R1C1.jpg --uncompressed-outfile /tmp/tmp.uncompressed.4gRWgV --outfile /tmp/tmp.ppm.os5RCo --ppm --mydir /opt/homebrew/bin/solve-field
+
+llar/astrometry-net/0.97_1/libexec/lib/python3.15/site-packages/astrometry/util/filetype.py", line 60, in filetype_short
+    ft = filetype(fn)
+  File "/opt/homebrew/Cellar/astrometry-net/0.97_1/libexec/lib/python3.15/site-packages/astrometry/util/filetype.py", line 27, in filetype
+    (rtn,out,err) = run_command(cmd)
+                    ~~~~~~~~~~~^^^^^
+  File "/opt/homebrew/Cellar/astrometry-net/0.97_1/libexec/lib/python3.15/site-packages/astrometry/util/run_command.py", line 68, in run_command
+    out = out.decode()
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xad in position 236: invalid start byte
+augment-xylist.c:591:backtick Failed to run command: /opt/homebrew/bin/image2pnm --infile /Users/harish/Documents/StarLoc-2.0/research/real_image/results/ASK033/ASK033_section_R1C1.jpg --uncompressed-outfile /tmp/tmp.uncompressed.4gRWgV --outfile /tmp/tmp.ppm.os5RCo --ppm --mydir /opt/homebrew/bin/solve-field
+ ioutils.c:568:run_command_get_outputs Command failed: return value 255

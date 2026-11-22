@@ -1,0 +1,60 @@
+{
+  "phase": "138_rotation_trend_robustness",
+  "pairs": 12,
+  "ordinary_slope_deg_per_pair": 0.0008024379194952268,
+  "theil_sen_slope_deg_per_pair": -5.24023510454876e-05,
+  "theil_sen_total_change_deg": -0.0005764258615003635,
+  "leave_one_out_slope_min": -0.0004513366472463984,
+  "leave_one_out_slope_max": 0.0015557560521989502,
+  "leave_one_out_slopes": [
+    {
+      "omitted_pair": "518->519",
+      "slope_deg_per_pair": 0.001343377413655547
+    },
+    {
+      "omitted_pair": "519->520",
+      "slope_deg_per_pair": 0.0015557560521989502
+    },
+    {
+      "omitted_pair": "520->521",
+      "slope_deg_per_pair": -0.0004513366472463984
+    },
+    {
+      "omitted_pair": "521->522",
+      "slope_deg_per_pair": 0.0010453428481444176
+    },
+    {
+      "omitted_pair": "522->523",
+      "slope_deg_per_pair": 0.0005425576157600901
+    },
+    {
+      "omitted_pair": "523->524",
+      "slope_deg_per_pair": 0.0008216222413478337
+    },
+    {
+      "omitted_pair": "524->525",
+      "slope_deg_per_pair": 0.0007033696854950002
+    },
+    {
+      "omitted_pair": "525->526",
+      "slope_deg_per_pair": 0.0010092690254282282
+    },
+    {
+      "omitted_pair": "526->527",
+      "slope_deg_per_pair": 0.0004978117807817719
+    },
+    {
+      "omitted_pair": "527->528",
+      "slope_deg_per_pair": 0.0005742429853983363
+    },
+    {
+      "omitted_pair": "528->529",
+      "slope_deg_per_pair": 0.0008877844938375782
+    },
+    {
+      "omitted_pair": "529->530",
+      "slope_deg_per_pair": 0.001334022906635611
+    }
+  ],
+  "interpretation": "If robust and leave-one-out slopes remain small, the weak temporal trend is not driven by a single pair. This remains a descriptive analysis of image-plane estimates, not physical camera motion."
+}

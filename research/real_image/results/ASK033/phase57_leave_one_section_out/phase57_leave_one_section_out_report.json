@@ -1,0 +1,219 @@
+{
+  "phase": 57,
+  "title": "Leave-one-section-out global fisheye validation",
+  "selection": "local_wcs_candidate_error_px <= 1.0",
+  "total_strict_points": 74,
+  "folds": [
+    {
+      "held_out_section": "R1C2",
+      "training_sections": [
+        "R2C1",
+        "R2C2",
+        "R3C1",
+        "R3C2"
+      ],
+      "training": {
+        "count": 63,
+        "median_px": 0.5675051573856629,
+        "mean_px": 0.6998691117624358,
+        "rmse_px": 1.0308228145582095,
+        "p90_px": 1.246341628028419,
+        "max_px": 5.891021791918694,
+        "within_1px": 50,
+        "within_2px": 62,
+        "within_3px": 62,
+        "within_5px": 62
+      },
+      "held_out": {
+        "count": 11,
+        "median_px": 1.4367972756796634,
+        "mean_px": 1.582871879895649,
+        "rmse_px": 1.7407001754921132,
+        "p90_px": 2.4618436863471453,
+        "max_px": 3.219207399025853,
+        "within_1px": 2,
+        "within_2px": 9,
+        "within_3px": 10,
+        "within_5px": 11
+      },
+      "optimizer_success": true,
+      "parameters": {
+        "optical_centre_x_px": 935.9931226275187,
+        "optical_centre_y_px": 755.7130724300478,
+        "focal_scale_px_per_rad": 823.8926905027226,
+        "radial_k1": -0.03611903585562274,
+        "radial_k2": 0.0011671880019846774
+      }
+    },
+    {
+      "held_out_section": "R2C1",
+      "training_sections": [
+        "R1C2",
+        "R2C2",
+        "R3C1",
+        "R3C2"
+      ],
+      "training": {
+        "count": 70,
+        "median_px": 0.5647863403644309,
+        "mean_px": 0.7266322363219545,
+        "rmse_px": 1.0566719504550952,
+        "p90_px": 1.3537156425920236,
+        "max_px": 6.1990630164718805,
+        "within_1px": 58,
+        "within_2px": 69,
+        "within_3px": 69,
+        "within_5px": 69
+      },
+      "held_out": {
+        "count": 4,
+        "median_px": 0.5063599757742905,
+        "mean_px": 0.6523739712891294,
+        "rmse_px": 0.7184767205973447,
+        "p90_px": 0.9780835074845536,
+        "max_px": 1.1698830679262744,
+        "within_1px": 3,
+        "within_2px": 4,
+        "within_3px": 4,
+        "within_5px": 4
+      },
+      "optimizer_success": true,
+      "parameters": {
+        "optical_centre_x_px": 942.5018223017552,
+        "optical_centre_y_px": 755.4296930910732,
+        "focal_scale_px_per_rad": 822.2368818768264,
+        "radial_k1": -0.030151833597655678,
+        "radial_k2": -0.002698375812121313
+      }
+    },
+    {
+      "held_out_section": "R2C2",
+      "training_sections": [
+        "R1C2",
+        "R2C1",
+        "R3C1",
+        "R3C2"
+      ],
+      "training": {
+        "count": 60,
+        "median_px": 0.47484661759388813,
+        "mean_px": 0.6298800379531698,
+        "rmse_px": 0.7571655988437492,
+        "p90_px": 1.2527350253950997,
+        "max_px": 1.919985828056985,
+        "within_1px": 50,
+        "within_2px": 60,
+        "within_3px": 60,
+        "within_5px": 60
+      },
+      "held_out": {
+        "count": 14,
+        "median_px": 0.8271028784050886,
+        "mean_px": 1.1645275928212235,
+        "rmse_px": 1.8759891267936024,
+        "p90_px": 1.2180953703839348,
+        "max_px": 6.371592070566025,
+        "within_1px": 11,
+        "within_2px": 13,
+        "within_3px": 13,
+        "within_5px": 13
+      },
+      "optimizer_success": true,
+      "parameters": {
+        "optical_centre_x_px": 945.0655922286992,
+        "optical_centre_y_px": 754.6100578929545,
+        "focal_scale_px_per_rad": 821.4027475598035,
+        "radial_k1": -0.027142843980180246,
+        "radial_k2": -0.005142645144462335
+      }
+    },
+    {
+      "held_out_section": "R3C1",
+      "training_sections": [
+        "R1C2",
+        "R2C1",
+        "R2C2",
+        "R3C2"
+      ],
+      "training": {
+        "count": 50,
+        "median_px": 0.615966208093112,
+        "mean_px": 0.7625453949724293,
+        "rmse_px": 1.09227470249248,
+        "p90_px": 1.290214747347554,
+        "max_px": 5.5616968150926525,
+        "within_1px": 39,
+        "within_2px": 49,
+        "within_3px": 49,
+        "within_5px": 49
+      },
+      "held_out": {
+        "count": 24,
+        "median_px": 1.3415077644432936,
+        "mean_px": 2.4977539137482303,
+        "rmse_px": 3.460383128458788,
+        "p90_px": 6.423831612140916,
+        "max_px": 8.278042582015043,
+        "within_1px": 8,
+        "within_2px": 15,
+        "within_3px": 17,
+        "within_5px": 20
+      },
+      "optimizer_success": true,
+      "parameters": {
+        "optical_centre_x_px": 939.0543137384409,
+        "optical_centre_y_px": 754.5730699361667,
+        "focal_scale_px_per_rad": 827.2797632160969,
+        "radial_k1": -0.06614127713434922,
+        "radial_k2": 0.043889316535911105
+      }
+    },
+    {
+      "held_out_section": "R3C2",
+      "training_sections": [
+        "R1C2",
+        "R2C1",
+        "R2C2",
+        "R3C1"
+      ],
+      "training": {
+        "count": 53,
+        "median_px": 0.4895449684717474,
+        "mean_px": 0.6750570732788732,
+        "rmse_px": 1.0634284515177468,
+        "p90_px": 1.0234234689243804,
+        "max_px": 6.136046799531394,
+        "within_1px": 47,
+        "within_2px": 52,
+        "within_3px": 52,
+        "within_5px": 52
+      },
+      "held_out": {
+        "count": 21,
+        "median_px": 0.9344373246362733,
+        "mean_px": 1.0308655615937639,
+        "rmse_px": 1.1515685211697857,
+        "p90_px": 1.8320187862808002,
+        "max_px": 2.0131351885357245,
+        "within_1px": 11,
+        "within_2px": 20,
+        "within_3px": 21,
+        "within_5px": 21
+      },
+      "optimizer_success": true,
+      "parameters": {
+        "optical_centre_x_px": 941.0199723541556,
+        "optical_centre_y_px": 755.9340474037668,
+        "focal_scale_px_per_rad": 822.891581257685,
+        "radial_k1": -0.029493593228556925,
+        "radial_k2": -0.004699278837900238
+      }
+    }
+  ],
+  "limitations": [
+    "Calibration correspondences were selected using local-WCS residuals.",
+    "Local WCS associations are not independent ground truth.",
+    "All sections originate from one image and one camera.",
+    "R2C1 has only four strict points, so its fold is weakly supported."
+  ]
+}
