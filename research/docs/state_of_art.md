@@ -1,73 +1,85 @@
-# State of the Art — StarLoc 2.0
+# Technical Background & Research Context — StarLoc 2.0
 
-## 1. Project context
+## 1. Application context
 
-StarLoc 2.0 investigates automatic optical calibration of an all-sky camera using stellar observations. The intended application is the AllSkyKamera Network, where camera orientation and geometric properties should be estimated from night-sky images rather than relying exclusively on potentially inaccurate camera configuration.
+StarLoc 2.0 addresses optical calibration of wide-field all-sky cameras using stellar observations. Its primary R&D context is the AllSkyKamera Network: recover camera orientation and pixel-to-sky geometry from observations rather than relying exclusively on nominal installation parameters.
 
-The project focuses on detecting stars, identifying them in an astronomical catalogue, associating celestial coordinates with image pixels and estimating the camera's optical model.
+The project also studies engineering concepts that transfer to optical attitude sensing: stellar feature extraction, catalogue association, geometric calibration, multi-region consistency and measurement-quality assessment.
 
-## 2. Stellar catalogues and astrometry
+## 2. Astronomical reference data
 
-An astronomical star catalogue provides reference positions for identifiable stars. The Hipparcos catalogue is used in this project as the reference source. Its right ascension, declination, visual magnitude and proper-motion information support the construction of a time-dependent reference sky.
+A star catalogue provides reference celestial positions and associated metadata. StarLoc uses Hipparcos-derived data in its research workflow. Catalogue epoch and proper-motion information matter when comparing catalogue coordinates with observations taken at a later epoch.
 
-The catalogue positions must be interpreted at the observation epoch. Proper motion is relevant because stellar coordinates change over time. The project propagates catalogue positions to the selected observation date before generating the local visible-sky catalogue.
+The observation time, observer location and coordinate-frame conventions are required to transform celestial positions into the local sky geometry relevant to a camera.
 
-## 3. Celestial coordinate systems
+## 3. Coordinate transformations
 
-The project uses celestial coordinates and local horizontal coordinates.
+The research involves relationships between:
+- Equatorial coordinates (right ascension and declination).
+- Local horizontal coordinates (altitude and azimuth).
+- Camera/image coordinates (pixel positions).
+- Future aerospace body and navigation frames.
 
-- Right ascension and declination describe stellar positions in an equatorial reference frame.
-- Altitude and azimuth describe the apparent direction of a star relative to an observer.
-- Observation time and geographic location are required to relate these coordinate systems.
+The transformation chain must record epoch, time scale, observer location, axis direction, handedness and rotation convention. A temporary Rouen test location used in synthetic experiments is not a confirmed camera installation location.
 
-The current demonstration uses a temporary Rouen test location. This is not a confirmed AllSkyKamera installation location.
+## 4. Stellar image processing
 
-## 4. Star detection
+The current research prototype uses thresholding and connected-component analysis to detect compact bright candidates, followed by intensity-weighted centroid estimation. The resulting sub-pixel image locations are used as measurements for catalogue association and geometric calibration.
 
-Star detection identifies bright compact sources in an image. The project uses image thresholding and connected-component analysis, followed by intensity-weighted centroid estimation.
+Detection quality is affected by background gradients, noise, saturation, overlapping sources, clouds, reflections, moonlight and other image artefacts. Real-image performance must therefore be assessed separately from synthetic tests.
 
-The centroid provides a subpixel estimate of the star's image position. Detection performance is affected by noise, source brightness, overlapping stars, image artefacts and background illumination.
+## 5. Fisheye camera geometry
 
-## 5. Fisheye projection
-
-An all-sky camera requires a wide-angle projection model. The current research implementation uses an equidistant fisheye model:
+A wide-field all-sky camera requires a projection model that maps angular directions to image radii. The current baseline is equidistant:
 
     r = f × θ
 
-where r is the radial image distance from the optical centre, f is the focal scale in pixels and θ is the incident ray angle.
+where r is radial image distance from the optical centre, f is focal scale and θ is the incident ray angle.
 
-This model is a starting point. A real camera may exhibit additional radial and tangential distortions, lens asymmetry, sensor alignment errors and masking.
+A physical lens may require additional radial and tangential distortion terms, non-central effects, masking and asymmetric calibration. The equidistant model is a starting point rather than a universal lens model.
 
-## 6. Astrometric identification and calibration
+## 6. Catalogue identification and astrometric solving
 
-Once image stars are detected, their pixel coordinates can be associated with catalogue positions. Each identified star provides a correspondence between a known celestial direction and an observed image location.
+Image detections must be associated with reference stars before camera parameters can be estimated. Local astrometric solutions provide a way to investigate image regions independently, while overlapping regions offer constraints for checking consistency and estimating a global transform.
 
-The correspondences can be used to estimate optical parameters, including:
-- Optical centre.
-- Focal scale.
-- Effective field of view.
-- Camera rotation or roll under the current pointing assumptions.
+The StarLoc real-image investigation uses local WCS solutions on ASK033 image sections. A local WCS residual is useful evidence, but agreement with that WCS does not independently certify the identity of a matched catalogue star.
 
-Reprojection residuals quantify the difference between observed and model-predicted pixel coordinates.
+## 7. Multi-section calibration as the central research challenge
 
-## 7. Multi-section calibration
+A full all-sky image may have non-uniform source density, optical distortion and varying local image quality. Dividing an image into overlapping sections can help obtain local solutions. However, the resulting estimates may differ because of sparse matches, false associations, local distortion and model mismatch.
 
-A full 180-degree fisheye image may be difficult to solve as one observation. Dividing the image into overlapping sections can provide local star correspondences. Section-level solutions can then be compared and combined.
+The core global-calibration challenge is to:
+- Assess the reliability of each local solution.
+- Preserve association provenance and uncertainty.
+- Reject or down-weight inconsistent correspondences.
+- Reconcile overlapping section transforms.
+- Validate the global model on sections and images not used for fitting.
 
-The current synthetic experiments fit four overlapping image sections and compare their estimated parameters. A real camera implementation must additionally address lens distortion, section overlap, edge effects, star association errors and consistency of the global solution.
+The current ASK033 investigation exposed section-dependent residuals and therefore motivates further independent validation.
 
-## 8. Existing tools and related approaches
+## 8. Related tools used in the research
 
-Astrometry.net is a relevant reference approach for astronomical source identification and astrometric solving. The project investigates a complementary workflow tailored to the AllSkyKamera objective, especially the combination of solutions from multiple image sections.
+- **Astropy:** astronomical coordinate and time-related processing.
+- **NumPy / SciPy:** numerical computation and optimisation.
+- **OpenCV:** image processing and candidate detection.
+- **Astrometry.net:** relevant external reference approach for source identification and astrometric solving.
 
-Astropy is used for astronomical coordinate calculations and catalogue processing. NumPy and SciPy support numerical processing and parameter estimation. OpenCV supports image processing and star detection.
+This project does not claim to replace these tools. It investigates a workflow tailored to all-sky multi-section calibration and the integration of local evidence into a camera-level model.
 
-## 9. Current limitations
+## 9. Transfer to embedded aerospace and autonomous sensing
 
-The current results are based on synthetic fisheye observations generated from real Hipparcos catalogue data. They do not yet establish performance on a real AllSkyKamera exposure.
+The transferable engineering elements are:
+- Camera calibration and coordinate transforms.
+- Stellar feature and catalogue association.
+- Geometric estimation and outlier rejection.
+- Timestamped measurement generation.
+- Residual and quality monitoring.
+- A future C++ implementation with bounded resource use.
 
-The present calibration model assumes a zenith-pointed camera with an unknown roll. Arbitrary camera pointing, unknown geographic position, full distortion modelling and real-image validation remain future work.
+An aerospace optical attitude sensor requires additional camera-to-body calibration, attitude solution, timing, fault handling and verification. Camera/IMU fusion is a separate estimator. Those capabilities are future work, not current claims.
 
-## 10. Conclusion
+## 10. Research gap and conclusion
 
-The research establishes a reproducible simulation pipeline from catalogue preparation to star detection, blind matching, optical parameter estimation and multi-section validation. The next essential validation step is to apply the pipeline to an actual AllSkyKamera night-sky image with known observation time and approximate installation location.
+The key gap is not basic star detection alone. It is independent real-camera validation and robust reconciliation of local astrometric solutions into a globally consistent calibration over multiple image regions and observations.
+
+The next research phase should prioritise independent reference data, complete-section and complete-image holdouts, temporal repeatability, uncertainty estimation and a reproducible global calibration pipeline. Only after the optical measurement is validated should the project progress to embedded C++ deployment and aerospace estimator integration.
