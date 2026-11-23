@@ -1,147 +1,81 @@
-# StarLoc 2.0 — System Architecture & Interface Definition
+# StarLoc 2.0 — System Architecture
+## Architecture aligned with the professor's four core objectives
 
-## 1. System purpose
+## 1. System boundary
 
-StarLoc 2.0 investigates a server-side calibration pipeline for the AllSkyKamera Network. Given a night-sky image and observation metadata, the intended system estimates camera geometry and orientation from stellar observations, reconciles solutions across overlapping image regions and produces a traceable pixel-to-celestial calibration.
+The current system is a Python R&D prototype for optical calibration of an all-sky camera. The active real dataset is one public ASK033 still image. Controlled synthetic observations are retained for ground-truth validation.
 
-The architecture also defines how the research core could later be separated into portable algorithm modules for embedded optical sensing and aerospace/autonomous applications.
+Unknown observer-position estimation, full star-tracker attitude solution, IMU fusion, mobile robotics integration and production server deployment are outside the current scope.
 
-## 2. System boundary
+## 2. Logical architecture
 
-### Current research implementation
-- Python research scripts for catalogue preparation, synthetic image generation, stellar detection, centroiding, matching and optical calibration.
-- Synthetic datasets with known camera parameters.
-- Public ASK033 real-image investigation using local astrometric solutions.
-- Cross-section correspondence classification, residual analysis and integrated evidence outputs.
+    [Real or Synthetic Image + Metadata]
+                    |
+                    v
+             [Input Validation]
+                    |
+                    v
+            [Image Pre-processing]
+                    |
+                    v
+              [Star Detection]
+                    |
+                    v
+          [Sub-pixel Centroiding]
+                    |
+                    +-----------------------+
+                    |                       |
+                    v                       v
+          [Catalogue Preparation]   [Candidate Quality]
+          [Epoch / Site / RA/Dec]            |
+                    |                       |
+                    +-----------+-----------+
+                                |
+                                v
+                     [Star Identification]
+                                |
+                                v
+                      [RA/Dec to Pixel]
+                                |
+                                v
+                      [Optical Calibration]
+                                |
+                                v
+                  [Residuals and Validation]
+                                |
+                                v
+                  [Calibration Result / Demo]
 
-### Target system capabilities still to be completed
-- Robust global multi-section calibration on independently validated real observations.
-- Temporal camera-orientation estimation from image sequences.
-- A deployable server-side service and stable calibration-result interface.
-- C++/embedded implementation and target performance evidence.
-- Camera/IMU fusion for a downstream attitude-estimation application.
+## 3. Functional modules
 
-## 3. Logical architecture
-
-```text
-[Image + Observation Metadata]
-             |
-             v
-[Input Validation / Provenance]
-             |
-             v
-[Image Pre-processing]
-             |
-             v
-[Star Detection] -> [Centroid + Quality]
-             |                 |
-             +--------+--------+
-                      v
-             [Catalogue Preparation]
-             [Epoch / Sky Coordinates]
-                      |
-                      v
-             [Star Correspondence]
-                      |
-                      v
-          [Per-Section Astrometric Solve]
-                      |
-                      v
-        [Association and Residual Quality Audit]
-                      |
-                      v
-         [Global Multi-Section Calibration]
-                      |
-                      v
-          [Temporal / Repeatability Analysis]
-                      |
-                      v
-           [Calibration Result + Diagnostics]
-                      |
-                      v
-             [Server-side Consumer]
-                      |
-              future adapter boundary
-                      v
-          [Embedded / Autonomy Consumer]
-```
-
-The diagram describes the target architecture. The current implementation covers selected components and experimental flows; it is not yet a single operational service implementing every block.
-
-## 4. Functional modules
-
-| Module | Responsibility | Current status |
+| Module | Responsibility | Current implementation |
 |---|---|---|
-| Observation metadata | Timestamp, site, image dimensions and camera context | Inputs documented; real-image metadata needs independent confirmation |
-| Catalogue service | Load catalogue, validate fields and propagate epoch-dependent positions | Research scripts implemented |
-| Image processing | Preprocess, detect stellar candidates and estimate centroids | Implemented experimentally |
-| Association engine | Link detected stars to catalogue objects | Synthetic matching implemented; real-image associations require independent validation |
-| Local astrometric solver | Obtain local image-to-sky solutions | Investigated using cropped ASK033 sections / WCS |
-| Correspondence auditor | Classify strict, uncertain and suspect associations | Implemented in research evidence workflow |
-| Global calibration solver | Reconcile local solutions into a full-image camera model | Exploratory; not yet independently validated |
-| Temporal estimator | Track orientation/calibration behaviour across observations | Future development |
-| Result publisher | Produce versioned calibration, quality metrics and diagnostics | Evidence outputs exist; deployable service/API remains future work |
-| Embedded adapter | Consume bounded calibration/measurement outputs | Future development |
+| Observation input | Load image and metadata | ASK033 acquisition and synthetic generation scripts |
+| Catalogue preparation | Load Hipparcos data and handle epoch | Catalogue download, cleaning and propagation scripts |
+| Sky prediction | Transform catalogue coordinates using time/site | Visible-sky catalogue generation |
+| Image processing | Detect candidates and estimate centroids | Synthetic and real-image detection/refinement scripts |
+| Identification | Match image candidates to catalogue stars | Blind synthetic matching; exploratory ASK033 WCS/catalogue workflow |
+| Coordinate mapping | Convert celestial coordinates to image pixels | Astropy WCS conversion script and section solutions |
+| Optical calibration | Estimate optical centre, scale/FOV and distortion | Synthetic fit and exploratory real-camera model audits |
+| Validation | Report residuals and spatial holdout | Synthetic robustness and ASK033 section validation |
 
-## 5. Input contract — target
+## 4. Coordinate and timing contracts
 
-A production calibration run should identify its input explicitly:
+Before accepting real calibration, record:
+- Celestial reference frame and catalogue epoch.
+- Observation timestamp, time scale and exposure start/midpoint/end convention.
+- Observer latitude, longitude, altitude and provenance.
+- Camera/image coordinate origin and axis directions.
+- FITS one-based versus image zero-based pixel coordinates.
+- Local section coordinates and offsets into the full image.
+- Camera projection model, angular units and transform direction.
 
-| Field | Meaning |
-|---|---|
-| image_id | Stable identifier for the image |
-| image | Image bytes or immutable object reference |
-| observation_time | Timestamp with explicit time scale and timezone/UTC convention |
-| observer_location | Latitude, longitude and altitude, with source/uncertainty |
-| image_geometry | Width, height, orientation and pixel convention |
-| camera_metadata | Camera/lens identifier and any known optical information |
-| initial_pointing | Optional prior orientation and uncertainty |
-| catalogue_version | Reference catalogue and version |
-| processing_config | Algorithm/model version and calibration settings |
+Do not silently substitute a guessed timestamp, location or camera pointing.
 
-The exact production schema is not yet implemented. Missing or uncertain metadata must be represented explicitly rather than silently replaced with assumed values.
+## 5. Current limitations
 
-## 6. Calibration result contract — target
-
-A calibration result should include:
-- Calibration identifier and source image identifiers.
-- Observation time and site metadata used.
-- Camera model name and parameter vector.
-- Pixel-to-celestial and celestial-to-pixel transform conventions.
-- Local section solutions and their quality classifications.
-- Number of accepted, uncertain and rejected correspondences.
-- Residual distribution and validation method.
-- Uncertainty or confidence information.
-- Software version, catalogue version and processing configuration.
-- Warnings and known limitations.
-
-A result must distinguish fitting residuals, random held-out residuals, leave-one-section-out residuals and independent external validation. These metrics are not interchangeable.
-
-## 7. Coordinate and timing conventions to formalise
-
-Before integration, the implementation must explicitly define:
-- Pixel origin, axis directions and pixel-centre convention.
-- Celestial reference frame and equinox/epoch.
-- Horizontal frame conventions where altitude/azimuth are used.
-- Camera frame and optical-axis direction.
-- Camera-to-world and world-to-camera rotation direction.
-- Angle units and handedness.
-- Timestamp source, time scale and conversion rules.
-- Camera-to-body extrinsic transform for any future aerospace integration.
-
-## 8. Non-functional requirements for the target system
-
-- Reproducible results from immutable inputs and versioned configuration.
-- Traceable catalogue and observation metadata.
-- Robust handling of sparse, cloudy, noisy and contaminated images.
-- Explicit quality gates for uncertain or inconsistent local solutions.
-- Bounded resource use for any embedded implementation.
-- Measured execution time and memory on the selected target.
-- Regression tests for algorithm changes.
-- Clear failure states; no silent fallback to unverified calibration.
-
-## 9. Aerospace and autonomous integration boundary
-
-The calibration engine should publish a geometrically defined, timestamped optical measurement with quality information. A downstream attitude estimator may consume this measurement alongside inertial propagation, but the estimator is a separate subsystem with its own state definition, noise model, observability analysis and verification plan.
-
-This separation avoids treating camera calibration as equivalent to a complete star tracker or autonomous navigation system.
+- ASK033 metadata needs timestamp and site verification.
+- Catalogue correspondences from local WCS solutions are not independent identity truth.
+- Global real-camera optical calibration is exploratory and spatial generalisation is non-uniform.
+- Synthetic accuracy does not establish physical-lens accuracy.
+- The current project does not implement unknown-position solving, IMU fusion or a production service.

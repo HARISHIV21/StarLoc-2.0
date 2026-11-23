@@ -1,35 +1,42 @@
-# ASK033 and Real-Image Research
+# ASK033 Real-Image Research — Core Objectives
 
-This folder contains the real-observation acquisition scripts and the associated ASK033/T1 experimental data. It is the historical research workspace, not a single linear production package.
+This directory contains source scripts and evidence for applying the professor's four core StarLoc objectives to the real ASK033 AllSkyKamera still image.
 
-**Start with the repository-level [Real Observations & Experimental Evidence index](../../REAL_OBSERVATIONS.md).**
+Start with:
+- [Real observation evidence index](../../REAL_OBSERVATIONS.md)
+- [Professor objectives and traceability](../../PROFESSOR_OBJECTIVES.md)
+- [Final R&D report](../docs/final_report.md)
+- [Real-camera validation matrix](../docs/real_camera_validation_matrix.md)
 
-## Main contents
+## Active real-image workflow
 
-- `01_...py` onward: acquisition, preprocessing, candidate detection, local astrometry and historical phase scripts.
-- `data/network/ASK033/`: public-camera image and acquisition metadata.
-- `data/astrometry_indexes/`: local astrometry.net index files/configuration.
-- `results/ASK033/`: ASK033 still-image and archive-sequence outputs, phase reports, overlays, CSV measurements and diagnostic images.
-- `user_test/`: separate user-provided T1 image and its detection/ranking outputs.
-- `phase117_dataset_selection/`: later temporal dataset-selection utility.
+1. Acquire and inspect the original ASK033 image and camera metadata.
+2. Detect point-source candidates and refine sub-pixel centroids.
+3. Build a visible Hipparcos catalogue using the recorded observation epoch and approximate site.
+4. Match image candidates with catalogue stars and assess identity quality.
+5. Obtain local WCS solutions for selected image sections.
+6. Convert catalogue RA/Dec to image pixels with explicit FITS/pixel-origin and section-offset handling.
+7. Fit and audit the optical camera model, including distortion and spatial validation.
 
-## Real-observation evidence
+## Main source scripts
 
-The experiments include:
-- ASK033 still-image candidate detection and five-section local astrometric investigation.
-- Cross-section correspondence, WCS, distortion and residual audits.
-- Archive-derived temporal feature persistence, optical flow, centroid/patch tracking, photometry and morphology.
-- Candidate ranking, targeted blind-solve attempts and WCS/catalogue consistency checks.
-- 13-frame reconstruction, repeated catalogue-ID consistency checks, frame registration, spatial holdouts and coordinate-integrity audits through Phase 147.
-- T1 real-image detection and candidate ranking.
+- 01_inspect_ask033.py–03_download_ask033.py: image acquisition and provenance inspection.
+- 04_detect_real_stars.py–06_refine_real_candidates.py: detection and centroid refinement.
+- 07_build_ask033_catalogue.py–08_fix_ask033_catalogue_ids.py: catalogue preparation and ID handling.
+- 09_phase21_initial_real_matching.py onward: matching, local astrometry and correspondence validation.
+- 25_objective3_radec_to_pixel.py: RA/Dec to pixel-coordinate conversion.
+- 26_objective4_*.py onward: optical calibration, distortion and validation.
+- 46_phase60_real_star_association_audit.py–47_phase61_final_association_visualisation.py: final classified correspondence evidence.
 
-## Interpretation guardrails
+The phase-numbered scripts are research steps and have historical input/output dependencies. They are not all a single one-command production pipeline.
 
-- Detected points and tracks are image-feature candidates until independently identified.
-- Local WCS consistency is not independent catalogue truth.
-- Phase 117 and Phase 95 share closely related data lineage; their agreement is not independent replication.
-- Image-plane motion/rotation estimates do not establish physical camera motion.
-- The archive MP4 referenced by reports is not in the current Git tree; extracted frames and derived reports are retained.
-- ASK033 timestamps and exposure-time semantics require reconciliation before absolute epoch-dependent astrometric claims.
+## Key retained data
 
-Do not remove historical phase scripts or result artefacts until their input/output lineage and role in the evidence record have been reviewed.
+- data/network/ASK033/: original image and camera/endpoint metadata.
+- data/astrometry_indexes/ and astrometry/: local Astrometry.net index/configuration files.
+- results/ASK033/: detection outputs, candidate tables, local WCS solutions, section correspondences, residual diagnostics and calibration reports.
+- research/final_professor_evidence/: curated classified correspondence tables and summary.
+
+## Scientific qualification
+
+The ASK033 still-image investigation is exploratory. Recorded site/time metadata need confirmation. Local-WCS agreement does not independently prove catalogue identity, and the current global optical calibration has not passed independent multi-image validation.

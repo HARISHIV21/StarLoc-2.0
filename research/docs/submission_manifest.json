@@ -1,21 +1,35 @@
 {
   "project": "StarLoc 2.0",
-  "created_utc": "2026-11-20T19:14:11.935551+00:00",
-  "main_archive": {
-    "filename": "StarLoc_2.0_Submission.zip",
-    "size_bytes": 17163809,
-    "sha256": "792a9c1aa62d7c8d84838fb19d5cf04ffe9e4641ce18a696d5206505e4900e6b"
+  "scope": "Professor-defined four core objectives",
+  "core_objectives": [
+    "Detect stars in the image",
+    "Identify stars in a catalogue using observation date/time and approximate observer position",
+    "Convert identified catalogue RA/Dec coordinates to image pixel coordinates",
+    "Determine optical camera calibration"
+  ],
+  "primary_real_dataset": {
+    "camera": "ASK033 AllSkyKamera",
+    "dimensions_px": [1920, 1440],
+    "site_metadata": "Miesenbach, Austria; recorded metadata, not independently surveyed",
+    "timestamp_status": "endpoint query timestamp and overlay timestamp differ; exposure-time semantics unresolved",
+    "sections_with_local_astrometric_solutions": ["R1C2", "R2C1", "R2C2", "R3C1", "R3C2"]
   },
-  "research_archive": {
-    "filename": "StarLoc_2.0_Research_Results.zip",
-    "size_bytes": 9896235,
-    "sha256": "b39c184f824878b7131f2113fea58d9e302d8fe6db71afdd077ac40bf0850499"
+  "synthetic_validation": {
+    "status": "retained",
+    "purpose": "controlled ground-truth testing of detection, catalogue identification and optical calibration",
+    "main_demo": "research/16_run_final_demo.py",
+    "metrics_are_synthetic": true
   },
-  "real_camera_validation": "exploratory_real_image_work_completed_through_phase_147; independent_star_identity_and_global_calibration_validation_pending",
-  "real_observation_evidence": {
-    "ASK033_still_image": "public 1920x1440 image; five local astrometric sections investigated; cross-section correspondence audit",
-    "ASK033_archive_sequence": "derived 13-frame sequence; temporal image-feature experiments through phase 147; original MP4 not present in repository tree",
-    "T1_user_image": "6000x1918; candidate detection and ranking; no independent star truth established",
-    "qualification": "exploratory real-observation R&D; not independently validated global camera calibration"
-  }
+  "real_camera_status": "exploratory; independent star identity and global optical calibration validation remain pending",
+  "later_stage_options": [
+    "Image orientation relative to celestial dome, Sun or Moon",
+    "Observer-position estimation if position is unknown",
+    "Coupling one or two IMUs for mobile robotics"
+  ],
+  "excluded_from_active_scope": [
+    "ASK033 archive-video temporal/motion analysis",
+    "Separate T1 image experiment",
+    "Unrelated staged simulation lesson outputs"
+  ],
+  "integrity_note": "This manifest describes repository scope. Re-run the integrity and demo checks after the cleanup commit before treating packaging as verified."
 }

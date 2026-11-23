@@ -1,264 +1,142 @@
-# STARLOC 2.0
-### Stellar Vision & Multi-Section Astrometric Calibration for All-Sky Camera Networks
-**Research direction:** Embedded Aerospace • Autonomous Optical Sensing • Geometric Calibration
+# StarLoc 2.0 — Star Identification and Optical Calibration for All-Sky Cameras
 
-[![Research](https://img.shields.io/badge/Project-R%26D%20Engineering-17324D)](#research-objective)
-[![Processing](https://img.shields.io/badge/Pipeline-Stellar%20Vision%20%2B%20Astrometry-315B75)](#processing-architecture)
-[![Implementation](https://img.shields.io/badge/Implementation-Python%20Prototype-3776AB)](#implementation)
-[![Validation](https://img.shields.io/badge/Validation-Synthetic%20%2B%20Real--Image%20Study-C47A27)](#validation-evidence)
+**Primary R&D objective:** detect stars in a real all-sky image, identify them in a celestial catalogue using observation date/time and approximate observer location, convert their accurate RA/Dec coordinates to image pixels, and determine the camera's optical calibration.
 
-> **StarLoc 2.0 develops the software pipeline needed to recover camera geometry and orientation from observed stars, reconcile local astrometric solutions across overlapping image regions, and produce a consistent calibration model for wide-field optical systems.**
+The project follows the priorities provided by the professor. It is not currently presented as a complete star tracker, observer-position solver, mobile-robotics estimator or IMU-fusion system.
 
-The project is motivated by the calibration requirements of the **AllSkyKamera Network**: determine the geometric properties and orientation of a camera from night-sky observations rather than relying blindly on potentially inaccurate installation parameters. The same core engineering problems—stellar feature extraction, celestial catalogue association, camera geometry, attitude references, uncertainty and robust estimation—are relevant to optical attitude sensing and autonomous aerospace systems.
+## Professor's four core objectives
 
-**Start with the [Real Observations & Experimental Evidence index](REAL_OBSERVATIONS.md)** for the actual ASK033/T1 inputs, extracted frames, visual outputs, quantitative phase reports and scientific limitations.
+1. **Find stars in the image.** Detect point sources and estimate reliable sub-pixel centroids.
+2. **Identify the stars in a catalogue.** Use observation date/time and approximate observer position to predict visible catalogue stars and associate detections with catalogue identities. If observer position is unknown, defer that harder problem.
+3. **Convert RA/Dec to pixel coordinates.** Use identified stars' celestial coordinates and the image astrometric transform to obtain corresponding image coordinates, with explicit coordinate conventions and round-trip checks.
+4. **Determine optical calibration.** Estimate and validate optical centre, focal scale/FOV and distortion model from identified star correspondences.
 
----
+See [Professor Objectives & Traceability](PROFESSOR_OBJECTIVES.md) for the mapping from each objective to existing scripts, data and evidence.
 
-## Research objective
+## Current status — evidence-based
 
-Build and validate a software-defined calibration workflow that transforms a night-sky image into traceable pixel-to-sky geometry.
-
-The central engineering challenge is not simply detecting bright points. It is establishing reliable correspondences between image observations and celestial reference directions, estimating the camera model, understanding where local solutions disagree, and combining evidence into a coherent global calibration.
-
-### Target outputs
-
-- Stellar detections with sub-pixel image coordinates.
-- Catalogue associations linked to observation epoch and sky coordinates.
-- Local astrometric solutions for image regions.
-- Camera optical parameters and image-to-celestial transformations.
-- Cross-section consistency and global-calibration diagnostics.
-- Residual, uncertainty, quality and provenance information suitable for downstream processing.
-
-## Why this is an embedded-aerospace project
-
-StarLoc is centred on a real optical sensing and calibration problem. Its relevance extends beyond an all-sky monitoring network:
-
-| Engineering capability | All-sky camera application | Aerospace / autonomy relevance |
+| Objective | Current status | Evidence / remaining gap |
 |---|---|---|
-| Stellar feature detection | Extract stars from night-sky images | Optical sensor front-end |
-| Catalogue association | Identify observed stars | Celestial reference matching |
-| Camera geometry estimation | Recover optical centre, scale and orientation | Sensor alignment and optical calibration |
-| Multi-region solution reconciliation | Build a consistent full-image model | Multi-camera / multi-sensor geometric consistency |
-| Temporal comparison | Investigate changes in orientation and calibration | Dynamic sensing and attitude-reference updates |
-| Quality and residual analysis | Detect unreliable local solutions | Measurement validation and fault-aware estimation |
-
-The current repository implements the research prototype and experiments in Python. A deterministic C++ core, target-hardware deployment and camera/IMU estimator are planned engineering stages—not capabilities claimed as already complete.
+| 1. Star detection | Implemented and tested synthetically and on ASK033 | Detection, quality filtering and centroid-refinement scripts/results exist; independent real-image detection labels are still needed |
+| 2. Catalogue identification | Synthetic blind identification demonstrated; real ASK033 associations exploratory | Hipparcos processing, epoch handling and local WCS matching exist; timestamp/site provenance and independent star-identity verification remain open |
+| 3. RA/Dec → pixel | Conversion workflow implemented for local WCS sections | Script 25_objective3_radec_to_pixel.py; verify inputs, coordinate origin, section offsets and independent accuracy |
+| 4. Optical calibration | Synthetic constrained calibration demonstrated; real global model exploratory | Local section WCS and global fisheye/SIP audits exist; one independently validated global real-camera calibration is not yet established |
 
 ## Processing architecture
 
-```text
-       ALL-SKY IMAGE + OBSERVATION METADATA
-       (timestamp, site, image geometry, camera context)
-                         |
-                         v
-              IMAGE PRE-PROCESSING
-                         |
-                         v
-          STELLAR CANDIDATE DETECTION
-                         |
-                         v
-           SUB-PIXEL CENTROID ESTIMATION
-                         |
-                         +------------------------------+
-                         |                              |
-                         v                              v
-              REFERENCE STAR CATALOGUE          IMAGE REGIONS / TILES
-              epoch and sky coordinates          overlapping sections
-                         |                              |
-                         +---------------+--------------+
-                                         |
-                                         v
-                          STAR / CATALOGUE ASSOCIATION
-                                         |
-                                         v
-                            LOCAL ASTROMETRIC SOLUTIONS
-                                         |
-                                         v
-                         CROSS-SECTION CONSISTENCY AUDIT
-                                         |
-                                         v
-                         GLOBAL CAMERA MODEL ESTIMATION
-                                         |
-                                         v
-                       PIXEL <-> CELESTIAL TRANSFORM
-                                         |
-                                         v
-                     CALIBRATION QUALITY + UNCERTAINTY
-                                         |
-                                         v
-                       VERSIONED CALIBRATION OUTPUT
-                                         |
-                          future integration interface
-                                         v
-                EMBEDDED OPTICAL / ATTITUDE SENSOR STACK
-                                         |
-                                         v
-                AUTONOMOUS NAVIGATION / SENSOR FUSION
-```
+    REAL IMAGE + OBSERVATION METADATA
+    (date/time, approximate site, image dimensions)
+                     |
+                     v
+             STAR DETECTION
+                     |
+                     v
+        SUB-PIXEL CENTROID ESTIMATION
+                     |
+                     v
+         CATALOGUE / EPOCH PREPARATION
+                     |
+                     v
+           STAR IDENTIFICATION
+                     |
+                     v
+          RA/DEC <-> PIXEL MAPPING
+                     |
+                     v
+           OPTICAL CALIBRATION
+                     |
+                     v
+      RESIDUALS / DISTORTION / VALIDATION
+                     |
+                     v
+        CALIBRATION RESULT + DEMO
 
-The real-image research has explored section-level astrometric solutions and their consistency. A fully validated global multi-section calibration product is the key research objective still to be closed.
+## Real observation retained as the main application dataset
 
-## Research programme and implementation
+The active real-camera dataset is the public **ASK033 AllSkyKamera** still image:
 
-The repository preserves a staged investigation rather than one monolithic script. The numbered experiments and phase artefacts provide a record of algorithm development, validation attempts and evidence.
+- Image size: 1920 × 1440 pixels.
+- Recorded site metadata: Miesenbach, Austria (47.834° N, 16.005° E); recorded metadata, not an independently surveyed site reference.
+- Five image sections have local astrometric solutions: R1C2, R2C1, R2C2, R3C1 and R3C2.
+- The historical association audit classified 233 candidates as 74 strict internal-consistency, 155 uncertain and 4 suspect. These labels do not independently certify catalogue identity.
+- Phase 37B recorded 237 accepted geometric matches using its stated 5-pixel gate; this is a separate result and must not be conflated with the 233-point classified audit.
 
-| Workstream | Engineering content | Repository location |
-|---|---|---|
-| Synthetic sensor environment | Generate fisheye observations with known geometric truth | `research/`, `research/data/synthetic/` |
-| Stellar image processing | Detection, centroid estimation and candidate refinement | `research/`, `research/real_image/`, `simulation/` |
-| Catalogue and astrometry | Hipparcos data preparation, epoch propagation and visible-sky generation | `research/data/catalogue/`, `research/` |
-| Blind identification | Catalogue-to-image matching and calibration experiments | `research/` |
-| Robustness and performance | Noise, missing/false detections, residual and benchmark experiments | `research/`, `results/` |
-| Real-camera investigation | ASK033 image analysis, local WCS, section correspondences and residual audits | `research/real_image/`, `research/final_professor_evidence/` |
-| Research evidence | Reports, test plans, integrity records and presentation material | `research/docs/` |
+**Metadata blocker:** the endpoint query timestamp and separate image-overlay timestamp do not agree. The exposure-time meaning (start, midpoint or end) also requires confirmation before epoch-dependent coordinates can be treated as final.
 
-## Selected experimental evidence
+Open [REAL_OBSERVATIONS.md](REAL_OBSERVATIONS.md) for the source image, metadata, detection outputs, local solutions and retained real-image reports.
 
-### 1. Controlled synthetic calibration
+## Necessary synthetic observations — retained
 
-The documented blind synthetic experiment reports:
+Synthetic observations remain in the project because they provide controlled ground truth for testing detection, catalogue association, coordinate mapping and optical calibration before claiming real-camera accuracy.
 
-| Metric | Result |
-|---|---:|
-| Detected image regions | 1,136 |
-| Catalogue candidates | 1,284 |
-| Identified stars | 1,136 |
-| Recovered field of view | 179.998° |
-| Recovered roll | 36.999° |
-| Reprojection RMSE | 0.2850 px |
+The retained synthetic pipeline includes:
+- A 1024 × 1024, nominal 180° equidistant-fisheye synthetic observation with known camera parameters.
+- A separate catalogue-rendered synthetic observation built from Hipparcos-derived stars and a documented temporary Rouen test location.
+- Ground-truth catalogues, metadata, detection/matching outputs, calibration reports and robustness results.
+- A reproducible blind synthetic demo and robustness test.
 
-This experiment demonstrates the end-to-end feasibility of the implemented detection, catalogue association and constrained fisheye calibration workflow under its synthetic assumptions. It is not a real-camera accuracy result.
+See [Synthetic Observation & Validation](research/docs/synthetic_observation_validation.md). Synthetic performance numbers must never be reported as real ASK033 accuracy.
 
-### 2. Robustness under controlled degradation
+## Run the synthetic demonstration
 
-Four documented synthetic scenes—clean, noisy, degraded and stress—reported a mean roll error of 0.00485° and mean reprojection RMSE of 0.90025 px. The stress scene reached 1.7174 px RMSE, showing the effect of degraded observations.
+From the repository root:
 
-### 3. Real observations — ASK033 and T1
+    python3 -m venv .venv
+    source .venv/bin/activate
+    python -m pip install numpy scipy opencv-python astropy matplotlib
+    python research/16_run_final_demo.py
 
-The real-data investigation includes:
-- A public ASK033 still image (1920 × 1440), detection/refinement outputs and local astrometric investigations over five sections.
-- An ASK033 archive-derived frame sequence analysed for persistence, optical flow, centroid/patch tracking, photometry, morphology, registration and temporal catalogue consistency through Phase 147.
-- A separate user-provided T1 image (6000 × 1918) with initial/refined detection and candidate-ranking outputs.
+This is the documented research dependency set, not yet a pinned lock file. The demo runs the catalogue-based synthetic calibration and robustness workflow. It does not rerun ASK033 real-image calibration.
 
-Selected temporal evidence:
-- Phase 117: 13 frames, 18,213 point-source candidate detections, 11,449 mutual matches; zero recorded flux-integrity failures. These detections are not confirmed stars.
-- Phase 120: 290 projected catalogue sources; 104 distinct Hipparcos IDs matched against the existing WCS, 70 repeated in at least two frames. This is consistency evidence, not independent astrometric validation.
-- Phase 138: image-plane rotation-trend diagnostics; physical camera motion is not established.
-- Phase 145: coordinate-integrity audit over a 4 × 4 grid and 12 frame pairs; this verifies internal data consistency, not absolute coordinate accuracy.
-- Phases 146–147: Phase 117 and Phase 95 show high correspondence, but their data lineage is related and therefore not an independent replication.
+## Main source-code entry points
 
-The still-image association audit recorded 233 candidate correspondences: 74 strict internal-consistency, 155 uncertain and 4 suspect. Phase 56 reported 0.9381 px RMSE on 15 random held-out points; Phase 57 leave-one-section-out reported 2.3247 px aggregate RMSE, with R3C1 at 3.460 px.
-
-**Interpretation:** substantial real-image R&D has been conducted, but no independent real-star truth set or independently validated global camera calibration has been established. Candidate persistence, morphology, photometric stability, existing-WCS agreement and cross-phase consistency must not be described as proof of stellar identity.
-
-See the [Real Observations & Experimental Evidence index](REAL_OBSERVATIONS.md) for direct paths to the source observations, visual evidence and phase reports.
-
-## Current engineering status
-
-| Capability | Evidence status |
+| Purpose | Script |
 |---|---|
-| Synthetic fisheye image generation | Implemented |
-| Stellar detection and centroid estimation | Implemented and experimentally evaluated |
-| Hipparcos catalogue preparation and epoch handling | Implemented in research workflow |
-| Blind catalogue matching | Demonstrated on synthetic data |
-| Constrained fisheye optical calibration | Demonstrated on synthetic data |
-| Synthetic robustness and multi-section experiments | Documented |
-| ASK033 still + temporal real-image investigation and T1 processing | Conducted through Phase 147; exploratory |
-| Real-image correspondence and temporal consistency audits | Conducted; WCS-based and cross-phase consistency only, independent star identity incomplete |
-| Independently validated global multi-section calibration | Remaining research milestone |
-| Image-plane motion/registration/rotation diagnostics | Investigated through Phase 138; physical camera motion/orientation not independently validated |
-| Production server-side service/API | Not yet implemented as a deployable service |
-| Embedded C++ / RTOS target implementation | Future engineering work |
-| Camera/IMU fusion and autonomous attitude estimator | Future research and integration work |
+| Generate controlled synthetic fisheye data | research/01_generate_fisheye_dataset.py |
+| Detect synthetic stars | research/02_detect_fisheye_stars.py |
+| Optimise detection | research/03_optimize_star_detection.py |
+| Initial synthetic optical calibration | research/04_fisheye_optical_calibration.py |
+| Download / clean / propagate Hipparcos data | research/07–10 |
+| Render catalogue-based synthetic observation | research/11_render_catalogue_fisheye.py |
+| Blind catalogue matching and calibration | research/12_blind_catalogue_calibration.py |
+| Synthetic robustness validation | research/13_robustness_validation.py |
+| Run synthetic demonstration | research/16_run_final_demo.py |
+| Detect/refine real ASK033 candidates | research/real_image/04–06 |
+| Build real-image visible catalogue | research/real_image/07_build_ask033_catalogue.py |
+| Local astrometric solve and validation | research/real_image/12–24 |
+| RA/Dec to pixel conversion | research/real_image/25_objective3_radec_to_pixel.py |
+| Optical calibration / distortion audits | research/real_image/26–44 |
+| Final real-image association evidence | research/real_image/46–47 |
+| Integrated evidence demonstration | research/48_phase62_integrated_demo.py |
 
-## Repository structure
+Historical scripts are retained where they support the four core objectives. They are staged research experiments, not one automatic production pipeline.
 
-```text
-.
-├── README.md
-├── README_STARLOC_FINAL.md
-├── REAL_OBSERVATIONS.md
-├── research/
-│   ├── real_image/README.md        # real-observation research entry point
-│   ├── *.py
-│   ├── real_image/                 # ASK033 image investigation
-│   ├── data/
-│   │   ├── catalogue/              # Hipparcos-derived reference data
-│   │   └── synthetic/              # generated observations / ground truth
-│   ├── final_professor_evidence/   # classified correspondence evidence
-│   ├── docs/                       # reports, specifications and plans
-│   └── results/                    # research outputs and diagnostics
-├── simulation/
-│   └── lesson_*/                   # staged algorithm development
-└── results/                        # selected simulation figures
-```
+## Required project deliverables
 
-## Running the research
+- Project tracking documents and planning.
+- Functional and technical specifications.
+- Research source code and preserved input datasets.
+- Synthetic test observations with known ground truth.
+- Real ASK033 observation and traceable detection/catalogue/calibration evidence.
+- Test plan, results and limitations.
+- A repeatable synthetic demonstration and, where possible, a real-image evidence demo.
+- Final report and oral presentation.
 
-The repository is a Python research workspace developed on macOS. The documented stack includes Python, NumPy, SciPy, OpenCV, Astropy and Matplotlib.
+## Later objectives — explicitly outside the current core scope
 
-Create an isolated environment:
+Only after the four core objectives are sufficiently validated should the project consider:
+1. Image orientation relative to the celestial dome, Sun or Moon.
+2. Estimating observer position from stellar observations.
+3. Coupling one or two IMUs to account for motion in mobile robotics.
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-```
+These are future extensions, not completed capabilities.
 
-Install the dependencies required by the experiment being run. A single pinned, repository-wide environment is a reproducibility task still to be consolidated; historical scripts may have different dependencies and generated-file prerequisites.
+## Scientific limitations
 
-Documented entry points:
+- ASK033 uses one real still image in the active scope.
+- Recorded site and timestamp metadata require confirmation.
+- Local WCS consistency is not independent proof of catalogue identity.
+- The global real-camera optical model remains exploratory.
+- A deployable server-side calibration service, embedded implementation and IMU fusion are not current deliverables.
 
-```bash
-# Main synthetic demonstration
-python research/16_run_final_demo.py
-
-# Integrated Phase 62 evidence demonstration
-python research/48_phase62_integrated_demo.py
-```
-
-Run from the repository root. The Phase 62 script integrates previously generated evidence; it does not rerun every experiment or independently refit the calibration model. Consult [Research Workspace Guide](research/docs/README_RESEARCH.md) before running individual experiments.
-
-## Engineering roadmap
-
-The roadmap is ordered to protect scientific validity before moving toward embedded deployment.
-
-1. **Close the real-camera validation loop** — independent star identities/reference solutions, verified timestamps and site metadata, multiple images, held-out-section testing and documented acceptance thresholds.
-2. **Complete global multi-section calibration** — robustly reconcile overlapping local solutions, model distortion and quantify the global transform's uncertainty.
-3. **Add temporal orientation analysis** — evaluate repeatability and camera-orientation changes over image sequences, separating real movement from calibration noise.
-4. **Harden the software architecture** — modular interfaces, coordinate-frame contracts, units, error handling, deterministic regression data and reproducible configuration.
-5. **Develop an embedded C++ implementation** — port selected algorithms, cross-check against Python and measure latency, memory and numerical deviation on a selected target.
-6. **Integrate into autonomous sensing** — define camera-to-body alignment, timestamped attitude observations and quality gates; investigate gyro/IMU fusion as a separate estimator workstream.
-
-See the [Embedded & Aerospace Engineering Roadmap](research/docs/embedded_aerospace_roadmap.md).
-
-## Technical documentation
-
-- [System architecture and interfaces](research/docs/system_architecture.md)
-- [Research and experiment guide](research/docs/README_RESEARCH.md)
-- [Final research report](research/docs/final_report.md)
-- [Functional and technical specifications](research/docs/functional_technical_specifications.md)
-- [Test plan and validation evidence](research/docs/test_plan_and_results.md)
-- [Real observations and experiment evidence index](REAL_OBSERVATIONS.md)
-- [Real-image research workspace](research/real_image/README.md)
-- [Real-camera validation matrix](research/docs/real_camera_validation_matrix.md)
-- [Embedded and aerospace roadmap](research/docs/embedded_aerospace_roadmap.md)
-- [State of the art](research/docs/state_of_art.md)
-- [Feasibility study](research/docs/feasibility_study.md)
-- [Risk analysis](research/docs/risk_analysis.md)
-- [Project schedule](research/docs/project_schedule_gantt.md)
-- [Presentation outline](research/docs/presentation_outline.md)
-- [Submission checklist](research/docs/submission_checklist.md)
-
-## Application context
-
-**Primary R&D application:** server-side optical calibration of the AllSkyKamera Network, where reliable camera orientation and pixel-to-celestial transformations support downstream sky observation and trajectory analysis.
-
-**Related engineering domains:** star-sensor research, optical attitude determination, autonomous aerial/robotic sensing, embedded computer vision, camera geometry and multi-sensor estimation.
-
-The current project is a research prototype. It is not presented as a flight-qualified star tracker, a certified aerospace component or a deployed calibration service.
-
----
-
-**StarLoc 2.0 — from stellar observations to traceable camera geometry.**
+**StarLoc 2.0 — detect stars, identify them, map celestial coordinates to pixels, and calibrate the camera.**
