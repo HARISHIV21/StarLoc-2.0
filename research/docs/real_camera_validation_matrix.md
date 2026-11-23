@@ -67,3 +67,21 @@ Every result must state:
 - Known weaknesses and excluded cases.
 
 Do not describe the real-image pipeline as fully validated until independent identity/reference checks and multi-image global calibration tests pass.
+
+
+## 7. Evidence update through Phase 147
+
+The repository also contains the following temporal and real-image results, which should be considered alongside the earlier still-image evidence:
+
+| Phase | Recorded result | Evidence class | Qualification |
+|---|---|---|---|
+| 117 | 13 frames; 18,213 candidate detections; 11,449 mutual matches; zero flux-integrity failures | Reconstruction/data integrity | Candidate detections are not confirmed stars |
+| 120 | 290 projected catalogue sources; 104 distinct Hipparcos IDs matched; 70 repeated in ≥2 frames | Existing-WCS correspondence | Not independent astrometric truth |
+| 138 | Theil–Sen image-plane rotation slope −0.0000524° per pair; total trend −0.0005764° | Temporal image-plane diagnostic | Does not prove physical camera motion |
+| 145 | 4 × 4 grid; all 16 cells represented across 12 pairs; coordinate arithmetic consistent | Coordinate integrity | Does not establish absolute accuracy |
+| 146–147 | Phase 117/95 one-to-one source correspondence about 97.8–98.8% | Cross-dataset lineage audit | The datasets are related, not independent replication |
+| T1 V2 | 649 candidates: 0 high, 16 medium, 633 low | Candidate ranking | Not star classifications |
+
+The original archive MP4 referenced by the temporal reports is not in the Git tree; extracted frames and derived reports are present. ASK033 metadata contains conflicting time references and unresolved exposure timestamp semantics. These provenance issues remain validation blockers.
+
+The current real-data status should therefore be described as **substantial exploratory real-observation R&D through Phase 147**. It is not yet independently validated global camera calibration or validated physical orientation estimation.

@@ -135,3 +135,20 @@ StarLoc 2.0 has developed a substantial research workflow for stellar detection,
 The next decisive milestone is not simply more star detection. It is an independently validated global calibration across multiple real images, followed by temporal analysis and a modular implementation suitable for future embedded deployment.
 
 The project therefore provides a credible research foundation at the intersection of optical calibration, stellar vision, embedded sensing and aerospace/autonomous system development, while keeping current experimental evidence distinct from future system capabilities.
+
+
+## 10. Real-observation status update — evidence through Phase 147
+
+The repository's real-observation evidence is broader than the original still-image/Phase 57 summary. The ASK033 work also includes an archive-derived 13-frame sequence (frames 518–530), plus a separate T1 user image.
+
+Selected recorded outcomes:
+- Phase 117: 18,213 point-source candidate detections across 13 frames, 11,449 mutual matches, and zero recorded flux-integrity failures.
+- Phase 120: 290 projected catalogue sources; 104 distinct Hipparcos IDs matched against the existing WCS; 70 IDs repeated in at least two frames, 40 in at least three, and 8 in at least five.
+- Phase 138: Theil–Sen image-plane rotation trend −0.0000524° per frame pair, estimated total −0.0005764°. This is descriptive and does not prove physical camera motion.
+- Phase 145: 4 × 4 spatial grid and 12 frame pairs passed the recorded coordinate arithmetic-integrity checks. This is not absolute astrometric accuracy.
+- Phases 146–147: Phase 117 and Phase 95 show approximately 97.8–98.8% one-to-one source correspondence, but the phase reports explicitly identify related data lineage. This is not independent replication.
+- T1: 2,104 initial image-feature candidates; V2 ranked 649 (0 high, 16 medium, 633 low). These are algorithmic rankings, not confirmed stars.
+
+The archive MP4 referenced by the temporal reports is not present in the current Git tree; derived frames and reports are present. ASK033 metadata also contains a conflict between the endpoint query timestamp and a separate overlay timestamp. Exposure start/midpoint/end semantics and independent camera-site survey confirmation remain unresolved.
+
+This update supersedes any earlier short description that implies the real work stopped at Phase 99 or that only a single still-image detection was attempted. It does not change the scientific qualification: the real-data programme is substantial but exploratory. Independent star-identity validation, globally consistent multi-image calibration and physical camera-motion validation remain open.

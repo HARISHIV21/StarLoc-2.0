@@ -12,15 +12,15 @@ This page is the entry point for the **actual camera observations and user-suppl
 
 ### Open the actual observation and its processing outputs
 
-- [Original ASK033 colour image](real_image/data/network/ASK033/ASK033_live_original.jpg)
-- [Grayscale image](real_image/data/network/ASK033/ASK033_live_grayscale.png)
-- [Original preview](real_image/results/ASK033/ASK033_original_preview.jpg)
-- [Star-candidate detection overlay](real_image/results/ASK033/ASK033_detection_overlay.jpg)
-- [Background-subtracted image](real_image/results/ASK033/ASK033_background_subtracted.png)
-- [Refined candidate overlay](real_image/results/ASK033/ASK033_refined_candidates.jpg)
-- [Detection report](real_image/results/ASK033/detection_report.json)
-- [Observation metadata](real_image/results/ASK033/ASK033_observation_metadata.json)
-- [Camera/source metadata](real_image/data/network/ASK033/image_metadata.json)
+- [Original ASK033 colour image](research/real_image/data/network/ASK033/ASK033_live_original.jpg)
+- [Grayscale image](research/real_image/data/network/ASK033/ASK033_live_grayscale.png)
+- [Original preview](research/real_image/results/ASK033/ASK033_original_preview.jpg)
+- [Star-candidate detection overlay](research/real_image/results/ASK033/ASK033_detection_overlay.jpg)
+- [Background-subtracted image](research/real_image/results/ASK033/ASK033_background_subtracted.png)
+- [Refined candidate overlay](research/real_image/results/ASK033/ASK033_refined_candidates.jpg)
+- [Detection report](research/real_image/results/ASK033/detection_report.json)
+- [Observation metadata](research/real_image/results/ASK033/ASK033_observation_metadata.json)
+- [Camera/source metadata](research/real_image/data/network/ASK033/image_metadata.json)
 
 ### Local astrometric sections
 
@@ -32,7 +32,7 @@ The real image was divided into a 3 × 3 grid. Local plate-solving and validatio
 - R3C1
 - R3C2
 
-Open the [section previews](real_image/results/ASK033/) and the [real-image processing directory](real_image/results/ASK033/).
+Open the [section previews](research/real_image/results/ASK033/) and the [real-image processing directory](research/real_image/results/ASK033/).
 
 The local solutions and cross-section correspondences are exploratory. A local WCS agreement is not independent proof that a catalogue identity is correct.
 
@@ -46,10 +46,10 @@ The repository contains frame exports and analysis results from an ASK033 archiv
 
 ### Frame evidence
 
-- [Frame contact sheet](real_image/results/ASK033/archive_video_20261119_frame_inspection/contact_sheet.jpg)
-- [Timestamp contact sheet](real_image/results/ASK033/archive_video_20261119_frame_inspection/timestamp_sequence/timestamp_contact_sheet.jpg)
-- [Timestamp audit JSON](real_image/results/ASK033/archive_video_20261119_frame_inspection/timestamp_sequence/archive_frame_timestamp_audit.json)
-- [Extracted frame sequence](real_image/results/ASK033/archive_video_20261119_frame_inspection/timestamp_sequence/)
+- [Frame contact sheet](research/real_image/results/ASK033/archive_video_20261119_frame_inspection/contact_sheet.jpg)
+- [Timestamp contact sheet](research/real_image/results/ASK033/archive_video_20261119_frame_inspection/timestamp_sequence/timestamp_contact_sheet.jpg)
+- [Timestamp audit JSON](research/real_image/results/ASK033/archive_video_20261119_frame_inspection/timestamp_sequence/archive_frame_timestamp_audit.json)
+- [Extracted frame sequence](research/real_image/results/ASK033/archive_video_20261119_frame_inspection/timestamp_sequence/)
 
 The timestamp audit records 13 sampled frames from 0 to 36 seconds at 3-second intervals. The visible camera overlay timestamps run from 19 November 2026 17:16:50 to 20 November 2026 05:33:19 (Europe/Vienna). These are manually transcribed overlay values; whether they represent exposure start, midpoint or end is not established.
 
@@ -77,13 +77,13 @@ A separate real image is stored at:
 `research/real_image/user_test/T1.jpeg`
 
 - Dimensions: 6000 × 1918 pixels.
-- [Open T1 original image](real_image/user_test/T1.jpeg)
-- [Initial detection overlay](real_image/user_test/T1_detection_results/T1_detection_overlay.jpg)
-- [Initial detection report](real_image/user_test/T1_detection_results/T1_detection_report.json)
-- [Refined detection overlay](real_image/user_test/T1_refined_detection_results/T1_refined_overlay.jpg)
-- [V2 candidate overlay](real_image/user_test/T1_refined_v2_results/T1_v2_all_overlay.jpg)
-- [V2 high-confidence overlay](real_image/user_test/T1_refined_v2_results/T1_v2_high_overlay.jpg)
-- [V2 candidate report](real_image/user_test/T1_refined_v2_results/T1_v2_report.json)
+- [Open T1 original image](research/real_image/user_test/T1.jpeg)
+- [Initial detection overlay](research/real_image/user_test/T1_detection_results/T1_detection_overlay.jpg)
+- [Initial detection report](research/real_image/user_test/T1_detection_results/T1_detection_report.json)
+- [Refined detection overlay](research/real_image/user_test/T1_refined_detection_results/T1_refined_overlay.jpg)
+- [V2 candidate overlay](research/real_image/user_test/T1_refined_v2_results/T1_v2_all_overlay.jpg)
+- [V2 high-confidence overlay](research/real_image/user_test/T1_refined_v2_results/T1_v2_high_overlay.jpg)
+- [V2 candidate report](research/real_image/user_test/T1_refined_v2_results/T1_v2_report.json)
 
 The initial detector reported 2,104 image-feature candidates. The V2 ranking reported 649 candidates: 0 high-confidence, 16 medium-confidence and 633 low-confidence. These are algorithmic candidate rankings, **not confirmed star detections**. The image's source, capture timestamp, location and independent astronomical ground truth are not established in the report.
 
@@ -118,3 +118,25 @@ Start with:
 5. The T1 image and candidate-ranking overlays.
 
 The real-data experiments are substantial, but they must be described precisely: image-feature tracking and photometric stability are not equivalent to independently confirmed star tracking.
+
+
+## 7. Additional real-data work after Phase 99 — Phases 100–147
+
+The following experiments are also present in the repository and must be included when describing the real-observation work:
+
+| Phase range | Actual work | Key recorded outcome | Limitation |
+|---|---|---|---|
+| 100–106 | PSF-coverage audit, candidate ranking, visual/patch inspection, shortlist and WCS coverage | Phase 101B: 1,073 rankable but not astrometrically verified; 3 invalid/degenerate; 273 with insufficient temporal evidence. Phase 105 shortlisted 11; Phase 106 found 0/11 covered by primary WCS files | Rankings are not probabilities or star IDs; shortlist did not prove catalogue identities |
+| 107–116 | Targeted blind solve, WCS/catalogue validation, correspondence/residual audits and independent-region solve attempts | Solver outputs and follow-up reports retained | Solver marker/WCS output is not independent proof of a valid star-field solution |
+| 117 | Clean multiframe reconstruction | 13 frames; 18,213 point-source candidate detections; 11,449 mutual matches; flux-integrity maximum absolute error 0 and zero failures | Point-source candidates, not confirmed stars |
+| 120–121 | One-to-one catalogue correspondence and residual stability | 290 projected catalogue sources; 104 distinct Hipparcos IDs matched; 70 repeated in ≥2 frames, 40 in ≥3, 8 in ≥5 | Correspondences use the existing WCS; not independent astrometric truth |
+| 122–129 | Frame-shift decomposition and global/tiled/overlapping registration | Multiple image-only and catalogue-derived displacement comparisons | Image-plane displacement does not identify its physical cause |
+| 130–138 | Spatial support, translation/similarity/affine comparisons, quadrant holdouts and rotation-trend robustness | Phase 138 Theil–Sen slope −0.0000524° per frame pair; estimated total trend −0.0005764°; leave-one-out slopes −0.000451° to +0.001556° per pair | Descriptive image-plane estimates, not proof of physical camera rotation |
+| 145 | Coordinate-integrity and full-frame spatial-support audit | 4 × 4 grid; all 16 cells represented over 12 frame pairs; coordinate arithmetic internally consistent | Data integrity is not astrometric accuracy |
+| 146–147 | Cross-dataset and one-to-one vector correspondence audits | Phase 117/95 match fractions about 97.8–98.8%; Phase 117/96B about 75.0–84.0% | Phase 117/95 data lineage is related, not independent replication; Phase 96B is integer-pixel limited |
+
+Important source-lineage finding: Phase 146/147 explicitly compares Phase 117 with Phase 95. Their strong agreement must be reported as cross-pipeline consistency on related data, not as two independent observations.
+
+The original archive MP4 named `allsky-20261119.mp4` is referenced by reports but is not present in the current Git tree. Extracted frames and derived reports are committed. A full video rerun requires the original clip and provenance record.
+
+The ASK033 still-image metadata also contains different time references: the image endpoint query metadata records 20 November 2026 19:20:23 UTC, while the observation metadata records an overlay time of 19 November 2026 19:55:13 UTC. Exposure start/midpoint/end semantics and independent site-coordinate confirmation are unresolved. Do not silently choose one timestamp for epoch-dependent astrometry.

@@ -11,5 +11,11 @@
     "size_bytes": 9896235,
     "sha256": "b39c184f824878b7131f2113fea58d9e302d8fe6db71afdd077ac40bf0850499"
   },
-  "real_camera_validation": "pending"
+  "real_camera_validation": "exploratory_real_image_work_completed_through_phase_147; independent_star_identity_and_global_calibration_validation_pending",
+  "real_observation_evidence": {
+    "ASK033_still_image": "public 1920x1440 image; five local astrometric sections investigated; cross-section correspondence audit",
+    "ASK033_archive_sequence": "derived 13-frame sequence; temporal image-feature experiments through phase 147; original MP4 not present in repository tree",
+    "T1_user_image": "6000x1918; candidate detection and ranking; no independent star truth established",
+    "qualification": "exploratory real-observation R&D; not independently validated global camera calibration"
+  }
 }

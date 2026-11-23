@@ -1,29 +1,29 @@
-# StarLoc 2.0
+# StarLoc 2.0 — concise project entry point
 
-**Stellar Identification & Multi-Section Astrometric Calibration for All-Sky Camera Networks**
+StarLoc 2.0 is a Python research prototype for stellar-image processing and multi-section astrometric calibration of wide-field all-sky cameras.
 
-This repository contains the research implementation, experiments and validation evidence for StarLoc 2.0. The primary R&D problem is recovering camera geometry and orientation from stellar observations for the AllSkyKamera Network, including local astrometric analysis across overlapping image regions and the development of a globally consistent calibration.
+**For the authoritative project scope, implemented status, synthetic results, real-observation evidence and remaining validation work, see the [main README](README.md).**
 
-For the full project scope, architecture, experimental evidence and engineering roadmap, see the [main project README](README.md).
+## Start with the evidence
 
-## Current evidence
-
-- Synthetic stellar detection, catalogue matching and constrained fisheye calibration.
-- Hipparcos-derived catalogue preparation and epoch processing.
-- Synthetic robustness and multi-section experiments.
-- Exploratory investigation of a public ASK033 real-camera image.
-- Correspondence-quality audit and leave-one-section-out analysis.
-
-## Important scope distinction
-
-The current implementation is a Python research prototype. Independent real-camera global calibration, a deployable server-side service, embedded C++/RTOS implementation and camera/IMU fusion remain future engineering work.
-
-## Technical documentation
-
-- [System architecture](research/docs/system_architecture.md)
-- [Research workspace](research/docs/README_RESEARCH.md)
+- [Real Observations & Experimental Evidence — ASK033 and T1](REAL_OBSERVATIONS.md)
+- [Real-image research workspace](research/real_image/README.md)
 - [Final R&D report](research/docs/final_report.md)
-- [Functional and technical specification](research/docs/functional_technical_specifications.md)
-- [Verification plan and evidence](research/docs/test_plan_and_results.md)
 - [Real-camera validation matrix](research/docs/real_camera_validation_matrix.md)
-- [Embedded aerospace roadmap](research/docs/embedded_aerospace_roadmap.md)
+- [Research workspace guide](research/docs/README_RESEARCH.md)
+
+## Current scope
+
+The repository contains:
+- Synthetic fisheye image generation, candidate detection, catalogue processing, blind matching and constrained optical calibration experiments.
+- ASK033 real still-image detection and local astrometric investigation across five sections.
+- ASK033 archive-derived temporal experiments, including feature tracking, photometry/morphology, candidate ranking, catalogue consistency, registration and coordinate-integrity audits through Phase 147.
+- A separate T1 real-image detection and candidate-ranking experiment.
+
+## Scientific qualification
+
+The real-image work is substantial but exploratory. Candidate features and tracks are not automatically confirmed stars. Existing-WCS correspondence, repeated IDs and cross-phase agreement are not independent astrometric truth. The original archive MP4 is referenced by reports but is not in the Git tree; ASK033 timestamp/exposure semantics also need resolution.
+
+Independent real-star identity validation, globally validated multi-image calibration, physical camera-motion validation, a production server-side service, embedded C++ deployment and camera/IMU fusion remain open.
+
+This file is intentionally a short navigation page. The main README and linked evidence documents are authoritative.
