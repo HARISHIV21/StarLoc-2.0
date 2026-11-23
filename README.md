@@ -225,6 +225,7 @@ The project is being organised around practices expected in embedded and aerospa
 
 ## 10. Documentation index
 
+- [Embedded, aerospace and autonomous development roadmap](research/docs/embedded_aerospace_roadmap.md)
 - [Research workspace guide](research/docs/README_RESEARCH.md)
 - [Final research report](research/docs/final_report.md)
 - [Functional and technical specifications](research/docs/functional_technical_specifications.md)
