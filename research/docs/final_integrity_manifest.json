@@ -1,24 +1,35 @@
 {
   "project": "StarLoc 2.0",
-  "generated_utc": "2026-11-20T21:56:45.575381+00:00",
-  "python_scripts_checked": 66,
-  "required_files_verified": 24,
-  "json_reports_verified": 12,
-  "phases_integrated": [
-    60,
-    61,
-    62
+  "manifest_status": "documentation and scope manifest; integrity checks not rerun after repository cleanup",
+  "active_scope": [
+    "Professor objectives 1 to 4",
+    "Necessary synthetic observations and ground truth",
+    "ASK033 real still image and core detection/catalogue/WCS/calibration evidence"
   ],
-  "real_camera_validation": {
-    "camera": "ASK033",
-    "sections_solved": 5,
-    "phase37_correspondences": 233,
-    "phase56_strict_correspondences": 74,
-    "phase57_leave_one_section_out": {
-      "median_px": 1.0468,
-      "rmse_px": 2.3247,
-      "max_px": 8.278
+  "retained_validation": {
+    "synthetic_blind_calibration": {
+      "detected_regions": 1136,
+      "identified_stars": 1136,
+      "estimated_fov_deg": 179.9982,
+      "estimated_roll_deg": 36.9993,
+      "reprojection_rmse_px": 0.2850,
+      "evidence_class": "synthetic"
     },
-    "qualification": "Exploratory single-image calibration. WCS-derived correspondences are not independent ground truth."
-  }
+    "ask033_real_image": {
+      "dimensions_px": [1920, 1440],
+      "sections_with_local_solutions": ["R1C2", "R2C1", "R2C2", "R3C1", "R3C2"],
+      "classified_correspondences": 233,
+      "strict_internal_consistency": 74,
+      "uncertain": 155,
+      "suspect": 4,
+      "qualification": "exploratory; WCS-derived correspondences are not independent ground truth"
+    }
+  },
+  "open_gates": [
+    "Verify ASK033 timestamp and exposure-time convention",
+    "Confirm site metadata",
+    "Independently verify catalogue star identities",
+    "Validate global optical model across held-out sections using independent correspondences",
+    "Re-run syntax, demo and packaging integrity checks after cleanup"
+  ]
 }

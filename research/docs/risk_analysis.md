@@ -1,20 +1,23 @@
-# Risk Analysis — StarLoc 2.0
+# StarLoc 2.0 — Risk Analysis
 
-| ID | Risk | Probability | Impact | Mitigation |
+| ID | Risk | Probability | Impact | Mitigation / next action |
 |---|---|---|---|---|
-| R1 | Insufficient stars detected | Medium | High | Adjust detection threshold, exposure assumptions and minimum source size |
-| R2 | False detections from noise or artefacts | High | High | Robust matching, residual rejection and image-quality checks |
-| R3 | Incorrect timestamp | Medium | High | Require timestamp and time zone; record UTC conversion |
-| R4 | Incorrect geographic location | Medium | High | Obtain installation coordinates before real-image calibration |
-| R5 | Unknown camera pointing | High | High | Begin with approximate pointing; defer unrestricted blind solving |
-| R6 | Fisheye model mismatch | Medium | High | Compare residuals and extend the model using distortion parameters |
-| R7 | Sparse stars in an image section | Medium | Medium | Use overlapping sections and minimum-match criteria |
-| R8 | Inconsistent local section solutions | Medium | High | Compare section parameters and perform global optimisation |
-| R9 | Cloud cover or light pollution | High | Medium | Select suitable images and implement image-quality screening |
-| R10 | No real AllSkyKamera image available | Current blocker | High | Request a representative image and metadata from the project supervisor |
+| R1 | Insufficient real stars detected | Medium | High | Inspect source quality; tune detection and centroiding; label representative regions |
+| R2 | False detections from noise/artefacts | High | High | Quality filtering, one-to-one matching, residual checks and independent visual audit |
+| R3 | Incorrect observation timestamp | High until resolved | High | Reconcile endpoint and overlay timestamps; confirm exposure start/midpoint/end |
+| R4 | Incorrect observer location | Medium | High | Confirm ASK033 installation coordinates and provenance |
+| R5 | Unknown camera pointing | Medium | High | Obtain approximate pointing; defer unrestricted unknown-position solution |
+| R6 | Catalogue epoch/proper-motion mismatch | Medium | High | Record catalogue epoch and propagate to verified observation epoch |
+| R7 | Lens model mismatch | Medium | High | Compare residual patterns and validate distortion terms |
+| R8 | Sparse section correspondences | Medium | Medium | Use overlapping sections and explicit minimum-match quality gates |
+| R9 | Local WCS associations mistaken for truth | High | High | Independently verify a subset of catalogue identities |
+| R10 | Global calibration overfits one image | High | High | Leave-one-section-out tests and later multiple independent images |
+| R11 | Historical scripts have inconsistent prerequisites | Medium | Medium | Maintain source-to-input/output traceability and a pinned environment |
 
-## Risk review
+## Highest-priority risks
 
-The synthetic tests reduce uncertainty around the algorithmic pipeline but do not eliminate the risks associated with real optical systems.
+1. Timestamp and site metadata must be verified before final catalogue prediction.
+2. Catalogue identity must be validated independently of the local WCS used for matching.
+3. Global optical calibration must generalise across held-out sections.
 
-The highest-priority external dependency is access to a real AllSkyKamera image and its observation metadata.
+The synthetic tests reduce algorithm-development uncertainty but do not remove physical-camera or metadata risks.
