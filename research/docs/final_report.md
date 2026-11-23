@@ -1,149 +1,137 @@
-# StarLoc 2.0 — Final Research Report
+# StarLoc 2.0 — Research & Development Report
+## Stellar Identification and Multi-Section Astrometric Calibration for All-Sky Camera Networks
 
-## Software-Defined Optical Calibration of an All-Sky Camera Using Stellar Identification
+## 1. Executive summary
 
-## 1. Introduction
+StarLoc 2.0 investigates a software-defined approach to calibrating wide-field all-sky cameras from stellar observations. The motivating application is the AllSkyKamera Network, where camera orientation and geometric properties should be recovered from night-sky imagery rather than assumed from potentially inaccurate installation parameters.
 
-The objective of StarLoc 2.0 is to investigate automatic optical calibration of an all-sky camera using stars observed in night-sky images. The project is motivated by the AllSkyKamera Network requirement to determine camera orientation and geometric properties without depending entirely on potentially inaccurate camera configuration.
+The research pipeline combines astronomical catalogue preparation, image-based star detection, sub-pixel centroid estimation, catalogue association, local astrometric analysis and fisheye camera-model estimation. A major research direction is to reconcile solutions from overlapping image regions into a consistent full-image calibration.
 
-## 2. Methodology
+The work has progressed through controlled synthetic experiments and an exploratory real-image investigation using a public ASK033 AllSkyKamera image. Synthetic experiments demonstrate the feasibility of the constrained processing chain. The real-image study exposes correspondence uncertainty and section-dependent residuals, identifying the remaining scientific work needed before a global calibration can be considered validated.
 
-The developed workflow consists of:
-1. Preparation of a Hipparcos reference catalogue.
-2. Propagation of stellar positions to the selected observation date.
-3. Transformation into local horizontal coordinates.
-4. Generation of synthetic equidistant fisheye observations.
-5. Detection of stellar image regions and centroid estimation.
-6. Blind catalogue identification.
-7. Estimation of optical parameters.
-8. Robustness testing under noise and missing or false detections.
-9. Local calibration using overlapping image sections.
+## 2. Problem statement and application context
 
-## 3. Implementation
+An all-sky camera provides a wide angular field of view but its pixel-to-sky mapping depends on optical geometry and camera orientation. If these parameters are inaccurate, downstream measurements of sky position and observed trajectories may also be inaccurate.
 
-The prototype uses Python, NumPy, SciPy, OpenCV, Astropy and Matplotlib.
+The R&D problem is to estimate the camera's optical and orientation parameters from stars whose celestial positions can be predicted from a reference catalogue and observation metadata.
 
-The synthetic image is 1024 × 1024 pixels with a nominal 180-degree equidistant fisheye projection.
+The system must address:
+- Reliable extraction of star image coordinates.
+- Catalogue identification using celestial reference data.
+- Observation epoch and observer-location dependence.
+- Optical projection and lens distortion.
+- Local solutions in overlapping image sections.
+- Consistency and fusion of local solutions into a global camera model.
+- Residuals, uncertainty and quality control.
+- Temporal changes in camera orientation.
 
-## 4. Results
+## 3. Objectives
 
-The blind calibration experiment identified 1,136 image regions against 1,284 catalogue candidates. It estimated a 179.998-degree field of view and 36.999-degree roll, with a reprojection RMSE of 0.2850 pixels.
+1. Build a reproducible synthetic environment with known camera geometry.
+2. Develop stellar candidate detection and centroid estimation.
+3. Prepare Hipparcos-derived reference data and epoch-dependent sky positions.
+4. Investigate blind catalogue-to-image matching.
+5. Estimate optical parameters using geometric optimisation.
+6. Test robustness under noise, missing detections and false detections.
+7. Investigate real ASK033 image sections using local astrometric solutions.
+8. Audit correspondence quality and cross-section consistency.
+9. Define the route to a robust global calibration and temporal orientation analysis.
 
-Four robustness scenes produced a mean roll error of 0.00485 degrees and a mean reprojection RMSE of 0.90025 pixels.
+## 4. Processing methodology
 
-Four overlapping sections were fitted in each scene. Their local optical-centre, focal-scale and roll estimates were consistent with the simulated camera parameters.
+### 4.1 Catalogue preparation
+The research workflow processes Hipparcos-derived stellar data, validates catalogue fields and propagates positions to the selected observation epoch.
 
-## 5. Discussion
+### 4.2 Sky-coordinate transformation
+Celestial coordinates are related to local horizontal directions using observation time and an observer location. The temporary Rouen test location used in synthetic work is not a confirmed AllSkyKamera installation location.
 
-The results show that the main algorithmic stages are feasible under controlled synthetic conditions. The use of a real stellar catalogue makes the synthetic sky geometrically meaningful, while the rendering and noise model allow repeatable tests.
+### 4.3 Synthetic camera observation
+A nominal 180-degree equidistant fisheye model is used to render controlled observations with known parameters. This provides ground truth for initial algorithm development.
 
-However, the synthetic images are generated from a known camera model. The current calibration also assumes zenith pointing with unknown roll. Therefore, the reported accuracy must not be interpreted as real-camera accuracy.
+### 4.4 Stellar image processing
+The prototype performs image thresholding, connected-component candidate extraction and intensity-weighted centroid estimation. Detection settings are investigated under varying image conditions.
 
-## 6. Limitations
+### 4.5 Catalogue correspondence
+Detected image locations are compared with predicted catalogue-star projections. The synthetic workflow supports blind identification under its stated pointing and projection assumptions.
 
-- No actual AllSkyKamera exposure has yet been calibrated.
-- The current camera model is equidistant and does not fully represent real-lens distortions.
-- The present blind calibration assumes approximate pointing at the zenith.
-- Unknown observer location is not solved.
-- The global combination of section-level solutions requires further development.
-- IMU coupling is outside the completed primary pipeline.
+### 4.6 Optical calibration
+The baseline equidistant model uses r = f × θ. The constrained synthetic calibration estimates optical centre, focal scale, effective field of view and roll.
 
-## 7. Future work
+### 4.7 Multi-section real-image investigation
+A public ASK033 image was divided into overlapping regions. Local astrometric solutions and their cross-section correspondences were examined. The research retained strict, uncertain and suspect association classes rather than treating all matches as equally reliable.
 
-The next steps are:
-1. Obtain a real AllSkyKamera image and its timestamp.
-2. Confirm approximate geographic location and camera pointing.
-3. Run star detection and catalogue matching on the real image.
-4. Inspect residuals and identify optical-model mismatch.
-5. Extend the model to include additional distortion parameters if required.
-6. Combine overlapping section solutions into one global calibration.
-7. Evaluate repeatability on multiple observations.
+## 5. Experimental results
 
-## 8. Conclusion
+### 5.1 Synthetic blind calibration
 
-StarLoc 2.0 has established a software prototype for catalogue-based stellar identification and synthetic all-sky fisheye optical calibration. The blind calibration and robustness experiments provide encouraging results under controlled assumptions.
+The documented blind experiment reports:
+- 1,136 detected image regions.
+- 1,284 catalogue candidates.
+- 1,136 identified stars.
+- Estimated field of view: 179.998 degrees.
+- Estimated roll: 36.999 degrees.
+- Reprojection RMSE: 0.2850 pixels.
 
-The project has not yet demonstrated calibration of a real AllSkyKamera exposure. That validation is the principal remaining experimental step.
+These results are specific to the generated image and constrained camera model.
 
+### 5.2 Synthetic robustness
 
-<!-- STARLOC_PHASE59_FINAL_VALIDATION -->
-## Final real-camera validation update — Phases 38–59
+Four scenes—clean, noisy, degraded and stress—reported a mean roll error of 0.00485 degrees and a mean reprojection RMSE of 0.90025 pixels. The stress scene reached 1.7174 pixels RMSE.
 
-### Real-image experiment
+### 5.3 ASK033 real-image study
 
-The project was extended to a public ASK033 AllSkyKamera image with dimensions
-1920 × 1440 pixels. Five image sections obtained local astrometric solutions:
-R1C2, R2C1, R2C2, R3C1 and R3C2.
+The investigation used a 1920 × 1440 public ASK033 image. Five image sections obtained local astrometric solutions.
 
-The Phase 37 validation produced 233 provisional catalogue-to-image
-correspondences. A stricter local-WCS residual filter selected 74 points
-for the Phase 56 calibration experiment.
+The association audit reported 233 candidate correspondences:
+- 74 strict internal-consistency cases.
+- 155 uncertain cases.
+- 4 suspect associations.
 
-### Global fisheye calibration
+Phase 56 fitted a model using the strict subset and reported 0.9381 pixels RMSE on 15 randomly held-out points. Phase 57 evaluated leave-one-section-out generalisation and reported 2.3247 pixels aggregate RMSE, with R3C1 reaching 3.460 pixels.
 
-The Phase 38 exploratory equidistant fisheye model used radial coefficients
-k1 and k2. Its random held-out subset contained 47 points, with median
-residual 0.608 px and RMSE 0.986 px.
+These metrics measure different validation conditions. The random holdout result must not be presented as equivalent to independent spatial generalisation. The strict class denotes local-WCS consistency, not independent proof of catalogue identity.
 
-Phase 56 fitted the same model using 74 strict correspondences. Its
-15-point random held-out subset had median residual 0.797 px and RMSE
-0.938 px. The optical centre and focal scale remained close to the
-Phase 38 estimates. This does not establish a clear accuracy improvement.
+## 6. Discussion
 
-### Cross-section validation
+The synthetic experiments show that the implemented stages can recover the parameters of a constrained fisheye camera model under controlled conditions. They provide useful algorithm-development evidence and a repeatable starting point.
 
-Phase 57 withheld each complete image section in turn. Across 74
-predictions, the aggregate median error was 1.047 px and RMSE was
-2.325 px. Section-level RMSE ranged from 0.718 px to 3.460 px.
-R3C1 was the weakest section, with RMSE 3.460 px and maximum error
-8.278 px. R2C1 had only four held-out points.
+The real-image investigation is an important step beyond simulation. It demonstrates the practical complexity of section-based astrometric calibration: local solutions do not automatically combine into a consistent global model, and association uncertainty can dominate downstream fitting.
 
-Phase 58 examined residual vectors and distributions. It identified
-section-dependent directional biases and outlier sensitivity, especially
-in R2C2. No further correction was accepted without independent evidence.
+The leave-one-section-out result indicates that spatial generalisation remains a key weakness. The current evidence therefore supports describing the real-image calibration as exploratory rather than validated.
 
-### Final interpretation and limitations
+## 7. Current limitations
 
-The synthetic calibration experiments demonstrate the feasibility of
-the image-processing and geometric-calibration pipeline under controlled
-conditions. The public real-camera experiment demonstrates that local
-astrometric plate solving and an exploratory global fisheye fit can be
-performed across multiple image sections.
+- Real-image evidence is based on a limited public-image investigation.
+- Independent catalogue identity validation is incomplete.
+- Local WCS consistency is not independent ground truth.
+- The equidistant fisheye model is a baseline and does not fully represent real lens behaviour.
+- The synthetic blind solution assumes a constrained zenith-pointed camera with unknown roll.
+- A robust global multi-section calibration has not yet been independently validated.
+- Temporal orientation estimation over a sequence remains to be established.
+- A deployable server-side service is not yet implemented.
+- Embedded C++ implementation, hardware benchmarking and camera/IMU fusion are future work.
 
-However, the real-camera result is not a fully validated production
-calibration. The correspondences inherit uncertainty from local WCS
-solutions, only one public image was investigated, and the four suspect
-R2C2 associations remain unresolved. Independent multi-frame or
-independently verified astrometric validation is required.
+## 8. Next research and engineering work
 
-The Phase 38 and Phase 56 models are retained as separate experimental
-results. Neither is silently substituted for the other.
+### Priority 1 — Complete real-camera calibration
+Obtain a multi-image dataset with verified timestamps and site metadata, independently verify star identities, and validate a global model using complete held-out sections and images.
 
-<!-- STARLOC_PHASE60_62_FINAL_UPDATE -->
+### Priority 2 — Global and temporal estimation
+Develop a robust method for reconciling overlapping local solutions and analyse orientation repeatability across observations.
 
-## Final association audit and integrated demonstration — Phases 60–62
+### Priority 3 — Software architecture
+Separate detection, centroiding, catalogue transformation, matching, local solving, global calibration and result publication into documented modules with explicit coordinate and timing conventions.
 
-### Association quality audit
-The ASK033 experiment contains 233 cross-section correspondences:
-74 strict internal-consistency cases, 155 uncertain cases and four separately
-flagged suspect associations. Strict internal consistency means agreement with
-the corresponding local WCS solution; it does not independently certify a
-Hipparcos catalogue identity.
+### Priority 4 — Embedded port
+After numerical behaviour is stable, port selected components to C++, compare against the Python reference and benchmark on a selected target.
 
-### Calibration and generalisation
-The Phase 56 strict-subset model used 59 training and 15 held-out points and
-reported a held-out RMSE of 0.9381 px. Phase 57 leave-one-section-out validation
-reported an aggregate RMSE of 2.3247 px. R3C1 was the weakest held-out section
-at 3.460 px RMSE. These results indicate section-dependent errors and limit
-claims of general real-camera calibration accuracy.
+### Priority 5 — Aerospace/autonomous integration
+Define a timestamped camera attitude-measurement interface and investigate camera/IMU fusion as a separate estimator with its own verification evidence.
 
-### Integrated demonstration
-Phase 61 generated the classified association overlay and CSV. Phase 62
-integrated the synthetic results, real-camera reports, calibration experiments,
-validation evidence and scientific limitations into JSON, Markdown and HTML
-demonstration outputs. These integration steps did not refit calibration
-parameters or rerun previous experiments.
+## 9. Conclusion
 
-The real-camera global fisheye estimates remain exploratory because the
-section WCS correspondences are not independent astrometric ground truth.
-Image timestamp and camera pointing metadata also require confirmation.
+StarLoc 2.0 has developed a substantial research workflow for stellar detection, catalogue association and constrained fisheye calibration, and has extended the investigation to real ASK033 imagery and cross-section astrometric consistency.
+
+The next decisive milestone is not simply more star detection. It is an independently validated global calibration across multiple real images, followed by temporal analysis and a modular implementation suitable for future embedded deployment.
+
+The project therefore provides a credible research foundation at the intersection of optical calibration, stellar vision, embedded sensing and aerospace/autonomous system development, while keeping current experimental evidence distinct from future system capabilities.
