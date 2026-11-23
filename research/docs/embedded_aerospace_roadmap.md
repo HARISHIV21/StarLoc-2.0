@@ -1,133 +1,113 @@
-# Embedded, Aerospace & Autonomous Systems Roadmap
+# Embedded Aerospace & Autonomous Sensing — Engineering Roadmap
 
-## Purpose
+## Strategic intent
 
-This roadmap defines how the existing StarLoc 2.0 optical-calibration research can evolve toward an embedded aerospace sensing component. It distinguishes current evidence from proposed work.
+StarLoc's core research is the recovery of camera geometry and orientation from stellar observations. The first obligation is to solve and validate the AllSkyKamera multi-section calibration problem. Embedded aerospace development should build on a numerically trusted, modular optical measurement pipeline.
 
-## Baseline: what exists today
+This is a staged engineering programme, not a claim that the current Python prototype is already an embedded star tracker.
 
-- Python research scripts for synthetic fisheye image generation, stellar candidate detection, centroiding, catalogue preparation, matching and optical calibration.
-- Synthetic robustness experiments and multi-section analysis.
-- An exploratory investigation of a public ASK033 all-sky image.
-- Research reports, test evidence and diagnostic outputs.
+## WP1 — Close the real-camera calibration problem
 
-The current repository does not yet contain a production C++ implementation, an RTOS target, a camera hardware driver, a flight computer integration, a completed IMU-fusion estimator or flight qualification evidence.
+- Build a multi-image ASK dataset with verified timestamps and installation metadata.
+- Independently validate catalogue identities.
+- Quantify local WCS quality and section-dependent residuals.
+- Develop a robust method to reconcile overlapping section solutions.
+- Estimate one consistent global camera model and its uncertainty.
+- Evaluate repeatability across time and camera-orientation changes.
 
-## Work package 1 — Real-camera scientific validation
+**Gate:** independently validated global calibration on multiple real images, with spatial and temporal generalisation results.
 
-**Objective:** establish whether the optical model generalises beyond generated images.
+## WP2 — Define a stable numerical architecture
 
-Tasks:
-1. Secure a set of real camera images with verified timestamps and acquisition metadata.
-2. Obtain independent astrometric reference solutions or independently verified star identities.
-3. Evaluate multiple nights, sky regions and image-quality conditions.
-4. Separate calibration-fit observations from independent validation observations.
-5. Report pixel residuals, angular residuals, uncertainty, outliers and failure cases.
-6. Compare global and local-section models without treating local-WCS consistency as independent ground truth.
+Separate the research pipeline into modules:
+1. Image input and metadata validation.
+2. Preprocessing and star detection.
+3. Centroid and measurement-quality estimation.
+4. Catalogue and epoch/coordinate transformation.
+5. Star correspondence and outlier rejection.
+6. Local astrometric solution.
+7. Global camera calibration.
+8. Temporal consistency and result publication.
 
-Exit evidence:
-- Reproducible dataset manifest.
-- Independent reference and validation protocol.
-- Multi-image validation report.
-- Explicit acceptance thresholds agreed before final evaluation.
+Specify coordinate frames, transform directions, pixel conventions, units, time scales, uncertainty representation and failure codes.
 
-## Work package 2 — Software architecture and numerical contracts
+**Gate:** module contracts, regression fixtures and reproducible end-to-end research run.
 
-**Objective:** convert research scripts into maintainable components.
+## WP3 — C++ algorithm port
 
-Proposed modules:
-- Image input and metadata validation.
-- Preprocessing and candidate detection.
-- Centroid estimation.
-- Catalogue and coordinate transformation.
-- Star correspondence and outlier rejection.
-- Camera projection and distortion model.
-- Calibration solver.
-- Diagnostics and result serialization.
+- Identify computationally intensive and numerically self-contained components.
+- Port one module at a time to modern C++.
+- Preserve a Python reference implementation.
+- Cross-check outputs using fixed datasets and tolerances.
+- Add unit and integration tests.
+- Avoid unbounded allocation in any future time-critical path.
+
+**Gate:** Python/C++ numerical equivalence report and repeatable host-side test suite.
+
+## WP4 — Target selection and embedded performance
+
+Select hardware only after establishing image dimensions, throughput, frame rate, latency, memory and interface requirements.
+
+Evaluate whether the intended deployment is:
+- Embedded Linux / SoC for camera and compute-heavy image processing.
+- MCU / RTOS for deterministic control, sensor interfaces or reduced processing.
+- A partitioned architecture with optical processing on a compute module and time-critical control on an MCU.
+
+Measure execution time, peak memory, CPU load, data movement and failure behaviour on the actual target. Do not claim real-time performance without measured worst-case evidence.
+
+**Gate:** documented target rationale, resource budget and hardware benchmark report.
+
+## WP5 — Aerospace optical attitude interface
 
 Define:
-- Coordinate frames and transformation direction.
-- Angle and distance units.
-- Pixel origin and axis conventions.
-- Timestamp scale and epoch conventions.
-- Input validity, confidence and error codes.
-- Numerical tolerances and deterministic test fixtures.
+- Camera-to-body extrinsic calibration.
+- Body and navigation coordinate frames.
+- Timestamp and latency semantics.
+- Attitude measurement representation.
+- Measurement covariance / quality indicators.
+- Rejection and reacquisition behaviour.
 
-Exit evidence:
-- Module-level interfaces and design note.
-- Unit tests for each module.
-- Regression fixtures from known synthetic and real observations.
+The optical calibration output should be a timestamped measurement with explicit quality metadata. It is not itself a complete attitude estimator.
 
-## Work package 3 — Embedded C++ feasibility and port
+**Gate:** interface specification and simulation-based integration tests.
 
-**Objective:** determine which algorithms can execute within a defined target's compute and memory limits.
+## WP6 — Camera/IMU fusion and autonomous sensing
 
-Tasks:
-1. Select a target only after estimating image size, frame rate, compute load, memory and interface requirements.
-2. Port one module at a time, beginning with numerically self-contained operations.
-3. Use fixed-size or bounded buffers where appropriate.
-4. Avoid unbounded dynamic allocation in time-critical paths.
-5. Cross-check C++ outputs against the Python reference implementation.
-6. Measure worst-case execution time, memory use and numerical deviation on target hardware.
+As a separate subsystem:
+- Propagate attitude using gyro measurements.
+- Apply accepted optical attitude observations.
+- Select an estimator (e.g. EKF) based on the defined state and sensor models.
+- Evaluate observability, noise assumptions, timestamp alignment and latency.
+- Test loss of stars, false associations, dynamic camera motion and reacquisition.
+- Measure attitude error against independent truth.
 
-Potential implementation choices (to be assessed, not assumed):
-- Modern C++ for deterministic algorithm modules.
-- OpenCV or a reduced/custom image-processing implementation depending on target resources.
-- Embedded Linux for camera/compute-heavy platforms, or an RTOS/MCU for bounded control and sensor-interface tasks.
+**Gate:** estimator design, fault/degraded-mode tests and quantified performance.
 
-Exit evidence:
-- Target rationale and resource budget.
-- Python-versus-C++ equivalence report.
-- Timing and memory measurements on the selected hardware.
-- Automated host and target regression tests.
+## WP7 — Verification and aerospace engineering discipline
 
-## Work package 4 — Attitude and autonomous-system interface
+- Requirements-to-test traceability.
+- Unit, integration, regression and hardware-in-the-loop testing.
+- Fault injection and robustness analysis.
+- Data/configuration provenance.
+- Memory, timing and failure-mode budgets.
+- System safety and applicable standards assessment when a target application is defined.
 
-**Objective:** define how optical measurements could contribute to an autonomous platform's attitude estimate.
+No certification or compliance claim should be made without a defined system boundary and appropriate evidence.
 
-Tasks:
-1. Define camera-to-body extrinsic calibration and body/navigation frame conventions.
-2. Specify observation timestamps and measurement latency.
-3. Convert accepted star observations into a documented attitude-measurement interface.
-4. Define quality metrics and rejection criteria.
-5. Design gyro propagation and camera/IMU fusion as a separately testable estimator.
-6. Evaluate loss of stars, false matches, timing faults and reacquisition.
+## Milestone sequence
 
-Possible future estimator:
-- Gyroscope propagation between optical updates.
-- Camera-derived attitude observations when valid.
-- An EKF or other estimator selected after defining state, noise models and observability.
+| Milestone | Deliverable |
+|---|---|
+| M1 | Independently validated real-camera dataset |
+| M2 | Global multi-section camera calibration |
+| M3 | Temporal orientation / repeatability analysis |
+| M4 | Modular software architecture and regression suite |
+| M5 | C++ reference implementation |
+| M6 | Target-hardware resource and timing benchmark |
+| M7 | Camera attitude measurement interface |
+| M8 | Camera/IMU fusion prototype |
+| M9 | Integrated autonomous sensing demonstration |
 
-Exit evidence:
-- Coordinate-frame and timing specification.
-- Estimator design and observability analysis.
-- Simulation tests for nominal and degraded conditions.
-- Quantified attitude error and recovery performance.
+## Engineering priority
 
-## Work package 5 — Aerospace verification discipline
-
-Tasks:
-- Requirements and interface traceability.
-- Verification plan and acceptance criteria.
-- Unit, integration, regression and hardware-in-the-loop tests.
-- Fault injection and robustness tests.
-- Data provenance and configuration control.
-- Resource, latency and failure-mode analysis.
-
-No compliance or certification claim should be made without a defined system boundary, applicable standards, safety case and evidence from the relevant engineering process.
-
-## Suggested milestone sequence
-
-| Milestone | Deliverable | Dependency |
-|---|---|---|
-| M1 | Independent multi-image validation | Real images and reference data |
-| M2 | Modular software architecture | Stable numerical contracts |
-| M3 | C++ reference port | M2 and regression fixtures |
-| M4 | Target-hardware benchmark | Selected compute platform |
-| M5 | Attitude measurement interface | Frame and timing definitions |
-| M6 | Camera/IMU estimator prototype | Validated optical measurement model |
-| M7 | Integrated autonomy demonstration | Target platform and system tests |
-
-## Priority recommendation
-
-Do not start by adding an RTOS or claiming real-time operation. First establish independent real-camera accuracy and stable module interfaces. Then port and benchmark the computational core. This reduces the risk of embedding an algorithm whose real-world measurement quality is not yet established.
+Do not begin with an RTOS port or an arbitrary microcontroller. First establish that the real-image calibration and global geometric model are correct. Then modularise, port, benchmark and integrate. This creates a credible bridge from the professor's AllSkyKamera R&D problem to embedded aerospace and autonomous sensing.
