@@ -65,3 +65,10 @@ The global calibration remains exploratory. Independent reference verification, 
 ## Engineering direction
 
 The next stages are global real-camera validation, temporal orientation analysis, modular interfaces, C++ numerical equivalence, target-hardware benchmarking and a separately validated optical/IMU estimator interface. See `docs/embedded_aerospace_roadmap.md`.
+
+
+## Latest real-observation status — through Phase 147
+
+The real-image work did not stop at the earlier Phase 60–62 evidence integration. Additional ASK033 archive-sequence experiments are recorded through Phase 147, including candidate reconstruction, tracking, catalogue consistency, frame registration, spatial holdouts and coordinate-integrity audits. The original source video is referenced by the reports but is not present in the Git tree; extracted frames and derived reports are present.
+
+Use the [authoritative real-observation index](../../REAL_OBSERVATIONS.md) and [real-image workspace entry point](../real_image/README.md). The earlier real-image status paragraph in this guide is historical; the qualification remains that independent star identity and globally validated real-camera calibration are open.
