@@ -1,28 +1,29 @@
 # StarLoc 2.0
-## Software-Defined All-Sky Camera Calibration Using Stellar Identification
 
-### Objective
-Detect stars in all-sky fisheye images, identify them using an astronomical catalogue, associate celestial coordinates with image pixels, and estimate optical calibration parameters.
+**Stellar Identification & Multi-Section Astrometric Calibration for All-Sky Camera Networks**
 
-### Implemented workflow
-- Synthetic 180-degree equidistant fisheye image generation.
-- Star detection and centroid extraction.
-- Hipparcos catalogue processing.
-- Proper-motion propagation to the observation epoch.
-- Visible-sky catalogue generation.
-- Blind catalogue matching and optical calibration.
-- Robustness testing under simulated image degradation.
-- Four-section synthetic image analysis.
+This repository contains the research implementation, experiments and validation evidence for StarLoc 2.0. The primary R&D problem is recovering camera geometry and orientation from stellar observations for the AllSkyKamera Network, including local astrometric analysis across overlapping image regions and the development of a globally consistent calibration.
 
-### Main demonstration
-Run: python research/16_run_final_demo.py
+For the full project scope, architecture, experimental evidence and engineering roadmap, see the [main project README](README.md).
 
-### Main synthetic results
-- Detected regions: 1,136
-- Identified stars: 1,136
-- Estimated FOV: 179.998 degrees
-- Estimated roll: 36.999 degrees
-- Reprojection RMSE: 0.285 pixels
+## Current evidence
 
-### Validation limitation
-These results are from synthetic observations generated using real astronomical catalogue data. They are not real AllSkyKamera measurements. The current model assumes a zenith-pointed equidistant fisheye camera with unknown roll. Validation using a real camera exposure remains pending.
+- Synthetic stellar detection, catalogue matching and constrained fisheye calibration.
+- Hipparcos-derived catalogue preparation and epoch processing.
+- Synthetic robustness and multi-section experiments.
+- Exploratory investigation of a public ASK033 real-camera image.
+- Correspondence-quality audit and leave-one-section-out analysis.
+
+## Important scope distinction
+
+The current implementation is a Python research prototype. Independent real-camera global calibration, a deployable server-side service, embedded C++/RTOS implementation and camera/IMU fusion remain future engineering work.
+
+## Technical documentation
+
+- [System architecture](research/docs/system_architecture.md)
+- [Research workspace](research/docs/README_RESEARCH.md)
+- [Final R&D report](research/docs/final_report.md)
+- [Functional and technical specification](research/docs/functional_technical_specifications.md)
+- [Verification plan and evidence](research/docs/test_plan_and_results.md)
+- [Real-camera validation matrix](research/docs/real_camera_validation_matrix.md)
+- [Embedded aerospace roadmap](research/docs/embedded_aerospace_roadmap.md)
