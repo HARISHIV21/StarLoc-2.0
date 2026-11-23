@@ -11,6 +11,8 @@
 
 The project is motivated by the calibration requirements of the **AllSkyKamera Network**: determine the geometric properties and orientation of a camera from night-sky observations rather than relying blindly on potentially inaccurate installation parameters. The same core engineering problems—stellar feature extraction, celestial catalogue association, camera geometry, attitude references, uncertainty and robust estimation—are relevant to optical attitude sensing and autonomous aerospace systems.
 
+**Start with the [Real Observations & Experimental Evidence index](REAL_OBSERVATIONS.md)** for the actual ASK033/T1 inputs, extracted frames, visual outputs, quantitative phase reports and scientific limitations.
+
 ---
 
 ## Research objective
@@ -132,18 +134,25 @@ This experiment demonstrates the end-to-end feasibility of the implemented detec
 
 Four documented synthetic scenes—clean, noisy, degraded and stress—reported a mean roll error of 0.00485° and mean reprojection RMSE of 0.90025 px. The stress scene reached 1.7174 px RMSE, showing the effect of degraded observations.
 
-### 3. Real ASK033 image investigation
+### 3. Real observations — ASK033 and T1
 
-The project progressed from synthetic work to a public 1920 × 1440 ASK033 AllSkyKamera image. Five image sections obtained local astrometric solutions. The association audit recorded:
+The real-data investigation includes:
+- A public ASK033 still image (1920 × 1440), detection/refinement outputs and local astrometric investigations over five sections.
+- An ASK033 archive-derived frame sequence analysed for persistence, optical flow, centroid/patch tracking, photometry, morphology, registration and temporal catalogue consistency through Phase 147.
+- A separate user-provided T1 image (6000 × 1918) with initial/refined detection and candidate-ranking outputs.
 
-- 233 candidate correspondences in the cross-section audit.
-- 74 strict internal-consistency cases.
-- 155 uncertain cases.
-- 4 separately flagged suspect associations.
+Selected temporal evidence:
+- Phase 117: 13 frames, 18,213 point-source candidate detections, 11,449 mutual matches; zero recorded flux-integrity failures. These detections are not confirmed stars.
+- Phase 120: 290 projected catalogue sources; 104 distinct Hipparcos IDs matched against the existing WCS, 70 repeated in at least two frames. This is consistency evidence, not independent astrometric validation.
+- Phase 138: image-plane rotation-trend diagnostics; physical camera motion is not established.
+- Phase 145: coordinate-integrity audit over a 4 × 4 grid and 12 frame pairs; this verifies internal data consistency, not absolute coordinate accuracy.
+- Phases 146–147: Phase 117 and Phase 95 show high correspondence, but their data lineage is related and therefore not an independent replication.
 
-The Phase 56 strict-subset experiment reported 0.9381 px RMSE on 15 randomly held-out points. The more demanding Phase 57 leave-one-section-out evaluation reported 2.3247 px aggregate RMSE, with R3C1 reaching 3.460 px.
+The still-image association audit recorded 233 candidate correspondences: 74 strict internal-consistency, 155 uncertain and 4 suspect. Phase 56 reported 0.9381 px RMSE on 15 random held-out points; Phase 57 leave-one-section-out reported 2.3247 px aggregate RMSE, with R3C1 at 3.460 px.
 
-**What these results mean:** the real-image work demonstrates a substantial investigation of local astrometry, correspondence quality and section-dependent calibration behaviour. It does not yet establish an independently validated global camera solution. Agreement with a local WCS is an internal consistency check, not independent proof of catalogue identity. The next validation campaign must use independently verified references and multiple real observations.
+**Interpretation:** substantial real-image R&D has been conducted, but no independent real-star truth set or independently validated global camera calibration has been established. Candidate persistence, morphology, photometric stability, existing-WCS agreement and cross-phase consistency must not be described as proof of stellar identity.
+
+See the [Real Observations & Experimental Evidence index](REAL_OBSERVATIONS.md) for direct paths to the source observations, visual evidence and phase reports.
 
 ## Current engineering status
 
@@ -155,10 +164,10 @@ The Phase 56 strict-subset experiment reported 0.9381 px RMSE on 15 randomly hel
 | Blind catalogue matching | Demonstrated on synthetic data |
 | Constrained fisheye optical calibration | Demonstrated on synthetic data |
 | Synthetic robustness and multi-section experiments | Documented |
-| ASK033 real-image investigation | Conducted; exploratory |
-| Real-image correspondence quality audit | Conducted; unresolved/uncertain cases retained |
+| ASK033 still + temporal real-image investigation and T1 processing | Conducted through Phase 147; exploratory |
+| Real-image correspondence and temporal consistency audits | Conducted; WCS-based and cross-phase consistency only, independent star identity incomplete |
 | Independently validated global multi-section calibration | Remaining research milestone |
-| Dynamic orientation across a time series | Further validation and integration required |
+| Image-plane motion/registration/rotation diagnostics | Investigated through Phase 138; physical camera motion/orientation not independently validated |
 | Production server-side service/API | Not yet implemented as a deployable service |
 | Embedded C++ / RTOS target implementation | Future engineering work |
 | Camera/IMU fusion and autonomous attitude estimator | Future research and integration work |
@@ -169,7 +178,9 @@ The Phase 56 strict-subset experiment reported 0.9381 px RMSE on 15 randomly hel
 .
 ├── README.md
 ├── README_STARLOC_FINAL.md
+├── REAL_OBSERVATIONS.md
 ├── research/
+│   ├── real_image/README.md        # real-observation research entry point
 │   ├── *.py
 │   ├── real_image/                 # ASK033 image investigation
 │   ├── data/
@@ -229,6 +240,8 @@ See the [Embedded & Aerospace Engineering Roadmap](research/docs/embedded_aerosp
 - [Final research report](research/docs/final_report.md)
 - [Functional and technical specifications](research/docs/functional_technical_specifications.md)
 - [Test plan and validation evidence](research/docs/test_plan_and_results.md)
+- [Real observations and experiment evidence index](REAL_OBSERVATIONS.md)
+- [Real-image research workspace](research/real_image/README.md)
 - [Real-camera validation matrix](research/docs/real_camera_validation_matrix.md)
 - [Embedded and aerospace roadmap](research/docs/embedded_aerospace_roadmap.md)
 - [State of the art](research/docs/state_of_art.md)
